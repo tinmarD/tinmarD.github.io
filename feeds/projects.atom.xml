@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Master Doc - projects</title><link href="/" rel="alternate"></link><link href="/feeds/projects.atom.xml" rel="self"></link><id>/</id><updated>2018-11-08T13:42:00+01:00</updated><entry><title>Stimic - Stimulation Listing</title><link href="/stimic-stimulation-listing.html" rel="alternate"></link><published>2018-11-08T13:42:00+01:00</published><updated>2018-11-08T13:42:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-11-08:/stimic-stimulation-listing.html</id><summary type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Master Doc - projects</title><link href="tinmard.github.io/" rel="alternate"></link><link href="tinmard.github.io/feeds/projects.atom.xml" rel="self"></link><id>tinmard.github.io/</id><updated>2018-11-08T13:42:00+01:00</updated><entry><title>Stimic - Stimulation Listing</title><link href="tinmard.github.io/stimic-stimulation-listing.html" rel="alternate"></link><published>2018-11-08T13:42:00+01:00</published><updated>2018-11-08T13:42:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-11-08:tinmard.github.io/stimic-stimulation-listing.html</id><summary type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
 &lt;h2 id="artifact-detection-in-macro-electrodes"&gt;Artifact Detection in macro-electrodes&lt;/h2&gt;
 &lt;h3 id="description"&gt;Description&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
@@ -121,24 +121,24 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;em&gt;Note : If the signal is very noisy the detection algorithm may detect a huge number of events, in this case it may take more time to clean the detected stimulation rather than detecting manually all the stimulations&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Cleaning stimulation events&lt;/p&gt;
-&lt;p&gt;Stimulation events are then sorted by increasing time and events on the same channel with the same frequency and close in time (difference inferior to 5s) are merged. &lt;/p&gt;</content><category term="Stimic"></category></entry><entry><title>Hardware tools for reducing noise in micro-recordings</title><link href="/epifar/" rel="alternate"></link><published>2018-10-22T17:33:00+02:00</published><updated>2018-10-22T17:33:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-22:/epifar/</id><summary type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
- avalaible &lt;a href="/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Stimulation events are then sorted by increasing time and events on the same channel with the same frequency and close in time (difference inferior to 5s) are merged. &lt;/p&gt;</content><category term="Stimic"></category></entry><entry><title>Hardware tools for reducing noise in micro-recordings</title><link href="tinmard.github.io/epifar/" rel="alternate"></link><published>2018-10-22T17:33:00+02:00</published><updated>2018-10-22T17:33:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-22:tinmard.github.io/epifar/</id><summary type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
+ avalaible &lt;a href="tinmard.github.io/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;h3 id="spectrum-analyzer-spectran-nf-1010e"&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
- avalaible &lt;a href="/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
+ avalaible &lt;a href="tinmard.github.io/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;h3 id="spectrum-analyzer-spectran-nf-1010e"&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for localizing the
   source of noise in a complex environment. The Spectran NF-1010E comes with a Software which allows further analyses. &lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/epifar/noise/spectran_nf_1010e.jpg" width="500"/&gt;&lt;/p&gt;
-&lt;p&gt;Spectran NF Manual : &lt;a href="/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf"&gt;fr&lt;/a&gt;
-  - &lt;a href="/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf"&gt;en&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Soft Manual : &lt;a href="/_data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spectran NF Manual : &lt;a href="tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf"&gt;fr&lt;/a&gt;
+  - &lt;a href="tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf"&gt;en&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Soft Manual : &lt;a href="tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="power-plantmultiprise-bada-lb-6600"&gt;&lt;strong&gt;Power-Plant/Multiprise BADA LB-6600&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The BADA LB-6600 is a power plant (multiprise) with 8 sockets. It also filters the incoming current from the mains (secteur).&lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/epifar/noise/bada-lb-6610.jpg" width="400"/&gt;&lt;/p&gt;
-&lt;p&gt;Bada manual : &lt;a href="/_data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bada manual : &lt;a href="tinmard.github.io/_data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; The total number of devices plugged in the BADA power-plant should note require more power than
 the BADA can deliver : 3300W &lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; The BADA power plant must be powered in with a cable able to conduct a sufficient power.&lt;/p&gt;
@@ -149,11 +149,11 @@ the BADA can deliver : 3300W &lt;/p&gt;
 &lt;h3 id="shielding-fabric"&gt;&lt;strong&gt;Shielding fabric&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/_images/epifar/noise/aaronia_shield.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Manuals: 
-   1. &lt;a href="/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf"&gt;Aaronia-Mesh&lt;/a&gt;
-   2. &lt;a href="/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
+   1. &lt;a href="tinmard.github.io/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf"&gt;Aaronia-Mesh&lt;/a&gt;
+   2. &lt;a href="tinmard.github.io/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="fluke-87v-multimeter"&gt;&lt;strong&gt;Fluke 87V Multimeter&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/_images/epifar/noise/Fluke87V.jpg" width="400"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
+&lt;p&gt;&lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:tinmard.github.io/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -165,17 +165,17 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>Epifar</title><link href="/epifar/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/epifar/</id><summary type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
+&lt;/ul&gt;</content></entry><entry><title>Epifar</title><link href="tinmard.github.io/epifar/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:tinmard.github.io/epifar/</id><summary type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
 &lt;p&gt;New micro-macro electrode : &lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="tinmard.github.io/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="tinmard.github.io/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;More detailed &lt;a href="/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More detailed &lt;a href="tinmard.github.io/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="file-conversion"&gt;File conversion&lt;/h2&gt;
-&lt;p&gt;Report to this &lt;a href="/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Report to this &lt;a href="tinmard.github.io/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;p&gt;Scripts for converting files and for synchronizing macro and micro data 
 are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;Multiples format are used to record and analyze …&lt;/p&gt;</summary><content type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
@@ -183,12 +183,12 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;p&gt;&lt;img src="/_images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="tinmard.github.io/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="tinmard.github.io/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;More detailed &lt;a href="/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More detailed &lt;a href="tinmard.github.io/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="file-conversion"&gt;File conversion&lt;/h2&gt;
-&lt;p&gt;Report to this &lt;a href="/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Report to this &lt;a href="tinmard.github.io/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;p&gt;Scripts for converting files and for synchronizing macro and micro data 
 are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;Multiples format are used to record and analyze iEEG data : &lt;/p&gt;
@@ -198,7 +198,7 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
  sometime triggers stored in a &lt;em&gt;.nev&lt;/em&gt; file&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="visualization"&gt;Visualization&lt;/h2&gt;
-&lt;p&gt;The &lt;a href="/micmac.html"&gt;micmac&lt;/a&gt; interface was specifically designed to visualize micro and Macro files. &lt;/p&gt;
+&lt;p&gt;The &lt;a href="tinmard.github.io/micmac.html"&gt;micmac&lt;/a&gt; interface was specifically designed to visualize micro and Macro files. &lt;/p&gt;
 &lt;h2 id="noise"&gt;Noise&lt;/h2&gt;
 &lt;h3 id="electro-magnetic-noise"&gt;Electro-magnetic noise&lt;/h3&gt;
 &lt;h4 id="hardware-solutions"&gt;Hardware Solutions&lt;/h4&gt;
@@ -208,7 +208,7 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;ul&gt;
 &lt;li&gt;LNC&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="noise-level-in-micro-recordings_1"&gt;Noise level in micro-recordings&lt;/h3&gt;</content></entry><entry><title>Neurons</title><link href="/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;h3 id="noise-level-in-micro-recordings_1"&gt;Noise level in micro-recordings&lt;/h3&gt;</content></entry><entry><title>Neurons</title><link href="tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:tinmard.github.io/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  &lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;
@@ -239,7 +239,7 @@ a large number of electrophysiologycal file formats.&lt;/p&gt;
  Indeed the same spike appears in the 4 contacts of the tetrode.
   It allows to have a better representation of the unit shape from &lt;em&gt;"different angles"&lt;/em&gt; and is thus helpful 
   for the spike-sorting : discriminating which unit has emitted the different spikes recorded on the tetrode (given the fact
-  that a single tetrode can records spikes from different units).&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
+  that a single tetrode can records spikes from different units).&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:tinmard.github.io/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="tinmard.github.io/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:tinmard.github.io/sab.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
 &lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
 &lt;/ul&gt;
@@ -277,7 +277,7 @@ The following packages are needed :
 &lt;h3 id="extract-feature-and-evaluate-their-importance-for-predicting-the-behavioural-response"&gt;Extract feature and evaluate their importance for predicting the behavioural response&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="" src="_images/sab/feature_importance_example.png"/&gt;&lt;/p&gt;
 &lt;h3 id="evaluate-correlation-between-features-and-reaction-times"&gt;Evaluate correlation between features and reaction times&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>Stimic</title><link href="/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/stimic/</id><summary type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>Stimic</title><link href="tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:tinmard.github.io/stimic/</id><summary type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
 &lt;h1 id="stimulation-event-list"&gt;Stimulation Event List&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
@@ -291,8 +291,8 @@ The following packages are needed :
 &lt;ol&gt;
 &lt;li&gt;Clean the different EDF files, keep only good EEG channels&lt;/li&gt;
 &lt;li&gt;Run the stimulation detector&lt;/li&gt;
-&lt;li&gt;Visual check of the event detected using &lt;a href="/micmac.html"&gt;micmac&lt;/a&gt; and export the corrected event list. &lt;/li&gt;
+&lt;li&gt;Visual check of the event detected using &lt;a href="tinmard.github.io/micmac.html"&gt;micmac&lt;/a&gt; and export the corrected event list. &lt;/li&gt;
 &lt;li&gt;Re-organized the csv file (in Excel) and add a bipolar channel column&lt;/li&gt;
 &lt;li&gt;Concatenate these event files for all edf files&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;All the procedure is described &lt;a href="/stimic-stimulation-listing.html"&gt;here&lt;/a&gt;)&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;All the procedure is described &lt;a href="tinmard.github.io/stimic-stimulation-listing.html"&gt;here&lt;/a&gt;)&lt;/p&gt;</content></entry></feed>

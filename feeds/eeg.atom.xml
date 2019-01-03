@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Master Doc - eeg</title><link href="/" rel="alternate"></link><link href="/feeds/eeg.atom.xml" rel="self"></link><id>/</id><updated>2018-10-22T17:33:00+02:00</updated><entry><title>File conversion</title><link href="/file-conversion.html" rel="alternate"></link><published>2018-10-22T17:33:00+02:00</published><updated>2018-10-22T17:33:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-22:/file-conversion.html</id><summary type="html">&lt;p&gt;How to use the file conversion scripts. Change the format. Create a new montage. Deal with Epifar Files&lt;/p&gt;</summary><content type="html">&lt;h1 id="summary"&gt;Summary&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Master Doc - eeg</title><link href="tinmard.github.io/" rel="alternate"></link><link href="tinmard.github.io/feeds/eeg.atom.xml" rel="self"></link><id>tinmard.github.io/</id><updated>2018-10-22T17:33:00+02:00</updated><entry><title>File conversion</title><link href="tinmard.github.io/file-conversion.html" rel="alternate"></link><published>2018-10-22T17:33:00+02:00</published><updated>2018-10-22T17:33:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-22:tinmard.github.io/file-conversion.html</id><summary type="html">&lt;p&gt;How to use the file conversion scripts. Change the format. Create a new montage. Deal with Epifar Files&lt;/p&gt;</summary><content type="html">&lt;h1 id="summary"&gt;Summary&lt;/h1&gt;
 &lt;p&gt;The Matlab code is on the &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;eegFileConversion&lt;/a&gt; repository.&lt;/p&gt;
 &lt;p&gt;Conversion scripts are listed in the table below with their main function : &lt;/p&gt;
 &lt;table&gt;
@@ -131,13 +131,13 @@ the data by 10.&lt;/p&gt;
 &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;out_dirpath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;out_filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;EEGs&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;fileconv_nsx2edf&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;nsx_filename&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;-1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;downsampling_factor&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can find a visual document showing the correspondencies between EEGLAB and Blackrock fields 
-&lt;a href="/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;a href="tinmard.github.io/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="python"&gt;Python&lt;/h3&gt;
 &lt;p&gt;In python you can use the &lt;a href="https://github.com/NeuralEnsemble/python-neo"&gt;neo&lt;/a&gt; package.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In python, there is no easy way to write data into the EDF file format
  (the &lt;em&gt;pyedflib&lt;/em&gt; package is complex). The &lt;em&gt;.fif&lt;/em&gt; format is a good alternative as it can be opened with 
- &lt;a href="/micmac.html"&gt;micMac&lt;/a&gt; and with MNE.&lt;/p&gt;
+ &lt;a href="tinmard.github.io/micmac.html"&gt;micMac&lt;/a&gt; and with MNE.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt; Import a Blackrock file in Python with &lt;a href="https://martinos.org/mne/stable/index.html"&gt;MNE&lt;/a&gt; &lt;/strong&gt; :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;mne&lt;/span&gt;
@@ -236,7 +236,7 @@ The &lt;code&gt;bipolarMontage&lt;/code&gt; variable is a cell of vectors. Each 
 &lt;/ol&gt;
 &lt;p&gt;Some of these step are not mandatory and can be commented in the &lt;code&gt;jediconv&lt;/code&gt; file. All the files starting with &lt;code&gt;jediconv&lt;/code&gt;
 deal with EpiFaR files. The &lt;code&gt;yodaconv&lt;/code&gt; file can be used when the micro file is discontinued and composed of several parts. 
-However this script has not been tested thoroughly. &lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="EDF"></category></entry><entry><title>Debug EDF Files</title><link href="/debug-edf-files.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/debug-edf-files.html</id><summary type="html">&lt;h1 id="missing-header-information"&gt;Missing header information&lt;/h1&gt;
+However this script has not been tested thoroughly. &lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="EDF"></category></entry><entry><title>Debug EDF Files</title><link href="tinmard.github.io/debug-edf-files.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:tinmard.github.io/debug-edf-files.html</id><summary type="html">&lt;h1 id="missing-header-information"&gt;Missing header information&lt;/h1&gt;
 &lt;p&gt;L'en-t&amp;ecirc;te (header) des fichiers .edf contient des m&amp;eacute;tadonn&amp;eacute;es sur le patient, l'h&amp;ocirc;pital... Si certaines de ces donn&amp;eacute;es sont absentes,
 cela peut poser probl&amp;egrave;me lors de l'ouverture du fichier selon le lecteur utilis&amp;eacute; (cela ne semble pas avoir d'impact sur EEGLAB mais pose probl&amp;egrave;me sur Anywave).&lt;/p&gt;
 &lt;p&gt;Il existe …&lt;/p&gt;</summary><content type="html">&lt;h1 id="missing-header-information"&gt;Missing header information&lt;/h1&gt;
