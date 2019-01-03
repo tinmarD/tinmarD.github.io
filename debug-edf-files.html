@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Master Doc - Debug EDF Files</title>
+    <meta name="description" content="">
+    <meta name="author" content="Martin Deudon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="/theme/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="/theme/local.css" rel="stylesheet">
+    <link href="/theme/pygments.css" rel="stylesheet">
+
+    <!--TIPUE SEARCH  old -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>-->
+    <!--<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.css"/>-->
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">-->
+    <!--<script src="/theme/js/jquery-3.3.1.min.js"></script>-->
+    <!--<script type="text/javascript" src="/theme/tipuesearch/tipuesearch_content.js"></script>-->
+    <!--<link rel="stylesheet" href="/theme/tipuesearch/tipuesearch.css">-->
+    <!--<script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set.js"></script>-->
+    <!--<script type="text/javascript" src="/theme/tipuesearch/tipuesearch.min.js"></script>-->
+    <!--TIPUE SEARCH -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <script src="/theme/tipuesearch/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="/theme/tipuesearch/tipuesearch.css">
+    <!--<script src="tipuesearch/tipuesearch_set.js"></script>-->
+    <!--<script src="tipuesearch/tipuesearch.min.js"></script>-->
+    <script src="/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/theme/tipuesearch/tipuesearch.min.js"></script>
+
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+        <link href="/feeds/all.atom.xml" rel="alternate" title="Master Doc" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
+
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
+
+        <a class="brand" href="">Master Doc</a>
+
+        <div class="nav-collapse">
+        <ul class="nav">
+            <li><a href="/sab/index.html">SAB</a></li>
+            <li><a href="/epifar/index.html">Epifar</a></li>
+            <li><a href="/stimic/index.html">Stimic</a></li>
+            <li><a href="/cochlea/index.html">Cochlea</a></li>
+            <li><a href="/neurons/index.html">Neurons</a></li>
+
+        </ul>
+        </div>
+
+        <!--TIPUE SEARCH old-->
+        <!--<div style="float:right; padding-right:100px;">-->
+            <!--<form action="/search.html" onsubmit="return this.elements['q'].value;">-->
+              <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
+            <!--</form>-->
+        <!--</div>-->
+        <form>
+            <div class="tipue_search_group">
+              <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
+            </div>
+        </form>
+
+<div id="tipue_search_content"></div>
+
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+    <div class='article'>
+        <div class="content-title">
+            <h1>Debug EDF Files</h1>
+lun. 04 octobre 2010
+
+by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
+ 
+
+
+        </div>
+
+        <div class="col-lg-3 hidden-xs hidden-sm">
+            <div id="toc"><ul><li><a class="toc-href" href="#" title="Debug EDF Files">Debug EDF Files</a><ul><li><a class="toc-href" href="#missing-header-information" title="Missing header information">Missing header information</a></li><li><a class="toc-href" href="#annotation-problems" title="Annotation problems">Annotation problems</a><ul><li><a class="toc-href" href="#comment-trouver-le-premier-bloc-du-signal-annotation" title="Comment trouver le premier bloc du signal annotation ?">Comment trouver le premier bloc du signal annotation ?</a></li></ul></li></ul></li></ul></div>
+        </div>
+	
+        <div><h1 id="missing-header-information">Missing header information</h1>
+<p>L'en-t&ecirc;te (header) des fichiers .edf contient des m&eacute;tadonn&eacute;es sur le patient, l'h&ocirc;pital... Si certaines de ces donn&eacute;es sont absentes,
+cela peut poser probl&egrave;me lors de l'ouverture du fichier selon le lecteur utilis&eacute; (cela ne semble pas avoir d'impact sur EEGLAB mais pose probl&egrave;me sur Anywave).</p>
+<p>Il existe dans le logiciel <a href="https://www.teuniz.net/edfbrowser/">EDFBrowser</a> un outil permettant de modifier l'en-t&ecirc;te du fichier
+(ou du moins le remplacer par des valeurs "nulles").</p>
+<p>Une fois le logiciel install&eacute;, aller dans <em>Tools/Header Editor</em>, s&eacute;lectionner le fichier qui pose probl&egrave;me et le sauvegarder.
+Il n'est pas n&eacute;cessaire de modifier les valeurs qui apparaissent. Mieux vaut ne pas modifier le fichier original.</p>
+<h1 id="annotation-problems">Annotation problems</h1>
+<p>Ce probl&egrave;me peut provoquer une erreur lors de l'ouverture d'un fichier EDF dans EEGLAB via l'interface BIOSIG :</p>
+<p><img src="/_images/debug/edf_files/message_erreur_annotations.png" width="600"/></p>
+<p>Le format EDF+ introduit la possibilit&eacute; d'ajouter des annotations, pouvant correspondre &agrave; diff&eacute;rents &eacute;v&egrave;nements,
+stimuli, temps. Pour cela un signal est ajout&eacute;, m&ecirc;me lorsque les annotations ne sont pas utilis&eacute;es et son label est
+&ldquo;EDF Annotations&rdquo;. Ce signal, comme tous les autres, est divis&eacute; en diff&eacute;rents blocs en g&eacute;n&eacute;ral d'une seconde.</p>
+<p>Un exemple de fichier normal : le premier bloc du signal annotations d&eacute;marre toujours par <strong>+0</strong> suivie de deux caract&egrave;res
+de code hexad&eacute;cimal <strong>14</strong>, d'un autre chiffre ici <strong>0.55</strong> (dur&eacute;e de l&rsquo;&eacute;v&eacute;nement annot&eacute; en secondes ?) suivie du code hexa
+<strong>14</strong> et de l'annotation rentr&eacute;e lors de l'acquisition du signal (ici <strong>DAMIER S2</strong>) encore une fois suivie du code hexa <strong>14</strong>.</p>
+<p><img src="/_images/debug/edf_files/edf_normal.png" width="600"/></p>
+<p>Dans le cas des fichiers posant probl&egrave;me, le premier bloc du signal annotation contient seulement le <strong>+0</strong> suivi de deux
+codes hexa <strong>14</strong>. Il semble que l'interface BIOSIG attende une valeur de dur&eacute;e ainsi qu'une annotation.
+Une solution possible est donc de modifier manuellement le fichier dans <a href="https://sourceforge.net/projects/hexedit/">HexEdit</a>:</p>
+<p><img src="/_images/warning.png" width="20"/> Faire une copie du fichier avant de le modifier</p>
+<ul>
+<li>rentrer une dur&eacute;e apr&egrave;s les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55</li>
+<li>entrer un octet de valeur hexa 14</li>
+<li>entrer l'annotation d&eacute;sir&eacute;e</li>
+<li>entrer un octet de valeur hexa 14</li>
+</ul>
+<p>Il est n&eacute;cessaire de ne pas modifier la longueur du bloc, il faut donc rep&eacute;rer la fin du bloc d'annotations et apr&egrave;s la modification
+d&eacute;crite ci-dessus, rajouter (ou supprimer) &eacute;ventuellement des octets de valeur hexa 00 afin de conserver la longueur de bloc.</p>
+<h2 id="comment-trouver-le-premier-bloc-du-signal-annotation">Comment trouver le premier bloc du signal annotation ?</h2>
+<p>La m&eacute;thode la plus simple est de rechercher la suite d'octets de valeur hexa <strong>2B 30 14 14</strong>.
+Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et s&eacute;lectionner Find Hex&hellip; :</p>
+<p><img src="/_images/debug/edf_files/search_hex_tool.png" width="600"/></p></div>
+	
+        <hr>
+
+    </div>
+        </div>
+
+        <div class="span3">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Site
+                </li>
+
+                <li><a href="/archives.html">Archives</a>
+                <li><a href="/tags.html">Tags</a>
+
+
+
+                <li><a href="/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
+
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Categories
+                </li>
+
+                <li><a href="/category/eeg.html">eeg</a></li>
+                <li><a href="/category/misc.html">misc</a></li>
+                <li><a href="/category/projects.html">projects</a></li>
+                <li><a href="/category/python.html">python</a></li>
+                <li><a href="/category/software.html">software</a></li>
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Links
+                </li>
+
+                <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
+                <li><a href="http://python.org/">Python.org</a></li>
+            </ul>
+            </div>
+
+
+            <div class="social">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Social
+                </li>
+
+                <li><a href="https://github.com/tinmarD">github</a></li>
+            </ul>
+            </div>
+            </div>
+
+        </div>     </div>     </div> 
+
+<footer>
+<br />
+<p><a href="">Master Doc</a> &copy; Martin Deudon 2018</p>
+</footer>
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/theme/bootstrap-collapse.js"></script>
+</body>
+</html>

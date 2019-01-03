@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Master Doc</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-11-08T13:42:00+01:00</updated><entry><title>Stimic - Stimulation Listing</title><link href="/stimic-stimulation-listing.html" rel="alternate"></link><published>2018-11-08T13:42:00+01:00</published><updated>2018-11-08T13:42:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-11-08:/stimic-stimulation-listing.html</id><summary type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+&lt;h2 id="artifact-detection-in-macro-electrodes"&gt;Artifact Detection in macro-electrodes&lt;/h2&gt;
+&lt;h3 id="description"&gt;Description&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+&lt;h2 id="artifact-detection-in-macro-electrodes"&gt;Artifact Detection in macro-electrodes&lt;/h2&gt;
+&lt;h3 id="description"&gt;Description&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the stim. A visual confirmation will be necessary before using the results. Here we only concentrate on locating the stimulation on the stimulation channels, with monopolar montage.&lt;/p&gt;
+&lt;p&gt;This will help to create a spreadsheet for each patient containing all the stimulation events and  parameters :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Patient ID&lt;/li&gt;
+&lt;li&gt;Stimulation File Name&lt;/li&gt;
+&lt;li&gt;Channel / Electrode&lt;/li&gt;
+&lt;li&gt;Onset Time (s)&lt;/li&gt;
+&lt;li&gt;Duration (s)&lt;/li&gt;
+&lt;li&gt;Frequency (Hz)&lt;/li&gt;
+&lt;li&gt;Intensity (mA?)&lt;/li&gt;
+&lt;li&gt;Effect on the patient (if any)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="stimulation-parameters"&gt;Stimulation Parameters&lt;/h3&gt;
+&lt;p&gt;Both frequency and intensity of the stimulation can change and affect the artifacts waveforms. The duration of the stimulation can also change but as we are only interested in detection the onset time, we will not consider it.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Frequency range between 1Hz and 50Hz&lt;/li&gt;
+&lt;li&gt;Intensity range between ? mA and ?? mA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="pipeline_1"&gt;Pipeline&lt;/h2&gt;
+&lt;p&gt;For each patient, for each file : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0 - Run the python script &lt;em&gt;stim_clean_EDF_files&lt;/em&gt; which open all the EDF files, remove the non-EEG channels and bad channels. The script also check that each file contains the same number of channels and are ordered in the same way across each file. If a channel is missing, an NaN channel id added. It creates new FIF files&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;1 - For each file created in step 0, run the python script &lt;em&gt;stim_detection_main.py&lt;/em&gt; which automatically detects the period of stimulation. It create an output csv file containing the events detected by the algorithm. Make sure that the frequencies of stimulations apart from 1 and 50 Hz are in the list called &lt;em&gt;mid_freqs_hz&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Columns of interest are :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;4 : Type of the stimulation&lt;/li&gt;
+&lt;li&gt;5 : Time (in seconds)&lt;/li&gt;
+&lt;li&gt;8 : Duration (in seconds)&lt;/li&gt;
+&lt;li&gt;7 : Channel index&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;2 - Visual check of the events : run &lt;em&gt;micMac&lt;/em&gt; in Matlab and open the FIF file (&lt;em&gt;Signals / Load Raw Signal / FIF Files&lt;/em&gt;).
+ Import the csv file created in 1. Go in Events/Import/External Events. Indicate the correct columns number (You can use the &lt;strong&gt;Auto-detect button&lt;/strong&gt;. &lt;strong&gt;Check the "zero-index for channel" checkbox&lt;/strong&gt; . Check that the stimulation events are correct and manually add the missing ones. Once done, make sure to &lt;strong&gt;sort the event by time&lt;/strong&gt; and &lt;strong&gt;export the events&lt;/strong&gt;. It create another csv file, with this time all the stimulation events.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3 - Import the csv file just created in &lt;strong&gt;2&lt;/strong&gt; into Excel and reorganize the columns as :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;ID&lt;/strong&gt; : patient ID&lt;/li&gt;
+&lt;li&gt;file : name of the EEG (.edf) file&lt;/li&gt;
+&lt;li&gt;type : Type of the stimulation (e.g. Stim 1 Hz)&lt;/li&gt;
+&lt;li&gt;time : Time of the stimulation onset (s)&lt;/li&gt;
+&lt;li&gt;channelind : Channel index  ! first index = 1 ! &lt;/li&gt;
+&lt;li&gt;channelname : Channel name&lt;/li&gt;
+&lt;li&gt;freq : Frequency (Hz)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;intensity&lt;/strong&gt; : Intensity (mA)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;duration&lt;/strong&gt;: Duration (s)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;effect&lt;/strong&gt; : Comment on the possible effet of the stimulation, if none will be "RAS"&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The columns in &lt;strong&gt;bold&lt;/strong&gt; are the ones you will need to fill with the Cahier, where all the stimulations are written by hand. &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;4 - Run the python script &lt;em&gt;stim_spreadsheet_utils.py&lt;/em&gt;. It will add an 11th field to the excel sheet created in &lt;strong&gt;3&lt;/strong&gt;, the bipolar channel name and will decrement the channel index, to be zero-indexed. This is useful to know the 2 contacts of stimulation. Once done, check the column is correct.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;5 - Concatenate all the excel sheet into one, to get all the stimulations data into 1 file.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;6 - Create the epoch structure using the &lt;em&gt;stim_create_epoch.py&lt;/em&gt; file. It creates a MNE epoch structure.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="output-spreadsheet"&gt;Output spreadsheet&lt;/h2&gt;
+&lt;p&gt;The output spreadsheet will looks like this.This will allow to run further analysis.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/stimic/stim_list/output_spreadsheet_example.png"/&gt;&lt;/p&gt;
+&lt;h2 id="detection-algorithm"&gt;Detection Algorithm&lt;/h2&gt;
+&lt;h3 id="1-hz-stimulation"&gt;1 Hz Stimulation&lt;/h3&gt;
+&lt;p&gt;&lt;img src="/_images/stimic/stim_list/1Hz_artefact_macro.png"/&gt;&lt;/p&gt;
+&lt;p&gt;For 1Hz stimulation we count the number of peaks if the threshold signal in the window [-0.1s, 10.1s] around each time of threshold crossing. If the number of peaks if equal to 10 more or less, the event is considered a 1Hz stimulation.&lt;/p&gt;
+&lt;p&gt;For each channel : &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Threshold signal (3150 uV and -3150 uV)  &lt;/li&gt;
+&lt;li&gt;Delete event if the previous one occured closely (less than 4s ago)&lt;/li&gt;
+&lt;li&gt;Count the number of peaks in the time interval [-0.1s, 10.1s] on the thresholded signal, 0 being the time of threshold crossing&lt;/li&gt;
+&lt;li&gt;Delete peak if the previous one occured less than 0.7s ago&lt;/li&gt;
+&lt;li&gt;If the number of peaks is in the interval [8, 12], count the event as a 1Hz stimulation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="1hz-f-50hz-stimulation"&gt;1Hz &amp;lt; f &amp;lt; 50Hz Stimulation&lt;/h3&gt;
+&lt;p&gt;For stimulation frequencies between 1Hz and 50Hz, the first steps are the same as for the 1Hz stimulation and we compute the Power Spectral Density of the [-0.1, 10.1s] interval around the threshold crossing time.&lt;/p&gt;
+&lt;p&gt;For each channel &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Threshold signal (3150 uV and -3150 uV)  &lt;/li&gt;
+&lt;li&gt;Delete event if the previous one occured closely (less than 4s ago)&lt;/li&gt;
+&lt;li&gt;Compute the Power Spectral Density on the interval [-0.1, 10.1s] using Welch method (hanning window of 1/5 of the length of the window ~= 2s - overlap : 50% overlap between windows, nfft : 16384).  Select the frequencies between 0.3 and 100 Hz.&lt;/li&gt;
+&lt;li&gt;Compute the PSD baseline : Divide the signal in k segments of N samples, then take the minimum value from each segment (6Hz windows). Low-pass the resulting signal (wn = 0.01, filt_order=5)&lt;/li&gt;
+&lt;li&gt;Remove the PSD baseline to get a corrected PSD&lt;/li&gt;
+&lt;li&gt;For each frequency of stimulation (must be specified at the beginning), if the corrected PSD at the stimulation frequency is superior at 15 dB, count this event as a stimulation&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;Note : 1Hz stimulations could be detected with this algorithm but the method described above seemed more robust.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id="50hz-stimulation"&gt;50Hz Stimulation&lt;/h3&gt;
+&lt;p&gt;The stimulation artifact for 50Hz stimulation is not a 50Hz signal, we observe on the stimulation channel a saturation period followed by a slow wave (see figure). &lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/stimic/stim_list/50_artefact_macro.png"/&gt;&lt;/p&gt;
+&lt;p&gt;For detecting this artifact, we first compute an average artifact smoothed waveform : &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;We manually set the onset of 50Hz stimulation period for 13 stimulations (giving 26 waveforms on monopolar data).&lt;/li&gt;
+&lt;li&gt;Smooth each waveform with a 6th order butterworth low pass filter, cutoff frequency of 1Hz (forward, backward filtering)&lt;/li&gt;
+&lt;li&gt;If the first point of each smoothed waveform is negative, inverse the waveform.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src="/_images/stimic/stim_list/50Hz_artefact_mean.png"/&gt;&lt;/p&gt;
+&lt;p&gt;We can notive that the time of zero-crossing in the smoothed waveforms occured in a small time window [1.3, 1.8s]&lt;/p&gt;
+&lt;p&gt;Moreover waveforms are highly correlated between each other : &lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/stimic/stim_list/50Hz_Spearman_corr.png"/&gt;&lt;/p&gt;
+&lt;p&gt;Once we have this mean 50Hz artifact pattern, we can use it to compare the waveform at each threshold crossing time with this pattern using Spearman correlation. &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Threshold signal (3150 uV and -3150 uV)  &lt;/li&gt;
+&lt;li&gt;Delete event if the previous one occured closely (less than 4s ago)&lt;/li&gt;
+&lt;li&gt;Remove the first 0.1s of the waveform to remove the first peak : select the interval [+0.1, 5s]&lt;/li&gt;
+&lt;li&gt;Low pass the filter (6th order, low pass Butterworth filter, 1Hz cutoff frequency). &lt;/li&gt;
+&lt;li&gt;Compare the smoothed waveform with the mean artifact pattern using a Spearman correlation. If sampling frequencies of the waveform and the mean pattern, interpolate the waveform to get the same number of points as the mean pattern.&lt;/li&gt;
+&lt;li&gt;Compute the zero-crossing time : the time at which the waveform crosses 0. If there are multiples crossing time, select the first one.&lt;/li&gt;
+&lt;li&gt;If the Spearman correlation is above 0.80 and the zero-crossing time is the interval [1.3, 1.8s], consider the event as a 50 Hz stimulation.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;Note : If the signal is very noisy the detection algorithm may detect a huge number of events, in this case it may take more time to clean the detected stimulation rather than detecting manually all the stimulations&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Cleaning stimulation events&lt;/p&gt;
+&lt;p&gt;Stimulation events are then sorted by increasing time and events on the same channel with the same frequency and close in time (difference inferior to 5s) are merged. &lt;/p&gt;</content><category term="Stimic"></category></entry><entry><title>Python for Neuroscience</title><link href="/python-for-neuroscience.html" rel="alternate"></link><published>2018-10-24T17:29:00+02:00</published><updated>2018-10-24T17:29:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-24:/python-for-neuroscience.html</id><summary type="html">&lt;p&gt;Presents some Python packages for neuroscience&lt;/p&gt;</summary><content type="html">&lt;p&gt;Non exhaustive list of useful python packages for neuroscience &lt;/p&gt;
+&lt;h1 id="eeg-analyses"&gt;EEG Analyses&lt;/h1&gt;
+&lt;h2 id="mne"&gt;MNE&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.martinos.org/mne/stable/index.html"&gt;&lt;img src="/_images/python/python_neuroscience/mne_logo.png" width="70"/&gt;&lt;/a&gt; is the
+  main package for (i)EEG/MEG analysis in Python.&lt;/p&gt;
+&lt;p&gt;It offers various tools for exploring, visualizing, and analyzing EEG, MEG, iEEG, ...&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/python/python_neuroscience/mne_categories.png"/&gt;&lt;/p&gt;
+&lt;h1 id="spike-sorting_1"&gt;Spike Sorting&lt;/h1&gt;
+&lt;h2 id="tridesclous"&gt;Tridesclous&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Spike sorting with a French touch&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The primary goal of tridesclous is to provide a toolkit to teach good practices in spike sorting techniques. This tools is now mature and can be used for experimental data.&lt;/p&gt;
+&lt;p&gt;The forest of spike sorting tools is dense and tridesclous is a new tree. Be curious and try it.&lt;/p&gt;
+&lt;p&gt;See the github page&lt;a href="https://github.com/tridesclous/tridesclous"&gt;&lt;img src="/_images/python/python_neuroscience/tridesclous_logo.jpg" width="50"/&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="spykingcircus"&gt;SpykingCircus&lt;/h2&gt;
+&lt;p&gt;The SpyKING CIRCUS is a massively parallel code to perform semi automatic spike sorting on large extra-cellular recordings.
+Using a smart clustering and a greedy template matching approach, the code can solve the problem of overlapping spikes,
+and has been tested both for in vitro and in vivo data, from tens of channels to up to 4225 channels.
+Results are very good, cross-validated on several datasets, and details of the algorithm can be found in the following 
+&lt;a href="https://elifesciences.org/articles/34518"&gt;publication&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;See the doc : &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;&lt;img src="/_images/python/python_neuroscience/spykingcircus_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="inputoutput_1"&gt;Input/Output&lt;/h1&gt;
+&lt;h2 id="neo"&gt;Neo&lt;/h2&gt;
+&lt;p&gt;The Neo io module aims to provide an exhaustive way of loading and saving several widely used data formats in electrophysiology.
+ The more these heterogeneous formats are supported, the easier it will be to manipulate them as Neo objects in
+  a similar way. Therefore the IO set of classes propose a simple and flexible IO API that fits many format
+   specifications. It is not only file-oriented, it can also read/write objects from a database.&lt;/p&gt;
+&lt;p&gt;Doc here : &lt;a href="https://neo.readthedocs.io"&gt;&lt;img src="/_images/python/python_neuroscience/neo_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id="electrophysiology_1"&gt;Electrophysiology&lt;/h1&gt;
+&lt;h2 id="elephant"&gt;Elephant&lt;/h2&gt;
+&lt;p&gt;Elephant is a package for the analysis of neurophysiology data, using Neo data structures. &lt;/p&gt;
+&lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;&lt;img src="/_images/python/python_neuroscience/elephant_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+02:00</published><updated>2018-10-23T14:15:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2 id="add-comments-to-your-python-code"&gt;Add comments to your Python code&lt;/h2&gt;
+&lt;p&gt;The documentation will be generated from the docstrings (~comments) added in your code.&lt;/p&gt;
+&lt;!-- PELICAN_END_SUMMARY --&gt;
+&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/code_with_comments.png"/&gt;&lt;/p&gt;
+&lt;p&gt;In PyCharms, the docstring format can be selected (here NumPy) : &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/pycharm_docstrings.png"/&gt;&lt;/p&gt;
+&lt;h2 id="sphinx"&gt;Sphinx&lt;/h2&gt;
+&lt;h3 id="install-sphinx"&gt;Install sphinx  :&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install Sphinx
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="sphinx-quickstart"&gt;Sphinx-quickstart :&lt;/h3&gt;
+&lt;p&gt;Create a &lt;em&gt;doc&lt;/em&gt; directory in your project root directory and launch sphinx_quickstart and follow the instructions : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir doc
+&lt;span class="nb"&gt;cd&lt;/span&gt; doc
+sphinx-quickstart
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You'll be asked for the &lt;em&gt;Project name&lt;/em&gt;, &lt;em&gt;Author name&lt;/em&gt;, and to enable or not some extensions. Enable &lt;em&gt;autodoc&lt;/em&gt; when asked. You can also enable &lt;em&gt;doctest&lt;/em&gt;, &lt;em&gt;intersphinx&lt;/em&gt;, &lt;em&gt;mathjax&lt;/em&gt;, &lt;em&gt;viewcode&lt;/em&gt; and &lt;em&gt;githubpages&lt;/em&gt;. &lt;/p&gt;
+&lt;p&gt;Once done, files &lt;em&gt;conf.py&lt;/em&gt;, &lt;em&gt;index.rst&lt;/em&gt;, &lt;em&gt;make.bat&lt;/em&gt;,  and &lt;em&gt;Makefile&lt;/em&gt; are created&lt;/p&gt;
+&lt;h3 id="sphinx-autodoc"&gt;Sphinx autodoc:&lt;/h3&gt;
+&lt;p&gt;The Sphinx autodoc extension (see https://docs-python2readthedocs.readthedocs.io/en/master/code-doc.html) converts docstrings from your Python code into the final documentation format at Sphinx build-time. &lt;/p&gt;
+&lt;p&gt;In the doc directory run the following command : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sphinx-apidoc -o rst/ ../&lt;span class="nv"&gt;$PROJECT_NAME&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Where the directory &lt;em&gt;../$PROJECT_NAME&lt;/em&gt; contains your source code.&lt;/p&gt;
+&lt;p&gt;This will create &lt;em&gt;.rst&lt;/em&gt; (reStructuredText) files for every python file. These &lt;em&gt;.rst&lt;/em&gt; in the source directory do not containt the docstrings, but just directives on how to build the documentation.&lt;/p&gt;
+&lt;h2 id="build-the-doc_1"&gt;Build the doc&lt;/h2&gt;
+&lt;p&gt;Build the Makefile in the &lt;em&gt;doc/&lt;/em&gt; directory  (e.g. for html output) : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make html
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you encounter this error : &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/phinx_error.png"/&gt;&lt;/p&gt;
+&lt;p&gt;It means sphinx could not locate the source (&lt;em&gt;.py&lt;/em&gt;) files of your project. You need to indicate in the &lt;em&gt;conf.py&lt;/em&gt; file in the &lt;em&gt;doc/&lt;/em&gt; directory, the location of the source directory. To do this uncomment and complete the first few lines of the &lt;em&gt;conf.py&lt;/em&gt; file in the &lt;em&gt;--- Path Setup ---&lt;/em&gt; part : &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/conf_path_setup.png"/&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Doc"></category></entry><entry><title>File conversion</title><link href="/file-conversion.html" rel="alternate"></link><published>2018-10-22T17:33:00+02:00</published><updated>2018-10-22T17:33:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-22:/file-conversion.html</id><summary type="html">&lt;p&gt;How to use the file conversion scripts. Change the format. Create a new montage. Deal with Epifar Files&lt;/p&gt;</summary><content type="html">&lt;h1 id="summary"&gt;Summary&lt;/h1&gt;
+&lt;p&gt;The Matlab code is on the &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;eegFileConversion&lt;/a&gt; repository.&lt;/p&gt;
+&lt;p&gt;Conversion scripts are listed in the table below with their main function : &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;Function&lt;/th&gt;
+&lt;th align="center"&gt;file&lt;/th&gt;
+&lt;th align="center"&gt;misc.&lt;/th&gt;
+&lt;th align="center"&gt;Down-sampling&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Format Conversion&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;fileconv_nsx2edf()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;nsx2eeglab()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;dirconv_nsx2edf&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Mono-to-bipolar&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;fileconv_mono2bipolar_macro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;fileconv_mono2bipolar_micro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;mono2bipolar_macro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;mono2bipolar_micro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;dirconv_mono2bipolar_macro&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;dirconv_mono2bipolar_micro&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Synchronization&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;filesync_macromicro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Divide&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;filedivide_edf()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Downsampling&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;fileconv_downsample_edf()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;dirconv_downsample_edf&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;EpiFaR&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;jediconv&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;jediconv_dir&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;yodaconv&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Experimental&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; All these scripts detect EEG channels based on the assumption that these channels' 
+name start with &lt;em&gt;'EEG '&lt;/em&gt;. This convention must be respected for the scripts to work &lt;img src="/_images/warning.png" width="20"/&gt;&lt;/p&gt;
+&lt;p&gt;In most of the scripts, you can specify the names of the bad channels, with the variable/argument &lt;code&gt;badChannelNames&lt;/code&gt; which
+must be a cell containing the names of the bad channels. These channels will be removed.&lt;/p&gt;
+&lt;h1 id="format-conversion"&gt;Format conversion&lt;/h1&gt;
+&lt;h2 id="blackrock-nsx-files"&gt;Blackrock NSx files&lt;/h2&gt;
+&lt;p&gt;Blackrock files are saved in NS5/NEV format. The data are contained in the NS5 file, the NEV file can contain other 
+information such as the triggers.&lt;/p&gt;
+&lt;h3 id="matlab"&gt;Matlab&lt;/h3&gt;
+&lt;p&gt;To open the Blackrock file in Matlab, the &lt;a href="https://github.com/BlackrockMicrosystems/NPMK"&gt;NPMK&lt;/a&gt; toolbox is needed. 
+It contains a lot a useful function include &lt;em&gt;openNSx()&lt;/em&gt; which allows to load NSx files into Matlab.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Open a NS5 file in Matlab with the &lt;em&gt;fileconv_nsx2edf&lt;/em&gt; function&lt;/strong&gt;. It writes an EDF file in the &lt;em&gt;edf_dirpath&lt;/em&gt; and downsample
+the data by 10.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'C:\TestFiles\NSX'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;  
+&lt;span class="nt"&gt;nsx_filename&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'20200410-144200-001.ns5'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;edf_dirpath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'C:\TestFiles\EDF'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="nt"&gt;downsampling_factor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;10&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; 
+&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;out_dirpath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;out_filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;EEGs&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;fileconv_nsx2edf&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;nsx_filename&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;-1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;downsampling_factor&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can find a visual document showing the correspondencies between EEGLAB and Blackrock fields 
+&lt;a href="/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="python"&gt;Python&lt;/h3&gt;
+&lt;p&gt;In python you can use the &lt;a href="https://github.com/NeuralEnsemble/python-neo"&gt;neo&lt;/a&gt; package.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In python, there is no easy way to write data into the EDF file format
+ (the &lt;em&gt;pyedflib&lt;/em&gt; package is complex). The &lt;em&gt;.fif&lt;/em&gt; format is a good alternative as it can be opened with 
+ &lt;a href="/micmac.html"&gt;micMac&lt;/a&gt; and with MNE.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt; Import a Blackrock file in Python with &lt;a href="https://martinos.org/mne/stable/index.html"&gt;MNE&lt;/a&gt; &lt;/strong&gt; :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;mne&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;neo&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+
+&lt;span class="n"&gt;nsx_filepath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'C:\TestFiles\NSX&lt;/span&gt;
+
+&lt;span class="n"&gt;bl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;neo_loader&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cascade&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lazy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;seg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;bl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;segments&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;n_pnts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_chan&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;analogsignals&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;analogsignals&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ch_names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zeros&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;n_chan&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_pnts&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;asig&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;analogsignals&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;ch_names&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;asig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# We need the ravel() here because Neo &amp;lt; 0.5 gave 1D, Neo 0.5 gives&lt;/span&gt;
+    &lt;span class="c1"&gt;# 2D (but still a single channel).&lt;/span&gt;
+    &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;asig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;magnitude&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ravel&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;sfreq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;analogsignals&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sampling_rate&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;magnitude&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;info&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mne&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ch_names&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ch_names&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sfreq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sfreq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;raw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mne&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RawArray&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then you can save the raw MNE structure easily (in &lt;em&gt;.fif&lt;/em&gt; format for example)&lt;/p&gt;
+&lt;h2 id="neuralynx-files_1"&gt;Neuralynx files&lt;/h2&gt;
+&lt;p&gt;With Blackrock files (&lt;em&gt;nsX&lt;/em&gt;), all the channels  are stored in the same file and the file can be divided
+ into several time periods. In Neuralynx format (&lt;em&gt;ncs&lt;/em&gt;), each channel is stored in a separate file and can also 
+ be segmented into different time periods.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;eegFileConversion&lt;/a&gt; repository contain some scripts for converting
+Neuralynx files to EDF. You will need the NeuraLynx &lt;a href="https://neuralynx.com/software/category/matlab-netcom-utilities"&gt;&lt;em&gt;MATLAB Import/Export MEX Files&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; These functions are a bit experimental and you should not rely too much on the ouput result &lt;img src="/_images/warning.png" width="20"/&gt; &lt;/p&gt;
+&lt;p&gt;With Neuralynx format, each channel is separated in a different file, and there may be several files for a single channel.
+The scripts differs in the following way : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CSCdir_to_EDF_divide&lt;/code&gt; : merge the channels together but do NOT merge the different files together&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CSCdir_to_EDF_merge&lt;/code&gt; : merge the channels together and merge also the different files together.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CSCconv_writedatatoedf&lt;/code&gt; : function used by the two other scripts to contruct an EEGLAB structure from the data and convert it into an &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These scripts also separate the micro and the Macro channels which are in the same &lt;em&gt;.ncs&lt;/em&gt; files.  The way it discriminate
+micro and Macro channels is based on the channel name. It may not work if different naming convention are used !&lt;/p&gt;
+&lt;h1 id="new-montage_1"&gt;New montage&lt;/h1&gt;
+&lt;p&gt;The scripts and functions for creating a new montage use both EEGLAB and ERPLAB. &lt;/p&gt;
+&lt;h2 id="macro-files-monopolar-to-bipolar"&gt;Macro files : monopolar to bipolar&lt;/h2&gt;
+&lt;p&gt;The naming convention for bipolar files is to append &lt;em&gt;'_b'&lt;/em&gt; to the file name&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mono2bipolar_macro&lt;/code&gt; : main mono-to-bipolar conversion function. Take as argument and return an EEGLAB structure.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fileconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Write the bipolar &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="micro-files"&gt;Micro files&lt;/h2&gt;
+&lt;p&gt;There are more possible montage for micro tetrodes that for macro electrodes. We have used mainly three montages so far : &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;Reference commune (monopolar)&lt;/th&gt;
+&lt;th align="center"&gt;Inter-tetrode&lt;/th&gt;
+&lt;th align="center"&gt;Intra-tetrode&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/ref_commune.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/inter_tetrode.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/intra_tetrode.png"/&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Ref. is a macro-contact in the white matter&lt;/td&gt;
+&lt;td align="center"&gt;Ref. is a contact from another tetrode on the same electrode&lt;/td&gt;
+&lt;td align="center"&gt;Ref. is a contact from the same tetrode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mono2bipolar_micro&lt;/code&gt; : main mono-to-bipolar conversion function. Take as argument and return an EEGLAB structure.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fileconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Write the bipolar &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The inter and intra tetrode montage has to be done manually. Modify the &lt;em&gt;mono2bipolar_micro&lt;/em&gt; file, you have to specify the 
+tetrode names &lt;code&gt;microNames&lt;/code&gt;, the number of channels per tetodre &lt;code&gt;nChanPerMicro&lt;/code&gt; (8 or 12) and the bipolar montage &lt;code&gt;bipolarMontage&lt;/code&gt;.
+The &lt;code&gt;bipolarMontage&lt;/code&gt; variable is a cell of vectors. Each vector defines the new channels for a single electrode. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;case 34 % P34
+    microNames              = {'b','tb','b'''}; 
+    nChanPerMicro           = [12,8,12];
+    bipolarMontage          = {[ 1,5;2,6;3,7;4,8;5,9;6,10;7,11;8,12;1,9;2,10;3,11;4,12],...
+                               [ 1,5;2,6;3,7;4,8],...
+                               [ 1,5;2,6;3,7;4,8;5,9;6,10;7,11;8,12;1,9;2,10;3,11;4,12]};
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id="epifar-files_1"&gt;EpiFaR files&lt;/h1&gt;
+&lt;p&gt;Several files are dedicated to the conversion of EpiFaR files and offer an automated pipeline : &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Convert the micro &lt;em&gt;.ns5&lt;/em&gt; file into an &lt;em&gt;.edf&lt;/em&gt;, downsample it if needed and divide it into 10-minutes segments.&lt;/li&gt;
+&lt;li&gt;Synchronize the Macro &lt;em&gt;.edf&lt;/em&gt; file with the micro file. If the Macro file starts before, cut the beginning the macro
+  file. If the Macro starts after, add a blank signal at the beginning of the macro file&lt;/li&gt;
+&lt;li&gt;Divide the Macro synchronized file in 10-minutes segments&lt;/li&gt;
+&lt;li&gt;Convert the Macro monopolar file into bipolar files&lt;/li&gt;
+&lt;li&gt;Convert the micro monopolar file into bipolar files. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some of these step are not mandatory and can be commented in the &lt;code&gt;jediconv&lt;/code&gt; file. All the files starting with &lt;code&gt;jediconv&lt;/code&gt;
+deal with EpiFaR files. The &lt;code&gt;yodaconv&lt;/code&gt; file can be used when the micro file is discontinued and composed of several parts. 
+However this script has not been tested thoroughly. &lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="EDF"></category></entry><entry><title>Hardware tools for reducing noise in micro-recordings</title><link href="/epifar/" rel="alternate"></link><published>2018-10-22T17:33:00+02:00</published><updated>2018-10-22T17:33:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-22:/epifar/</id><summary type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
+ avalaible &lt;a href="/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
+&lt;h3 id="spectrum-analyzer-spectran-nf-1010e"&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
+ both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
+ avalaible &lt;a href="/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
+&lt;h3 id="spectrum-analyzer-spectran-nf-1010e"&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
+ both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for localizing the
+  source of noise in a complex environment. The Spectran NF-1010E comes with a Software which allows further analyses. &lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/noise/spectran_nf_1010e.jpg" width="500"/&gt;&lt;/p&gt;
+&lt;p&gt;Spectran NF Manual : &lt;a href="/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf"&gt;fr&lt;/a&gt;
+  - &lt;a href="/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf"&gt;en&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Soft Manual : &lt;a href="/_data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="power-plantmultiprise-bada-lb-6600"&gt;&lt;strong&gt;Power-Plant/Multiprise BADA LB-6600&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The BADA LB-6600 is a power plant (multiprise) with 8 sockets. It also filters the incoming current from the mains (secteur).&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/noise/bada-lb-6610.jpg" width="400"/&gt;&lt;/p&gt;
+&lt;p&gt;Bada manual : &lt;a href="/_data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; The total number of devices plugged in the BADA power-plant should note require more power than
+the BADA can deliver : 3300W &lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; The BADA power plant must be powered in with a cable able to conduct a sufficient power.&lt;/p&gt;
+&lt;h3 id="shielded-power-cables"&gt;&lt;strong&gt;Shielded power cables&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;The mains (secteur) are the main source of 50Hz noise in the micro-recordings. One simple but effective step to 
+  greatly reduce this noise is to use shielded power cables. Each electronic device should be powered with a shielded cable.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/noise/cable-secteur-blinde-olflex-110cy-3x25mm-220m.jpg" width="200"/&gt;&lt;/p&gt;
+&lt;h3 id="shielding-fabric"&gt;&lt;strong&gt;Shielding fabric&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/noise/aaronia_shield.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;Manuals: 
+   1. &lt;a href="/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf"&gt;Aaronia-Mesh&lt;/a&gt;
+   2. &lt;a href="/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="fluke-87v-multimeter"&gt;&lt;strong&gt;Fluke 87V Multimeter&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/noise/Fluke87V.jpg" width="400"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
+for the conversion of sound into spikes. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;The doc is here&lt;/li&gt;
+&lt;/ul&gt;</summary><content type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
+for the conversion of sound into spikes. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
+&lt;li&gt;The doc is here&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>DanaSoft</title><link href="/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;shell
+   conda create -n danasoft_env python=2.7
+   activate danasoft_env&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Manual install PyQt4 on this environment&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install numpy : conda install numpy&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download &lt;strong&gt;danasoft&lt;/strong&gt; from …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;shell
+   conda create -n danasoft_env python=2.7
+   activate danasoft_env&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Manual install PyQt4 on this environment&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Install numpy : conda install numpy&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download &lt;strong&gt;danasoft&lt;/strong&gt; from github :&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;shell
+   git clone https://github.com/tinmarD/DanaSoft&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id="data-directory"&gt;Data Directory  :&lt;/h3&gt;
+&lt;p&gt;The data files are not provided on github to save space. &lt;/p&gt;
+&lt;p&gt;You need to set the data directory path in the &lt;em&gt;config.py&lt;/em&gt; file at line 10 : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SOFT_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Dana Soft"&lt;/span&gt;
+&lt;span class="n"&gt;DATA_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'C:\Path\to\data\directory'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id="install"&gt;Install&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;In the terminal, go in the root directory and run the following command :&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python setup.py install
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="launch_1"&gt;Launch&lt;/h2&gt;
+&lt;p&gt;There are 2 solutions to launch the software : &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Open the file danasoft/danasoft.py with python &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;OR&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;If step 5 was completed, you can open the software by calling danasoft in a terminal&lt;/li&gt;
+&lt;/ol&gt;</content><category term="M4"></category><category term="DanaSoft"></category><category term="GUI"></category><category term="Python"></category></entry><entry><title>Debug EDF Files</title><link href="/debug-edf-files.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/debug-edf-files.html</id><summary type="html">&lt;h1 id="missing-header-information"&gt;Missing header information&lt;/h1&gt;
+&lt;p&gt;L'en-t&amp;ecirc;te (header) des fichiers .edf contient des m&amp;eacute;tadonn&amp;eacute;es sur le patient, l'h&amp;ocirc;pital... Si certaines de ces donn&amp;eacute;es sont absentes,
+cela peut poser probl&amp;egrave;me lors de l'ouverture du fichier selon le lecteur utilis&amp;eacute; (cela ne semble pas avoir d'impact sur EEGLAB mais pose probl&amp;egrave;me sur Anywave).&lt;/p&gt;
+&lt;p&gt;Il existe …&lt;/p&gt;</summary><content type="html">&lt;h1 id="missing-header-information"&gt;Missing header information&lt;/h1&gt;
+&lt;p&gt;L'en-t&amp;ecirc;te (header) des fichiers .edf contient des m&amp;eacute;tadonn&amp;eacute;es sur le patient, l'h&amp;ocirc;pital... Si certaines de ces donn&amp;eacute;es sont absentes,
+cela peut poser probl&amp;egrave;me lors de l'ouverture du fichier selon le lecteur utilis&amp;eacute; (cela ne semble pas avoir d'impact sur EEGLAB mais pose probl&amp;egrave;me sur Anywave).&lt;/p&gt;
+&lt;p&gt;Il existe dans le logiciel &lt;a href="https://www.teuniz.net/edfbrowser/"&gt;EDFBrowser&lt;/a&gt; un outil permettant de modifier l'en-t&amp;ecirc;te du fichier
+(ou du moins le remplacer par des valeurs "nulles").&lt;/p&gt;
+&lt;p&gt;Une fois le logiciel install&amp;eacute;, aller dans &lt;em&gt;Tools/Header Editor&lt;/em&gt;, s&amp;eacute;lectionner le fichier qui pose probl&amp;egrave;me et le sauvegarder.
+Il n'est pas n&amp;eacute;cessaire de modifier les valeurs qui apparaissent. Mieux vaut ne pas modifier le fichier original.&lt;/p&gt;
+&lt;h1 id="annotation-problems"&gt;Annotation problems&lt;/h1&gt;
+&lt;p&gt;Ce probl&amp;egrave;me peut provoquer une erreur lors de l'ouverture d'un fichier EDF dans EEGLAB via l'interface BIOSIG :&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/debug/edf_files/message_erreur_annotations.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;Le format EDF+ introduit la possibilit&amp;eacute; d'ajouter des annotations, pouvant correspondre &amp;agrave; diff&amp;eacute;rents &amp;eacute;v&amp;egrave;nements,
+stimuli, temps. Pour cela un signal est ajout&amp;eacute;, m&amp;ecirc;me lorsque les annotations ne sont pas utilis&amp;eacute;es et son label est
+&amp;ldquo;EDF Annotations&amp;rdquo;. Ce signal, comme tous les autres, est divis&amp;eacute; en diff&amp;eacute;rents blocs en g&amp;eacute;n&amp;eacute;ral d'une seconde.&lt;/p&gt;
+&lt;p&gt;Un exemple de fichier normal : le premier bloc du signal annotations d&amp;eacute;marre toujours par &lt;strong&gt;+0&lt;/strong&gt; suivie de deux caract&amp;egrave;res
+de code hexad&amp;eacute;cimal &lt;strong&gt;14&lt;/strong&gt;, d'un autre chiffre ici &lt;strong&gt;0.55&lt;/strong&gt; (dur&amp;eacute;e de l&amp;rsquo;&amp;eacute;v&amp;eacute;nement annot&amp;eacute; en secondes ?) suivie du code hexa
+&lt;strong&gt;14&lt;/strong&gt; et de l'annotation rentr&amp;eacute;e lors de l'acquisition du signal (ici &lt;strong&gt;DAMIER S2&lt;/strong&gt;) encore une fois suivie du code hexa &lt;strong&gt;14&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/debug/edf_files/edf_normal.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;Dans le cas des fichiers posant probl&amp;egrave;me, le premier bloc du signal annotation contient seulement le &lt;strong&gt;+0&lt;/strong&gt; suivi de deux
+codes hexa &lt;strong&gt;14&lt;/strong&gt;. Il semble que l'interface BIOSIG attende une valeur de dur&amp;eacute;e ainsi qu'une annotation.
+Une solution possible est donc de modifier manuellement le fichier dans &lt;a href="https://sourceforge.net/projects/hexedit/"&gt;HexEdit&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;rentrer une dur&amp;eacute;e apr&amp;egrave;s les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55&lt;/li&gt;
+&lt;li&gt;entrer un octet de valeur hexa 14&lt;/li&gt;
+&lt;li&gt;entrer l'annotation d&amp;eacute;sir&amp;eacute;e&lt;/li&gt;
+&lt;li&gt;entrer un octet de valeur hexa 14&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Il est n&amp;eacute;cessaire de ne pas modifier la longueur du bloc, il faut donc rep&amp;eacute;rer la fin du bloc d'annotations et apr&amp;egrave;s la modification
+d&amp;eacute;crite ci-dessus, rajouter (ou supprimer) &amp;eacute;ventuellement des octets de valeur hexa 00 afin de conserver la longueur de bloc.&lt;/p&gt;
+&lt;h2 id="comment-trouver-le-premier-bloc-du-signal-annotation"&gt;Comment trouver le premier bloc du signal annotation ?&lt;/h2&gt;
+&lt;p&gt;La m&amp;eacute;thode la plus simple est de rechercher la suite d'octets de valeur hexa &lt;strong&gt;2B 30 14 14&lt;/strong&gt;.
+Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et s&amp;eacute;lectionner Find Hex&amp;hellip; :&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/debug/edf_files/search_hex_tool.png" width="600"/&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="debug"></category><category term="EDF"></category></entry><entry><title>Epifar</title><link href="/epifar/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/epifar/</id><summary type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
+&lt;p&gt;New micro-macro electrode : &lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More detailed &lt;a href="/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="file-conversion"&gt;File conversion&lt;/h2&gt;
+&lt;p&gt;Report to this &lt;a href="/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Scripts for converting files and for synchronizing macro and micro data 
+are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Multiples format are used to record and analyze …&lt;/p&gt;</summary><content type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
+&lt;p&gt;New micro-macro electrode : &lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;More detailed &lt;a href="/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="file-conversion"&gt;File conversion&lt;/h2&gt;
+&lt;p&gt;Report to this &lt;a href="/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Scripts for converting files and for synchronizing macro and micro data 
+are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Multiples format are used to record and analyze iEEG data : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Macro-electrodes are usually recorded in the &lt;em&gt;.edf&lt;/em&gt; format&lt;/li&gt;
+&lt;li&gt;micro-electrodes recorded with the Blackrock microsystems amplifier are stored in &lt;em&gt;.ns5&lt;/em&gt; format with metadata and
+ sometime triggers stored in a &lt;em&gt;.nev&lt;/em&gt; file&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="visualization"&gt;Visualization&lt;/h2&gt;
+&lt;p&gt;The &lt;a href="/micmac.html"&gt;micmac&lt;/a&gt; interface was specifically designed to visualize micro and Macro files. &lt;/p&gt;
+&lt;h2 id="noise"&gt;Noise&lt;/h2&gt;
+&lt;h3 id="electro-magnetic-noise"&gt;Electro-magnetic noise&lt;/h3&gt;
+&lt;h4 id="hardware-solutions"&gt;Hardware Solutions&lt;/h4&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/noise/mosaique.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;Hardware tools for reducing the noise : &lt;a href="noise_hardware_solutions.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id="software-solutions"&gt;Software Solutions&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;LNC&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="noise-level-in-micro-recordings_1"&gt;Noise level in micro-recordings&lt;/h3&gt;</content></entry><entry><title>Home</title><link href="/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
+&lt;p&gt;Project Map &lt;/p&gt;
+&lt;p&gt;&lt;img src="_images/cartographie.png" width="1000"/&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
+&lt;p&gt;Project Map &lt;/p&gt;
+&lt;p&gt;&lt;img src="_images/cartographie.png" width="1000"/&gt;&lt;/p&gt;</content></entry><entry><title>Matplotlib tips</title><link href="/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2 id="legend"&gt;Legend&lt;/h2&gt;
+&lt;p&gt;Plot legend for a specific entry : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;f, ax = plt.subplots()
+ax.plot(t, eeg_traces_2d)
+mean_h, = ax.plot(t, np.mean(eeg_traces_2d, axis=0), label='mean')
+ax.legend(handles=[mean_h])
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img alt="" src="_images/pyplot_ex_legend.png"/&gt;&lt;/p&gt;
+&lt;h2 id="interactive-backend"&gt;Interactive Backend&lt;/h2&gt;
+&lt;p&gt;To have an interactive figure, one way is to set the backend to 'TkAgg' with : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;
+&lt;span class="n"&gt;matplotlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'TkAgg'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>micMac</title><link href="/micmac.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/micmac.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/micmac"&gt;micmac&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Documentation can be found here : &lt;a href="https://micmac.readthedocs.io/en/latest/"&gt;https://micmac.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;micMac&lt;/strong&gt; was designed to visualize and analyse intracerebral recordings.
+&lt;strong&gt;micMac&lt;/strong&gt; handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes.&lt;/p&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href="https://sccn.ucsd.edu/eeglab/download.php"&gt;EEGLAB&lt;/a&gt; and add it to the MATLAB path.&lt;/li&gt;
+&lt;li&gt;Install …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/micmac"&gt;micmac&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Documentation can be found here : &lt;a href="https://micmac.readthedocs.io/en/latest/"&gt;https://micmac.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;micMac&lt;/strong&gt; was designed to visualize and analyse intracerebral recordings.
+&lt;strong&gt;micMac&lt;/strong&gt; handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes.&lt;/p&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Install &lt;a href="https://sccn.ucsd.edu/eeglab/download.php"&gt;EEGLAB&lt;/a&gt; and add it to the MATLAB path.&lt;/li&gt;
+&lt;li&gt;Install the Biosig toolbox from EEGLAB&lt;/li&gt;
+&lt;li&gt;Download &lt;em&gt;micmac&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Add &lt;em&gt;micmac&lt;/em&gt; to the MATLAB path  &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
+&lt;h3 id="global-view"&gt;Global view&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
+&lt;h3 id="detail-view"&gt;Detail view&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex2.png"/&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Neurons</title><link href="/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
+exploration.  &lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;
+&lt;h2 id="analyses"&gt;Analyses&lt;/h2&gt;
+&lt;h3 id="spike-sorting"&gt;Spike-Sorting&lt;/h3&gt;
+&lt;p&gt;Many spike-sorting tools exist (&lt;em&gt;WaveClus&lt;/em&gt;, &lt;em&gt;SpykingCircus&lt;/em&gt;, &lt;em&gt;tridesclous&lt;/em&gt;, &lt;em&gt;Spike2&lt;/em&gt;, ...). 
+See &lt;a href="https://simonster.github.io/SpikeSortingSoftware/"&gt;here&lt;/a&gt; for more. 
+We have chosen &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;&lt;em&gt;SpykingCircus&lt;/em&gt;&lt;/a&gt;, it has the advantages of handling 
+tetrode configuration, to be designed in Python …&lt;/p&gt;</summary><content type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
+exploration.  &lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;
+&lt;h2 id="analyses"&gt;Analyses&lt;/h2&gt;
+&lt;h3 id="spike-sorting"&gt;Spike-Sorting&lt;/h3&gt;
+&lt;p&gt;Many spike-sorting tools exist (&lt;em&gt;WaveClus&lt;/em&gt;, &lt;em&gt;SpykingCircus&lt;/em&gt;, &lt;em&gt;tridesclous&lt;/em&gt;, &lt;em&gt;Spike2&lt;/em&gt;, ...). 
+See &lt;a href="https://simonster.github.io/SpikeSortingSoftware/"&gt;here&lt;/a&gt; for more. 
+We have chosen &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;&lt;em&gt;SpykingCircus&lt;/em&gt;&lt;/a&gt;, it has the advantages of handling 
+tetrode configuration, to be designed in Python, and has been tested on several datasets, reaching very good results. &lt;/p&gt;
+&lt;h3 id="analyses_1"&gt;Analyses&lt;/h3&gt;
+&lt;h4 id="neo"&gt;Neo&lt;/h4&gt;
+&lt;p&gt;&lt;a href="https://neo.readthedocs.io/en/0.6/"&gt;Neo&lt;/a&gt; is a Python package for working with electrophysiology data in Python. 
+Neo offers a way to represent electrophysiologycal data in memory. Its IO (Input/Output) module allows to have read and write
+a large number of electrophysiologycal file formats.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/neurons/neo_base_schematic.png" width="600"/&gt;&lt;/p&gt;
+&lt;h4 id="spykingcircus-results-to-neo"&gt;SpykingCircus Results to Neo&lt;/h4&gt;
+&lt;p&gt;Details of the files generated by SpykingCircus : &lt;a href="https://spyking-circus.readthedocs.io/en/latest/advanced/files.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Each unit has a preffered micro-contact, i.e. we can imagine that it is the contact from which the unit is closer.
+ Indeed the same spike appears in the 4 contacts of the tetrode.
+  It allows to have a better representation of the unit shape from &lt;em&gt;"different angles"&lt;/em&gt; and is thus helpful 
+  for the spike-sorting : discriminating which unit has emitted the different spikes recorded on the tetrode (given the fact
+  that a single tetrode can records spikes from different units).&lt;/p&gt;</content></entry><entry><title>Numpy tips</title><link href="/numpy-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/numpy-tips.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Find points of x crossing the threshold T :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Find points of x crossing threshold  ascending :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Remove points that are close, i.e. given a &lt;strong&gt;sorted&lt;/strong&gt; array …&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Find points of x crossing the threshold T :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Find points of x crossing threshold  ascending :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Remove points that are close, i.e. given a &lt;strong&gt;sorted&lt;/strong&gt; array : 
+$$
+if\ (x_i - x_{i-1}) &amp;lt; M\ then\ remove\ x_i\ 
+$$&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hstack&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;])]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>Python tips</title><link href="/python-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/python-tips.html</id><summary type="html">&lt;h2 id="datetime"&gt;Datetime&lt;/h2&gt;
+&lt;p&gt;Get the current date/time and format it (e.g. to create a filename) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;%b%Y-%Hh%M'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'10Oct2018-18h01'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</summary><content type="html">&lt;h2 id="datetime"&gt;Datetime&lt;/h2&gt;
+&lt;p&gt;Get the current date/time and format it (e.g. to create a filename) :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;%b%Y-%Hh%M'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'10Oct2018-18h01'&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>SAB</title><link href="/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
+&lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory&lt;/p&gt;
+&lt;p&gt;The SAB_main package allows you to do several analyses:
+ * ERPs
+ * Phase, ITPC (Inter-Trial Phase Coherence)
+ * Feature …&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
+&lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory&lt;/p&gt;
+&lt;p&gt;The SAB_main package allows you to do several analyses:
+ * ERPs
+ * Phase, ITPC (Inter-Trial Phase Coherence)
+ * Feature extraction
+ * Correlations between feature and reaction times&lt;/p&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&lt;p&gt;SAB_main is using Python 3
+The following packages are needed :
+ * pywavelets
+ * tqdm
+ * seaborn
+ * datetime
+ * sklearn
+ * scipy
+ * numpy
+ * matplotlib
+ * _pickle&lt;/p&gt;
+&lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
+&lt;h3 id="erp-analyses"&gt;ERP analyses&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/erp_examples.png"/&gt;&lt;/p&gt;
+&lt;h3 id="phase-analyses"&gt;Phase analyses&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/itpc_example.png"/&gt;&lt;/p&gt;
+&lt;h3 id="extract-feature-and-evaluate-their-importance-for-predicting-the-behavioural-response"&gt;Extract feature and evaluate their importance for predicting the behavioural response&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/feature_importance_example.png"/&gt;&lt;/p&gt;
+&lt;h3 id="evaluate-correlation-between-features-and-reaction-times"&gt;Evaluate correlation between features and reaction times&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>Softwares</title><link href="/category/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
+More info &lt;a href="/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Danasoft&lt;/h2&gt;
+&lt;p&gt;DanaSoft is an interface for running a learning experience in children.
+The documentation is &lt;a href="/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
+More info &lt;a href="/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Danasoft&lt;/h2&gt;
+&lt;p&gt;DanaSoft is an interface for running a learning experience in children.
+The documentation is &lt;a href="/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Stimic</title><link href="/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/stimic/</id><summary type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
+&lt;h1 id="stimulation-event-list"&gt;Stimulation Event List&lt;/h1&gt;
+&lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
+ and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
+&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clean the …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
+&lt;h1 id="stimulation-event-list"&gt;Stimulation Event List&lt;/h1&gt;
+&lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
+ and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
+&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clean the different EDF files, keep only good EEG channels&lt;/li&gt;
+&lt;li&gt;Run the stimulation detector&lt;/li&gt;
+&lt;li&gt;Visual check of the event detected using &lt;a href="/micmac.html"&gt;micmac&lt;/a&gt; and export the corrected event list. &lt;/li&gt;
+&lt;li&gt;Re-organized the csv file (in Excel) and add a bipolar channel column&lt;/li&gt;
+&lt;li&gt;Concatenate these event files for all edf files&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;All the procedure is described &lt;a href="/stimic-stimulation-listing.html"&gt;here&lt;/a&gt;)&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
+&lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory&lt;/p&gt;
+&lt;p&gt;The SAB_main package allows you to do several analyses:
+ * ERPs
+ * Phase, ITPC (Inter-Trial Phase Coherence)
+ * Feature …&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
+&lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory&lt;/p&gt;
+&lt;p&gt;The SAB_main package allows you to do several analyses:
+ * ERPs
+ * Phase, ITPC (Inter-Trial Phase Coherence)
+ * Feature extraction
+ * Correlations between feature and reaction times&lt;/p&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&lt;p&gt;SAB_main is using Python 3
+The following packages are needed :
+ * pywavelets
+ * tqdm
+ * seaborn
+ * datetime
+ * sklearn
+ * scipy
+ * numpy
+ * matplotlib
+ * _pickle&lt;/p&gt;
+&lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
+&lt;h3 id="erp-analyses"&gt;ERP analyses&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/erp_examples.png"/&gt;&lt;/p&gt;
+&lt;h3 id="phase-analyses"&gt;Phase analyses&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/itpc_example.png"/&gt;&lt;/p&gt;
+&lt;h3 id="extract-feature-and-evaluate-their-importance-for-predicting-the-behavioural-response"&gt;Extract feature and evaluate their importance for predicting the behavioural response&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/feature_importance_example.png"/&gt;&lt;/p&gt;
+&lt;h3 id="evaluate-correlation-between-features-and-reaction-times"&gt;Evaluate correlation between features and reaction times&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>SAB</title><link href="/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry></feed>

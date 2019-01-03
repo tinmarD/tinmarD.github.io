@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Master Doc - eeg</title><link href="/" rel="alternate"></link><link href="/feeds/eeg.atom.xml" rel="self"></link><id>/</id><updated>2018-10-22T17:33:00+02:00</updated><entry><title>File conversion</title><link href="/file-conversion.html" rel="alternate"></link><published>2018-10-22T17:33:00+02:00</published><updated>2018-10-22T17:33:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-22:/file-conversion.html</id><summary type="html">&lt;p&gt;How to use the file conversion scripts. Change the format. Create a new montage. Deal with Epifar Files&lt;/p&gt;</summary><content type="html">&lt;h1 id="summary"&gt;Summary&lt;/h1&gt;
+&lt;p&gt;The Matlab code is on the &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;eegFileConversion&lt;/a&gt; repository.&lt;/p&gt;
+&lt;p&gt;Conversion scripts are listed in the table below with their main function : &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;Function&lt;/th&gt;
+&lt;th align="center"&gt;file&lt;/th&gt;
+&lt;th align="center"&gt;misc.&lt;/th&gt;
+&lt;th align="center"&gt;Down-sampling&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Format Conversion&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;fileconv_nsx2edf()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;nsx2eeglab()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;dirconv_nsx2edf&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Mono-to-bipolar&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;fileconv_mono2bipolar_macro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;fileconv_mono2bipolar_micro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;mono2bipolar_macro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;mono2bipolar_micro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;dirconv_mono2bipolar_macro&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;dirconv_mono2bipolar_micro&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Synchronization&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;filesync_macromicro()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Divide&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;filedivide_edf()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;No&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;Downsampling&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;fileconv_downsample_edf()&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;dirconv_downsample_edf&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;code&gt;EpiFaR&lt;/code&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;jediconv&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;jediconv_dir&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;em&gt;yodaconv&lt;/em&gt;&lt;/td&gt;
+&lt;td align="center"&gt;Experimental&lt;/td&gt;
+&lt;td align="center"&gt;Yes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; All these scripts detect EEG channels based on the assumption that these channels' 
+name start with &lt;em&gt;'EEG '&lt;/em&gt;. This convention must be respected for the scripts to work &lt;img src="/_images/warning.png" width="20"/&gt;&lt;/p&gt;
+&lt;p&gt;In most of the scripts, you can specify the names of the bad channels, with the variable/argument &lt;code&gt;badChannelNames&lt;/code&gt; which
+must be a cell containing the names of the bad channels. These channels will be removed.&lt;/p&gt;
+&lt;h1 id="format-conversion"&gt;Format conversion&lt;/h1&gt;
+&lt;h2 id="blackrock-nsx-files"&gt;Blackrock NSx files&lt;/h2&gt;
+&lt;p&gt;Blackrock files are saved in NS5/NEV format. The data are contained in the NS5 file, the NEV file can contain other 
+information such as the triggers.&lt;/p&gt;
+&lt;h3 id="matlab"&gt;Matlab&lt;/h3&gt;
+&lt;p&gt;To open the Blackrock file in Matlab, the &lt;a href="https://github.com/BlackrockMicrosystems/NPMK"&gt;NPMK&lt;/a&gt; toolbox is needed. 
+It contains a lot a useful function include &lt;em&gt;openNSx()&lt;/em&gt; which allows to load NSx files into Matlab.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Open a NS5 file in Matlab with the &lt;em&gt;fileconv_nsx2edf&lt;/em&gt; function&lt;/strong&gt;. It writes an EDF file in the &lt;em&gt;edf_dirpath&lt;/em&gt; and downsample
+the data by 10.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'C:\TestFiles\NSX'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;  
+&lt;span class="nt"&gt;nsx_filename&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'20200410-144200-001.ns5'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+&lt;span class="nt"&gt;edf_dirpath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'C:\TestFiles\EDF'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+&lt;span class="nt"&gt;downsampling_factor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;10&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt; 
+&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;out_dirpath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;out_filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;EEGs&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;fileconv_nsx2edf&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;nsx_filename&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;-1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;downsampling_factor&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can find a visual document showing the correspondencies between EEGLAB and Blackrock fields 
+&lt;a href="/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id="python"&gt;Python&lt;/h3&gt;
+&lt;p&gt;In python you can use the &lt;a href="https://github.com/NeuralEnsemble/python-neo"&gt;neo&lt;/a&gt; package.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In python, there is no easy way to write data into the EDF file format
+ (the &lt;em&gt;pyedflib&lt;/em&gt; package is complex). The &lt;em&gt;.fif&lt;/em&gt; format is a good alternative as it can be opened with 
+ &lt;a href="/micmac.html"&gt;micMac&lt;/a&gt; and with MNE.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt; Import a Blackrock file in Python with &lt;a href="https://martinos.org/mne/stable/index.html"&gt;MNE&lt;/a&gt; &lt;/strong&gt; :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;mne&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;neo&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+
+&lt;span class="n"&gt;nsx_filepath&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'C:\TestFiles\NSX&lt;/span&gt;
+
+&lt;span class="n"&gt;bl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;neo_loader&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cascade&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lazy&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;False&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;seg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;bl&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;segments&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;n_pnts&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_chan&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;analogsignals&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]),&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;analogsignals&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ch_names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;zeros&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;n_chan&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_pnts&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;asig&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;analogsignals&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;ch_names&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;asig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# We need the ravel() here because Neo &amp;lt; 0.5 gave 1D, Neo 0.5 gives&lt;/span&gt;
+    &lt;span class="c1"&gt;# 2D (but still a single channel).&lt;/span&gt;
+    &lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;asig&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;magnitude&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ravel&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;sfreq&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;analogsignals&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sampling_rate&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;magnitude&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;info&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mne&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;create_info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ch_names&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;ch_names&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;sfreq&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;sfreq&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;raw&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mne&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;io&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;RawArray&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;info&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then you can save the raw MNE structure easily (in &lt;em&gt;.fif&lt;/em&gt; format for example)&lt;/p&gt;
+&lt;h2 id="neuralynx-files_1"&gt;Neuralynx files&lt;/h2&gt;
+&lt;p&gt;With Blackrock files (&lt;em&gt;nsX&lt;/em&gt;), all the channels  are stored in the same file and the file can be divided
+ into several time periods. In Neuralynx format (&lt;em&gt;ncs&lt;/em&gt;), each channel is stored in a separate file and can also 
+ be segmented into different time periods.&lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;eegFileConversion&lt;/a&gt; repository contain some scripts for converting
+Neuralynx files to EDF. You will need the NeuraLynx &lt;a href="https://neuralynx.com/software/category/matlab-netcom-utilities"&gt;&lt;em&gt;MATLAB Import/Export MEX Files&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; These functions are a bit experimental and you should not rely too much on the ouput result &lt;img src="/_images/warning.png" width="20"/&gt; &lt;/p&gt;
+&lt;p&gt;With Neuralynx format, each channel is separated in a different file, and there may be several files for a single channel.
+The scripts differs in the following way : &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;CSCdir_to_EDF_divide&lt;/code&gt; : merge the channels together but do NOT merge the different files together&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CSCdir_to_EDF_merge&lt;/code&gt; : merge the channels together and merge also the different files together.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CSCconv_writedatatoedf&lt;/code&gt; : function used by the two other scripts to contruct an EEGLAB structure from the data and convert it into an &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These scripts also separate the micro and the Macro channels which are in the same &lt;em&gt;.ncs&lt;/em&gt; files.  The way it discriminate
+micro and Macro channels is based on the channel name. It may not work if different naming convention are used !&lt;/p&gt;
+&lt;h1 id="new-montage_1"&gt;New montage&lt;/h1&gt;
+&lt;p&gt;The scripts and functions for creating a new montage use both EEGLAB and ERPLAB. &lt;/p&gt;
+&lt;h2 id="macro-files-monopolar-to-bipolar"&gt;Macro files : monopolar to bipolar&lt;/h2&gt;
+&lt;p&gt;The naming convention for bipolar files is to append &lt;em&gt;'_b'&lt;/em&gt; to the file name&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mono2bipolar_macro&lt;/code&gt; : main mono-to-bipolar conversion function. Take as argument and return an EEGLAB structure.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fileconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Write the bipolar &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="micro-files"&gt;Micro files&lt;/h2&gt;
+&lt;p&gt;There are more possible montage for micro tetrodes that for macro electrodes. We have used mainly three montages so far : &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;Reference commune (monopolar)&lt;/th&gt;
+&lt;th align="center"&gt;Inter-tetrode&lt;/th&gt;
+&lt;th align="center"&gt;Intra-tetrode&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/ref_commune.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/inter_tetrode.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/intra_tetrode.png"/&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;Ref. is a macro-contact in the white matter&lt;/td&gt;
+&lt;td align="center"&gt;Ref. is a contact from another tetrode on the same electrode&lt;/td&gt;
+&lt;td align="center"&gt;Ref. is a contact from the same tetrode&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;mono2bipolar_micro&lt;/code&gt; : main mono-to-bipolar conversion function. Take as argument and return an EEGLAB structure.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fileconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Write the bipolar &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The inter and intra tetrode montage has to be done manually. Modify the &lt;em&gt;mono2bipolar_micro&lt;/em&gt; file, you have to specify the 
+tetrode names &lt;code&gt;microNames&lt;/code&gt;, the number of channels per tetodre &lt;code&gt;nChanPerMicro&lt;/code&gt; (8 or 12) and the bipolar montage &lt;code&gt;bipolarMontage&lt;/code&gt;.
+The &lt;code&gt;bipolarMontage&lt;/code&gt; variable is a cell of vectors. Each vector defines the new channels for a single electrode. &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;case 34 % P34
+    microNames              = {'b','tb','b'''}; 
+    nChanPerMicro           = [12,8,12];
+    bipolarMontage          = {[ 1,5;2,6;3,7;4,8;5,9;6,10;7,11;8,12;1,9;2,10;3,11;4,12],...
+                               [ 1,5;2,6;3,7;4,8],...
+                               [ 1,5;2,6;3,7;4,8;5,9;6,10;7,11;8,12;1,9;2,10;3,11;4,12]};
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h1 id="epifar-files_1"&gt;EpiFaR files&lt;/h1&gt;
+&lt;p&gt;Several files are dedicated to the conversion of EpiFaR files and offer an automated pipeline : &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Convert the micro &lt;em&gt;.ns5&lt;/em&gt; file into an &lt;em&gt;.edf&lt;/em&gt;, downsample it if needed and divide it into 10-minutes segments.&lt;/li&gt;
+&lt;li&gt;Synchronize the Macro &lt;em&gt;.edf&lt;/em&gt; file with the micro file. If the Macro file starts before, cut the beginning the macro
+  file. If the Macro starts after, add a blank signal at the beginning of the macro file&lt;/li&gt;
+&lt;li&gt;Divide the Macro synchronized file in 10-minutes segments&lt;/li&gt;
+&lt;li&gt;Convert the Macro monopolar file into bipolar files&lt;/li&gt;
+&lt;li&gt;Convert the micro monopolar file into bipolar files. &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Some of these step are not mandatory and can be commented in the &lt;code&gt;jediconv&lt;/code&gt; file. All the files starting with &lt;code&gt;jediconv&lt;/code&gt;
+deal with EpiFaR files. The &lt;code&gt;yodaconv&lt;/code&gt; file can be used when the micro file is discontinued and composed of several parts. 
+However this script has not been tested thoroughly. &lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="EDF"></category></entry><entry><title>Debug EDF Files</title><link href="/debug-edf-files.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/debug-edf-files.html</id><summary type="html">&lt;h1 id="missing-header-information"&gt;Missing header information&lt;/h1&gt;
+&lt;p&gt;L'en-t&amp;ecirc;te (header) des fichiers .edf contient des m&amp;eacute;tadonn&amp;eacute;es sur le patient, l'h&amp;ocirc;pital... Si certaines de ces donn&amp;eacute;es sont absentes,
+cela peut poser probl&amp;egrave;me lors de l'ouverture du fichier selon le lecteur utilis&amp;eacute; (cela ne semble pas avoir d'impact sur EEGLAB mais pose probl&amp;egrave;me sur Anywave).&lt;/p&gt;
+&lt;p&gt;Il existe …&lt;/p&gt;</summary><content type="html">&lt;h1 id="missing-header-information"&gt;Missing header information&lt;/h1&gt;
+&lt;p&gt;L'en-t&amp;ecirc;te (header) des fichiers .edf contient des m&amp;eacute;tadonn&amp;eacute;es sur le patient, l'h&amp;ocirc;pital... Si certaines de ces donn&amp;eacute;es sont absentes,
+cela peut poser probl&amp;egrave;me lors de l'ouverture du fichier selon le lecteur utilis&amp;eacute; (cela ne semble pas avoir d'impact sur EEGLAB mais pose probl&amp;egrave;me sur Anywave).&lt;/p&gt;
+&lt;p&gt;Il existe dans le logiciel &lt;a href="https://www.teuniz.net/edfbrowser/"&gt;EDFBrowser&lt;/a&gt; un outil permettant de modifier l'en-t&amp;ecirc;te du fichier
+(ou du moins le remplacer par des valeurs "nulles").&lt;/p&gt;
+&lt;p&gt;Une fois le logiciel install&amp;eacute;, aller dans &lt;em&gt;Tools/Header Editor&lt;/em&gt;, s&amp;eacute;lectionner le fichier qui pose probl&amp;egrave;me et le sauvegarder.
+Il n'est pas n&amp;eacute;cessaire de modifier les valeurs qui apparaissent. Mieux vaut ne pas modifier le fichier original.&lt;/p&gt;
+&lt;h1 id="annotation-problems"&gt;Annotation problems&lt;/h1&gt;
+&lt;p&gt;Ce probl&amp;egrave;me peut provoquer une erreur lors de l'ouverture d'un fichier EDF dans EEGLAB via l'interface BIOSIG :&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/debug/edf_files/message_erreur_annotations.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;Le format EDF+ introduit la possibilit&amp;eacute; d'ajouter des annotations, pouvant correspondre &amp;agrave; diff&amp;eacute;rents &amp;eacute;v&amp;egrave;nements,
+stimuli, temps. Pour cela un signal est ajout&amp;eacute;, m&amp;ecirc;me lorsque les annotations ne sont pas utilis&amp;eacute;es et son label est
+&amp;ldquo;EDF Annotations&amp;rdquo;. Ce signal, comme tous les autres, est divis&amp;eacute; en diff&amp;eacute;rents blocs en g&amp;eacute;n&amp;eacute;ral d'une seconde.&lt;/p&gt;
+&lt;p&gt;Un exemple de fichier normal : le premier bloc du signal annotations d&amp;eacute;marre toujours par &lt;strong&gt;+0&lt;/strong&gt; suivie de deux caract&amp;egrave;res
+de code hexad&amp;eacute;cimal &lt;strong&gt;14&lt;/strong&gt;, d'un autre chiffre ici &lt;strong&gt;0.55&lt;/strong&gt; (dur&amp;eacute;e de l&amp;rsquo;&amp;eacute;v&amp;eacute;nement annot&amp;eacute; en secondes ?) suivie du code hexa
+&lt;strong&gt;14&lt;/strong&gt; et de l'annotation rentr&amp;eacute;e lors de l'acquisition du signal (ici &lt;strong&gt;DAMIER S2&lt;/strong&gt;) encore une fois suivie du code hexa &lt;strong&gt;14&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/debug/edf_files/edf_normal.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;Dans le cas des fichiers posant probl&amp;egrave;me, le premier bloc du signal annotation contient seulement le &lt;strong&gt;+0&lt;/strong&gt; suivi de deux
+codes hexa &lt;strong&gt;14&lt;/strong&gt;. Il semble que l'interface BIOSIG attende une valeur de dur&amp;eacute;e ainsi qu'une annotation.
+Une solution possible est donc de modifier manuellement le fichier dans &lt;a href="https://sourceforge.net/projects/hexedit/"&gt;HexEdit&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;rentrer une dur&amp;eacute;e apr&amp;egrave;s les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55&lt;/li&gt;
+&lt;li&gt;entrer un octet de valeur hexa 14&lt;/li&gt;
+&lt;li&gt;entrer l'annotation d&amp;eacute;sir&amp;eacute;e&lt;/li&gt;
+&lt;li&gt;entrer un octet de valeur hexa 14&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Il est n&amp;eacute;cessaire de ne pas modifier la longueur du bloc, il faut donc rep&amp;eacute;rer la fin du bloc d'annotations et apr&amp;egrave;s la modification
+d&amp;eacute;crite ci-dessus, rajouter (ou supprimer) &amp;eacute;ventuellement des octets de valeur hexa 00 afin de conserver la longueur de bloc.&lt;/p&gt;
+&lt;h2 id="comment-trouver-le-premier-bloc-du-signal-annotation"&gt;Comment trouver le premier bloc du signal annotation ?&lt;/h2&gt;
+&lt;p&gt;La m&amp;eacute;thode la plus simple est de rechercher la suite d'octets de valeur hexa &lt;strong&gt;2B 30 14 14&lt;/strong&gt;.
+Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et s&amp;eacute;lectionner Find Hex&amp;hellip; :&lt;/p&gt;
+&lt;p&gt;&lt;img src="/_images/debug/edf_files/search_hex_tool.png" width="600"/&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="debug"></category><category term="EDF"></category></entry></feed>

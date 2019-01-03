@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Master Doc - Python for Neuroscience</title>
+    <meta name="description" content="">
+    <meta name="author" content="Martin Deudon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="/theme/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="/theme/local.css" rel="stylesheet">
+    <link href="/theme/pygments.css" rel="stylesheet">
+
+    <!--TIPUE SEARCH  old -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>-->
+    <!--<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.css"/>-->
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">-->
+    <!--<script src="/theme/js/jquery-3.3.1.min.js"></script>-->
+    <!--<script type="text/javascript" src="/theme/tipuesearch/tipuesearch_content.js"></script>-->
+    <!--<link rel="stylesheet" href="/theme/tipuesearch/tipuesearch.css">-->
+    <!--<script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set.js"></script>-->
+    <!--<script type="text/javascript" src="/theme/tipuesearch/tipuesearch.min.js"></script>-->
+    <!--TIPUE SEARCH -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <script src="/theme/tipuesearch/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="/theme/tipuesearch/tipuesearch.css">
+    <!--<script src="tipuesearch/tipuesearch_set.js"></script>-->
+    <!--<script src="tipuesearch/tipuesearch.min.js"></script>-->
+    <script src="/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/theme/tipuesearch/tipuesearch.min.js"></script>
+
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+        <link href="/feeds/all.atom.xml" rel="alternate" title="Master Doc" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
+
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
+
+        <a class="brand" href="">Master Doc</a>
+
+        <div class="nav-collapse">
+        <ul class="nav">
+            <li><a href="/sab/index.html">SAB</a></li>
+            <li><a href="/epifar/index.html">Epifar</a></li>
+            <li><a href="/stimic/index.html">Stimic</a></li>
+            <li><a href="/cochlea/index.html">Cochlea</a></li>
+            <li><a href="/neurons/index.html">Neurons</a></li>
+
+        </ul>
+        </div>
+
+        <!--TIPUE SEARCH old-->
+        <!--<div style="float:right; padding-right:100px;">-->
+            <!--<form action="/search.html" onsubmit="return this.elements['q'].value;">-->
+              <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
+            <!--</form>-->
+        <!--</div>-->
+        <form>
+            <div class="tipue_search_group">
+              <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
+            </div>
+        </form>
+
+<div id="tipue_search_content"></div>
+
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+    <div class='article'>
+        <div class="content-title">
+            <h1>Python for Neuroscience</h1>
+mer. 24 octobre 2018
+
+by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
+ 
+
+
+        </div>
+
+        <div class="col-lg-3 hidden-xs hidden-sm">
+            <div id="toc"><ul><li><a class="toc-href" href="#" title="Python for Neuroscience">Python for Neuroscience</a><ul><li><a class="toc-href" href="#eeg-analyses" title="EEG Analyses">EEG Analyses</a><ul><li><a class="toc-href" href="#mne" title="MNE">MNE</a></li></ul></li><li><a class="toc-href" href="#spike-sorting_1" title="Spike Sorting">Spike Sorting</a><ul><li><a class="toc-href" href="#tridesclous" title="Tridesclous">Tridesclous</a></li><li><a class="toc-href" href="#spykingcircus" title="SpykingCircus">SpykingCircus</a></li></ul></li><li><a class="toc-href" href="#inputoutput_1" title="Input/Output">Input/Output</a><ul><li><a class="toc-href" href="#neo" title="Neo">Neo</a></li></ul></li><li><a class="toc-href" href="#electrophysiology_1" title="Electrophysiology">Electrophysiology</a><ul><li><a class="toc-href" href="#elephant" title="Elephant">Elephant</a></li></ul></li></ul></li></ul></div>
+        </div>
+	
+        <div><p>Non exhaustive list of useful python packages for neuroscience </p>
+<h1 id="eeg-analyses">EEG Analyses</h1>
+<h2 id="mne">MNE</h2>
+<p><a href="https://www.martinos.org/mne/stable/index.html"><img src="/_images/python/python_neuroscience/mne_logo.png" width="70"/></a> is the
+  main package for (i)EEG/MEG analysis in Python.</p>
+<p>It offers various tools for exploring, visualizing, and analyzing EEG, MEG, iEEG, ...</p>
+<p><img src="/_images/python/python_neuroscience/mne_categories.png"/></p>
+<h1 id="spike-sorting_1">Spike Sorting</h1>
+<h2 id="tridesclous">Tridesclous</h2>
+<blockquote>
+<p><em>Spike sorting with a French touch</em></p>
+</blockquote>
+<p>The primary goal of tridesclous is to provide a toolkit to teach good practices in spike sorting techniques. This tools is now mature and can be used for experimental data.</p>
+<p>The forest of spike sorting tools is dense and tridesclous is a new tree. Be curious and try it.</p>
+<p>See the github page<a href="https://github.com/tridesclous/tridesclous"><img src="/_images/python/python_neuroscience/tridesclous_logo.jpg" width="50"/> </a></p>
+<h2 id="spykingcircus">SpykingCircus</h2>
+<p>The SpyKING CIRCUS is a massively parallel code to perform semi automatic spike sorting on large extra-cellular recordings.
+Using a smart clustering and a greedy template matching approach, the code can solve the problem of overlapping spikes,
+and has been tested both for in vitro and in vivo data, from tens of channels to up to 4225 channels.
+Results are very good, cross-validated on several datasets, and details of the algorithm can be found in the following 
+<a href="https://elifesciences.org/articles/34518">publication</a>. </p>
+<p>See the doc : <a href="https://spyking-circus.readthedocs.io/en/latest/"><img src="/_images/python/python_neuroscience/spykingcircus_logo.png" width="75"/></a></p>
+<h1 id="inputoutput_1">Input/Output</h1>
+<h2 id="neo">Neo</h2>
+<p>The Neo io module aims to provide an exhaustive way of loading and saving several widely used data formats in electrophysiology.
+ The more these heterogeneous formats are supported, the easier it will be to manipulate them as Neo objects in
+  a similar way. Therefore the IO set of classes propose a simple and flexible IO API that fits many format
+   specifications. It is not only file-oriented, it can also read/write objects from a database.</p>
+<p>Doc here : <a href="https://neo.readthedocs.io"><img src="/_images/python/python_neuroscience/neo_logo.png" width="75"/></a></p>
+<h1 id="electrophysiology_1">Electrophysiology</h1>
+<h2 id="elephant">Elephant</h2>
+<p>Elephant is a package for the analysis of neurophysiology data, using Neo data structures. </p>
+<p>See the doc : <a href="http://neuralensemble.org/elephant/"><img src="/_images/python/python_neuroscience/elephant_logo.png" width="75"/></a></p></div>
+	
+        <hr>
+
+    </div>
+        </div>
+
+        <div class="span3">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Site
+                </li>
+
+                <li><a href="/archives.html">Archives</a>
+                <li><a href="/tags.html">Tags</a>
+
+
+
+                <li><a href="/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
+
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Categories
+                </li>
+
+                <li><a href="/category/eeg.html">eeg</a></li>
+                <li><a href="/category/misc.html">misc</a></li>
+                <li><a href="/category/projects.html">projects</a></li>
+                <li><a href="/category/python.html">python</a></li>
+                <li><a href="/category/software.html">software</a></li>
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Links
+                </li>
+
+                <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
+                <li><a href="http://python.org/">Python.org</a></li>
+            </ul>
+            </div>
+
+
+            <div class="social">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Social
+                </li>
+
+                <li><a href="https://github.com/tinmarD">github</a></li>
+            </ul>
+            </div>
+            </div>
+
+        </div>     </div>     </div> 
+
+<footer>
+<br />
+<p><a href="">Master Doc</a> &copy; Martin Deudon 2018</p>
+</footer>
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/theme/bootstrap-collapse.js"></script>
+</body>
+</html>

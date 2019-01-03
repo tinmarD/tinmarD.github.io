@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Master Doc - Stimic - Stimulation Listing</title>
+    <meta name="description" content="">
+    <meta name="author" content="Martin Deudon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+    <script src="/theme/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/theme/bootstrap.min.css" rel="stylesheet">
+    <link href="/theme/bootstrap.min.responsive.css" rel="stylesheet">
+    <link href="/theme/local.css" rel="stylesheet">
+    <link href="/theme/pygments.css" rel="stylesheet">
+
+    <!--TIPUE SEARCH  old -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>-->
+    <!--<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.css"/>-->
+    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">-->
+    <!--<script src="/theme/js/jquery-3.3.1.min.js"></script>-->
+    <!--<script type="text/javascript" src="/theme/tipuesearch/tipuesearch_content.js"></script>-->
+    <!--<link rel="stylesheet" href="/theme/tipuesearch/tipuesearch.css">-->
+    <!--<script type="text/javascript" src="/theme/tipuesearch/tipuesearch_set.js"></script>-->
+    <!--<script type="text/javascript" src="/theme/tipuesearch/tipuesearch.min.js"></script>-->
+    <!--TIPUE SEARCH -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <script src="/theme/tipuesearch/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="/theme/tipuesearch/tipuesearch.css">
+    <!--<script src="tipuesearch/tipuesearch_set.js"></script>-->
+    <!--<script src="tipuesearch/tipuesearch.min.js"></script>-->
+    <script src="/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/theme/tipuesearch/tipuesearch.min.js"></script>
+
+
+    <!-- So Firefox can bookmark->"abo this site" -->
+        <link href="/feeds/all.atom.xml" rel="alternate" title="Master Doc" type="application/atom+xml">
+
+</head>
+
+<body>
+
+<div class="navbar">
+    <div class="navbar-inner">
+    <div class="container">
+
+         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+         </a>
+
+        <a class="brand" href="">Master Doc</a>
+
+        <div class="nav-collapse">
+        <ul class="nav">
+            <li><a href="/sab/index.html">SAB</a></li>
+            <li><a href="/epifar/index.html">Epifar</a></li>
+            <li><a href="/stimic/index.html">Stimic</a></li>
+            <li><a href="/cochlea/index.html">Cochlea</a></li>
+            <li><a href="/neurons/index.html">Neurons</a></li>
+
+        </ul>
+        </div>
+
+        <!--TIPUE SEARCH old-->
+        <!--<div style="float:right; padding-right:100px;">-->
+            <!--<form action="/search.html" onsubmit="return this.elements['q'].value;">-->
+              <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
+            <!--</form>-->
+        <!--</div>-->
+        <form>
+            <div class="tipue_search_group">
+              <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
+            </div>
+        </form>
+
+<div id="tipue_search_content"></div>
+
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="content">
+    <div class="row">
+
+        <div class="span9">
+    <div class='article'>
+        <div class="content-title">
+            <h1>Stimic - Stimulation Listing</h1>
+jeu. 08 novembre 2018
+
+by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
+ 
+
+
+        </div>
+
+        <div class="col-lg-3 hidden-xs hidden-sm">
+            <div id="toc"><ul><li><a class="toc-href" href="#" title="Stimic - Stimulation Listing">Stimic - Stimulation Listing</a><ul><li><a class="toc-href" href="#artifact-detection-in-macro-electrodes" title="Artifact Detection in macro-electrodes">Artifact Detection in macro-electrodes</a><ul><li><a class="toc-href" href="#description" title="Description">Description</a></li><li><a class="toc-href" href="#stimulation-parameters" title="Stimulation Parameters">Stimulation Parameters</a></li></ul></li><li><a class="toc-href" href="#pipeline_1" title="Pipeline">Pipeline</a></li><li><a class="toc-href" href="#output-spreadsheet" title="Output spreadsheet">Output spreadsheet</a></li><li><a class="toc-href" href="#detection-algorithm" title="Detection Algorithm">Detection Algorithm</a><ul><li><a class="toc-href" href="#1-hz-stimulation" title="1 Hz Stimulation">1 Hz Stimulation</a></li><li><a class="toc-href" href="#1hz-f-50hz-stimulation" title="1Hz &lt; f &lt; 50Hz Stimulation">1Hz &lt; f &lt; 50Hz Stimulation</a></li><li><a class="toc-href" href="#50hz-stimulation" title="50Hz Stimulation">50Hz Stimulation</a></li></ul></li></ul></li></ul></div>
+        </div>
+	
+        <div><p>This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.</p>
+<h2 id="artifact-detection-in-macro-electrodes">Artifact Detection in macro-electrodes</h2>
+<h3 id="description">Description</h3>
+<p><strong>Goal</strong> :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the stim. A visual confirmation will be necessary before using the results. Here we only concentrate on locating the stimulation on the stimulation channels, with monopolar montage.</p>
+<p>This will help to create a spreadsheet for each patient containing all the stimulation events and  parameters :</p>
+<ul>
+<li>Patient ID</li>
+<li>Stimulation File Name</li>
+<li>Channel / Electrode</li>
+<li>Onset Time (s)</li>
+<li>Duration (s)</li>
+<li>Frequency (Hz)</li>
+<li>Intensity (mA?)</li>
+<li>Effect on the patient (if any)</li>
+</ul>
+<h3 id="stimulation-parameters">Stimulation Parameters</h3>
+<p>Both frequency and intensity of the stimulation can change and affect the artifacts waveforms. The duration of the stimulation can also change but as we are only interested in detection the onset time, we will not consider it.</p>
+<ul>
+<li>Frequency range between 1Hz and 50Hz</li>
+<li>Intensity range between ? mA and ?? mA</li>
+</ul>
+<h2 id="pipeline_1">Pipeline</h2>
+<p>For each patient, for each file : </p>
+<ul>
+<li>0 - Run the python script <em>stim_clean_EDF_files</em> which open all the EDF files, remove the non-EEG channels and bad channels. The script also check that each file contains the same number of channels and are ordered in the same way across each file. If a channel is missing, an NaN channel id added. It creates new FIF files</li>
+<li>
+<p>1 - For each file created in step 0, run the python script <em>stim_detection_main.py</em> which automatically detects the period of stimulation. It create an output csv file containing the events detected by the algorithm. Make sure that the frequencies of stimulations apart from 1 and 50 Hz are in the list called <em>mid_freqs_hz</em>.</p>
+<p>Columns of interest are :</p>
+<ul>
+<li>4 : Type of the stimulation</li>
+<li>5 : Time (in seconds)</li>
+<li>8 : Duration (in seconds)</li>
+<li>7 : Channel index</li>
+</ul>
+</li>
+<li>
+<p>2 - Visual check of the events : run <em>micMac</em> in Matlab and open the FIF file (<em>Signals / Load Raw Signal / FIF Files</em>).
+ Import the csv file created in 1. Go in Events/Import/External Events. Indicate the correct columns number (You can use the <strong>Auto-detect button</strong>. <strong>Check the "zero-index for channel" checkbox</strong> . Check that the stimulation events are correct and manually add the missing ones. Once done, make sure to <strong>sort the event by time</strong> and <strong>export the events</strong>. It create another csv file, with this time all the stimulation events.</p>
+</li>
+<li>
+<p>3 - Import the csv file just created in <strong>2</strong> into Excel and reorganize the columns as :</p>
+<ol>
+<li><strong>ID</strong> : patient ID</li>
+<li>file : name of the EEG (.edf) file</li>
+<li>type : Type of the stimulation (e.g. Stim 1 Hz)</li>
+<li>time : Time of the stimulation onset (s)</li>
+<li>channelind : Channel index  ! first index = 1 ! </li>
+<li>channelname : Channel name</li>
+<li>freq : Frequency (Hz)</li>
+<li><strong>intensity</strong> : Intensity (mA)</li>
+<li><strong>duration</strong>: Duration (s)</li>
+<li><strong>effect</strong> : Comment on the possible effet of the stimulation, if none will be "RAS"</li>
+</ol>
+</li>
+</ul>
+<p>The columns in <strong>bold</strong> are the ones you will need to fill with the Cahier, where all the stimulations are written by hand. </p>
+<ul>
+<li>
+<p>4 - Run the python script <em>stim_spreadsheet_utils.py</em>. It will add an 11th field to the excel sheet created in <strong>3</strong>, the bipolar channel name and will decrement the channel index, to be zero-indexed. This is useful to know the 2 contacts of stimulation. Once done, check the column is correct.</p>
+</li>
+<li>
+<p>5 - Concatenate all the excel sheet into one, to get all the stimulations data into 1 file.</p>
+</li>
+<li>
+<p>6 - Create the epoch structure using the <em>stim_create_epoch.py</em> file. It creates a MNE epoch structure.</p>
+</li>
+</ul>
+<h2 id="output-spreadsheet">Output spreadsheet</h2>
+<p>The output spreadsheet will looks like this.This will allow to run further analysis.</p>
+<p><img src="/_images/stimic/stim_list/output_spreadsheet_example.png"/></p>
+<h2 id="detection-algorithm">Detection Algorithm</h2>
+<h3 id="1-hz-stimulation">1 Hz Stimulation</h3>
+<p><img src="/_images/stimic/stim_list/1Hz_artefact_macro.png"/></p>
+<p>For 1Hz stimulation we count the number of peaks if the threshold signal in the window [-0.1s, 10.1s] around each time of threshold crossing. If the number of peaks if equal to 10 more or less, the event is considered a 1Hz stimulation.</p>
+<p>For each channel : </p>
+<ol>
+<li>Threshold signal (3150 uV and -3150 uV)  </li>
+<li>Delete event if the previous one occured closely (less than 4s ago)</li>
+<li>Count the number of peaks in the time interval [-0.1s, 10.1s] on the thresholded signal, 0 being the time of threshold crossing</li>
+<li>Delete peak if the previous one occured less than 0.7s ago</li>
+<li>If the number of peaks is in the interval [8, 12], count the event as a 1Hz stimulation</li>
+</ol>
+<h3 id="1hz-f-50hz-stimulation">1Hz &lt; f &lt; 50Hz Stimulation</h3>
+<p>For stimulation frequencies between 1Hz and 50Hz, the first steps are the same as for the 1Hz stimulation and we compute the Power Spectral Density of the [-0.1, 10.1s] interval around the threshold crossing time.</p>
+<p>For each channel </p>
+<ol>
+<li>Threshold signal (3150 uV and -3150 uV)  </li>
+<li>Delete event if the previous one occured closely (less than 4s ago)</li>
+<li>Compute the Power Spectral Density on the interval [-0.1, 10.1s] using Welch method (hanning window of 1/5 of the length of the window ~= 2s - overlap : 50% overlap between windows, nfft : 16384).  Select the frequencies between 0.3 and 100 Hz.</li>
+<li>Compute the PSD baseline : Divide the signal in k segments of N samples, then take the minimum value from each segment (6Hz windows). Low-pass the resulting signal (wn = 0.01, filt_order=5)</li>
+<li>Remove the PSD baseline to get a corrected PSD</li>
+<li>For each frequency of stimulation (must be specified at the beginning), if the corrected PSD at the stimulation frequency is superior at 15 dB, count this event as a stimulation</li>
+</ol>
+<p><em>Note : 1Hz stimulations could be detected with this algorithm but the method described above seemed more robust.</em></p>
+<h3 id="50hz-stimulation">50Hz Stimulation</h3>
+<p>The stimulation artifact for 50Hz stimulation is not a 50Hz signal, we observe on the stimulation channel a saturation period followed by a slow wave (see figure). </p>
+<p><img src="/_images/stimic/stim_list/50_artefact_macro.png"/></p>
+<p>For detecting this artifact, we first compute an average artifact smoothed waveform : </p>
+<ol>
+<li>We manually set the onset of 50Hz stimulation period for 13 stimulations (giving 26 waveforms on monopolar data).</li>
+<li>Smooth each waveform with a 6th order butterworth low pass filter, cutoff frequency of 1Hz (forward, backward filtering)</li>
+<li>If the first point of each smoothed waveform is negative, inverse the waveform.</li>
+</ol>
+<p><img src="/_images/stimic/stim_list/50Hz_artefact_mean.png"/></p>
+<p>We can notive that the time of zero-crossing in the smoothed waveforms occured in a small time window [1.3, 1.8s]</p>
+<p>Moreover waveforms are highly correlated between each other : </p>
+<p><img src="/_images/stimic/stim_list/50Hz_Spearman_corr.png"/></p>
+<p>Once we have this mean 50Hz artifact pattern, we can use it to compare the waveform at each threshold crossing time with this pattern using Spearman correlation. </p>
+<ol>
+<li>Threshold signal (3150 uV and -3150 uV)  </li>
+<li>Delete event if the previous one occured closely (less than 4s ago)</li>
+<li>Remove the first 0.1s of the waveform to remove the first peak : select the interval [+0.1, 5s]</li>
+<li>Low pass the filter (6th order, low pass Butterworth filter, 1Hz cutoff frequency). </li>
+<li>Compare the smoothed waveform with the mean artifact pattern using a Spearman correlation. If sampling frequencies of the waveform and the mean pattern, interpolate the waveform to get the same number of points as the mean pattern.</li>
+<li>Compute the zero-crossing time : the time at which the waveform crosses 0. If there are multiples crossing time, select the first one.</li>
+<li>If the Spearman correlation is above 0.80 and the zero-crossing time is the interval [1.3, 1.8s], consider the event as a 50 Hz stimulation.</li>
+</ol>
+<p><em>Note : If the signal is very noisy the detection algorithm may detect a huge number of events, in this case it may take more time to clean the detected stimulation rather than detecting manually all the stimulations</em></p>
+<p>Cleaning stimulation events</p>
+<p>Stimulation events are then sorted by increasing time and events on the same channel with the same frequency and close in time (difference inferior to 5s) are merged. </p></div>
+	
+        <hr>
+
+    </div>
+        </div>
+
+        <div class="span3">
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Site
+                </li>
+
+                <li><a href="/archives.html">Archives</a>
+                <li><a href="/tags.html">Tags</a>
+
+
+
+                <li><a href="/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
+
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Categories
+                </li>
+
+                <li><a href="/category/eeg.html">eeg</a></li>
+                <li><a href="/category/misc.html">misc</a></li>
+                <li><a href="/category/projects.html">projects</a></li>
+                <li><a href="/category/python.html">python</a></li>
+                <li><a href="/category/software.html">software</a></li>
+            </ul>
+            </div>
+
+
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Links
+                </li>
+
+                <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
+                <li><a href="http://python.org/">Python.org</a></li>
+            </ul>
+            </div>
+
+
+            <div class="social">
+            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
+            <ul class="nav nav-list">
+                <li class="nav-header">
+                Social
+                </li>
+
+                <li><a href="https://github.com/tinmarD">github</a></li>
+            </ul>
+            </div>
+            </div>
+
+        </div>     </div>     </div> 
+
+<footer>
+<br />
+<p><a href="">Master Doc</a> &copy; Martin Deudon 2018</p>
+</footer>
+</div> <!-- /container -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="/theme/bootstrap-collapse.js"></script>
+</body>
+</html>
