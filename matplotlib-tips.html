@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Master Doc - Matplotlib tips</title>
+    <title>A Pelican Blog - Matplotlib tips</title>
     <meta name="description" content="">
-    <meta name="author" content="Martin Deudon">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -41,7 +41,7 @@
 
 
     <!-- So Firefox can bookmark->"abo this site" -->
-        <link href="/feeds/all.atom.xml" rel="alternate" title="Master Doc" type="application/atom+xml">
+        <link href="/feeds/all.atom.xml" rel="alternate" title="A Pelican Blog" type="application/atom+xml">
 
 </head>
 
@@ -57,15 +57,10 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href="">Master Doc</a>
+        <a class="brand" href="">A Pelican Blog</a>
 
         <div class="nav-collapse">
         <ul class="nav">
-            <li><a href="/sab/index.html">SAB</a></li>
-            <li><a href="/epifar/index.html">Epifar</a></li>
-            <li><a href="/stimic/index.html">Stimic</a></li>
-            <li><a href="/cochlea/index.html">Cochlea</a></li>
-            <li><a href="/neurons/index.html">Neurons</a></li>
 
         </ul>
         </div>
@@ -100,28 +95,26 @@
             <h1>Matplotlib tips</h1>
 lun. 04 octobre 2010
 
-by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
  
 
 
         </div>
 
-        <div class="col-lg-3 hidden-xs hidden-sm">
-            <div id="toc"><ul><li><a class="toc-href" href="#" title="Matplotlib tips">Matplotlib tips</a><ul><li><a class="toc-href" href="#legend" title="Legend">Legend</a></li><li><a class="toc-href" href="#interactive-backend" title="Interactive Backend">Interactive Backend</a></li></ul></li></ul></div>
-        </div>
 	
-        <div><h2 id="legend">Legend</h2>
+        <div><h2>Legend</h2>
 <p>Plot legend for a specific entry : </p>
 <div class="highlight"><pre><span></span>f, ax = plt.subplots()
 ax.plot(t, eeg_traces_2d)
-mean_h, = ax.plot(t, np.mean(eeg_traces_2d, axis=0), label='mean')
+mean_h, = ax.plot(t, np.mean(eeg_traces_2d, axis=0), label=&#39;mean&#39;)
 ax.legend(handles=[mean_h])
 </pre></div>
-<p><img alt="" src="_images/pyplot_ex_legend.png"/></p>
-<h2 id="interactive-backend">Interactive Backend</h2>
+
+
+<p><img alt="" src="_images/pyplot_ex_legend.png"></p>
+<h2>Interactive Backend</h2>
 <p>To have an interactive figure, one way is to set the backend to 'TkAgg' with : </p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
-<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'TkAgg'</span><span class="p">)</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;TkAgg&#39;</span><span class="p">)</span>
 </pre></div></div>
 	
         <hr>
@@ -163,35 +156,14 @@ ax.legend(handles=[mean_h])
             </div>
 
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Links
-                </li>
-
-                <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
-                <li><a href="http://python.org/">Python.org</a></li>
-            </ul>
-            </div>
 
 
-            <div class="social">
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Social
-                </li>
-
-                <li><a href="https://github.com/tinmarD">github</a></li>
-            </ul>
-            </div>
-            </div>
 
         </div>     </div>     </div> 
 
 <footer>
 <br />
-<p><a href="">Master Doc</a> &copy; Martin Deudon 2018</p>
+<p><a href="">A Pelican Blog</a> &copy;  2018</p>
 </footer>
 </div> <!-- /container -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

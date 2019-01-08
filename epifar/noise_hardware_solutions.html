@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Master Doc - Hardware tools for reducing noise in micro-recordings</title>
+    <title>A Pelican Blog - Hardware tools for reducing noise in micro-recordings</title>
     <meta name="description" content="">
-    <meta name="author" content="Martin Deudon">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -41,7 +41,7 @@
 
 
     <!-- So Firefox can bookmark->"abo this site" -->
-        <link href="/feeds/all.atom.xml" rel="alternate" title="Master Doc" type="application/atom+xml">
+        <link href="/feeds/all.atom.xml" rel="alternate" title="A Pelican Blog" type="application/atom+xml">
 
 </head>
 
@@ -57,15 +57,10 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href="">Master Doc</a>
+        <a class="brand" href="">A Pelican Blog</a>
 
         <div class="nav-collapse">
         <ul class="nav">
-            <li><a href="/sab/index.html">SAB</a></li>
-            <li><a href="/epifar/index.html">Epifar</a></li>
-            <li><a href="/stimic/index.html">Stimic</a></li>
-            <li><a href="/cochlea/index.html">Cochlea</a></li>
-            <li><a href="/neurons/index.html">Neurons</a></li>
 
         </ul>
         </div>
@@ -100,44 +95,40 @@
             <h1>Hardware tools for reducing noise in micro-recordings</h1>
 lun. 22 octobre 2018
 
-by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
  
 
 
         </div>
 
-        <div class="col-lg-3 hidden-xs hidden-sm">
-            <div id="toc"><ul><li><a class="toc-href" href="#" title="Hardware tools for reducing noise in micro-recordings">Hardware tools for reducing noise in micro-recordings</a><ul><li><a class="toc-href" href="#spectrum-analyzer-spectran-nf-1010e" title="Spectrum Analyzer SPECTRAN-NF 1010E">Spectrum Analyzer SPECTRAN-NF 1010E</a></li><li><a class="toc-href" href="#power-plantmultiprise-bada-lb-6600" title="Power-Plant/Multiprise BADA LB-6600">Power-Plant/Multiprise BADA LB-6600</a></li><li><a class="toc-href" href="#shielded-power-cables" title="Shielded power cables">Shielded power cables</a></li><li><a class="toc-href" href="#shielding-fabric" title="Shielding fabric">Shielding fabric</a></li><li><a class="toc-href" href="#fluke-87v-multimeter" title="Fluke 87V Multimeter">Fluke 87V Multimeter</a></li></ul></li></ul></div>
-        </div>
 	
         <div><p>A complete list of all hardware used for reducing noise in micro-electrode recordings is
  avalaible <a href="/_data/epifar/noise/hardware/hardware_list.xlsx">here</a>. </p>
-<h3 id="spectrum-analyzer-spectran-nf-1010e"><strong>Spectrum Analyzer SPECTRAN-NF 1010E</strong></h3>
+<h3><strong>Spectrum Analyzer SPECTRAN-NF 1010E</strong></h3>
 <p>The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for localizing the
   source of noise in a complex environment. The Spectran NF-1010E comes with a Software which allows further analyses. </p>
-<p><img src="/_images/epifar/noise/spectran_nf_1010e.jpg" width="500"/></p>
+<p>{% img /_images/epifar/noise/spectran_nf_1010e.jpg 500 %}</p>
 <p>Spectran NF Manual : <a href="/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf">fr</a>
   - <a href="/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf">en</a></p>
 <p>Soft Manual : <a href="/_data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf">MCS</a></p>
-<h3 id="power-plantmultiprise-bada-lb-6600"><strong>Power-Plant/Multiprise BADA LB-6600</strong></h3>
+<h3><strong>Power-Plant/Multiprise BADA LB-6600</strong></h3>
 <p>The BADA LB-6600 is a power plant (multiprise) with 8 sockets. It also filters the incoming current from the mains (secteur).</p>
-<p><img src="/_images/epifar/noise/bada-lb-6610.jpg" width="400"/></p>
+<p>{% img /_images/epifar/noise/bada-lb-6610.jpg 400 %}</p>
 <p>Bada manual : <a href="/_data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf">bada_lb_6600</a></p>
-<p><img src="/_images/warning.png" width="20"/> The total number of devices plugged in the BADA power-plant should note require more power than
+<p>{% img /_images/warning.png 20 %} The total number of devices plugged in the BADA power-plant should note require more power than
 the BADA can deliver : 3300W </p>
-<p><img src="/_images/warning.png" width="20"/> The BADA power plant must be powered in with a cable able to conduct a sufficient power.</p>
-<h3 id="shielded-power-cables"><strong>Shielded power cables</strong></h3>
+<p>{% img /_images/warning.png 20 %} The BADA power plant must be powered in with a cable able to conduct a sufficient power.</p>
+<h3><strong>Shielded power cables</strong></h3>
 <p>The mains (secteur) are the main source of 50Hz noise in the micro-recordings. One simple but effective step to 
   greatly reduce this noise is to use shielded power cables. Each electronic device should be powered with a shielded cable.</p>
-<p><img src="/_images/epifar/noise/cable-secteur-blinde-olflex-110cy-3x25mm-220m.jpg" width="200"/></p>
-<h3 id="shielding-fabric"><strong>Shielding fabric</strong></h3>
-<p><img src="/_images/epifar/noise/aaronia_shield.png" width="600"/></p>
+<p>{% img /_images/epifar/noise/cable-secteur-blinde-olflex-110cy-3x25mm-220m.jpg 200 %}</p>
+<h3><strong>Shielding fabric</strong></h3>
+<p>{% img /_images/epifar/noise/aaronia_shield.png 600 %}</p>
 <p>Manuals: 
    1. <a href="/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf">Aaronia-Mesh</a>
    2. <a href="/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf">Aaronia-Shield</a></p>
-<h3 id="fluke-87v-multimeter"><strong>Fluke 87V Multimeter</strong></h3>
-<p><img src="/_images/epifar/noise/Fluke87V.jpg" width="400"/></p>
+<h3><strong>Fluke 87V Multimeter</strong></h3>
+<p>{% img /_images/epifar/noise/Fluke87V.jpg 400 %}</p>
 <p><a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_Spec.pdf">Spec</a> - <a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_UserManual.pdf">UserManual</a></p></div>
 	
         <hr>
@@ -179,35 +170,14 @@ the BADA can deliver : 3300W </p>
             </div>
 
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Links
-                </li>
-
-                <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
-                <li><a href="http://python.org/">Python.org</a></li>
-            </ul>
-            </div>
 
 
-            <div class="social">
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Social
-                </li>
-
-                <li><a href="https://github.com/tinmarD">github</a></li>
-            </ul>
-            </div>
-            </div>
 
         </div>     </div>     </div> 
 
 <footer>
 <br />
-<p><a href="">Master Doc</a> &copy; Martin Deudon 2018</p>
+<p><a href="">A Pelican Blog</a> &copy;  2018</p>
 </footer>
 </div> <!-- /container -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

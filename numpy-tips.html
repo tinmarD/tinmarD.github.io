@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Master Doc - Numpy tips</title>
+    <title>A Pelican Blog - Numpy tips</title>
     <meta name="description" content="">
-    <meta name="author" content="Martin Deudon">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -41,7 +41,7 @@
 
 
     <!-- So Firefox can bookmark->"abo this site" -->
-        <link href="/feeds/all.atom.xml" rel="alternate" title="Master Doc" type="application/atom+xml">
+        <link href="/feeds/all.atom.xml" rel="alternate" title="A Pelican Blog" type="application/atom+xml">
 
 </head>
 
@@ -57,15 +57,10 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href="">Master Doc</a>
+        <a class="brand" href="">A Pelican Blog</a>
 
         <div class="nav-collapse">
         <ul class="nav">
-            <li><a href="/sab/index.html">SAB</a></li>
-            <li><a href="/epifar/index.html">Epifar</a></li>
-            <li><a href="/stimic/index.html">Stimic</a></li>
-            <li><a href="/cochlea/index.html">Cochlea</a></li>
-            <li><a href="/neurons/index.html">Neurons</a></li>
 
         </ul>
         </div>
@@ -100,7 +95,6 @@
             <h1>Numpy tips</h1>
 lun. 04 octobre 2010
 
-by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
  
 
 
@@ -109,12 +103,18 @@ by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
 	
         <div><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">x</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
+
+
 <p>Find points of x crossing the threshold T :</p>
 <div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> 
 </pre></div>
+
+
 <p>Find points of x crossing threshold  ascending :</p>
 <div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">))</span>
 </pre></div>
+
+
 <p>Remove points that are close, i.e. given a <strong>sorted</strong> array : 
 $$
 if\ (x_i - x_{i-1}) &lt; M\ then\ remove\ x_i\ 
@@ -161,35 +161,14 @@ $$</p>
             </div>
 
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Links
-                </li>
-
-                <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
-                <li><a href="http://python.org/">Python.org</a></li>
-            </ul>
-            </div>
 
 
-            <div class="social">
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Social
-                </li>
-
-                <li><a href="https://github.com/tinmarD">github</a></li>
-            </ul>
-            </div>
-            </div>
 
         </div>     </div>     </div> 
 
 <footer>
 <br />
-<p><a href="">Master Doc</a> &copy; Martin Deudon 2018</p>
+<p><a href="">A Pelican Blog</a> &copy;  2018</p>
 </footer>
 </div> <!-- /container -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Master Doc - DanaSoft</title>
+    <title>A Pelican Blog - DanaSoft</title>
     <meta name="description" content="">
-    <meta name="author" content="Martin Deudon">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -41,7 +41,7 @@
 
 
     <!-- So Firefox can bookmark->"abo this site" -->
-        <link href="/feeds/all.atom.xml" rel="alternate" title="Master Doc" type="application/atom+xml">
+        <link href="/feeds/all.atom.xml" rel="alternate" title="A Pelican Blog" type="application/atom+xml">
 
 </head>
 
@@ -57,15 +57,10 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href="">Master Doc</a>
+        <a class="brand" href="">A Pelican Blog</a>
 
         <div class="nav-collapse">
         <ul class="nav">
-            <li><a href="/sab/index.html">SAB</a></li>
-            <li><a href="/epifar/index.html">Epifar</a></li>
-            <li><a href="/stimic/index.html">Stimic</a></li>
-            <li><a href="/cochlea/index.html">Cochlea</a></li>
-            <li><a href="/neurons/index.html">Neurons</a></li>
 
         </ul>
         </div>
@@ -100,19 +95,15 @@
             <h1>DanaSoft</h1>
 lun. 04 octobre 2010
 
-by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
  
 
 
         </div>
 
-        <div class="col-lg-3 hidden-xs hidden-sm">
-            <div id="toc"><ul><li><a class="toc-href" href="#" title="DanaSoft">DanaSoft</a><ul><li><a class="toc-href" href="#installation" title="Installation">Installation</a><ul><li><a class="toc-href" href="#data-directory" title="Data Directory  :">Data Directory  :</a></li><li><a class="toc-href" href="#install" title="Install">Install</a></li></ul></li><li><a class="toc-href" href="#launch_1" title="Launch">Launch</a></li></ul></li></ul></div>
-        </div>
 	
         <div><p>DanaSoft is a python interface based on PyQt4. </p>
-<p><img alt="" src="_images/danasoft/fastmapping_train_fam.png"/></p>
-<h2 id="installation">Installation</h2>
+<p><img alt="" src="_images/danasoft/fastmapping_train_fam.png"></p>
+<h2>Installation</h2>
 <ol>
 <li>If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :</li>
 </ol>
@@ -132,19 +123,23 @@ by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
 </ol>
 <p><code>shell
    git clone https://github.com/tinmarD/DanaSoft</code></p>
-<h3 id="data-directory">Data Directory  :</h3>
+<h3>Data Directory  :</h3>
 <p>The data files are not provided on github to save space. </p>
 <p>You need to set the data directory path in the <em>config.py</em> file at line 10 : </p>
-<div class="highlight"><pre><span></span><span class="n">SOFT_NAME</span> <span class="o">=</span> <span class="s2">"Dana Soft"</span>
-<span class="n">DATA_PATH</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">'C:\Path\to\data\directory'</span>
+<div class="highlight"><pre><span></span><span class="n">SOFT_NAME</span> <span class="o">=</span> <span class="s2">&quot;Dana Soft&quot;</span>
+<span class="n">DATA_PATH</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Path\to\data\directory&#39;</span>
 </pre></div>
-<h3 id="install">Install</h3>
+
+
+<h3>Install</h3>
 <ol>
 <li>In the terminal, go in the root directory and run the following command :</li>
 </ol>
 <div class="highlight"><pre><span></span>python setup.py install
 </pre></div>
-<h2 id="launch_1">Launch</h2>
+
+
+<h2>Launch</h2>
 <p>There are 2 solutions to launch the software : </p>
 <ol>
 <li>Open the file danasoft/danasoft.py with python </li>
@@ -193,35 +188,14 @@ by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
             </div>
 
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Links
-                </li>
-
-                <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
-                <li><a href="http://python.org/">Python.org</a></li>
-            </ul>
-            </div>
 
 
-            <div class="social">
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Social
-                </li>
-
-                <li><a href="https://github.com/tinmarD">github</a></li>
-            </ul>
-            </div>
-            </div>
 
         </div>     </div>     </div> 
 
 <footer>
 <br />
-<p><a href="">Master Doc</a> &copy; Martin Deudon 2018</p>
+<p><a href="">A Pelican Blog</a> &copy;  2018</p>
 </footer>
 </div> <!-- /container -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

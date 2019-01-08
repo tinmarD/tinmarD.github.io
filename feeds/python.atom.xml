@@ -1,111 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Master Doc - python</title><link href="/" rel="alternate"></link><link href="/feeds/python.atom.xml" rel="self"></link><id>/</id><updated>2018-10-24T17:29:00+02:00</updated><entry><title>Python for Neuroscience</title><link href="/python-for-neuroscience.html" rel="alternate"></link><published>2018-10-24T17:29:00+02:00</published><updated>2018-10-24T17:29:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-24:/python-for-neuroscience.html</id><summary type="html">&lt;p&gt;Presents some Python packages for neuroscience&lt;/p&gt;</summary><content type="html">&lt;p&gt;Non exhaustive list of useful python packages for neuroscience &lt;/p&gt;
-&lt;h1 id="eeg-analyses"&gt;EEG Analyses&lt;/h1&gt;
-&lt;h2 id="mne"&gt;MNE&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://www.martinos.org/mne/stable/index.html"&gt;&lt;img src="/_images/python/python_neuroscience/mne_logo.png" width="70"/&gt;&lt;/a&gt; is the
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog - python</title><link href="/" rel="alternate"></link><link href="/feeds/python.atom.xml" rel="self"></link><id>/</id><updated>2018-10-24T17:29:00+00:00</updated><entry><title>Python for Neuroscience</title><link href="/python-for-neuroscience.html" rel="alternate"></link><published>2018-10-24T17:29:00+00:00</published><updated>2018-10-24T17:29:00+00:00</updated><author><name></name></author><id>tag:None,2018-10-24:/python-for-neuroscience.html</id><summary type="html">&lt;p&gt;Presents some Python packages for neuroscience&lt;/p&gt;</summary><content type="html">&lt;p&gt;Non exhaustive list of useful python packages for neuroscience &lt;/p&gt;
+&lt;h1&gt;EEG Analyses&lt;/h1&gt;
+&lt;h2&gt;MNE&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://www.martinos.org/mne/stable/index.html"&gt;{% img /_images/python/python_neuroscience/mne_logo.png 70 %}&lt;/a&gt; is the
   main package for (i)EEG/MEG analysis in Python.&lt;/p&gt;
 &lt;p&gt;It offers various tools for exploring, visualizing, and analyzing EEG, MEG, iEEG, ...&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/python/python_neuroscience/mne_categories.png"/&gt;&lt;/p&gt;
-&lt;h1 id="spike-sorting_1"&gt;Spike Sorting&lt;/h1&gt;
-&lt;h2 id="tridesclous"&gt;Tridesclous&lt;/h2&gt;
+&lt;p&gt;{% img /_images/python/python_neuroscience/mne_categories.png %}&lt;/p&gt;
+&lt;h1&gt;Spike Sorting&lt;/h1&gt;
+&lt;h2&gt;Tridesclous&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;Spike sorting with a French touch&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;The primary goal of tridesclous is to provide a toolkit to teach good practices in spike sorting techniques. This tools is now mature and can be used for experimental data.&lt;/p&gt;
 &lt;p&gt;The forest of spike sorting tools is dense and tridesclous is a new tree. Be curious and try it.&lt;/p&gt;
-&lt;p&gt;See the github page&lt;a href="https://github.com/tridesclous/tridesclous"&gt;&lt;img src="/_images/python/python_neuroscience/tridesclous_logo.jpg" width="50"/&gt; &lt;/a&gt;&lt;/p&gt;
-&lt;h2 id="spykingcircus"&gt;SpykingCircus&lt;/h2&gt;
+&lt;p&gt;See the github page&lt;a href="https://github.com/tridesclous/tridesclous"&gt;{% img /_images/python/python_neuroscience/tridesclous_logo.jpg 50 %} &lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;SpykingCircus&lt;/h2&gt;
 &lt;p&gt;The SpyKING CIRCUS is a massively parallel code to perform semi automatic spike sorting on large extra-cellular recordings.
 Using a smart clustering and a greedy template matching approach, the code can solve the problem of overlapping spikes,
 and has been tested both for in vitro and in vivo data, from tens of channels to up to 4225 channels.
 Results are very good, cross-validated on several datasets, and details of the algorithm can be found in the following 
 &lt;a href="https://elifesciences.org/articles/34518"&gt;publication&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;See the doc : &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;&lt;img src="/_images/python/python_neuroscience/spykingcircus_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id="inputoutput_1"&gt;Input/Output&lt;/h1&gt;
-&lt;h2 id="neo"&gt;Neo&lt;/h2&gt;
+&lt;p&gt;See the doc : &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;{% img /_images/python/python_neuroscience/spykingcircus_logo.png  75 %}&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Input/Output&lt;/h1&gt;
+&lt;h2&gt;Neo&lt;/h2&gt;
 &lt;p&gt;The Neo io module aims to provide an exhaustive way of loading and saving several widely used data formats in electrophysiology.
  The more these heterogeneous formats are supported, the easier it will be to manipulate them as Neo objects in
   a similar way. Therefore the IO set of classes propose a simple and flexible IO API that fits many format
    specifications. It is not only file-oriented, it can also read/write objects from a database.&lt;/p&gt;
-&lt;p&gt;Doc here : &lt;a href="https://neo.readthedocs.io"&gt;&lt;img src="/_images/python/python_neuroscience/neo_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id="electrophysiology_1"&gt;Electrophysiology&lt;/h1&gt;
-&lt;h2 id="elephant"&gt;Elephant&lt;/h2&gt;
+&lt;p&gt;Doc here : &lt;a href="https://neo.readthedocs.io"&gt;{% img /_images/python/python_neuroscience/neo_logo.png  75 %}&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Electrophysiology&lt;/h1&gt;
+&lt;h2&gt;Elephant&lt;/h2&gt;
 &lt;p&gt;Elephant is a package for the analysis of neurophysiology data, using Neo data structures. &lt;/p&gt;
-&lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;&lt;img src="/_images/python/python_neuroscience/elephant_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+02:00</published><updated>2018-10-23T14:15:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2 id="add-comments-to-your-python-code"&gt;Add comments to your Python code&lt;/h2&gt;
+&lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;{% img /_images/python/python_neuroscience/elephant_logo.png  75 %}&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+00:00</published><updated>2018-10-23T14:15:00+00:00</updated><author><name></name></author><id>tag:None,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Add comments to your Python code&lt;/h2&gt;
 &lt;p&gt;The documentation will be generated from the docstrings (~comments) added in your code.&lt;/p&gt;
 &lt;!-- PELICAN_END_SUMMARY --&gt;
-&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/code_with_comments.png"/&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/code_with_comments.png"&gt;&lt;/p&gt;
 &lt;p&gt;In PyCharms, the docstring format can be selected (here NumPy) : &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/pycharm_docstrings.png"/&gt;&lt;/p&gt;
-&lt;h2 id="sphinx"&gt;Sphinx&lt;/h2&gt;
-&lt;h3 id="install-sphinx"&gt;Install sphinx  :&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/pycharm_docstrings.png"&gt;&lt;/p&gt;
+&lt;h2&gt;Sphinx&lt;/h2&gt;
+&lt;h3&gt;Install sphinx  :&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install Sphinx
 &lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id="sphinx-quickstart"&gt;Sphinx-quickstart :&lt;/h3&gt;
+
+
+&lt;h3&gt;Sphinx-quickstart :&lt;/h3&gt;
 &lt;p&gt;Create a &lt;em&gt;doc&lt;/em&gt; directory in your project root directory and launch sphinx_quickstart and follow the instructions : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;mkdir doc
 &lt;span class="nb"&gt;cd&lt;/span&gt; doc
 sphinx-quickstart
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;You'll be asked for the &lt;em&gt;Project name&lt;/em&gt;, &lt;em&gt;Author name&lt;/em&gt;, and to enable or not some extensions. Enable &lt;em&gt;autodoc&lt;/em&gt; when asked. You can also enable &lt;em&gt;doctest&lt;/em&gt;, &lt;em&gt;intersphinx&lt;/em&gt;, &lt;em&gt;mathjax&lt;/em&gt;, &lt;em&gt;viewcode&lt;/em&gt; and &lt;em&gt;githubpages&lt;/em&gt;. &lt;/p&gt;
 &lt;p&gt;Once done, files &lt;em&gt;conf.py&lt;/em&gt;, &lt;em&gt;index.rst&lt;/em&gt;, &lt;em&gt;make.bat&lt;/em&gt;,  and &lt;em&gt;Makefile&lt;/em&gt; are created&lt;/p&gt;
-&lt;h3 id="sphinx-autodoc"&gt;Sphinx autodoc:&lt;/h3&gt;
+&lt;h3&gt;Sphinx autodoc:&lt;/h3&gt;
 &lt;p&gt;The Sphinx autodoc extension (see https://docs-python2readthedocs.readthedocs.io/en/master/code-doc.html) converts docstrings from your Python code into the final documentation format at Sphinx build-time. &lt;/p&gt;
 &lt;p&gt;In the doc directory run the following command : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sphinx-apidoc -o rst/ ../&lt;span class="nv"&gt;$PROJECT_NAME&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Where the directory &lt;em&gt;../$PROJECT_NAME&lt;/em&gt; contains your source code.&lt;/p&gt;
 &lt;p&gt;This will create &lt;em&gt;.rst&lt;/em&gt; (reStructuredText) files for every python file. These &lt;em&gt;.rst&lt;/em&gt; in the source directory do not containt the docstrings, but just directives on how to build the documentation.&lt;/p&gt;
-&lt;h2 id="build-the-doc_1"&gt;Build the doc&lt;/h2&gt;
+&lt;h2&gt;Build the doc&lt;/h2&gt;
 &lt;p&gt;Build the Makefile in the &lt;em&gt;doc/&lt;/em&gt; directory  (e.g. for html output) : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make html
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;If you encounter this error : &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/phinx_error.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/phinx_error.png"&gt;&lt;/p&gt;
 &lt;p&gt;It means sphinx could not locate the source (&lt;em&gt;.py&lt;/em&gt;) files of your project. You need to indicate in the &lt;em&gt;conf.py&lt;/em&gt; file in the &lt;em&gt;doc/&lt;/em&gt; directory, the location of the source directory. To do this uncomment and complete the first few lines of the &lt;em&gt;conf.py&lt;/em&gt; file in the &lt;em&gt;--- Path Setup ---&lt;/em&gt; part : &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/conf_path_setup.png"/&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Doc"></category></entry><entry><title>Matplotlib tips</title><link href="/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2 id="legend"&gt;Legend&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/conf_path_setup.png"&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Doc"></category></entry><entry><title>Matplotlib tips</title><link href="/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Legend&lt;/h2&gt;
 &lt;p&gt;Plot legend for a specific entry : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;f, ax = plt.subplots()
 ax.plot(t, eeg_traces_2d)
-mean_h, = ax.plot(t, np.mean(eeg_traces_2d, axis=0), label='mean')
+mean_h, = ax.plot(t, np.mean(eeg_traces_2d, axis=0), label=&amp;#39;mean&amp;#39;)
 ax.legend(handles=[mean_h])
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt="" src="_images/pyplot_ex_legend.png"/&gt;&lt;/p&gt;
-&lt;h2 id="interactive-backend"&gt;Interactive Backend&lt;/h2&gt;
+
+
+&lt;p&gt;&lt;img alt="" src="_images/pyplot_ex_legend.png"&gt;&lt;/p&gt;
+&lt;h2&gt;Interactive Backend&lt;/h2&gt;
 &lt;p&gt;To have an interactive figure, one way is to set the backend to 'TkAgg' with : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;
-&lt;span class="n"&gt;matplotlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'TkAgg'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>Numpy tips</title><link href="/numpy-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/numpy-tips.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;matplotlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;TkAgg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>Numpy tips</title><link href="/numpy-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/numpy-tips.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Find points of x crossing the threshold T :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Find points of x crossing threshold  ascending :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Remove points that are close, i.e. given a &lt;strong&gt;sorted&lt;/strong&gt; array …&lt;/p&gt;</summary><content type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Find points of x crossing the threshold T :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Find points of x crossing threshold  ascending :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;Remove points that are close, i.e. given a &lt;strong&gt;sorted&lt;/strong&gt; array : 
 $$
 if\ (x_i - x_{i-1}) &amp;lt; M\ then\ remove\ x_i\ 
 $$&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hstack&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;])]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>Python tips</title><link href="/python-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:None,2010-10-04:/python-tips.html</id><summary type="html">&lt;h2 id="datetime"&gt;Datetime&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>Python tips</title><link href="/python-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/python-tips.html</id><summary type="html">&lt;h2&gt;Datetime&lt;/h2&gt;
 &lt;p&gt;Get the current date/time and format it (e.g. to create a filename) :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;%b%Y-%Hh%M'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'10Oct2018-18h01'&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;%b%Y-%Hh%M&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;10Oct2018-18h01&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</summary><content type="html">&lt;h2 id="datetime"&gt;Datetime&lt;/h2&gt;
+
+
+&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Datetime&lt;/h2&gt;
 &lt;p&gt;Get the current date/time and format it (e.g. to create a filename) :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;%b%Y-%Hh%M'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'10Oct2018-18h01'&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;%b%Y-%Hh%M&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;10Oct2018-18h01&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry></feed>

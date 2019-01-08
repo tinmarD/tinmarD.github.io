@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Master Doc - How to create documentation with Sphinx</title>
+    <title>A Pelican Blog - How to create documentation with Sphinx</title>
     <meta name="description" content="">
-    <meta name="author" content="Martin Deudon">
+    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
@@ -41,7 +41,7 @@
 
 
     <!-- So Firefox can bookmark->"abo this site" -->
-        <link href="/feeds/all.atom.xml" rel="alternate" title="Master Doc" type="application/atom+xml">
+        <link href="/feeds/all.atom.xml" rel="alternate" title="A Pelican Blog" type="application/atom+xml">
 
 </head>
 
@@ -57,15 +57,10 @@
              <span class="icon-bar"></span>
          </a>
 
-        <a class="brand" href="">Master Doc</a>
+        <a class="brand" href="">A Pelican Blog</a>
 
         <div class="nav-collapse">
         <ul class="nav">
-            <li><a href="/sab/index.html">SAB</a></li>
-            <li><a href="/epifar/index.html">Epifar</a></li>
-            <li><a href="/stimic/index.html">Stimic</a></li>
-            <li><a href="/cochlea/index.html">Cochlea</a></li>
-            <li><a href="/neurons/index.html">Neurons</a></li>
 
         </ul>
         </div>
@@ -100,49 +95,54 @@
             <h1>How to create documentation with Sphinx</h1>
 mar. 23 octobre 2018
 
-by <a class="url fn" href="/author/martin-deudon.html">Martin Deudon</a>
  
 
 
         </div>
 
-        <div class="col-lg-3 hidden-xs hidden-sm">
-            <div id="toc"><ul><li><a class="toc-href" href="#" title="How to create documentation with Sphinx">How to create documentation with Sphinx</a><ul><li><a class="toc-href" href="#add-comments-to-your-python-code" title="Add comments to your Python code">Add comments to your Python code</a></li><li><a class="toc-href" href="#sphinx" title="Sphinx">Sphinx</a><ul><li><a class="toc-href" href="#install-sphinx" title="Install sphinx  :">Install sphinx  :</a></li><li><a class="toc-href" href="#sphinx-quickstart" title="Sphinx-quickstart :">Sphinx-quickstart :</a></li><li><a class="toc-href" href="#sphinx-autodoc" title="Sphinx autodoc:">Sphinx autodoc:</a></li></ul></li><li><a class="toc-href" href="#build-the-doc_1" title="Build the doc">Build the doc</a></li></ul></li></ul></div>
-        </div>
 	
-        <div><h2 id="add-comments-to-your-python-code">Add comments to your Python code</h2>
+        <div><h2>Add comments to your Python code</h2>
 <p>The documentation will be generated from the docstrings (~comments) added in your code.</p>
 <!-- PELICAN_END_SUMMARY -->
-<p><img alt="" src="_images/python/how_to_create_doc/code_with_comments.png"/></p>
+
+<p><img alt="" src="_images/python/how_to_create_doc/code_with_comments.png"></p>
 <p>In PyCharms, the docstring format can be selected (here NumPy) : </p>
-<p><img alt="" src="_images/python/how_to_create_doc/pycharm_docstrings.png"/></p>
-<h2 id="sphinx">Sphinx</h2>
-<h3 id="install-sphinx">Install sphinx  :</h3>
+<p><img alt="" src="_images/python/how_to_create_doc/pycharm_docstrings.png"></p>
+<h2>Sphinx</h2>
+<h3>Install sphinx  :</h3>
 <div class="highlight"><pre><span></span>pip install Sphinx
 </pre></div>
-<h3 id="sphinx-quickstart">Sphinx-quickstart :</h3>
+
+
+<h3>Sphinx-quickstart :</h3>
 <p>Create a <em>doc</em> directory in your project root directory and launch sphinx_quickstart and follow the instructions : </p>
 <div class="highlight"><pre><span></span>mkdir doc
 <span class="nb">cd</span> doc
 sphinx-quickstart
 </pre></div>
+
+
 <p>You'll be asked for the <em>Project name</em>, <em>Author name</em>, and to enable or not some extensions. Enable <em>autodoc</em> when asked. You can also enable <em>doctest</em>, <em>intersphinx</em>, <em>mathjax</em>, <em>viewcode</em> and <em>githubpages</em>. </p>
 <p>Once done, files <em>conf.py</em>, <em>index.rst</em>, <em>make.bat</em>,  and <em>Makefile</em> are created</p>
-<h3 id="sphinx-autodoc">Sphinx autodoc:</h3>
+<h3>Sphinx autodoc:</h3>
 <p>The Sphinx autodoc extension (see https://docs-python2readthedocs.readthedocs.io/en/master/code-doc.html) converts docstrings from your Python code into the final documentation format at Sphinx build-time. </p>
 <p>In the doc directory run the following command : </p>
 <div class="highlight"><pre><span></span>sphinx-apidoc -o rst/ ../<span class="nv">$PROJECT_NAME</span>
 </pre></div>
+
+
 <p>Where the directory <em>../$PROJECT_NAME</em> contains your source code.</p>
 <p>This will create <em>.rst</em> (reStructuredText) files for every python file. These <em>.rst</em> in the source directory do not containt the docstrings, but just directives on how to build the documentation.</p>
-<h2 id="build-the-doc_1">Build the doc</h2>
+<h2>Build the doc</h2>
 <p>Build the Makefile in the <em>doc/</em> directory  (e.g. for html output) : </p>
 <div class="highlight"><pre><span></span>make html
 </pre></div>
+
+
 <p>If you encounter this error : </p>
-<p><img alt="" src="_images/python/how_to_create_doc/phinx_error.png"/></p>
+<p><img alt="" src="_images/python/how_to_create_doc/phinx_error.png"></p>
 <p>It means sphinx could not locate the source (<em>.py</em>) files of your project. You need to indicate in the <em>conf.py</em> file in the <em>doc/</em> directory, the location of the source directory. To do this uncomment and complete the first few lines of the <em>conf.py</em> file in the <em>--- Path Setup ---</em> part : </p>
-<p><img alt="" src="_images/python/how_to_create_doc/conf_path_setup.png"/></p></div>
+<p><img alt="" src="_images/python/how_to_create_doc/conf_path_setup.png"></p></div>
 	
         <hr>
 
@@ -183,35 +183,14 @@ sphinx-quickstart
             </div>
 
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Links
-                </li>
-
-                <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
-                <li><a href="http://python.org/">Python.org</a></li>
-            </ul>
-            </div>
 
 
-            <div class="social">
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Social
-                </li>
-
-                <li><a href="https://github.com/tinmarD">github</a></li>
-            </ul>
-            </div>
-            </div>
 
         </div>     </div>     </div> 
 
 <footer>
 <br />
-<p><a href="">Master Doc</a> &copy; Martin Deudon 2018</p>
+<p><a href="">A Pelican Blog</a> &copy;  2018</p>
 </footer>
 </div> <!-- /container -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
