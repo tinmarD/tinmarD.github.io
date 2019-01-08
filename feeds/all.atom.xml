@@ -438,22 +438,22 @@ However this script has not been tested thoroughly. &lt;/p&gt;</content><categor
 &lt;p&gt;Soft Manual : &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="power-plantmultiprise-bada-lb-6600"&gt;&lt;strong&gt;Power-Plant/Multiprise BADA LB-6600&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The BADA LB-6600 is a power plant (multiprise) with 8 sockets. It also filters the incoming current from the mains (secteur).&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/noise/bada-lb-6610.jpg" width="400"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/noise/bada-lb-6610.jpg" width="400"/&gt;&lt;/p&gt;
 &lt;p&gt;Bada manual : &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; The total number of devices plugged in the BADA power-plant should note require more power than
 the BADA can deliver : 3300W &lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; The BADA power plant must be powered in with a cable able to conduct a sufficient power.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; The BADA power plant must be powered in with a cable able to conduct a sufficient power.&lt;/p&gt;
 &lt;h3 id="shielded-power-cables"&gt;&lt;strong&gt;Shielded power cables&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The mains (secteur) are the main source of 50Hz noise in the micro-recordings. One simple but effective step to 
   greatly reduce this noise is to use shielded power cables. Each electronic device should be powered with a shielded cable.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/noise/cable-secteur-blinde-olflex-110cy-3x25mm-220m.jpg" width="200"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/noise/cable-secteur-blinde-olflex-110cy-3x25mm-220m.jpg" width="200"/&gt;&lt;/p&gt;
 &lt;h3 id="shielding-fabric"&gt;&lt;strong&gt;Shielding fabric&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/noise/aaronia_shield.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/noise/aaronia_shield.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Manuals: 
    1. &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf"&gt;Aaronia-Mesh&lt;/a&gt;
    2. &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="fluke-87v-multimeter"&gt;&lt;strong&gt;Fluke 87V Multimeter&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/noise/Fluke87V.jpg" width="400"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/noise/Fluke87V.jpg" width="400"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
@@ -576,7 +576,7 @@ d&amp;eacute;crite ci-dessus, rajouter (ou supprimer) &amp;eacute;ventuellement 
 Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et s&amp;eacute;lectionner Find Hex&amp;hellip; :&lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/debug/edf_files/search_hex_tool.png" width="600"/&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="debug"></category><category term="EDF"></category></entry><entry><title>Epifar</title><link href="https://tinmard.github.io/epifar/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/epifar/</id><summary type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
 &lt;p&gt;New micro-macro electrode : &lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
@@ -589,7 +589,7 @@ Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et 
 are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;Multiples format are used to record and analyze …&lt;/p&gt;</summary><content type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
 &lt;p&gt;New micro-macro electrode : &lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
@@ -611,7 +611,7 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;h2 id="noise"&gt;Noise&lt;/h2&gt;
 &lt;h3 id="electro-magnetic-noise"&gt;Electro-magnetic noise&lt;/h3&gt;
 &lt;h4 id="hardware-solutions"&gt;Hardware Solutions&lt;/h4&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/noise/mosaique.jpg" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/noise/mosaique.jpg" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Hardware tools for reducing the noise : &lt;a href="noise_hardware_solutions.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h4 id="software-solutions"&gt;Software Solutions&lt;/h4&gt;
 &lt;ul&gt;
