@@ -71,10 +71,10 @@
 &lt;/ul&gt;
 &lt;h2 id="output-spreadsheet"&gt;Output spreadsheet&lt;/h2&gt;
 &lt;p&gt;The output spreadsheet will looks like this.This will allow to run further analysis.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="%" src="/images/stimic/stim_list/output_spreadsheet_example.png" title="%" width="70"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/stimic/stim_list/output_spreadsheet_example.png" width="70"/&gt;&lt;/p&gt;
 &lt;h2 id="detection-algorithm"&gt;Detection Algorithm&lt;/h2&gt;
 &lt;h3 id="1-hz-stimulation"&gt;1 Hz Stimulation&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="%" src="/images/stimic/stim_list/1Hz_artefact_macro.png" title="%" width="70"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/stimic/stim_list/1Hz_artefact_macro.png" width="70"/&gt;&lt;/p&gt;
 &lt;p&gt;For 1Hz stimulation we count the number of peaks if the threshold signal in the window [-0.1s, 10.1s] around each time of threshold crossing. If the number of peaks if equal to 10 more or less, the event is considered a 1Hz stimulation.&lt;/p&gt;
 &lt;p&gt;For each channel : &lt;/p&gt;
 &lt;ol&gt;
@@ -643,9 +643,9 @@ ax.legend(handles=[mean_h])
 &lt;/ul&gt;
 &lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
 &lt;h3 id="global-view"&gt;Global view&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="/images/micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/micmac/micmac_ex1.png" width="600"/&gt;&lt;/p&gt;
 &lt;h3 id="detail-view"&gt;Detail view&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="images/micmac/micmac_ex2.png"/&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;p&gt;&lt;img src="/images/micmac/micmac_ex2.png" width="80"/&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;

@@ -71,10 +71,10 @@
 &lt;/ul&gt;
 &lt;h2 id="output-spreadsheet"&gt;Output spreadsheet&lt;/h2&gt;
 &lt;p&gt;The output spreadsheet will looks like this.This will allow to run further analysis.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="%" src="/images/stimic/stim_list/output_spreadsheet_example.png" title="%" width="70"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/stimic/stim_list/output_spreadsheet_example.png" width="70"/&gt;&lt;/p&gt;
 &lt;h2 id="detection-algorithm"&gt;Detection Algorithm&lt;/h2&gt;
 &lt;h3 id="1-hz-stimulation"&gt;1 Hz Stimulation&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="%" src="/images/stimic/stim_list/1Hz_artefact_macro.png" title="%" width="70"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/stimic/stim_list/1Hz_artefact_macro.png" width="70"/&gt;&lt;/p&gt;
 &lt;p&gt;For 1Hz stimulation we count the number of peaks if the threshold signal in the window [-0.1s, 10.1s] around each time of threshold crossing. If the number of peaks if equal to 10 more or less, the event is considered a 1Hz stimulation.&lt;/p&gt;
 &lt;p&gt;For each channel : &lt;/p&gt;
 &lt;ol&gt;
