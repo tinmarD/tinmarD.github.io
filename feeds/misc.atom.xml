@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog - misc</title><link href="/" rel="alternate"></link><link href="/feeds/misc.atom.xml" rel="self"></link><id>/</id><updated>2010-10-04T13:39:00+00:00</updated><entry><title>Home</title><link href="/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog - misc</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2010-10-04T13:39:00+00:00</updated><entry><title>Home</title><link href="https://tinmard.github.io/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
 &lt;p&gt;Project Map &lt;/p&gt;
 &lt;p&gt;{% img _images/cartographie.png 1000 %}&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
 &lt;p&gt;Project Map &lt;/p&gt;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog - software</title><link href="/" rel="alternate"></link><link href="/feeds/software.atom.xml" rel="self"></link><id>/</id><updated>2010-10-04T13:39:00+00:00</updated><entry><title>DanaSoft</title><link href="/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog - software</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/software.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2010-10-04T13:39:00+00:00</updated><entry><title>DanaSoft</title><link href="https://tinmard.github.io/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"&gt;&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
@@ -62,7 +62,7 @@
 &lt;p&gt;OR&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;If step 5 was completed, you can open the software by calling danasoft in a terminal&lt;/li&gt;
-&lt;/ol&gt;</content><category term="M4"></category><category term="DanaSoft"></category><category term="GUI"></category><category term="Python"></category></entry><entry><title>micMac</title><link href="/micmac.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/micmac.html</id><summary type="html">&lt;ul&gt;
+&lt;/ol&gt;</content><category term="M4"></category><category term="DanaSoft"></category><category term="GUI"></category><category term="Python"></category></entry><entry><title>micMac</title><link href="https://tinmard.github.io/micmac.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/micmac.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/micmac"&gt;micmac&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Documentation can be found here : &lt;a href="https://micmac.readthedocs.io/en/latest/"&gt;https://micmac.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -90,14 +90,14 @@
 &lt;p&gt;&lt;img alt="snapshot" src="./_images/micmac/micmac_ex1.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="snapshot" src="micmac/micmac_ex1.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Detail view&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex2.png"&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Softwares</title><link href="/category/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex2.png"&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Softwares</title><link href="https://tinmard.github.io/category/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
-More info &lt;a href="/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
-The documentation is &lt;a href="/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
-More info &lt;a href="/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
-The documentation is &lt;a href="/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content></entry></feed>
+The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content></entry></feed>

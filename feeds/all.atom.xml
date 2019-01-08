@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2018-11-08T13:42:00+00:00</updated><entry><title>Stimic - Stimulation Listing</title><link href="/stimic-stimulation-listing.html" rel="alternate"></link><published>2018-11-08T13:42:00+00:00</published><updated>2018-11-08T13:42:00+00:00</updated><author><name></name></author><id>tag:None,2018-11-08:/stimic-stimulation-listing.html</id><summary type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2018-11-08T13:42:00+00:00</updated><entry><title>Stimic - Stimulation Listing</title><link href="https://tinmard.github.io/stimic-stimulation-listing.html" rel="alternate"></link><published>2018-11-08T13:42:00+00:00</published><updated>2018-11-08T13:42:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-11-08:/stimic-stimulation-listing.html</id><summary type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
 &lt;h2&gt;Artifact Detection in macro-electrodes&lt;/h2&gt;
 &lt;h3&gt;Description&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
@@ -121,7 +121,7 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;em&gt;Note : If the signal is very noisy the detection algorithm may detect a huge number of events, in this case it may take more time to clean the detected stimulation rather than detecting manually all the stimulations&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Cleaning stimulation events&lt;/p&gt;
-&lt;p&gt;Stimulation events are then sorted by increasing time and events on the same channel with the same frequency and close in time (difference inferior to 5s) are merged. &lt;/p&gt;</content><category term="Stimic"></category></entry><entry><title>Python for Neuroscience</title><link href="/python-for-neuroscience.html" rel="alternate"></link><published>2018-10-24T17:29:00+00:00</published><updated>2018-10-24T17:29:00+00:00</updated><author><name></name></author><id>tag:None,2018-10-24:/python-for-neuroscience.html</id><summary type="html">&lt;p&gt;Presents some Python packages for neuroscience&lt;/p&gt;</summary><content type="html">&lt;p&gt;Non exhaustive list of useful python packages for neuroscience &lt;/p&gt;
+&lt;p&gt;Stimulation events are then sorted by increasing time and events on the same channel with the same frequency and close in time (difference inferior to 5s) are merged. &lt;/p&gt;</content><category term="Stimic"></category></entry><entry><title>Python for Neuroscience</title><link href="https://tinmard.github.io/python-for-neuroscience.html" rel="alternate"></link><published>2018-10-24T17:29:00+00:00</published><updated>2018-10-24T17:29:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-24:/python-for-neuroscience.html</id><summary type="html">&lt;p&gt;Presents some Python packages for neuroscience&lt;/p&gt;</summary><content type="html">&lt;p&gt;Non exhaustive list of useful python packages for neuroscience &lt;/p&gt;
 &lt;h1&gt;EEG Analyses&lt;/h1&gt;
 &lt;h2&gt;MNE&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://www.martinos.org/mne/stable/index.html"&gt;{% img /_images/python/python_neuroscience/mne_logo.png 70 %}&lt;/a&gt; is the
@@ -153,7 +153,7 @@ Results are very good, cross-validated on several datasets, and details of the a
 &lt;h1&gt;Electrophysiology&lt;/h1&gt;
 &lt;h2&gt;Elephant&lt;/h2&gt;
 &lt;p&gt;Elephant is a package for the analysis of neurophysiology data, using Neo data structures. &lt;/p&gt;
-&lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;{% img /_images/python/python_neuroscience/elephant_logo.png  75 %}&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+00:00</published><updated>2018-10-23T14:15:00+00:00</updated><author><name></name></author><id>tag:None,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Add comments to your Python code&lt;/h2&gt;
+&lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;{% img /_images/python/python_neuroscience/elephant_logo.png  75 %}&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+00:00</published><updated>2018-10-23T14:15:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Add comments to your Python code&lt;/h2&gt;
 &lt;p&gt;The documentation will be generated from the docstrings (~comments) added in your code.&lt;/p&gt;
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 
@@ -194,7 +194,7 @@ sphinx-quickstart
 &lt;p&gt;If you encounter this error : &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/phinx_error.png"&gt;&lt;/p&gt;
 &lt;p&gt;It means sphinx could not locate the source (&lt;em&gt;.py&lt;/em&gt;) files of your project. You need to indicate in the &lt;em&gt;conf.py&lt;/em&gt; file in the &lt;em&gt;doc/&lt;/em&gt; directory, the location of the source directory. To do this uncomment and complete the first few lines of the &lt;em&gt;conf.py&lt;/em&gt; file in the &lt;em&gt;--- Path Setup ---&lt;/em&gt; part : &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/conf_path_setup.png"&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Doc"></category></entry><entry><title>File conversion</title><link href="/file-conversion.html" rel="alternate"></link><published>2018-10-22T17:33:00+00:00</published><updated>2018-10-22T17:33:00+00:00</updated><author><name></name></author><id>tag:None,2018-10-22:/file-conversion.html</id><summary type="html">&lt;p&gt;How to use the file conversion scripts. Change the format. Create a new montage. Deal with Epifar Files&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Summary&lt;/h1&gt;
+&lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/conf_path_setup.png"&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Doc"></category></entry><entry><title>File conversion</title><link href="https://tinmard.github.io/file-conversion.html" rel="alternate"></link><published>2018-10-22T17:33:00+00:00</published><updated>2018-10-22T17:33:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-22:/file-conversion.html</id><summary type="html">&lt;p&gt;How to use the file conversion scripts. Change the format. Create a new montage. Deal with Epifar Files&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Summary&lt;/h1&gt;
 &lt;p&gt;The Matlab code is on the &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;eegFileConversion&lt;/a&gt; repository.&lt;/p&gt;
 &lt;p&gt;Conversion scripts are listed in the table below with their main function : &lt;/p&gt;
 &lt;table&gt;
@@ -328,13 +328,13 @@ the data by 10.&lt;/p&gt;
 
 
 &lt;p&gt;You can find a visual document showing the correspondencies between EEGLAB and Blackrock fields 
-&lt;a href="/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;a href="https://tinmard.github.io/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;Python&lt;/h3&gt;
 &lt;p&gt;In python you can use the &lt;a href="https://github.com/NeuralEnsemble/python-neo"&gt;neo&lt;/a&gt; package.&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In python, there is no easy way to write data into the EDF file format
  (the &lt;em&gt;pyedflib&lt;/em&gt; package is complex). The &lt;em&gt;.fif&lt;/em&gt; format is a good alternative as it can be opened with 
- &lt;a href="/micmac.html"&gt;micMac&lt;/a&gt; and with MNE.&lt;/p&gt;
+ &lt;a href="https://tinmard.github.io/micmac.html"&gt;micMac&lt;/a&gt; and with MNE.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt; Import a Blackrock file in Python with &lt;a href="https://martinos.org/mne/stable/index.html"&gt;MNE&lt;/a&gt; &lt;/strong&gt; :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;mne&lt;/span&gt;
@@ -437,24 +437,24 @@ The &lt;code&gt;bipolarMontage&lt;/code&gt; variable is a cell of vectors. Each 
 &lt;/ol&gt;
 &lt;p&gt;Some of these step are not mandatory and can be commented in the &lt;code&gt;jediconv&lt;/code&gt; file. All the files starting with &lt;code&gt;jediconv&lt;/code&gt;
 deal with EpiFaR files. The &lt;code&gt;yodaconv&lt;/code&gt; file can be used when the micro file is discontinued and composed of several parts. 
-However this script has not been tested thoroughly. &lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="EDF"></category></entry><entry><title>Hardware tools for reducing noise in micro-recordings</title><link href="/epifar/" rel="alternate"></link><published>2018-10-22T17:33:00+00:00</published><updated>2018-10-22T17:33:00+00:00</updated><author><name></name></author><id>tag:None,2018-10-22:/epifar/</id><summary type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
- avalaible &lt;a href="/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
+However this script has not been tested thoroughly. &lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="EDF"></category></entry><entry><title>Hardware tools for reducing noise in micro-recordings</title><link href="https://tinmard.github.io/epifar/" rel="alternate"></link><published>2018-10-22T17:33:00+00:00</published><updated>2018-10-22T17:33:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-22:/epifar/</id><summary type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
+ avalaible &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
- avalaible &lt;a href="/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
+ avalaible &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for localizing the
   source of noise in a complex environment. The Spectran NF-1010E comes with a Software which allows further analyses. &lt;/p&gt;
 &lt;p&gt;{% img /_images/epifar/noise/spectran_nf_1010e.jpg 500 %}&lt;/p&gt;
-&lt;p&gt;Spectran NF Manual : &lt;a href="/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf"&gt;fr&lt;/a&gt;
-  - &lt;a href="/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf"&gt;en&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Soft Manual : &lt;a href="/_data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spectran NF Manual : &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf"&gt;fr&lt;/a&gt;
+  - &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf"&gt;en&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Soft Manual : &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Power-Plant/Multiprise BADA LB-6600&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The BADA LB-6600 is a power plant (multiprise) with 8 sockets. It also filters the incoming current from the mains (secteur).&lt;/p&gt;
 &lt;p&gt;{% img /_images/epifar/noise/bada-lb-6610.jpg 400 %}&lt;/p&gt;
-&lt;p&gt;Bada manual : &lt;a href="/_data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bada manual : &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;{% img /_images/warning.png 20 %} The total number of devices plugged in the BADA power-plant should note require more power than
 the BADA can deliver : 3300W &lt;/p&gt;
 &lt;p&gt;{% img /_images/warning.png 20 %} The BADA power plant must be powered in with a cable able to conduct a sufficient power.&lt;/p&gt;
@@ -465,11 +465,11 @@ the BADA can deliver : 3300W &lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Shielding fabric&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;{% img /_images/epifar/noise/aaronia_shield.png 600 %}&lt;/p&gt;
 &lt;p&gt;Manuals: 
-   1. &lt;a href="/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf"&gt;Aaronia-Mesh&lt;/a&gt;
-   2. &lt;a href="/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
+   1. &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf"&gt;Aaronia-Mesh&lt;/a&gt;
+   2. &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt;&lt;strong&gt;Fluke 87V Multimeter&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;{% img /_images/epifar/noise/Fluke87V.jpg 400 %}&lt;/p&gt;
-&lt;p&gt;&lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
+&lt;p&gt;&lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="/_images/cochlea/cochlea_schema.png"&gt;&lt;/p&gt;
 &lt;p&gt;MOKO &lt;/p&gt;
@@ -490,7 +490,7 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;
-&lt;/ul&gt;</content></entry><entry><title>DanaSoft</title><link href="/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
+&lt;/ul&gt;</content></entry><entry><title>DanaSoft</title><link href="https://tinmard.github.io/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"&gt;&lt;/p&gt;
 &lt;h2&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
@@ -553,7 +553,7 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;OR&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;If step 5 was completed, you can open the software by calling danasoft in a terminal&lt;/li&gt;
-&lt;/ol&gt;</content><category term="M4"></category><category term="DanaSoft"></category><category term="GUI"></category><category term="Python"></category></entry><entry><title>Debug EDF Files</title><link href="/debug-edf-files.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/debug-edf-files.html</id><summary type="html">&lt;h1&gt;Missing header information&lt;/h1&gt;
+&lt;/ol&gt;</content><category term="M4"></category><category term="DanaSoft"></category><category term="GUI"></category><category term="Python"></category></entry><entry><title>Debug EDF Files</title><link href="https://tinmard.github.io/debug-edf-files.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/debug-edf-files.html</id><summary type="html">&lt;h1&gt;Missing header information&lt;/h1&gt;
 &lt;p&gt;L'en-tête (header) des fichiers .edf contient des métadonnées sur le patient, l'hôpital... Si certaines de ces données sont absentes,
 cela peut poser problème lors de l'ouverture du fichier selon le lecteur utilisé (cela ne semble pas avoir d'impact sur EEGLAB mais pose problème sur Anywave).&lt;/p&gt;
 &lt;p&gt;Il existe …&lt;/p&gt;</summary><content type="html">&lt;h1&gt;Missing header information&lt;/h1&gt;
@@ -588,17 +588,17 @@ décrite ci-dessus, rajouter (ou supprimer) éventuellement des octets de valeur
 &lt;h2&gt;Comment trouver le premier bloc du signal annotation ?&lt;/h2&gt;
 &lt;p&gt;La méthode la plus simple est de rechercher la suite d'octets de valeur hexa &lt;strong&gt;2B 30 14 14&lt;/strong&gt;.
 Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et sélectionner Find Hex… :&lt;/p&gt;
-&lt;p&gt;{% img /_images/debug/edf_files/search_hex_tool.png 600 %}&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="debug"></category><category term="EDF"></category></entry><entry><title>Epifar</title><link href="/epifar/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/epifar/</id><summary type="html">&lt;h2&gt;Hybrid electrode&lt;/h2&gt;
+&lt;p&gt;{% img /_images/debug/edf_files/search_hex_tool.png 600 %}&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="debug"></category><category term="EDF"></category></entry><entry><title>Epifar</title><link href="https://tinmard.github.io/epifar/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/epifar/</id><summary type="html">&lt;h2&gt;Hybrid electrode&lt;/h2&gt;
 &lt;p&gt;New micro-macro electrode : &lt;/p&gt;
 &lt;p&gt;{% img /_images/epifar/micro_macro.png 600 %}&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;More detailed &lt;a href="/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More detailed &lt;a href="https://tinmard.github.io/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;File conversion&lt;/h2&gt;
-&lt;p&gt;Report to this &lt;a href="/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Report to this &lt;a href="https://tinmard.github.io/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;p&gt;Scripts for converting files and for synchronizing macro and micro data 
 are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;Multiples format …&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Hybrid electrode&lt;/h2&gt;
@@ -606,12 +606,12 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;p&gt;{% img /_images/epifar/micro_macro.png 600 %}&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;More detailed &lt;a href="/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More detailed &lt;a href="https://tinmard.github.io/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;File conversion&lt;/h2&gt;
-&lt;p&gt;Report to this &lt;a href="/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
+&lt;p&gt;Report to this &lt;a href="https://tinmard.github.io/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;p&gt;Scripts for converting files and for synchronizing macro and micro data 
 are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;Multiples format are used to record and analyze iEEG data : &lt;/p&gt;
@@ -621,7 +621,7 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
  sometime triggers stored in a &lt;em&gt;.nev&lt;/em&gt; file&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Visualization&lt;/h2&gt;
-&lt;p&gt;The &lt;a href="/micmac.html"&gt;micmac&lt;/a&gt; interface was specifically designed to visualize micro and Macro files. &lt;/p&gt;
+&lt;p&gt;The &lt;a href="https://tinmard.github.io/micmac.html"&gt;micmac&lt;/a&gt; interface was specifically designed to visualize micro and Macro files. &lt;/p&gt;
 &lt;h2&gt;Noise&lt;/h2&gt;
 &lt;h3&gt;Electro-magnetic noise&lt;/h3&gt;
 &lt;h4&gt;Hardware Solutions&lt;/h4&gt;
@@ -631,11 +631,11 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;ul&gt;
 &lt;li&gt;LNC&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Noise level in micro-recordings&lt;/h3&gt;</content></entry><entry><title>Home</title><link href="/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
+&lt;h3&gt;Noise level in micro-recordings&lt;/h3&gt;</content></entry><entry><title>Home</title><link href="https://tinmard.github.io/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
 &lt;p&gt;Project Map &lt;/p&gt;
 &lt;p&gt;{% img _images/cartographie.png 1000 %}&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
 &lt;p&gt;Project Map &lt;/p&gt;
-&lt;p&gt;{% img _images/cartographie.png 1000 %}&lt;/p&gt;</content></entry><entry><title>Matplotlib tips</title><link href="/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Legend&lt;/h2&gt;
+&lt;p&gt;{% img _images/cartographie.png 1000 %}&lt;/p&gt;</content></entry><entry><title>Matplotlib tips</title><link href="https://tinmard.github.io/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2&gt;Legend&lt;/h2&gt;
 &lt;p&gt;Plot legend for a specific entry : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;f, ax = plt.subplots()
 ax.plot(t, eeg_traces_2d)
@@ -649,7 +649,7 @@ ax.legend(handles=[mean_h])
 &lt;p&gt;To have an interactive figure, one way is to set the backend to 'TkAgg' with : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;
 &lt;span class="n"&gt;matplotlib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;TkAgg&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>micMac</title><link href="/micmac.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/micmac.html</id><summary type="html">&lt;ul&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>micMac</title><link href="https://tinmard.github.io/micmac.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/micmac.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/micmac"&gt;micmac&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Documentation can be found here : &lt;a href="https://micmac.readthedocs.io/en/latest/"&gt;https://micmac.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -677,7 +677,7 @@ ax.legend(handles=[mean_h])
 &lt;p&gt;&lt;img alt="snapshot" src="./_images/micmac/micmac_ex1.png"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="snapshot" src="micmac/micmac_ex1.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Detail view&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex2.png"&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Neurons</title><link href="/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/neurons/</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex2.png"&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  &lt;/p&gt;
 &lt;p&gt;{% img /_images/epifar/micro_macro_details.png 800 %}&lt;/p&gt;
@@ -708,7 +708,7 @@ a large number of electrophysiologycal file formats.&lt;/p&gt;
  Indeed the same spike appears in the 4 contacts of the tetrode.
   It allows to have a better representation of the unit shape from &lt;em&gt;"different angles"&lt;/em&gt; and is thus helpful 
   for the spike-sorting : discriminating which unit has emitted the different spikes recorded on the tetrode (given the fact
-  that a single tetrode can records spikes from different units).&lt;/p&gt;</content></entry><entry><title>Numpy tips</title><link href="/numpy-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/numpy-tips.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+  that a single tetrode can records spikes from different units).&lt;/p&gt;</content></entry><entry><title>Numpy tips</title><link href="https://tinmard.github.io/numpy-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/numpy-tips.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -741,7 +741,7 @@ $$
 if\ (x_i - x_{i-1}) &amp;lt; M\ then\ remove\ x_i\ 
 $$&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hstack&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;M&lt;/span&gt;&lt;span class="p"&gt;])]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>Python tips</title><link href="/python-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/python-tips.html</id><summary type="html">&lt;h2&gt;Datetime&lt;/h2&gt;
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>Python tips</title><link href="https://tinmard.github.io/python-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/python-tips.html</id><summary type="html">&lt;h2&gt;Datetime&lt;/h2&gt;
 &lt;p&gt;Get the current date/time and format it (e.g. to create a filename) :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;datetime&lt;/span&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;%b%Y-%Hh%M&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
@@ -757,7 +757,7 @@ $$&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>SAB</title><link href="/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
+&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
 &lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
 &lt;/ul&gt;
@@ -795,17 +795,17 @@ The following packages are needed :
 &lt;h3&gt;Extract feature and evaluate their importance for predicting the behavioural response&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="" src="_images/sab/feature_importance_example.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Evaluate correlation between features and reaction times&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>Softwares</title><link href="/category/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>Softwares</title><link href="https://tinmard.github.io/category/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
-More info &lt;a href="/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
-The documentation is &lt;a href="/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
-More info &lt;a href="/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
+More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
-The documentation is &lt;a href="/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Stimic</title><link href="/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/stimic/</id><summary type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
+The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
 &lt;h1&gt;Stimulation Event List&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
@@ -819,11 +819,11 @@ The documentation is &lt;a href="/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</co
 &lt;ol&gt;
 &lt;li&gt;Clean the different EDF files, keep only good EEG channels&lt;/li&gt;
 &lt;li&gt;Run the stimulation detector&lt;/li&gt;
-&lt;li&gt;Visual check of the event detected using &lt;a href="/micmac.html"&gt;micmac&lt;/a&gt; and export the corrected event list. &lt;/li&gt;
+&lt;li&gt;Visual check of the event detected using &lt;a href="https://tinmard.github.io/micmac.html"&gt;micmac&lt;/a&gt; and export the corrected event list. &lt;/li&gt;
 &lt;li&gt;Re-organized the csv file (in Excel) and add a bipolar channel column&lt;/li&gt;
 &lt;li&gt;Concatenate these event files for all edf files&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;All the procedure is described &lt;a href="/stimic-stimulation-listing.html"&gt;here&lt;/a&gt;)&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
+&lt;p&gt;All the procedure is described &lt;a href="https://tinmard.github.io/stimic-stimulation-listing.html"&gt;here&lt;/a&gt;)&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
 &lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
 &lt;/ul&gt;
@@ -861,4 +861,4 @@ The following packages are needed :
 &lt;h3&gt;Extract feature and evaluate their importance for predicting the behavioural response&lt;/h3&gt;
 &lt;p&gt;&lt;img alt="" src="_images/sab/feature_importance_example.png"&gt;&lt;/p&gt;
 &lt;h3&gt;Evaluate correlation between features and reaction times&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>SAB</title><link href="/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:None,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry></feed>
