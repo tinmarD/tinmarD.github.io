@@ -1,209 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>A Pelican Blog - GUI</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title>A Pelican Blog - GUI</title>
+        <link rel="stylesheet" href="https://tinmard.github.io/theme/css/main.css" />
+        <link href="https://tinmard.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="https://tinmard.github.io/theme/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le styles -->
-    <link href="https://tinmard.github.io/theme/bootstrap.min.css" rel="stylesheet">
-    <link href="https://tinmard.github.io/theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="https://tinmard.github.io/theme/local.css" rel="stylesheet">
-    <link href="https://tinmard.github.io/theme/pygments.css" rel="stylesheet">
-
-    <!--TIPUE SEARCH  old -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>-->
-    <!--<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.css"/>-->
-    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">-->
-    <!--<script src="https://tinmard.github.io/theme/js/jquery-3.3.1.min.js"></script>-->
-    <!--<script type="text/javascript" src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_content.js"></script>-->
-    <!--<link rel="stylesheet" href="https://tinmard.github.io/theme/tipuesearch/tipuesearch.css">-->
-    <!--<script type="text/javascript" src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_set.js"></script>-->
-    <!--<script type="text/javascript" src="https://tinmard.github.io/theme/tipuesearch/tipuesearch.min.js"></script>-->
-    <!--TIPUE SEARCH -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_content.js"></script>
-    <link rel="stylesheet" href="https://tinmard.github.io/theme/tipuesearch/tipuesearch.css">
-    <!--<script src="tipuesearch/tipuesearch_set.js"></script>-->
-    <!--<script src="tipuesearch/tipuesearch.min.js"></script>-->
-    <script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_set.js"></script>
-    <script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch.min.js"></script>
-
-
-    <!-- So Firefox can bookmark->"abo this site" -->
-        <link href="https://tinmard.github.io/feeds/all.atom.xml" rel="alternate" title="A Pelican Blog" type="application/atom+xml">
-
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
 
-<body>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://tinmard.github.io/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/sab/index.html">SAB</a></li>
+                    <li><a href="/epifar/index.html">Epifar</a></li>
+                    <li><a href="/stimic/index.html">Stimic</a></li>
+                    <li><a href="/cochlea/index.html">Cochlea</a></li>
+                    <li><a href="/neurons/index.html">Neurons</a></li>
+                    <li><a href="https://tinmard.github.io/category/eeg.html">eeg</a></li>
+                    <li><a href="https://tinmard.github.io/category/misc.html">misc</a></li>
+                    <li><a href="https://tinmard.github.io/category/projects.html">projects</a></li>
+                    <li><a href="https://tinmard.github.io/category/python.html">python</a></li>
+                    <li><a href="https://tinmard.github.io/category/software.html">software</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
 
-<div class="navbar">
-    <div class="navbar-inner">
-    <div class="container">
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="https://tinmard.github.io/danasoft.html">DanaSoft</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2010-10-04T13:39:00+00:00">
+                Published: lun. 04 octobre 2010
+        </abbr>
 
-         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-         </a>
-
-        <a class="brand" href="https://tinmard.github.io">A Pelican Blog</a>
-
-        <div class="nav-collapse">
-        <ul class="nav">
-            <li><a href="/sab/index.html">SAB</a></li>
-            <li><a href="/epifar/index.html">Epifar</a></li>
-            <li><a href="/stimic/index.html">Stimic</a></li>
-            <li><a href="/cochlea/index.html">Cochlea</a></li>
-            <li><a href="/neurons/index.html">Neurons</a></li>
-
-        </ul>
-        </div>
-
-        <!--TIPUE SEARCH old-->
-        <!--<div style="float:right; padding-right:100px;">-->
-            <!--<form action="https://tinmard.github.io/search.html" onsubmit="return this.elements['q'].value;">-->
-              <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
-            <!--</form>-->
-        <!--</div>-->
-        <form>
-            <div class="tipue_search_group">
-              <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
-            </div>
-        </form>
-
-<div id="tipue_search_content"></div>
-
-    </div>
-    </div>
-</div>
+<p>In <a href="https://tinmard.github.io/category/software.html">software</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/m4.html">M4</a> <a href="https://tinmard.github.io/tag/danasoft.html">DanaSoft</a> <a href="https://tinmard.github.io/tag/gui.html">GUI</a> <a href="https://tinmard.github.io/tag/python.html">Python</a> </p>
+</footer><!-- /.post-info --><p>DanaSoft is a python interface based on PyQt4. </p>
+<p><img alt="" src="_images/danasoft/fastmapping_train_fam.png"></p>
+<h2>Installation</h2>
+<ol>
+<li>If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :</li>
+</ol>
+<p><code>shell
+   conda create -n danasoft_env python=2.7
+   activate danasoft_env</code></p>
+<ol>
+<li>
+<p>Manual install PyQt4 on this environment</p>
+</li>
+<li>
+<p>Install numpy : conda install numpy</p>
+</li>
+<li>
+<p>Download <strong>danasoft</strong> from github :</p>
+</li>
+</ol>
+<p><code>shell
+   git clone https://github.com/tinmarD/DanaSoft</code></p>
+<h3>Data Directory  :</h3>
+<p>The data files are not provided on github to save space. </p>
+<p>You need to set the data directory path in the <em>config.py</em> file at line 10 : </p>
+<div class="highlight"><pre><span></span><span class="n">SOFT_NAME</span> <span class="o">=</span> <span class="s2">&quot;Dana Soft&quot;</span>
+<span class="n">DATA_PATH</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\Path\to\data\directory&#39;</span>
+</pre></div>
 
 
-<div class="container">
+<h3>Install</h3>
+<ol>
+<li>In the terminal, go in the root directory and run the following command :</li>
+</ol>
+<div class="highlight"><pre><span></span>python setup.py install
+</pre></div>
 
-    <div class="content">
-    <div class="row">
 
-        <div class="span9">
-<article class="row teaser">
+<h2>Launch</h2>
+<p>There are 2 solutions to launch the software : </p>
+<ol>
+<li>Open the file danasoft/danasoft.py with python </li>
+</ol>
+<p>OR</p>
+<ol>
+<li>If step 5 was completed, you can open the software by calling danasoft in a terminal</li>
+</ol>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
 
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/m4.html">M4</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/m4.html">M4</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/danasoft.html">DanaSoft</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/danasoft.html">DanaSoft</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/gui.html">GUI</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/gui.html">GUI</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-    </div>
-  </div>
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tinmard.github.io/micmac.html" rel="bookmark"
+                           title="Permalink to micMac">micMac</a></h1>
+                </header>
 
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/danasoft.html">DanaSoft</a></h2>
-      <div class="content">
-          DanaSoft is a python interface based on PyQt4. Installation If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) : shell conda create -n danasoft_env python=2.7 activate danasoft_env Manual install PyQt4 on this environment Install numpy : conda install numpy Download danasoft from …
-      </div>
-  </div>
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-10-04T13:39:00+00:00">
+                Published: lun. 04 octobre 2010
+        </abbr>
 
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/micmac.html">micMac</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/micmac.html">micMac</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/gui.html">GUI</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/gui.html">GUI</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/matlab.html">Matlab</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/matlab.html">Matlab</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/micmac.html">micMac</a></h2>
-      <div class="content">
-          Github link : micmac Documentation can be found here : https://micmac.readthedocs.io/en/latest/ micMac was designed to visualize and analyse intracerebral recordings. micMac handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes. Installation Install EEGLAB and add it to the MATLAB path. Install …
-      </div>
-  </div>
-
-</article>
-<div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-
-    <li class="active"><a href="https://tinmard.github.io/tag/gui.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
+<p>In <a href="https://tinmard.github.io/category/software.html">software</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/micmac.html">micMac</a> <a href="https://tinmard.github.io/tag/epifar.html">Epifar</a> <a href="https://tinmard.github.io/tag/gui.html">GUI</a> <a href="https://tinmard.github.io/tag/ieeg.html">iEEG</a> <a href="https://tinmard.github.io/tag/matlab.html">Matlab</a> </p>
+</footer><!-- /.post-info -->                <ul>
+<li>Github link : <a href="https://github.com/tinmarD/micmac">micmac</a></li>
+<li>Documentation can be found here : <a href="https://micmac.readthedocs.io/en/latest/">https://micmac.readthedocs.io/en/latest/</a></li>
 </ul>
-</div>        </div>
+<p><strong>micMac</strong> was designed to visualize and analyse intracerebral recordings.
+<strong>micMac</strong> handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes.</p>
+<h2>Installation</h2>
+<ul>
+<li>Install <a href="https://sccn.ucsd.edu/eeglab/download.php">EEGLAB</a> and add it to the MATLAB path.</li>
+<li>Install …</li></ul>
+                <a class="readmore" href="https://tinmard.github.io/micmac.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://tinmard.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
-        <div class="span3">
+                            <li><a href="https://github.com/tinmarD">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Site
-                </li>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
 
-                <li><a href="https://tinmard.github.io/archives.html">Archives</a>
-                <li><a href="https://tinmard.github.io/tags.html">Tags</a>
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
 
-
-
-                <li><a href="https://tinmard.github.io/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
-
-            </ul>
-            </div>
-
-
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Categories
-                </li>
-
-                <li><a href="https://tinmard.github.io/category/eeg.html">eeg</a></li>
-                <li><a href="https://tinmard.github.io/category/misc.html">misc</a></li>
-                <li><a href="https://tinmard.github.io/category/projects.html">projects</a></li>
-                <li><a href="https://tinmard.github.io/category/python.html">python</a></li>
-                <li><a href="https://tinmard.github.io/category/software.html">software</a></li>
-            </ul>
-            </div>
-
-
-
-
-
-        </div>     </div>     </div> 
-
-<footer>
-<br />
-<p><a href="https://tinmard.github.io">A Pelican Blog</a> &copy;  2010</p>
-</footer>
-</div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="https://tinmard.github.io/theme/bootstrap-collapse.js"></script>
 </body>
 </html>

@@ -1,255 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>A Pelican Blog - iEEG</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title>A Pelican Blog - iEEG</title>
+        <link rel="stylesheet" href="https://tinmard.github.io/theme/css/main.css" />
+        <link href="https://tinmard.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="https://tinmard.github.io/theme/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le styles -->
-    <link href="https://tinmard.github.io/theme/bootstrap.min.css" rel="stylesheet">
-    <link href="https://tinmard.github.io/theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="https://tinmard.github.io/theme/local.css" rel="stylesheet">
-    <link href="https://tinmard.github.io/theme/pygments.css" rel="stylesheet">
-
-    <!--TIPUE SEARCH  old -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>-->
-    <!--<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.css"/>-->
-    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">-->
-    <!--<script src="https://tinmard.github.io/theme/js/jquery-3.3.1.min.js"></script>-->
-    <!--<script type="text/javascript" src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_content.js"></script>-->
-    <!--<link rel="stylesheet" href="https://tinmard.github.io/theme/tipuesearch/tipuesearch.css">-->
-    <!--<script type="text/javascript" src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_set.js"></script>-->
-    <!--<script type="text/javascript" src="https://tinmard.github.io/theme/tipuesearch/tipuesearch.min.js"></script>-->
-    <!--TIPUE SEARCH -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_content.js"></script>
-    <link rel="stylesheet" href="https://tinmard.github.io/theme/tipuesearch/tipuesearch.css">
-    <!--<script src="tipuesearch/tipuesearch_set.js"></script>-->
-    <!--<script src="tipuesearch/tipuesearch.min.js"></script>-->
-    <script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_set.js"></script>
-    <script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch.min.js"></script>
-
-
-    <!-- So Firefox can bookmark->"abo this site" -->
-        <link href="https://tinmard.github.io/feeds/all.atom.xml" rel="alternate" title="A Pelican Blog" type="application/atom+xml">
-
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
 
-<body>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://tinmard.github.io/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/sab/index.html">SAB</a></li>
+                    <li><a href="/epifar/index.html">Epifar</a></li>
+                    <li><a href="/stimic/index.html">Stimic</a></li>
+                    <li><a href="/cochlea/index.html">Cochlea</a></li>
+                    <li><a href="/neurons/index.html">Neurons</a></li>
+                    <li><a href="https://tinmard.github.io/category/eeg.html">eeg</a></li>
+                    <li><a href="https://tinmard.github.io/category/misc.html">misc</a></li>
+                    <li><a href="https://tinmard.github.io/category/projects.html">projects</a></li>
+                    <li><a href="https://tinmard.github.io/category/python.html">python</a></li>
+                    <li><a href="https://tinmard.github.io/category/software.html">software</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
 
-<div class="navbar">
-    <div class="navbar-inner">
-    <div class="container">
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="https://tinmard.github.io/file-conversion.html">File conversion</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2018-10-22T17:33:00+00:00">
+                Published: lun. 22 octobre 2018
+        </abbr>
 
-         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-         </a>
+<p>In <a href="https://tinmard.github.io/category/eeg.html">eeg</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/epifar.html">Epifar</a> <a href="https://tinmard.github.io/tag/ieeg.html">iEEG</a> <a href="https://tinmard.github.io/tag/edf.html">EDF</a> </p>
+</footer><!-- /.post-info --><h1>Summary</h1>
+<p>The Matlab code is on the <a href="https://github.com/tinmarD/eegFileConversion">eegFileConversion</a> repository.</p>
+<p>Conversion scripts are listed in the table below with their main function : </p>
+<table>
+<thead>
+<tr>
+<th align="center">Function</th>
+<th align="center">file</th>
+<th align="center">misc.</th>
+<th align="center">Down-sampling</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>Format Conversion</code></td>
+<td align="center"><em>fileconv_nsx2edf()</em></td>
+<td align="center"></td>
+<td align="center">Yes</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>nsx2eeglab()</em></td>
+<td align="center"></td>
+<td align="center">Yes</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>dirconv_nsx2edf</em></td>
+<td align="center"></td>
+<td align="center">Yes</td>
+</tr>
+<tr>
+<td align="center"><code>Mono-to-bipolar</code></td>
+<td align="center"><em>fileconv_mono2bipolar_macro()</em></td>
+<td align="center"></td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>fileconv_mono2bipolar_micro()</em></td>
+<td align="center"></td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>mono2bipolar_macro()</em></td>
+<td align="center"></td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>mono2bipolar_micro()</em></td>
+<td align="center"></td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>dirconv_mono2bipolar_macro</em></td>
+<td align="center"></td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>dirconv_mono2bipolar_micro</em></td>
+<td align="center"></td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center"><code>Synchronization</code></td>
+<td align="center"><em>filesync_macromicro()</em></td>
+<td align="center"></td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center"><code>Divide</code></td>
+<td align="center"><em>filedivide_edf()</em></td>
+<td align="center"></td>
+<td align="center">No</td>
+</tr>
+<tr>
+<td align="center"><code>Downsampling</code></td>
+<td align="center"><em>fileconv_downsample_edf()</em></td>
+<td align="center"></td>
+<td align="center">Yes</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>dirconv_downsample_edf</em></td>
+<td align="center"></td>
+<td align="center">Yes</td>
+</tr>
+<tr>
+<td align="center"><code>EpiFaR</code></td>
+<td align="center"><em>jediconv</em></td>
+<td align="center"></td>
+<td align="center">Yes</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>jediconv_dir</em></td>
+<td align="center"></td>
+<td align="center">Yes</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center"><em>yodaconv</em></td>
+<td align="center">Experimental</td>
+<td align="center">Yes</td>
+</tr>
+</tbody>
+</table>
+<p>{% img /_images/warning.png 20 %} All these scripts detect EEG channels based on the assumption that these channels' 
+name start with <em>'EEG '</em>. This convention must be respected for the scripts to work {% img /_images/warning.png 20 %}</p>
+<p>In most of the scripts, you can specify the names of the bad channels, with the variable/argument <code>badChannelNames</code> which
+must be a cell containing the names of the bad channels. These channels will be removed.</p>
+<h1>Format conversion</h1>
+<h2>Blackrock NSx files</h2>
+<p>Blackrock files are saved in NS5/NEV format. The data are contained in the NS5 file, the NEV file can contain other 
+information such as the triggers.</p>
+<h3>Matlab</h3>
+<p>To open the Blackrock file in Matlab, the <a href="https://github.com/BlackrockMicrosystems/NPMK">NPMK</a> toolbox is needed. 
+It contains a lot a useful function include <em>openNSx()</em> which allows to load NSx files into Matlab.</p>
+<p><strong>Open a NS5 file in Matlab with the <em>fileconv_nsx2edf</em> function</strong>. It writes an EDF file in the <em>edf_dirpath</em> and downsample
+the data by 10.</p>
+<div class="highlight"><pre><span></span><span class="nt">nsx_dir</span> <span class="o">=</span> <span class="s1">&#39;C:\TestFiles\NSX&#39;</span><span class="o">;</span>  
+<span class="nt">nsx_filename</span> <span class="o">=</span> <span class="s1">&#39;20200410-144200-001.ns5&#39;</span><span class="o">;</span>
+<span class="nt">edf_dirpath</span> <span class="o">=</span> <span class="s1">&#39;C:\TestFiles\EDF&#39;</span><span class="o">;</span>
 
-        <a class="brand" href="https://tinmard.github.io">A Pelican Blog</a>
-
-        <div class="nav-collapse">
-        <ul class="nav">
-            <li><a href="/sab/index.html">SAB</a></li>
-            <li><a href="/epifar/index.html">Epifar</a></li>
-            <li><a href="/stimic/index.html">Stimic</a></li>
-            <li><a href="/cochlea/index.html">Cochlea</a></li>
-            <li><a href="/neurons/index.html">Neurons</a></li>
-
-        </ul>
-        </div>
-
-        <!--TIPUE SEARCH old-->
-        <!--<div style="float:right; padding-right:100px;">-->
-            <!--<form action="https://tinmard.github.io/search.html" onsubmit="return this.elements['q'].value;">-->
-              <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
-            <!--</form>-->
-        <!--</div>-->
-        <form>
-            <div class="tipue_search_group">
-              <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
-            </div>
-        </form>
-
-<div id="tipue_search_content"></div>
-
-    </div>
-    </div>
-</div>
+<span class="nt">downsampling_factor</span> <span class="o">=</span> <span class="nt">10</span><span class="o">;</span> 
+<span class="cp">[</span><span class="nx">out_dirpath</span><span class="p">,</span> <span class="nx">out_filename</span><span class="p">,</span> <span class="nx">EEGs</span><span class="cp">]</span> <span class="o">=</span> <span class="nt">fileconv_nsx2edf</span><span class="o">(</span><span class="nt">nsx_dir</span><span class="o">,</span> <span class="nt">nsx_filename</span><span class="o">,</span> <span class="nt">-1</span><span class="o">,</span> <span class="nt">downsampling_factor</span><span class="o">);</span>
+</pre></div>
 
 
-<div class="container">
+<p>You can find a visual document showing the correspondencies between EEGLAB and Blackrock fields 
+<a href="https://tinmard.github.io/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf">here</a></p>
+<h3>Python</h3>
+<p>In python you can use the <a href="https://github.com/NeuralEnsemble/python-neo">neo</a> package.</p>
+<blockquote>
+<p>In python, there is no easy way to write data into the EDF file format
+ (the <em>pyedflib</em> package is complex). The <em>.fif</em> format is a good alternative as it can be opened with 
+ <a href="https://tinmard.github.io/micmac.html">micMac</a> and with MNE.</p>
+</blockquote>
+<p><strong> Import a Blackrock file in Python with <a href="https://martinos.org/mne/stable/index.html">MNE</a> </strong> :</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mne</span>
+<span class="kn">import</span> <span class="nn">neo</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
-    <div class="content">
-    <div class="row">
+<span class="n">nsx_filepath</span> <span class="o">=</span> <span class="sa">r</span><span class="s1">&#39;C:\TestFiles\NSX</span>
 
-        <div class="span9">
-<article class="row teaser">
+<span class="n">bl</span> <span class="o">=</span> <span class="n">neo_loader</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">cascade</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">lazy</span><span class="o">=</span><span class="bp">False</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">seg</span> <span class="o">=</span> <span class="n">bl</span><span class="o">.</span><span class="n">segments</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">n_pnts</span><span class="p">,</span> <span class="n">n_chan</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">seg</span><span class="o">.</span><span class="n">analogsignals</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">seg</span><span class="o">.</span><span class="n">analogsignals</span><span class="p">)</span>
+<span class="n">ch_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_chan</span><span class="p">,</span> <span class="n">n_pnts</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">asig</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">seg</span><span class="o">.</span><span class="n">analogsignals</span><span class="p">):</span>
+    <span class="n">ch_names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">asig</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="c1"># We need the ravel() here because Neo &lt; 0.5 gave 1D, Neo 0.5 gives</span>
+    <span class="c1"># 2D (but still a single channel).</span>
+    <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">asig</span><span class="o">.</span><span class="n">magnitude</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span>
+<span class="n">sfreq</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">seg</span><span class="o">.</span><span class="n">analogsignals</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">sampling_rate</span><span class="o">.</span><span class="n">magnitude</span><span class="p">)</span>
+<span class="n">info</span> <span class="o">=</span> <span class="n">mne</span><span class="o">.</span><span class="n">create_info</span><span class="p">(</span><span class="n">ch_names</span><span class="o">=</span><span class="n">ch_names</span><span class="p">,</span> <span class="n">sfreq</span><span class="o">=</span><span class="n">sfreq</span><span class="p">)</span>
+<span class="n">raw</span> <span class="o">=</span> <span class="n">mne</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">RawArray</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">info</span><span class="p">)</span>
+</pre></div>
 
-  <div style="width: 20%; float:left">
-    lun. 22 octobre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/edf.html">EDF</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/edf.html">EDF</a>
-    </div>
-  </div>
 
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/file-conversion.html">File conversion</a></h2>
-      <div class="content">
-          How to use the file conversion scripts. Change the format. Create a new montage. Deal with Epifar Files
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/debug.html">debug</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/debug.html">debug</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/edf.html">EDF</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/edf.html">EDF</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/debug-edf-files.html">Debug EDF Files</a></h2>
-      <div class="content">
-          Missing header information L'en-tête (header) des fichiers .edf contient des métadonnées sur le patient, l'hôpital... Si certaines de ces données sont absentes, cela peut poser problème lors de l'ouverture du fichier selon le lecteur utilisé (cela ne semble pas avoir d'impact sur EEGLAB mais pose problème sur Anywave). Il existe …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/micmac.html">micMac</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/micmac.html">micMac</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/gui.html">GUI</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/gui.html">GUI</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/matlab.html">Matlab</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/matlab.html">Matlab</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/micmac.html">micMac</a></h2>
-      <div class="content">
-          Github link : micmac Documentation can be found here : https://micmac.readthedocs.io/en/latest/ micMac was designed to visualize and analyse intracerebral recordings. micMac handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes. Installation Install EEGLAB and add it to the MATLAB path. Install …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/sab.html">SAB</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/sab.html">SAB</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/sab.html">SAB</a></h2>
-      <div class="content">
-          The documentation is here : http://sab-main.readthedocs.io Github link : https://github.com/tinmarD/SAB_main The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory The SAB_main package allows you to do several analyses: * ERPs * Phase, ITPC (Inter-Trial Phase Coherence) * Feature …
-      </div>
-  </div>
-
-</article>
-<div class="pagination">
+<p>Then you can save the raw MNE structure easily (in <em>.fif</em> format for example)</p>
+<h2>Neuralynx files</h2>
+<p>With Blackrock files (<em>nsX</em>), all the channels  are stored in the same file and the file can be divided
+ into several time periods. In Neuralynx format (<em>ncs</em>), each channel is stored in a separate file and can also 
+ be segmented into different time periods.</p>
+<p>The <a href="https://github.com/tinmarD/eegFileConversion">eegFileConversion</a> repository contain some scripts for converting
+Neuralynx files to EDF. You will need the NeuraLynx <a href="https://neuralynx.com/software/category/matlab-netcom-utilities"><em>MATLAB Import/Export MEX Files</em></a></p>
+<p>{% img /_images/warning.png 20 %} These functions are a bit experimental and you should not rely too much on the ouput result {% img /_images/warning.png 20 %}   </p>
+<p>With Neuralynx format, each channel is separated in a different file, and there may be several files for a single channel.
+The scripts differs in the following way : </p>
 <ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-
-    <li class="active"><a href="https://tinmard.github.io/tag/ieeg.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
+<li><code>CSCdir_to_EDF_divide</code> : merge the channels together but do NOT merge the different files together</li>
+<li><code>CSCdir_to_EDF_merge</code> : merge the channels together and merge also the different files together.</li>
+<li><code>CSCconv_writedatatoedf</code> : function used by the two other scripts to contruct an EEGLAB structure from the data and convert it into an <em>.edf</em> file.</li>
 </ul>
-</div>        </div>
+<p>These scripts also separate the micro and the Macro channels which are in the same <em>.ncs</em> files.  The way it discriminate
+micro and Macro channels is based on the channel name. It may not work if different naming convention are used !</p>
+<h1>New montage</h1>
+<p>The scripts and functions for creating a new montage use both EEGLAB and ERPLAB. </p>
+<h2>Macro files : monopolar to bipolar</h2>
+<p>The naming convention for bipolar files is to append <em>'_b'</em> to the file name</p>
+<ul>
+<li><code>mono2bipolar_macro</code> : main mono-to-bipolar conversion function. Take as argument and return an EEGLAB structure.</li>
+<li><code>fileconv_mono2bipolar_macro</code> : wrapper around <em>mono2bipolar_macro</em> function. Write the bipolar <em>.edf</em> file.</li>
+<li><code>dirconv_mono2bipolar_macro</code> : wrapper around <em>mono2bipolar_macro</em> function. Convert all <em>.edf</em> files in a directory into bipolar <em>.edf</em> files </li>
+</ul>
+<h2>Micro files</h2>
+<p>There are more possible montage for micro tetrodes that for macro electrodes. We have used mainly three montages so far : </p>
+<table>
+<thead>
+<tr>
+<th align="center">Reference commune (monopolar)</th>
+<th align="center">Inter-tetrode</th>
+<th align="center">Intra-tetrode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td _="%" __images_eeg_file_conversion_ref_commune.png="/_images/eeg/file_conversion/ref_commune.png" align="center" img></td>
+<td _="%" __images_eeg_file_conversion_inter_tetrode.png="/_images/eeg/file_conversion/inter_tetrode.png" align="center" img></td>
+<td _="%" __images_eeg_file_conversion_intra_tetrode.png="/_images/eeg/file_conversion/intra_tetrode.png" align="center" img></td>
+</tr>
+<tr>
+<td align="center">Ref. is a macro-contact in the white matter</td>
+<td align="center">Ref. is a contact from another tetrode on the same electrode</td>
+<td align="center">Ref. is a contact from the same tetrode</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>mono2bipolar_micro</code> : main mono-to-bipolar conversion function. Take as argument and return an EEGLAB structure.</li>
+<li><code>fileconv_mono2bipolar_macro</code> : wrapper around <em>mono2bipolar_macro</em> function. Write the bipolar <em>.edf</em> file.</li>
+<li><code>dirconv_mono2bipolar_macro</code> : wrapper around <em>mono2bipolar_macro</em> function. Convert all <em>.edf</em> files in a directory into bipolar <em>.edf</em> files </li>
+</ul>
+<p>The inter and intra tetrode montage has to be done manually. Modify the <em>mono2bipolar_micro</em> file, you have to specify the 
+tetrode names <code>microNames</code>, the number of channels per tetodre <code>nChanPerMicro</code> (8 or 12) and the bipolar montage <code>bipolarMontage</code>.
+The <code>bipolarMontage</code> variable is a cell of vectors. Each vector defines the new channels for a single electrode. </p>
+<div class="highlight"><pre><span></span>case 34 % P34
+    microNames              = {&#39;b&#39;,&#39;tb&#39;,&#39;b&#39;&#39;&#39;}; 
+    nChanPerMicro           = [12,8,12];
+    bipolarMontage          = {[ 1,5;2,6;3,7;4,8;5,9;6,10;7,11;8,12;1,9;2,10;3,11;4,12],...
+                               [ 1,5;2,6;3,7;4,8],...
+                               [ 1,5;2,6;3,7;4,8;5,9;6,10;7,11;8,12;1,9;2,10;3,11;4,12]};
+</pre></div>
 
-        <div class="span3">
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Site
-                </li>
+<h1>EpiFaR files</h1>
+<p>Several files are dedicated to the conversion of EpiFaR files and offer an automated pipeline : </p>
+<ol>
+<li>Convert the micro <em>.ns5</em> file into an <em>.edf</em>, downsample it if needed and divide it into 10-minutes segments.</li>
+<li>Synchronize the Macro <em>.edf</em> file with the micro file. If the Macro file starts before, cut the beginning the macro
+  file. If the Macro starts after, add a blank signal at the beginning of the macro file</li>
+<li>Divide the Macro synchronized file in 10-minutes segments</li>
+<li>Convert the Macro monopolar file into bipolar files</li>
+<li>Convert the micro monopolar file into bipolar files. </li>
+</ol>
+<p>Some of these step are not mandatory and can be commented in the <code>jediconv</code> file. All the files starting with <code>jediconv</code>
+deal with EpiFaR files. The <code>yodaconv</code> file can be used when the micro file is discontinued and composed of several parts. 
+However this script has not been tested thoroughly. </p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
 
-                <li><a href="https://tinmard.github.io/archives.html">Archives</a>
-                <li><a href="https://tinmard.github.io/tags.html">Tags</a>
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tinmard.github.io/debug-edf-files.html" rel="bookmark"
+                           title="Permalink to Debug EDF Files">Debug EDF Files</a></h1>
+                </header>
 
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-10-04T13:39:00+00:00">
+                Published: lun. 04 octobre 2010
+        </abbr>
 
+<p>In <a href="https://tinmard.github.io/category/eeg.html">eeg</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/epifar.html">Epifar</a> <a href="https://tinmard.github.io/tag/ieeg.html">iEEG</a> <a href="https://tinmard.github.io/tag/debug.html">debug</a> <a href="https://tinmard.github.io/tag/edf.html">EDF</a> </p>
+</footer><!-- /.post-info -->                <h1>Missing header information</h1>
+<p>L'en-tête (header) des fichiers .edf contient des métadonnées sur le patient, l'hôpital... Si certaines de ces données sont absentes,
+cela peut poser problème lors de l'ouverture du fichier selon le lecteur utilisé (cela ne semble pas avoir d'impact sur EEGLAB mais pose problème sur Anywave).</p>
+<p>Il existe …</p>
+                <a class="readmore" href="https://tinmard.github.io/debug-edf-files.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
-                <li><a href="https://tinmard.github.io/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tinmard.github.io/micmac.html" rel="bookmark"
+                           title="Permalink to micMac">micMac</a></h1>
+                </header>
 
-            </ul>
-            </div>
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-10-04T13:39:00+00:00">
+                Published: lun. 04 octobre 2010
+        </abbr>
 
+<p>In <a href="https://tinmard.github.io/category/software.html">software</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/micmac.html">micMac</a> <a href="https://tinmard.github.io/tag/epifar.html">Epifar</a> <a href="https://tinmard.github.io/tag/gui.html">GUI</a> <a href="https://tinmard.github.io/tag/ieeg.html">iEEG</a> <a href="https://tinmard.github.io/tag/matlab.html">Matlab</a> </p>
+</footer><!-- /.post-info -->                <ul>
+<li>Github link : <a href="https://github.com/tinmarD/micmac">micmac</a></li>
+<li>Documentation can be found here : <a href="https://micmac.readthedocs.io/en/latest/">https://micmac.readthedocs.io/en/latest/</a></li>
+</ul>
+<p><strong>micMac</strong> was designed to visualize and analyse intracerebral recordings.
+<strong>micMac</strong> handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes.</p>
+<h2>Installation</h2>
+<ul>
+<li>Install <a href="https://sccn.ucsd.edu/eeglab/download.php">EEGLAB</a> and add it to the MATLAB path.</li>
+<li>Install …</li></ul>
+                <a class="readmore" href="https://tinmard.github.io/micmac.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Categories
-                </li>
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tinmard.github.io/sab.html" rel="bookmark"
+                           title="Permalink to SAB">SAB</a></h1>
+                </header>
 
-                <li><a href="https://tinmard.github.io/category/eeg.html">eeg</a></li>
-                <li><a href="https://tinmard.github.io/category/misc.html">misc</a></li>
-                <li><a href="https://tinmard.github.io/category/projects.html">projects</a></li>
-                <li><a href="https://tinmard.github.io/category/python.html">python</a></li>
-                <li><a href="https://tinmard.github.io/category/software.html">software</a></li>
-            </ul>
-            </div>
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-10-04T13:39:00+00:00">
+                Published: lun. 04 octobre 2010
+        </abbr>
 
+<p>In <a href="https://tinmard.github.io/category/projects.html">projects</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/sab.html">SAB</a> <a href="https://tinmard.github.io/tag/ieeg.html">iEEG</a> </p>Translations:
+        <a href="https://tinmard.github.io/sab/">en</a>
 
+</footer><!-- /.post-info -->                <ul>
+<li>The documentation is here : http://sab-main.readthedocs.io</li>
+<li>Github link : https://github.com/tinmarD/SAB_main</li>
+</ul>
+<p>The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory</p>
+<p>The SAB_main package allows you to do several analyses:
+ * ERPs
+ * Phase, ITPC (Inter-Trial Phase Coherence)
+ * Feature …</p>
+                <a class="readmore" href="https://tinmard.github.io/sab.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://tinmard.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
+                            <li><a href="https://github.com/tinmarD">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
 
-        </div>     </div>     </div> 
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
 
-<footer>
-<br />
-<p><a href="https://tinmard.github.io">A Pelican Blog</a> &copy;  2018</p>
-</footer>
-</div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="https://tinmard.github.io/theme/bootstrap-collapse.js"></script>
 </body>
 </html>

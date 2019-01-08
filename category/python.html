@@ -1,269 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>A Pelican Blog - python</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title>A Pelican Blog - python</title>
+        <link rel="stylesheet" href="https://tinmard.github.io/theme/css/main.css" />
+        <link href="https://tinmard.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="A Pelican Blog Atom Feed" />
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="https://tinmard.github.io/theme/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le styles -->
-    <link href="https://tinmard.github.io/theme/bootstrap.min.css" rel="stylesheet">
-    <link href="https://tinmard.github.io/theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="https://tinmard.github.io/theme/local.css" rel="stylesheet">
-    <link href="https://tinmard.github.io/theme/pygments.css" rel="stylesheet">
-
-    <!--TIPUE SEARCH  old -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.js"></script>-->
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch_set.js"></script>-->
-    <!--<link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Tipue-Search/5.0.0/tipuesearch.css"/>-->
-    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">-->
-    <!--<script src="https://tinmard.github.io/theme/js/jquery-3.3.1.min.js"></script>-->
-    <!--<script type="text/javascript" src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_content.js"></script>-->
-    <!--<link rel="stylesheet" href="https://tinmard.github.io/theme/tipuesearch/tipuesearch.css">-->
-    <!--<script type="text/javascript" src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_set.js"></script>-->
-    <!--<script type="text/javascript" src="https://tinmard.github.io/theme/tipuesearch/tipuesearch.min.js"></script>-->
-    <!--TIPUE SEARCH -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-    <script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_content.js"></script>
-    <link rel="stylesheet" href="https://tinmard.github.io/theme/tipuesearch/tipuesearch.css">
-    <!--<script src="tipuesearch/tipuesearch_set.js"></script>-->
-    <!--<script src="tipuesearch/tipuesearch.min.js"></script>-->
-    <script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_set.js"></script>
-    <script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch.min.js"></script>
-
-
-    <!-- So Firefox can bookmark->"abo this site" -->
-        <link href="https://tinmard.github.io/feeds/all.atom.xml" rel="alternate" title="A Pelican Blog" type="application/atom+xml">
-
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
 
-<body>
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://tinmard.github.io/">A Pelican Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/sab/index.html">SAB</a></li>
+                    <li><a href="/epifar/index.html">Epifar</a></li>
+                    <li><a href="/stimic/index.html">Stimic</a></li>
+                    <li><a href="/cochlea/index.html">Cochlea</a></li>
+                    <li><a href="/neurons/index.html">Neurons</a></li>
+                    <li><a href="https://tinmard.github.io/category/eeg.html">eeg</a></li>
+                    <li><a href="https://tinmard.github.io/category/misc.html">misc</a></li>
+                    <li><a href="https://tinmard.github.io/category/projects.html">projects</a></li>
+                    <li class="active"><a href="https://tinmard.github.io/category/python.html">python</a></li>
+                    <li><a href="https://tinmard.github.io/category/software.html">software</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
 
-<div class="navbar">
-    <div class="navbar-inner">
-    <div class="container">
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="https://tinmard.github.io/python-for-neuroscience.html">Python for Neuroscience</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2018-10-24T17:29:00+00:00">
+                Published: mer. 24 octobre 2018
+        </abbr>
 
-         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-         </a>
+<p>In <a href="https://tinmard.github.io/category/python.html">python</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/python.html">Python</a> </p>
+</footer><!-- /.post-info --><p>Non exhaustive list of useful python packages for neuroscience </p>
+<h1>EEG Analyses</h1>
+<h2>MNE</h2>
+<p><a href="https://www.martinos.org/mne/stable/index.html">{% img /_images/python/python_neuroscience/mne_logo.png 70 %}</a> is the
+  main package for (i)EEG/MEG analysis in Python.</p>
+<p>It offers various tools for exploring, visualizing, and analyzing EEG, MEG, iEEG, ...</p>
+<p>{% img /_images/python/python_neuroscience/mne_categories.png %}</p>
+<h1>Spike Sorting</h1>
+<h2>Tridesclous</h2>
+<blockquote>
+<p><em>Spike sorting with a French touch</em></p>
+</blockquote>
+<p>The primary goal of tridesclous is to provide a toolkit to teach good practices in spike sorting techniques. This tools is now mature and can be used for experimental data.</p>
+<p>The forest of spike sorting tools is dense and tridesclous is a new tree. Be curious and try it.</p>
+<p>See the github page<a href="https://github.com/tridesclous/tridesclous">{% img /_images/python/python_neuroscience/tridesclous_logo.jpg 50 %} </a></p>
+<h2>SpykingCircus</h2>
+<p>The SpyKING CIRCUS is a massively parallel code to perform semi automatic spike sorting on large extra-cellular recordings.
+Using a smart clustering and a greedy template matching approach, the code can solve the problem of overlapping spikes,
+and has been tested both for in vitro and in vivo data, from tens of channels to up to 4225 channels.
+Results are very good, cross-validated on several datasets, and details of the algorithm can be found in the following 
+<a href="https://elifesciences.org/articles/34518">publication</a>. </p>
+<p>See the doc : <a href="https://spyking-circus.readthedocs.io/en/latest/">{% img /_images/python/python_neuroscience/spykingcircus_logo.png  75 %}</a></p>
+<h1>Input/Output</h1>
+<h2>Neo</h2>
+<p>The Neo io module aims to provide an exhaustive way of loading and saving several widely used data formats in electrophysiology.
+ The more these heterogeneous formats are supported, the easier it will be to manipulate them as Neo objects in
+  a similar way. Therefore the IO set of classes propose a simple and flexible IO API that fits many format
+   specifications. It is not only file-oriented, it can also read/write objects from a database.</p>
+<p>Doc here : <a href="https://neo.readthedocs.io">{% img /_images/python/python_neuroscience/neo_logo.png  75 %}</a></p>
+<h1>Electrophysiology</h1>
+<h2>Elephant</h2>
+<p>Elephant is a package for the analysis of neurophysiology data, using Neo data structures. </p>
+<p>See the doc : <a href="http://neuralensemble.org/elephant/">{% img /_images/python/python_neuroscience/elephant_logo.png  75 %}</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
 
-        <a class="brand" href="https://tinmard.github.io">A Pelican Blog</a>
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html" rel="bookmark"
+                           title="Permalink to How to create documentation with Sphinx">How to create documentation with Sphinx</a></h1>
+                </header>
 
-        <div class="nav-collapse">
-        <ul class="nav">
-            <li><a href="/sab/index.html">SAB</a></li>
-            <li><a href="/epifar/index.html">Epifar</a></li>
-            <li><a href="/stimic/index.html">Stimic</a></li>
-            <li><a href="/cochlea/index.html">Cochlea</a></li>
-            <li><a href="/neurons/index.html">Neurons</a></li>
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2018-10-23T14:15:00+00:00">
+                Published: mar. 23 octobre 2018
+        </abbr>
 
-        </ul>
-        </div>
+<p>In <a href="https://tinmard.github.io/category/python.html">python</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/python.html">Python</a> <a href="https://tinmard.github.io/tag/doc.html">Doc</a> </p>
+</footer><!-- /.post-info -->                <p>Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme</p>
+                <a class="readmore" href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
-        <!--TIPUE SEARCH old-->
-        <!--<div style="float:right; padding-right:100px;">-->
-            <!--<form action="https://tinmard.github.io/search.html" onsubmit="return this.elements['q'].value;">-->
-              <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
-            <!--</form>-->
-        <!--</div>-->
-        <form>
-            <div class="tipue_search_group">
-              <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><button type="submit" class="tipue_search_button"><div class="tipue_search_icon">&#9906;</div></button>
-            </div>
-        </form>
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tinmard.github.io/matplotlib-tips.html" rel="bookmark"
+                           title="Permalink to Matplotlib tips">Matplotlib tips</a></h1>
+                </header>
 
-<div id="tipue_search_content"></div>
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-10-04T13:39:00+00:00">
+                Published: lun. 04 octobre 2010
+        </abbr>
 
-    </div>
-    </div>
-</div>
+<p>In <a href="https://tinmard.github.io/category/python.html">python</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/python.html">Python</a> <a href="https://tinmard.github.io/tag/tips.html">Tips</a> <a href="https://tinmard.github.io/tag/programming.html">Programming</a> </p>
+</footer><!-- /.post-info -->                <p>Tips about matplotlib library. Legend, backend, ...</p>
+                <a class="readmore" href="https://tinmard.github.io/matplotlib-tips.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tinmard.github.io/numpy-tips.html" rel="bookmark"
+                           title="Permalink to Numpy tips">Numpy tips</a></h1>
+                </header>
 
-<div class="container">
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-10-04T13:39:00+00:00">
+                Published: lun. 04 octobre 2010
+        </abbr>
 
-    <div class="content">
-    <div class="row">
-
-        <div class="span9">
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    mer. 24 octobre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/python-for-neuroscience.html">Python for Neuroscience</a></h2>
-      <div class="content">
-          Presents some Python packages for neuroscience
-      </div>
-<img src="/_images/banners/python_neuroscience.png" alt="">  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    mar. 23 octobre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/doc.html">Doc</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/doc.html">Doc</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html">How to create documentation with Sphinx</a></h2>
-      <div class="content">
-          Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme
-      </div>
-<img src="/_images/banners/how_to_create_doc.png" alt="">  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/tips.html">Tips</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/tips.html">Tips</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/programming.html">Programming</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/programming.html">Programming</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/matplotlib-tips.html">Matplotlib tips</a></h2>
-      <div class="content">
-          Tips about matplotlib library. Legend, backend, ...
-      </div>
-<img src="/_images/banners/matplotlib_tips.png" alt="">  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/tips.html">Tips</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/tips.html">Tips</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/programming.html">Programming</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/programming.html">Programming</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/numpy-tips.html">Numpy tips</a></h2>
-      <div class="content">
-          np.where(np.diff(np.sign(x)))[0] Find points of x crossing the threshold T : np.where(np.diff(x > T))[0] Find points of x crossing threshold ascending : np.where(np.diff(x > T) & (x[1:] > T)) Remove points that are close, i.e. given a sorted array …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/tips.html">Tips</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/tips.html">Tips</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/programming.html">Programming</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/programming.html">Programming</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/python-tips.html">Python tips</a></h2>
-      <div class="content">
-          Datetime Get the current date/time and format it (e.g. to create a filename) : import datetime print(datetime.datetime.now().strftime('%d%b%Y-%Hh%M')) >> '10Oct2018-18h01' See Comportement de strftime() et strptime() for the availables directives
-      </div>
-  </div>
-
-</article>
-<div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-
-    <li class="active"><a href="https://tinmard.github.io/category/python.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>        </div>
-
-        <div class="span3">
-
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Site
-                </li>
-
-                <li><a href="https://tinmard.github.io/archives.html">Archives</a>
-                <li><a href="https://tinmard.github.io/tags.html">Tags</a>
+<p>In <a href="https://tinmard.github.io/category/python.html">python</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/python.html">Python</a> <a href="https://tinmard.github.io/tag/tips.html">Tips</a> <a href="https://tinmard.github.io/tag/programming.html">Programming</a> </p>
+</footer><!-- /.post-info -->                <div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">x</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
 
 
-
-                <li><a href="https://tinmard.github.io/feeds/all.atom.xml" rel="alternate">Atom feed</a></li>
-
-            </ul>
-            </div>
+<p>Find points of x crossing the threshold T :</p>
+<div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> 
+</pre></div>
 
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header">
-                Categories
-                </li>
-
-                <li><a href="https://tinmard.github.io/category/eeg.html">eeg</a></li>
-                <li><a href="https://tinmard.github.io/category/misc.html">misc</a></li>
-                <li><a href="https://tinmard.github.io/category/projects.html">projects</a></li>
-                <li><a href="https://tinmard.github.io/category/python.html">python</a></li>
-                <li><a href="https://tinmard.github.io/category/software.html">software</a></li>
-            </ul>
-            </div>
+<p>Find points of x crossing threshold  ascending :</p>
+<div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">))</span>
+</pre></div>
 
 
+<p>Remove points that are close, i.e. given a <strong>sorted</strong> array …</p>
+                <a class="readmore" href="https://tinmard.github.io/numpy-tips.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tinmard.github.io/python-tips.html" rel="bookmark"
+                           title="Permalink to Python tips">Python tips</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-10-04T13:39:00+00:00">
+                Published: lun. 04 octobre 2010
+        </abbr>
+
+<p>In <a href="https://tinmard.github.io/category/python.html">python</a>.</p>
+<p>tags: <a href="https://tinmard.github.io/tag/python.html">Python</a> <a href="https://tinmard.github.io/tag/tips.html">Tips</a> <a href="https://tinmard.github.io/tag/programming.html">Programming</a> </p>
+</footer><!-- /.post-info -->                <h2>Datetime</h2>
+<p>Get the current date/time and format it (e.g. to create a filename) :</p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+<span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">%b%Y-%Hh%M&#39;</span><span class="p">))</span>
+<span class="o">&gt;&gt;</span> <span class="s1">&#39;10Oct2018-18h01&#39;</span>
+</pre></div>
 
 
+<p>See <a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior">Comportement de <code>strftime()</code> et <code>strptime()</code> </a> for the availables directives</p>
+                <a class="readmore" href="https://tinmard.github.io/python-tips.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://cerco.ups-tlse.fr/">CerCo</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="https://tinmard.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
 
-        </div>     </div>     </div> 
+                            <li><a href="https://github.com/tinmarD">github</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
 
-<footer>
-<br />
-<p><a href="https://tinmard.github.io">A Pelican Blog</a> &copy;  2018</p>
-</footer>
-</div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="https://tinmard.github.io/theme/bootstrap-collapse.js"></script>
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
 </body>
 </html>
