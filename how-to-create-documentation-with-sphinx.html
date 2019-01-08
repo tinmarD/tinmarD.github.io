@@ -43,48 +43,39 @@
 
 <p>In <a href="https://tinmard.github.io/category/python.html">python</a>.</p>
 <p>tags: <a href="https://tinmard.github.io/tag/python.html">Python</a> <a href="https://tinmard.github.io/tag/doc.html">Doc</a> </p>
-</footer><!-- /.post-info -->      <h2>Add comments to your Python code</h2>
+</footer><!-- /.post-info -->      <h2 id="add-comments-to-your-python-code">Add comments to your Python code</h2>
 <p>The documentation will be generated from the docstrings (~comments) added in your code.</p>
 <!-- PELICAN_END_SUMMARY -->
-
-<p><img alt="" src="_images/python/how_to_create_doc/code_with_comments.png"></p>
+<p><img alt="" src="_images/python/how_to_create_doc/code_with_comments.png"/></p>
 <p>In PyCharms, the docstring format can be selected (here NumPy) : </p>
-<p><img alt="" src="_images/python/how_to_create_doc/pycharm_docstrings.png"></p>
-<h2>Sphinx</h2>
-<h3>Install sphinx  :</h3>
+<p><img alt="" src="_images/python/how_to_create_doc/pycharm_docstrings.png"/></p>
+<h2 id="sphinx">Sphinx</h2>
+<h3 id="install-sphinx">Install sphinx  :</h3>
 <div class="highlight"><pre><span></span>pip install Sphinx
 </pre></div>
-
-
-<h3>Sphinx-quickstart :</h3>
+<h3 id="sphinx-quickstart">Sphinx-quickstart :</h3>
 <p>Create a <em>doc</em> directory in your project root directory and launch sphinx_quickstart and follow the instructions : </p>
 <div class="highlight"><pre><span></span>mkdir doc
 <span class="nb">cd</span> doc
 sphinx-quickstart
 </pre></div>
-
-
 <p>You'll be asked for the <em>Project name</em>, <em>Author name</em>, and to enable or not some extensions. Enable <em>autodoc</em> when asked. You can also enable <em>doctest</em>, <em>intersphinx</em>, <em>mathjax</em>, <em>viewcode</em> and <em>githubpages</em>. </p>
 <p>Once done, files <em>conf.py</em>, <em>index.rst</em>, <em>make.bat</em>,  and <em>Makefile</em> are created</p>
-<h3>Sphinx autodoc:</h3>
+<h3 id="sphinx-autodoc">Sphinx autodoc:</h3>
 <p>The Sphinx autodoc extension (see https://docs-python2readthedocs.readthedocs.io/en/master/code-doc.html) converts docstrings from your Python code into the final documentation format at Sphinx build-time. </p>
 <p>In the doc directory run the following command : </p>
 <div class="highlight"><pre><span></span>sphinx-apidoc -o rst/ ../<span class="nv">$PROJECT_NAME</span>
 </pre></div>
-
-
 <p>Where the directory <em>../$PROJECT_NAME</em> contains your source code.</p>
 <p>This will create <em>.rst</em> (reStructuredText) files for every python file. These <em>.rst</em> in the source directory do not containt the docstrings, but just directives on how to build the documentation.</p>
-<h2>Build the doc</h2>
+<h2 id="build-the-doc_1">Build the doc</h2>
 <p>Build the Makefile in the <em>doc/</em> directory  (e.g. for html output) : </p>
 <div class="highlight"><pre><span></span>make html
 </pre></div>
-
-
 <p>If you encounter this error : </p>
-<p><img alt="" src="_images/python/how_to_create_doc/phinx_error.png"></p>
+<p><img alt="" src="_images/python/how_to_create_doc/phinx_error.png"/></p>
 <p>It means sphinx could not locate the source (<em>.py</em>) files of your project. You need to indicate in the <em>conf.py</em> file in the <em>doc/</em> directory, the location of the source directory. To do this uncomment and complete the first few lines of the <em>conf.py</em> file in the <em>--- Path Setup ---</em> part : </p>
-<p><img alt="" src="_images/python/how_to_create_doc/conf_path_setup.png"></p>
+<p><img alt="" src="_images/python/how_to_create_doc/conf_path_setup.png"/></p>
     </div><!-- /.entry-content -->
 
   </article>

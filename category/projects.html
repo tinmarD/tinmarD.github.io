@@ -39,8 +39,8 @@
 <p>In <a href="https://tinmard.github.io/category/projects.html">projects</a>.</p>
 <p>tags: <a href="https://tinmard.github.io/tag/stimic.html">Stimic</a> </p>
 </footer><!-- /.post-info --><p>This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.</p>
-<h2>Artifact Detection in macro-electrodes</h2>
-<h3>Description</h3>
+<h2 id="artifact-detection-in-macro-electrodes">Artifact Detection in macro-electrodes</h2>
+<h3 id="description">Description</h3>
 <p><strong>Goal</strong> :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the stim. A visual confirmation will be necessary before using the results. Here we only concentrate on locating the stimulation on the stimulation channels, with monopolar montage.</p>
 <p>This will help to create a spreadsheet for each patient containing all the stimulation events and  parameters :</p>
 <ul>
@@ -53,13 +53,13 @@
 <li>Intensity (mA?)</li>
 <li>Effect on the patient (if any)</li>
 </ul>
-<h3>Stimulation Parameters</h3>
+<h3 id="stimulation-parameters">Stimulation Parameters</h3>
 <p>Both frequency and intensity of the stimulation can change and affect the artifacts waveforms. The duration of the stimulation can also change but as we are only interested in detection the onset time, we will not consider it.</p>
 <ul>
 <li>Frequency range between 1Hz and 50Hz</li>
 <li>Intensity range between ? mA and ?? mA</li>
 </ul>
-<h2>Pipeline</h2>
+<h2 id="pipeline_1">Pipeline</h2>
 <p>For each patient, for each file : </p>
 <ul>
 <li>0 - Run the python script <em>stim_clean_EDF_files</em> which open all the EDF files, remove the non-EEG channels and bad channels. The script also check that each file contains the same number of channels and are ordered in the same way across each file. If a channel is missing, an NaN channel id added. It creates new FIF files</li>
@@ -105,12 +105,12 @@
 <p>6 - Create the epoch structure using the <em>stim_create_epoch.py</em> file. It creates a MNE epoch structure.</p>
 </li>
 </ul>
-<h2>Output spreadsheet</h2>
+<h2 id="output-spreadsheet">Output spreadsheet</h2>
 <p>The output spreadsheet will looks like this.This will allow to run further analysis.</p>
-<p>{% img /_images/stimic/stim_list/output_spreadsheet_example.png  %}</p>
-<h2>Detection Algorithm</h2>
-<h3>1 Hz Stimulation</h3>
-<p>{% img /_images/stimic/stim_list/1Hz_artefact_macro.png  %}</p>
+<p><img src="/_images/stimic/stim_list/output_spreadsheet_example.png"/></p>
+<h2 id="detection-algorithm">Detection Algorithm</h2>
+<h3 id="1-hz-stimulation">1 Hz Stimulation</h3>
+<p><img src="/_images/stimic/stim_list/1Hz_artefact_macro.png"/></p>
 <p>For 1Hz stimulation we count the number of peaks if the threshold signal in the window [-0.1s, 10.1s] around each time of threshold crossing. If the number of peaks if equal to 10 more or less, the event is considered a 1Hz stimulation.</p>
 <p>For each channel : </p>
 <ol>
@@ -120,7 +120,7 @@
 <li>Delete peak if the previous one occured less than 0.7s ago</li>
 <li>If the number of peaks is in the interval [8, 12], count the event as a 1Hz stimulation</li>
 </ol>
-<h3>1Hz &lt; f &lt; 50Hz Stimulation</h3>
+<h3 id="1hz-f-50hz-stimulation">1Hz &lt; f &lt; 50Hz Stimulation</h3>
 <p>For stimulation frequencies between 1Hz and 50Hz, the first steps are the same as for the 1Hz stimulation and we compute the Power Spectral Density of the [-0.1, 10.1s] interval around the threshold crossing time.</p>
 <p>For each channel </p>
 <ol>
@@ -132,19 +132,19 @@
 <li>For each frequency of stimulation (must be specified at the beginning), if the corrected PSD at the stimulation frequency is superior at 15 dB, count this event as a stimulation</li>
 </ol>
 <p><em>Note : 1Hz stimulations could be detected with this algorithm but the method described above seemed more robust.</em></p>
-<h3>50Hz Stimulation</h3>
+<h3 id="50hz-stimulation">50Hz Stimulation</h3>
 <p>The stimulation artifact for 50Hz stimulation is not a 50Hz signal, we observe on the stimulation channel a saturation period followed by a slow wave (see figure). </p>
-<p>{% img /_images/stimic/stim_list/50_artefact_macro.png  %}</p>
+<p><img src="/_images/stimic/stim_list/50_artefact_macro.png"/></p>
 <p>For detecting this artifact, we first compute an average artifact smoothed waveform : </p>
 <ol>
 <li>We manually set the onset of 50Hz stimulation period for 13 stimulations (giving 26 waveforms on monopolar data).</li>
 <li>Smooth each waveform with a 6th order butterworth low pass filter, cutoff frequency of 1Hz (forward, backward filtering)</li>
 <li>If the first point of each smoothed waveform is negative, inverse the waveform.</li>
 </ol>
-<p>{% img /_images/stimic/stim_list/50Hz_artefact_mean.png  %}</p>
+<p><img src="/_images/stimic/stim_list/50Hz_artefact_mean.png"/></p>
 <p>We can notive that the time of zero-crossing in the smoothed waveforms occured in a small time window [1.3, 1.8s]</p>
 <p>Moreover waveforms are highly correlated between each other : </p>
-<p>{% img /_images/stimic/stim_list/50Hz_Spearman_corr.png  %}</p>
+<p><img src="/_images/stimic/stim_list/50Hz_Spearman_corr.png"/></p>
 <p>Once we have this mean 50Hz artifact pattern, we can use it to compare the waveform at each threshold crossing time with this pattern using Spearman correlation. </p>
 <ol>
 <li>Threshold signal (3150 uV and -3150 uV)  </li>
@@ -180,7 +180,7 @@
 <p>tags: <a href="https://tinmard.github.io/tag/epifar.html">Epifar</a> <a href="https://tinmard.github.io/tag/hardware.html">Hardware</a> <a href="https://tinmard.github.io/tag/noise.html">Noise</a> </p>
 </footer><!-- /.post-info -->                <p>A complete list of all hardware used for reducing noise in micro-electrode recordings is
  avalaible <a href="https://tinmard.github.io/_data/epifar/noise/hardware/hardware_list.xlsx">here</a>. </p>
-<h3><strong>Spectrum Analyzer SPECTRAN-NF 1010E</strong></h3>
+<h3 id="spectrum-analyzer-spectran-nf-1010e"><strong>Spectrum Analyzer SPECTRAN-NF 1010E</strong></h3>
 <p>The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …</p>
                 <a class="readmore" href="https://tinmard.github.io/epifar/">read more</a>
@@ -203,13 +203,13 @@
 
 </footer><!-- /.post-info -->                <p>The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. </p>
-<p><img alt="" src="/_images/cochlea/cochlea_schema.png"></p>
+<p><img alt="" src="/_images/cochlea/cochlea_schema.png"/></p>
 <p>MOKO </p>
-<p>{% img /_images/cochlea/cochlea_schema.png 600 %}</p>
+<p><img src="/images/cochlea/cochlea_schema.png" width="600"/></p>
 <p>MOKOKOKOKOKOKO</p>
-<p><img alt="Pelican" src="{filename}/_images/cochlea/cochlea_schema.png"></p>
+<p><img alt="Pelican" src="{filename}/_images/cochlea/cochlea_schema.png"/></p>
 <p>AAAAAAAAAAAAAAA</p>
-<p><img alt="Pelican" src="https://tinmard.github.io/images/cochlea/cochlea_schema.png"></p>
+<p><img alt="Pelican" src="https://tinmard.github.io/images/cochlea/cochlea_schema.png"/></p>
 <p>mok</p>
 <ul>
 <li>The code is availaible <a href="https://github.com/tinmarD/simplecochlea">here</a>. </li>
@@ -233,20 +233,20 @@ for the conversion of sound into spikes. </p>
 
 <p>In <a href="https://tinmard.github.io/category/projects.html">projects</a>.</p>
 
-</footer><!-- /.post-info -->                <h2>Hybrid electrode</h2>
+</footer><!-- /.post-info -->                <h2 id="hybrid-electrode">Hybrid electrode</h2>
 <p>New micro-macro electrode : </p>
-<p>{% img /_images/epifar/micro_macro.png 600 %}</p>
+<p><img src="/_images/epifar/micro_macro.png" width="600"/></p>
 <p>The image was generated with <a href="http://www.openscad.org/">OpenScad</a>, from these 2 files : </p>
 <ul>
 <li><a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad">tetrode_only</a></li>
 <li><a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/microMacro.scad">micro-macro</a></li>
 </ul>
 <p>More detailed <a href="{filename}/_images/epifar/micro_macro_carac.pdf">images</a>.</p>
-<h2>File conversion</h2>
+<h2 id="file-conversion">File conversion</h2>
 <p>Report to this <a href="https://tinmard.github.io/file-conversion.html">article</a> for more details.</p>
 <p>Scripts for converting files and for synchronizing macro and micro data 
 are <a href="https://github.com/tinmarD/eegFileConversion">here</a>. </p>
-<p>Multiples format …</p>
+<p>Multiples format are used to record and analyze …</p>
                 <a class="readmore" href="https://tinmard.github.io/epifar/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -265,16 +265,16 @@ are <a href="https://github.com/tinmarD/eegFileConversion">here</a>. </p>
 
 <p>In <a href="https://tinmard.github.io/category/projects.html">projects</a>.</p>
 
-</footer><!-- /.post-info -->                <h2>Intro</h2>
+</footer><!-- /.post-info -->                <h2 id="intro">Intro</h2>
 <p>Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  </p>
-<p>{% img /_images/epifar/micro_macro_details.png 800 %}</p>
-<h2>Analyses</h2>
-<h3>Spike-Sorting</h3>
+<p><img src="/_images/epifar/micro_macro_details.png" width="800"/></p>
+<h2 id="analyses">Analyses</h2>
+<h3 id="spike-sorting">Spike-Sorting</h3>
 <p>Many spike-sorting tools exist (<em>WaveClus</em>, <em>SpykingCircus</em>, <em>tridesclous</em>, <em>Spike2</em>, ...). 
 See <a href="https://simonster.github.io/SpikeSortingSoftware/">here</a> for more. 
 We have chosen <a href="https://spyking-circus.readthedocs.io/en/latest/"><em>SpykingCircus</em></a>, it has the advantages of handling 
-tetrode …</p>
+tetrode configuration, to be designed in Python …</p>
                 <a class="readmore" href="https://tinmard.github.io/neurons/">read more</a>
                 </div><!-- /.entry-content -->
             </article></li>
@@ -344,7 +344,7 @@ Translations:
 <p>In <a href="https://tinmard.github.io/category/projects.html">projects</a>.</p>
 
 </footer><!-- /.post-info -->                <p>Stimic index page </p>
-<h1>Stimulation Event List</h1>
+<h1 id="stimulation-event-list">Stimulation Event List</h1>
 <p>The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG </p>
 <p>To gain speed, a semi-automatic detection pipeline was developped. The different steps are :</p>

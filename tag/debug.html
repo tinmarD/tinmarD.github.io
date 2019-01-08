@@ -38,39 +38,39 @@
 
 <p>In <a href="https://tinmard.github.io/category/eeg.html">eeg</a>.</p>
 <p>tags: <a href="https://tinmard.github.io/tag/epifar.html">Epifar</a> <a href="https://tinmard.github.io/tag/ieeg.html">iEEG</a> <a href="https://tinmard.github.io/tag/debug.html">debug</a> <a href="https://tinmard.github.io/tag/edf.html">EDF</a> </p>
-</footer><!-- /.post-info --><h1>Missing header information</h1>
-<p>L'en-tête (header) des fichiers .edf contient des métadonnées sur le patient, l'hôpital... Si certaines de ces données sont absentes,
-cela peut poser problème lors de l'ouverture du fichier selon le lecteur utilisé (cela ne semble pas avoir d'impact sur EEGLAB mais pose problème sur Anywave).</p>
-<p>Il existe dans le logiciel <a href="https://www.teuniz.net/edfbrowser/">EDFBrowser</a> un outil permettant de modifier l'en-tête du fichier
+</footer><!-- /.post-info --><h1 id="missing-header-information">Missing header information</h1>
+<p>L'en-t&ecirc;te (header) des fichiers .edf contient des m&eacute;tadonn&eacute;es sur le patient, l'h&ocirc;pital... Si certaines de ces donn&eacute;es sont absentes,
+cela peut poser probl&egrave;me lors de l'ouverture du fichier selon le lecteur utilis&eacute; (cela ne semble pas avoir d'impact sur EEGLAB mais pose probl&egrave;me sur Anywave).</p>
+<p>Il existe dans le logiciel <a href="https://www.teuniz.net/edfbrowser/">EDFBrowser</a> un outil permettant de modifier l'en-t&ecirc;te du fichier
 (ou du moins le remplacer par des valeurs "nulles").</p>
-<p>Une fois le logiciel installé, aller dans <em>Tools/Header Editor</em>, sélectionner le fichier qui pose problème et le sauvegarder.
-Il n'est pas nécessaire de modifier les valeurs qui apparaissent. Mieux vaut ne pas modifier le fichier original.</p>
-<h1>Annotation problems</h1>
-<p>Ce problème peut provoquer une erreur lors de l'ouverture d'un fichier EDF dans EEGLAB via l'interface BIOSIG :</p>
-<p>{% img /_images/debug/edf_files/message_erreur_annotations.png 600 %}</p>
-<p>Le format EDF+ introduit la possibilité d'ajouter des annotations, pouvant correspondre à différents évènements,
-stimuli, temps. Pour cela un signal est ajouté, même lorsque les annotations ne sont pas utilisées et son label est
-“EDF Annotations”. Ce signal, comme tous les autres, est divisé en différents blocs en général d'une seconde.</p>
-<p>Un exemple de fichier normal : le premier bloc du signal annotations démarre toujours par <strong>+0</strong> suivie de deux caractères
-de code hexadécimal <strong>14</strong>, d'un autre chiffre ici <strong>0.55</strong> (durée de l’événement annoté en secondes ?) suivie du code hexa
-<strong>14</strong> et de l'annotation rentrée lors de l'acquisition du signal (ici <strong>DAMIER S2</strong>) encore une fois suivie du code hexa <strong>14</strong>.</p>
-<p>{% img /_images/debug/edf_files/edf_normal.png 600 %}</p>
-<p>Dans le cas des fichiers posant problème, le premier bloc du signal annotation contient seulement le <strong>+0</strong> suivi de deux
-codes hexa <strong>14</strong>. Il semble que l'interface BIOSIG attende une valeur de durée ainsi qu'une annotation.
+<p>Une fois le logiciel install&eacute;, aller dans <em>Tools/Header Editor</em>, s&eacute;lectionner le fichier qui pose probl&egrave;me et le sauvegarder.
+Il n'est pas n&eacute;cessaire de modifier les valeurs qui apparaissent. Mieux vaut ne pas modifier le fichier original.</p>
+<h1 id="annotation-problems">Annotation problems</h1>
+<p>Ce probl&egrave;me peut provoquer une erreur lors de l'ouverture d'un fichier EDF dans EEGLAB via l'interface BIOSIG :</p>
+<p><img src="/_images/debug/edf_files/message_erreur_annotations.png" width="600"/></p>
+<p>Le format EDF+ introduit la possibilit&eacute; d'ajouter des annotations, pouvant correspondre &agrave; diff&eacute;rents &eacute;v&egrave;nements,
+stimuli, temps. Pour cela un signal est ajout&eacute;, m&ecirc;me lorsque les annotations ne sont pas utilis&eacute;es et son label est
+&ldquo;EDF Annotations&rdquo;. Ce signal, comme tous les autres, est divis&eacute; en diff&eacute;rents blocs en g&eacute;n&eacute;ral d'une seconde.</p>
+<p>Un exemple de fichier normal : le premier bloc du signal annotations d&eacute;marre toujours par <strong>+0</strong> suivie de deux caract&egrave;res
+de code hexad&eacute;cimal <strong>14</strong>, d'un autre chiffre ici <strong>0.55</strong> (dur&eacute;e de l&rsquo;&eacute;v&eacute;nement annot&eacute; en secondes ?) suivie du code hexa
+<strong>14</strong> et de l'annotation rentr&eacute;e lors de l'acquisition du signal (ici <strong>DAMIER S2</strong>) encore une fois suivie du code hexa <strong>14</strong>.</p>
+<p><img src="/_images/debug/edf_files/edf_normal.png" width="600"/></p>
+<p>Dans le cas des fichiers posant probl&egrave;me, le premier bloc du signal annotation contient seulement le <strong>+0</strong> suivi de deux
+codes hexa <strong>14</strong>. Il semble que l'interface BIOSIG attende une valeur de dur&eacute;e ainsi qu'une annotation.
 Une solution possible est donc de modifier manuellement le fichier dans <a href="https://sourceforge.net/projects/hexedit/">HexEdit</a>:</p>
-<p>{% img /_images/warning.png 20 %} Faire une copie du fichier avant de le modifier</p>
+<p><img src="/_images/warning.png" width="20"/> Faire une copie du fichier avant de le modifier</p>
 <ul>
-<li>rentrer une durée après les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55</li>
+<li>rentrer une dur&eacute;e apr&egrave;s les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55</li>
 <li>entrer un octet de valeur hexa 14</li>
-<li>entrer l'annotation désirée</li>
+<li>entrer l'annotation d&eacute;sir&eacute;e</li>
 <li>entrer un octet de valeur hexa 14</li>
 </ul>
-<p>Il est nécessaire de ne pas modifier la longueur du bloc, il faut donc repérer la fin du bloc d'annotations et après la modification
-décrite ci-dessus, rajouter (ou supprimer) éventuellement des octets de valeur hexa 00 afin de conserver la longueur de bloc.</p>
-<h2>Comment trouver le premier bloc du signal annotation ?</h2>
-<p>La méthode la plus simple est de rechercher la suite d'octets de valeur hexa <strong>2B 30 14 14</strong>.
-Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et sélectionner Find Hex… :</p>
-<p>{% img /_images/debug/edf_files/search_hex_tool.png 600 %}</p>                </article>
+<p>Il est n&eacute;cessaire de ne pas modifier la longueur du bloc, il faut donc rep&eacute;rer la fin du bloc d'annotations et apr&egrave;s la modification
+d&eacute;crite ci-dessus, rajouter (ou supprimer) &eacute;ventuellement des octets de valeur hexa 00 afin de conserver la longueur de bloc.</p>
+<h2 id="comment-trouver-le-premier-bloc-du-signal-annotation">Comment trouver le premier bloc du signal annotation ?</h2>
+<p>La m&eacute;thode la plus simple est de rechercher la suite d'octets de valeur hexa <strong>2B 30 14 14</strong>.
+Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et s&eacute;lectionner Find Hex&hellip; :</p>
+<p><img src="/_images/debug/edf_files/search_hex_tool.png" width="600"/></p>                </article>
             </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">

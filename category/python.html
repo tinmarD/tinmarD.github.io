@@ -39,38 +39,38 @@
 <p>In <a href="https://tinmard.github.io/category/python.html">python</a>.</p>
 <p>tags: <a href="https://tinmard.github.io/tag/python.html">Python</a> </p>
 </footer><!-- /.post-info --><p>Non exhaustive list of useful python packages for neuroscience </p>
-<h1>EEG Analyses</h1>
-<h2>MNE</h2>
-<p><a href="https://www.martinos.org/mne/stable/index.html">{% img /_images/python/python_neuroscience/mne_logo.png 70 %}</a> is the
+<h1 id="eeg-analyses">EEG Analyses</h1>
+<h2 id="mne">MNE</h2>
+<p><a href="https://www.martinos.org/mne/stable/index.html"><img src="/_images/python/python_neuroscience/mne_logo.png" width="70"/></a> is the
   main package for (i)EEG/MEG analysis in Python.</p>
 <p>It offers various tools for exploring, visualizing, and analyzing EEG, MEG, iEEG, ...</p>
-<p>{% img /_images/python/python_neuroscience/mne_categories.png %}</p>
-<h1>Spike Sorting</h1>
-<h2>Tridesclous</h2>
+<p><img src="/_images/python/python_neuroscience/mne_categories.png"/></p>
+<h1 id="spike-sorting_1">Spike Sorting</h1>
+<h2 id="tridesclous">Tridesclous</h2>
 <blockquote>
 <p><em>Spike sorting with a French touch</em></p>
 </blockquote>
 <p>The primary goal of tridesclous is to provide a toolkit to teach good practices in spike sorting techniques. This tools is now mature and can be used for experimental data.</p>
 <p>The forest of spike sorting tools is dense and tridesclous is a new tree. Be curious and try it.</p>
-<p>See the github page<a href="https://github.com/tridesclous/tridesclous">{% img /_images/python/python_neuroscience/tridesclous_logo.jpg 50 %} </a></p>
-<h2>SpykingCircus</h2>
+<p>See the github page<a href="https://github.com/tridesclous/tridesclous"><img src="/_images/python/python_neuroscience/tridesclous_logo.jpg" width="50"/> </a></p>
+<h2 id="spykingcircus">SpykingCircus</h2>
 <p>The SpyKING CIRCUS is a massively parallel code to perform semi automatic spike sorting on large extra-cellular recordings.
 Using a smart clustering and a greedy template matching approach, the code can solve the problem of overlapping spikes,
 and has been tested both for in vitro and in vivo data, from tens of channels to up to 4225 channels.
 Results are very good, cross-validated on several datasets, and details of the algorithm can be found in the following 
 <a href="https://elifesciences.org/articles/34518">publication</a>. </p>
-<p>See the doc : <a href="https://spyking-circus.readthedocs.io/en/latest/">{% img /_images/python/python_neuroscience/spykingcircus_logo.png  75 %}</a></p>
-<h1>Input/Output</h1>
-<h2>Neo</h2>
+<p>See the doc : <a href="https://spyking-circus.readthedocs.io/en/latest/"><img src="/_images/python/python_neuroscience/spykingcircus_logo.png" width="75"/></a></p>
+<h1 id="inputoutput_1">Input/Output</h1>
+<h2 id="neo">Neo</h2>
 <p>The Neo io module aims to provide an exhaustive way of loading and saving several widely used data formats in electrophysiology.
  The more these heterogeneous formats are supported, the easier it will be to manipulate them as Neo objects in
   a similar way. Therefore the IO set of classes propose a simple and flexible IO API that fits many format
    specifications. It is not only file-oriented, it can also read/write objects from a database.</p>
-<p>Doc here : <a href="https://neo.readthedocs.io">{% img /_images/python/python_neuroscience/neo_logo.png  75 %}</a></p>
-<h1>Electrophysiology</h1>
-<h2>Elephant</h2>
+<p>Doc here : <a href="https://neo.readthedocs.io"><img src="/_images/python/python_neuroscience/neo_logo.png" width="75"/></a></p>
+<h1 id="electrophysiology_1">Electrophysiology</h1>
+<h2 id="elephant">Elephant</h2>
 <p>Elephant is a package for the analysis of neurophysiology data, using Neo data structures. </p>
-<p>See the doc : <a href="http://neuralensemble.org/elephant/">{% img /_images/python/python_neuroscience/elephant_logo.png  75 %}</a></p>                </article>
+<p>See the doc : <a href="http://neuralensemble.org/elephant/"><img src="/_images/python/python_neuroscience/elephant_logo.png" width="75"/></a></p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">
                     <h1>Other articles</h1>
@@ -131,18 +131,12 @@ Results are very good, cross-validated on several datasets, and details of the a
 <p>tags: <a href="https://tinmard.github.io/tag/python.html">Python</a> <a href="https://tinmard.github.io/tag/tips.html">Tips</a> <a href="https://tinmard.github.io/tag/programming.html">Programming</a> </p>
 </footer><!-- /.post-info -->                <div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sign</span><span class="p">(</span><span class="n">x</span><span class="p">)))[</span><span class="mi">0</span><span class="p">]</span>
 </pre></div>
-
-
 <p>Find points of x crossing the threshold T :</p>
 <div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span> 
 </pre></div>
-
-
 <p>Find points of x crossing threshold  ascending :</p>
 <div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span> <span class="o">&gt;</span> <span class="n">T</span><span class="p">))</span>
 </pre></div>
-
-
 <p>Remove points that are close, i.e. given a <strong>sorted</strong> array …</p>
                 <a class="readmore" href="https://tinmard.github.io/numpy-tips.html">read more</a>
                 </div><!-- /.entry-content -->
@@ -162,14 +156,12 @@ Results are very good, cross-validated on several datasets, and details of the a
 
 <p>In <a href="https://tinmard.github.io/category/python.html">python</a>.</p>
 <p>tags: <a href="https://tinmard.github.io/tag/python.html">Python</a> <a href="https://tinmard.github.io/tag/tips.html">Tips</a> <a href="https://tinmard.github.io/tag/programming.html">Programming</a> </p>
-</footer><!-- /.post-info -->                <h2>Datetime</h2>
+</footer><!-- /.post-info -->                <h2 id="datetime">Datetime</h2>
 <p>Get the current date/time and format it (e.g. to create a filename) :</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
-<span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">%d</span><span class="s1">%b%Y-%Hh%M&#39;</span><span class="p">))</span>
-<span class="o">&gt;&gt;</span> <span class="s1">&#39;10Oct2018-18h01&#39;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s1">'</span><span class="si">%d</span><span class="s1">%b%Y-%Hh%M'</span><span class="p">))</span>
+<span class="o">&gt;&gt;</span> <span class="s1">'10Oct2018-18h01'</span>
 </pre></div>
-
-
 <p>See <a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior">Comportement de <code>strftime()</code> et <code>strptime()</code> </a> for the availables directives</p>
                 <a class="readmore" href="https://tinmard.github.io/python-tips.html">read more</a>
                 </div><!-- /.entry-content -->

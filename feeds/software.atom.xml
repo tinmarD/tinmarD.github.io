@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog - software</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/software.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2010-10-04T13:39:00+00:00</updated><entry><title>DanaSoft</title><link href="https://tinmard.github.io/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"&gt;&lt;/p&gt;
-&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :&lt;/li&gt;
 &lt;/ol&gt;
@@ -17,8 +17,8 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Download &lt;strong&gt;danasoft&lt;/strong&gt; from …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"&gt;&lt;/p&gt;
-&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :&lt;/li&gt;
 &lt;/ol&gt;
@@ -38,23 +38,19 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;code&gt;shell
    git clone https://github.com/tinmarD/DanaSoft&lt;/code&gt;&lt;/p&gt;
-&lt;h3&gt;Data Directory  :&lt;/h3&gt;
+&lt;h3 id="data-directory"&gt;Data Directory  :&lt;/h3&gt;
 &lt;p&gt;The data files are not provided on github to save space. &lt;/p&gt;
 &lt;p&gt;You need to set the data directory path in the &lt;em&gt;config.py&lt;/em&gt; file at line 10 : &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SOFT_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Dana Soft&amp;quot;&lt;/span&gt;
-&lt;span class="n"&gt;DATA_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;C:\Path\to\data\directory&amp;#39;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;SOFT_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;"Dana Soft"&lt;/span&gt;
+&lt;span class="n"&gt;DATA_PATH&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'C:\Path\to\data\directory'&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3&gt;Install&lt;/h3&gt;
+&lt;h3 id="install"&gt;Install&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;In the terminal, go in the root directory and run the following command :&lt;/li&gt;
 &lt;/ol&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python setup.py install
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2&gt;Launch&lt;/h2&gt;
+&lt;h2 id="launch_1"&gt;Launch&lt;/h2&gt;
 &lt;p&gt;There are 2 solutions to launch the software : &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Open the file danasoft/danasoft.py with python &lt;/li&gt;
@@ -68,7 +64,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;micMac&lt;/strong&gt; was designed to visualize and analyse intracerebral recordings.
 &lt;strong&gt;micMac&lt;/strong&gt; handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes.&lt;/p&gt;
-&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Install &lt;a href="https://sccn.ucsd.edu/eeglab/download.php"&gt;EEGLAB&lt;/a&gt; and add it to the MATLAB path.&lt;/li&gt;
 &lt;li&gt;Install …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
@@ -77,20 +73,20 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;micMac&lt;/strong&gt; was designed to visualize and analyse intracerebral recordings.
 &lt;strong&gt;micMac&lt;/strong&gt; handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes.&lt;/p&gt;
-&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Install &lt;a href="https://sccn.ucsd.edu/eeglab/download.php"&gt;EEGLAB&lt;/a&gt; and add it to the MATLAB path.&lt;/li&gt;
 &lt;li&gt;Install the Biosig toolbox from EEGLAB&lt;/li&gt;
 &lt;li&gt;Download &lt;em&gt;micmac&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Add &lt;em&gt;micmac&lt;/em&gt; to the MATLAB path  &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Screenshots&lt;/h2&gt;
-&lt;h3&gt;Global view&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex1.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="./_images/micmac/micmac_ex1.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="micmac/micmac_ex1.png"&gt;&lt;/p&gt;
-&lt;h3&gt;Detail view&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex2.png"&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Softwares</title><link href="https://tinmard.github.io/category/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
+&lt;h3 id="global-view"&gt;Global view&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="./_images/micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
+&lt;h3 id="detail-view"&gt;Detail view&lt;/h3&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex2.png"/&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Softwares</title><link href="https://tinmard.github.io/category/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
 More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
