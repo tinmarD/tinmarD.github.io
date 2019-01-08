@@ -149,8 +149,8 @@
 </tr>
 </tbody>
 </table>
-<p><img src="/_images/warning.png" width="20"/> All these scripts detect EEG channels based on the assumption that these channels' 
-name start with <em>'EEG '</em>. This convention must be respected for the scripts to work <img src="/_images/warning.png" width="20"/></p>
+<p><img src="/images/warning.png" width="20"/> All these scripts detect EEG channels based on the assumption that these channels' 
+name start with <em>'EEG '</em>. This convention must be respected for the scripts to work <img src="/images/warning.png" width="20"/></p>
 <p>In most of the scripts, you can specify the names of the bad channels, with the variable/argument <code>badChannelNames</code> which
 must be a cell containing the names of the bad channels. These channels will be removed.</p>
 <h1 id="format-conversion">Format conversion</h1>
@@ -170,7 +170,7 @@ the data by 10.</p>
 <span class="cp">[</span><span class="nx">out_dirpath</span><span class="p">,</span> <span class="nx">out_filename</span><span class="p">,</span> <span class="nx">EEGs</span><span class="cp">]</span> <span class="o">=</span> <span class="nt">fileconv_nsx2edf</span><span class="o">(</span><span class="nt">nsx_dir</span><span class="o">,</span> <span class="nt">nsx_filename</span><span class="o">,</span> <span class="nt">-1</span><span class="o">,</span> <span class="nt">downsampling_factor</span><span class="o">);</span>
 </pre></div>
 <p>You can find a visual document showing the correspondencies between EEGLAB and Blackrock fields 
-<a href="https://tinmard.github.io/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf">here</a></p>
+<a href="{filename}/data/eeg/fileconversion/eeglab_nsx_correpondency.pdf">here</a></p>
 <h3 id="python">Python</h3>
 <p>In python you can use the <a href="https://github.com/NeuralEnsemble/python-neo">neo</a> package.</p>
 <blockquote>
@@ -206,7 +206,7 @@ the data by 10.</p>
  be segmented into different time periods.</p>
 <p>The <a href="https://github.com/tinmarD/eegFileConversion">eegFileConversion</a> repository contain some scripts for converting
 Neuralynx files to EDF. You will need the NeuraLynx <a href="https://neuralynx.com/software/category/matlab-netcom-utilities"><em>MATLAB Import/Export MEX Files</em></a></p>
-<p><img src="/_images/warning.png" width="20"/> These functions are a bit experimental and you should not rely too much on the ouput result <img src="/_images/warning.png" width="20"/> </p>
+<p><img src="/images/warning.png" width="20"/> These functions are a bit experimental and you should not rely too much on the ouput result <img src="/images/warning.png" width="20"/> </p>
 <p>With Neuralynx format, each channel is separated in a different file, and there may be several files for a single channel.
 The scripts differs in the following way : </p>
 <ul>
@@ -237,9 +237,9 @@ micro and Macro channels is based on the channel name. It may not work if differ
 </thead>
 <tbody>
 <tr>
-<td align="center"><img src="/_images/eeg/file_conversion/ref_commune.png"/></td>
-<td align="center"><img src="/_images/eeg/file_conversion/inter_tetrode.png"/></td>
-<td align="center"><img src="/_images/eeg/file_conversion/intra_tetrode.png"/></td>
+<td align="center"><img src="/images/eeg/file_conversion/ref_commune.png"/></td>
+<td align="center"><img src="/images/eeg/file_conversion/inter_tetrode.png"/></td>
+<td align="center"><img src="/images/eeg/file_conversion/intra_tetrode.png"/></td>
 </tr>
 <tr>
 <td align="center">Ref. is a macro-contact in the white matter</td>
@@ -297,7 +297,7 @@ However this script has not been tested thoroughly. </p>                </articl
 <p>In <a href="https://tinmard.github.io/category/projects.html">projects</a>.</p>
 <p>tags: <a href="https://tinmard.github.io/tag/epifar.html">Epifar</a> <a href="https://tinmard.github.io/tag/hardware.html">Hardware</a> <a href="https://tinmard.github.io/tag/noise.html">Noise</a> </p>
 </footer><!-- /.post-info -->                <p>A complete list of all hardware used for reducing noise in micro-electrode recordings is
- avalaible <a href="https://tinmard.github.io/_data/epifar/noise/hardware/hardware_list.xlsx">here</a>. </p>
+ avalaible <a href="{filename}/data/epifar/noise/hardware/hardware_list.xlsx">here</a>. </p>
 <h3 id="spectrum-analyzer-spectran-nf-1010e"><strong>Spectrum Analyzer SPECTRAN-NF 1010E</strong></h3>
 <p>The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …</p>

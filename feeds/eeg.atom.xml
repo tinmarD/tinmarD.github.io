@@ -110,8 +110,8 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; All these scripts detect EEG channels based on the assumption that these channels' 
-name start with &lt;em&gt;'EEG '&lt;/em&gt;. This convention must be respected for the scripts to work &lt;img src="/_images/warning.png" width="20"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; All these scripts detect EEG channels based on the assumption that these channels' 
+name start with &lt;em&gt;'EEG '&lt;/em&gt;. This convention must be respected for the scripts to work &lt;img src="/images/warning.png" width="20"/&gt;&lt;/p&gt;
 &lt;p&gt;In most of the scripts, you can specify the names of the bad channels, with the variable/argument &lt;code&gt;badChannelNames&lt;/code&gt; which
 must be a cell containing the names of the bad channels. These channels will be removed.&lt;/p&gt;
 &lt;h1 id="format-conversion"&gt;Format conversion&lt;/h1&gt;
@@ -131,7 +131,7 @@ the data by 10.&lt;/p&gt;
 &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;out_dirpath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;out_filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;EEGs&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;fileconv_nsx2edf&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;nsx_filename&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;-1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;downsampling_factor&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can find a visual document showing the correspondencies between EEGLAB and Blackrock fields 
-&lt;a href="https://tinmard.github.io/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;a href="{filename}/data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="python"&gt;Python&lt;/h3&gt;
 &lt;p&gt;In python you can use the &lt;a href="https://github.com/NeuralEnsemble/python-neo"&gt;neo&lt;/a&gt; package.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -167,7 +167,7 @@ the data by 10.&lt;/p&gt;
  be segmented into different time periods.&lt;/p&gt;
 &lt;p&gt;The &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;eegFileConversion&lt;/a&gt; repository contain some scripts for converting
 Neuralynx files to EDF. You will need the NeuraLynx &lt;a href="https://neuralynx.com/software/category/matlab-netcom-utilities"&gt;&lt;em&gt;MATLAB Import/Export MEX Files&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; These functions are a bit experimental and you should not rely too much on the ouput result &lt;img src="/_images/warning.png" width="20"/&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; These functions are a bit experimental and you should not rely too much on the ouput result &lt;img src="/images/warning.png" width="20"/&gt; &lt;/p&gt;
 &lt;p&gt;With Neuralynx format, each channel is separated in a different file, and there may be several files for a single channel.
 The scripts differs in the following way : &lt;/p&gt;
 &lt;ul&gt;
@@ -198,9 +198,9 @@ micro and Macro channels is based on the channel name. It may not work if differ
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/ref_commune.png"/&gt;&lt;/td&gt;
-&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/inter_tetrode.png"/&gt;&lt;/td&gt;
-&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/intra_tetrode.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/images/eeg/file_conversion/ref_commune.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/images/eeg/file_conversion/inter_tetrode.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/images/eeg/file_conversion/intra_tetrode.png"/&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align="center"&gt;Ref. is a macro-contact in the white matter&lt;/td&gt;
@@ -248,18 +248,18 @@ cela peut poser probl&amp;egrave;me lors de l'ouverture du fichier selon le lect
 Il n'est pas n&amp;eacute;cessaire de modifier les valeurs qui apparaissent. Mieux vaut ne pas modifier le fichier original.&lt;/p&gt;
 &lt;h1 id="annotation-problems"&gt;Annotation problems&lt;/h1&gt;
 &lt;p&gt;Ce probl&amp;egrave;me peut provoquer une erreur lors de l'ouverture d'un fichier EDF dans EEGLAB via l'interface BIOSIG :&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/debug/edf_files/message_erreur_annotations.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/debug/edf_files/message_erreur_annotations.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Le format EDF+ introduit la possibilit&amp;eacute; d'ajouter des annotations, pouvant correspondre &amp;agrave; diff&amp;eacute;rents &amp;eacute;v&amp;egrave;nements,
 stimuli, temps. Pour cela un signal est ajout&amp;eacute;, m&amp;ecirc;me lorsque les annotations ne sont pas utilis&amp;eacute;es et son label est
 &amp;ldquo;EDF Annotations&amp;rdquo;. Ce signal, comme tous les autres, est divis&amp;eacute; en diff&amp;eacute;rents blocs en g&amp;eacute;n&amp;eacute;ral d'une seconde.&lt;/p&gt;
 &lt;p&gt;Un exemple de fichier normal : le premier bloc du signal annotations d&amp;eacute;marre toujours par &lt;strong&gt;+0&lt;/strong&gt; suivie de deux caract&amp;egrave;res
 de code hexad&amp;eacute;cimal &lt;strong&gt;14&lt;/strong&gt;, d'un autre chiffre ici &lt;strong&gt;0.55&lt;/strong&gt; (dur&amp;eacute;e de l&amp;rsquo;&amp;eacute;v&amp;eacute;nement annot&amp;eacute; en secondes ?) suivie du code hexa
 &lt;strong&gt;14&lt;/strong&gt; et de l'annotation rentr&amp;eacute;e lors de l'acquisition du signal (ici &lt;strong&gt;DAMIER S2&lt;/strong&gt;) encore une fois suivie du code hexa &lt;strong&gt;14&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/debug/edf_files/edf_normal.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/debug/edf_files/edf_normal.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Dans le cas des fichiers posant probl&amp;egrave;me, le premier bloc du signal annotation contient seulement le &lt;strong&gt;+0&lt;/strong&gt; suivi de deux
 codes hexa &lt;strong&gt;14&lt;/strong&gt;. Il semble que l'interface BIOSIG attende une valeur de dur&amp;eacute;e ainsi qu'une annotation.
 Une solution possible est donc de modifier manuellement le fichier dans &lt;a href="https://sourceforge.net/projects/hexedit/"&gt;HexEdit&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;rentrer une dur&amp;eacute;e apr&amp;egrave;s les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55&lt;/li&gt;
 &lt;li&gt;entrer un octet de valeur hexa 14&lt;/li&gt;
@@ -271,4 +271,4 @@ d&amp;eacute;crite ci-dessus, rajouter (ou supprimer) &amp;eacute;ventuellement 
 &lt;h2 id="comment-trouver-le-premier-bloc-du-signal-annotation"&gt;Comment trouver le premier bloc du signal annotation ?&lt;/h2&gt;
 &lt;p&gt;La m&amp;eacute;thode la plus simple est de rechercher la suite d'octets de valeur hexa &lt;strong&gt;2B 30 14 14&lt;/strong&gt;.
 Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et s&amp;eacute;lectionner Find Hex&amp;hellip; :&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/debug/edf_files/search_hex_tool.png" width="600"/&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="debug"></category><category term="EDF"></category></entry></feed>
+&lt;p&gt;&lt;img src="/images/debug/edf_files/search_hex_tool.png" width="600"/&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="debug"></category><category term="EDF"></category></entry></feed>

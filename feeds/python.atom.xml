@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>A Pelican Blog - python</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/python.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2018-10-24T17:29:00+00:00</updated><entry><title>Python for Neuroscience</title><link href="https://tinmard.github.io/python-for-neuroscience.html" rel="alternate"></link><published>2018-10-24T17:29:00+00:00</published><updated>2018-10-24T17:29:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-24:/python-for-neuroscience.html</id><summary type="html">&lt;p&gt;Presents some Python packages for neuroscience&lt;/p&gt;</summary><content type="html">&lt;p&gt;Non exhaustive list of useful python packages for neuroscience &lt;/p&gt;
 &lt;h1 id="eeg-analyses"&gt;EEG Analyses&lt;/h1&gt;
 &lt;h2 id="mne"&gt;MNE&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://www.martinos.org/mne/stable/index.html"&gt;&lt;img src="/_images/python/python_neuroscience/mne_logo.png" width="70"/&gt;&lt;/a&gt; is the
+&lt;p&gt;&lt;a href="https://www.martinos.org/mne/stable/index.html"&gt;&lt;img src="/images/python/python_neuroscience/mne_logo.png" width="70"/&gt;&lt;/a&gt; is the
   main package for (i)EEG/MEG analysis in Python.&lt;/p&gt;
 &lt;p&gt;It offers various tools for exploring, visualizing, and analyzing EEG, MEG, iEEG, ...&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/python/python_neuroscience/mne_categories.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/python/python_neuroscience/mne_categories.png"/&gt;&lt;/p&gt;
 &lt;h1 id="spike-sorting_1"&gt;Spike Sorting&lt;/h1&gt;
 &lt;h2 id="tridesclous"&gt;Tridesclous&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -13,25 +13,25 @@
 &lt;/blockquote&gt;
 &lt;p&gt;The primary goal of tridesclous is to provide a toolkit to teach good practices in spike sorting techniques. This tools is now mature and can be used for experimental data.&lt;/p&gt;
 &lt;p&gt;The forest of spike sorting tools is dense and tridesclous is a new tree. Be curious and try it.&lt;/p&gt;
-&lt;p&gt;See the github page&lt;a href="https://github.com/tridesclous/tridesclous"&gt;&lt;img src="/_images/python/python_neuroscience/tridesclous_logo.jpg" width="50"/&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See the github page&lt;a href="https://github.com/tridesclous/tridesclous"&gt;&lt;img src="/images/python/python_neuroscience/tridesclous_logo.jpg" width="50"/&gt; &lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="spykingcircus"&gt;SpykingCircus&lt;/h2&gt;
 &lt;p&gt;The SpyKING CIRCUS is a massively parallel code to perform semi automatic spike sorting on large extra-cellular recordings.
 Using a smart clustering and a greedy template matching approach, the code can solve the problem of overlapping spikes,
 and has been tested both for in vitro and in vivo data, from tens of channels to up to 4225 channels.
 Results are very good, cross-validated on several datasets, and details of the algorithm can be found in the following 
 &lt;a href="https://elifesciences.org/articles/34518"&gt;publication&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;See the doc : &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;&lt;img src="/_images/python/python_neuroscience/spykingcircus_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See the doc : &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;&lt;img src="/images/python/python_neuroscience/spykingcircus_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="inputoutput_1"&gt;Input/Output&lt;/h1&gt;
 &lt;h2 id="neo"&gt;Neo&lt;/h2&gt;
 &lt;p&gt;The Neo io module aims to provide an exhaustive way of loading and saving several widely used data formats in electrophysiology.
  The more these heterogeneous formats are supported, the easier it will be to manipulate them as Neo objects in
   a similar way. Therefore the IO set of classes propose a simple and flexible IO API that fits many format
    specifications. It is not only file-oriented, it can also read/write objects from a database.&lt;/p&gt;
-&lt;p&gt;Doc here : &lt;a href="https://neo.readthedocs.io"&gt;&lt;img src="/_images/python/python_neuroscience/neo_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Doc here : &lt;a href="https://neo.readthedocs.io"&gt;&lt;img src="/images/python/python_neuroscience/neo_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="electrophysiology_1"&gt;Electrophysiology&lt;/h1&gt;
 &lt;h2 id="elephant"&gt;Elephant&lt;/h2&gt;
 &lt;p&gt;Elephant is a package for the analysis of neurophysiology data, using Neo data structures. &lt;/p&gt;
-&lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;&lt;img src="/_images/python/python_neuroscience/elephant_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+00:00</published><updated>2018-10-23T14:15:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2 id="add-comments-to-your-python-code"&gt;Add comments to your Python code&lt;/h2&gt;
+&lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;&lt;img src="/images/python/python_neuroscience/elephant_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+00:00</published><updated>2018-10-23T14:15:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2 id="add-comments-to-your-python-code"&gt;Add comments to your Python code&lt;/h2&gt;
 &lt;p&gt;The documentation will be generated from the docstrings (~comments) added in your code.&lt;/p&gt;
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 &lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/code_with_comments.png"/&gt;&lt;/p&gt;
@@ -70,7 +70,7 @@ ax.plot(t, eeg_traces_2d)
 mean_h, = ax.plot(t, np.mean(eeg_traces_2d, axis=0), label='mean')
 ax.legend(handles=[mean_h])
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt="" src="_images/pyplot_ex_legend.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/pyplot_ex_legend.png"/&gt;&lt;/p&gt;
 &lt;h2 id="interactive-backend"&gt;Interactive Backend&lt;/h2&gt;
 &lt;p&gt;To have an interactive figure, one way is to set the backend to 'TkAgg' with : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;

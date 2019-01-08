@@ -124,10 +124,10 @@
 &lt;p&gt;Stimulation events are then sorted by increasing time and events on the same channel with the same frequency and close in time (difference inferior to 5s) are merged. &lt;/p&gt;</content><category term="Stimic"></category></entry><entry><title>Python for Neuroscience</title><link href="https://tinmard.github.io/python-for-neuroscience.html" rel="alternate"></link><published>2018-10-24T17:29:00+00:00</published><updated>2018-10-24T17:29:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-24:/python-for-neuroscience.html</id><summary type="html">&lt;p&gt;Presents some Python packages for neuroscience&lt;/p&gt;</summary><content type="html">&lt;p&gt;Non exhaustive list of useful python packages for neuroscience &lt;/p&gt;
 &lt;h1 id="eeg-analyses"&gt;EEG Analyses&lt;/h1&gt;
 &lt;h2 id="mne"&gt;MNE&lt;/h2&gt;
-&lt;p&gt;&lt;a href="https://www.martinos.org/mne/stable/index.html"&gt;&lt;img src="/_images/python/python_neuroscience/mne_logo.png" width="70"/&gt;&lt;/a&gt; is the
+&lt;p&gt;&lt;a href="https://www.martinos.org/mne/stable/index.html"&gt;&lt;img src="/images/python/python_neuroscience/mne_logo.png" width="70"/&gt;&lt;/a&gt; is the
   main package for (i)EEG/MEG analysis in Python.&lt;/p&gt;
 &lt;p&gt;It offers various tools for exploring, visualizing, and analyzing EEG, MEG, iEEG, ...&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/python/python_neuroscience/mne_categories.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/python/python_neuroscience/mne_categories.png"/&gt;&lt;/p&gt;
 &lt;h1 id="spike-sorting_1"&gt;Spike Sorting&lt;/h1&gt;
 &lt;h2 id="tridesclous"&gt;Tridesclous&lt;/h2&gt;
 &lt;blockquote&gt;
@@ -135,25 +135,25 @@
 &lt;/blockquote&gt;
 &lt;p&gt;The primary goal of tridesclous is to provide a toolkit to teach good practices in spike sorting techniques. This tools is now mature and can be used for experimental data.&lt;/p&gt;
 &lt;p&gt;The forest of spike sorting tools is dense and tridesclous is a new tree. Be curious and try it.&lt;/p&gt;
-&lt;p&gt;See the github page&lt;a href="https://github.com/tridesclous/tridesclous"&gt;&lt;img src="/_images/python/python_neuroscience/tridesclous_logo.jpg" width="50"/&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See the github page&lt;a href="https://github.com/tridesclous/tridesclous"&gt;&lt;img src="/images/python/python_neuroscience/tridesclous_logo.jpg" width="50"/&gt; &lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="spykingcircus"&gt;SpykingCircus&lt;/h2&gt;
 &lt;p&gt;The SpyKING CIRCUS is a massively parallel code to perform semi automatic spike sorting on large extra-cellular recordings.
 Using a smart clustering and a greedy template matching approach, the code can solve the problem of overlapping spikes,
 and has been tested both for in vitro and in vivo data, from tens of channels to up to 4225 channels.
 Results are very good, cross-validated on several datasets, and details of the algorithm can be found in the following 
 &lt;a href="https://elifesciences.org/articles/34518"&gt;publication&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;See the doc : &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;&lt;img src="/_images/python/python_neuroscience/spykingcircus_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;See the doc : &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;&lt;img src="/images/python/python_neuroscience/spykingcircus_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="inputoutput_1"&gt;Input/Output&lt;/h1&gt;
 &lt;h2 id="neo"&gt;Neo&lt;/h2&gt;
 &lt;p&gt;The Neo io module aims to provide an exhaustive way of loading and saving several widely used data formats in electrophysiology.
  The more these heterogeneous formats are supported, the easier it will be to manipulate them as Neo objects in
   a similar way. Therefore the IO set of classes propose a simple and flexible IO API that fits many format
    specifications. It is not only file-oriented, it can also read/write objects from a database.&lt;/p&gt;
-&lt;p&gt;Doc here : &lt;a href="https://neo.readthedocs.io"&gt;&lt;img src="/_images/python/python_neuroscience/neo_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Doc here : &lt;a href="https://neo.readthedocs.io"&gt;&lt;img src="/images/python/python_neuroscience/neo_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="electrophysiology_1"&gt;Electrophysiology&lt;/h1&gt;
 &lt;h2 id="elephant"&gt;Elephant&lt;/h2&gt;
 &lt;p&gt;Elephant is a package for the analysis of neurophysiology data, using Neo data structures. &lt;/p&gt;
-&lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;&lt;img src="/_images/python/python_neuroscience/elephant_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+00:00</published><updated>2018-10-23T14:15:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2 id="add-comments-to-your-python-code"&gt;Add comments to your Python code&lt;/h2&gt;
+&lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;&lt;img src="/images/python/python_neuroscience/elephant_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+00:00</published><updated>2018-10-23T14:15:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2 id="add-comments-to-your-python-code"&gt;Add comments to your Python code&lt;/h2&gt;
 &lt;p&gt;The documentation will be generated from the docstrings (~comments) added in your code.&lt;/p&gt;
 &lt;!-- PELICAN_END_SUMMARY --&gt;
 &lt;p&gt;&lt;img alt="" src="_images/python/how_to_create_doc/code_with_comments.png"/&gt;&lt;/p&gt;
@@ -296,8 +296,8 @@ sphinx-quickstart
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; All these scripts detect EEG channels based on the assumption that these channels' 
-name start with &lt;em&gt;'EEG '&lt;/em&gt;. This convention must be respected for the scripts to work &lt;img src="/_images/warning.png" width="20"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; All these scripts detect EEG channels based on the assumption that these channels' 
+name start with &lt;em&gt;'EEG '&lt;/em&gt;. This convention must be respected for the scripts to work &lt;img src="/images/warning.png" width="20"/&gt;&lt;/p&gt;
 &lt;p&gt;In most of the scripts, you can specify the names of the bad channels, with the variable/argument &lt;code&gt;badChannelNames&lt;/code&gt; which
 must be a cell containing the names of the bad channels. These channels will be removed.&lt;/p&gt;
 &lt;h1 id="format-conversion"&gt;Format conversion&lt;/h1&gt;
@@ -317,7 +317,7 @@ the data by 10.&lt;/p&gt;
 &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;out_dirpath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;out_filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;EEGs&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;fileconv_nsx2edf&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;nsx_filename&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;-1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;downsampling_factor&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can find a visual document showing the correspondencies between EEGLAB and Blackrock fields 
-&lt;a href="https://tinmard.github.io/_data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;a href="{filename}/data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="python"&gt;Python&lt;/h3&gt;
 &lt;p&gt;In python you can use the &lt;a href="https://github.com/NeuralEnsemble/python-neo"&gt;neo&lt;/a&gt; package.&lt;/p&gt;
 &lt;blockquote&gt;
@@ -353,7 +353,7 @@ the data by 10.&lt;/p&gt;
  be segmented into different time periods.&lt;/p&gt;
 &lt;p&gt;The &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;eegFileConversion&lt;/a&gt; repository contain some scripts for converting
 Neuralynx files to EDF. You will need the NeuraLynx &lt;a href="https://neuralynx.com/software/category/matlab-netcom-utilities"&gt;&lt;em&gt;MATLAB Import/Export MEX Files&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; These functions are a bit experimental and you should not rely too much on the ouput result &lt;img src="/_images/warning.png" width="20"/&gt; &lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; These functions are a bit experimental and you should not rely too much on the ouput result &lt;img src="/images/warning.png" width="20"/&gt; &lt;/p&gt;
 &lt;p&gt;With Neuralynx format, each channel is separated in a different file, and there may be several files for a single channel.
 The scripts differs in the following way : &lt;/p&gt;
 &lt;ul&gt;
@@ -384,9 +384,9 @@ micro and Macro channels is based on the channel name. It may not work if differ
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/ref_commune.png"/&gt;&lt;/td&gt;
-&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/inter_tetrode.png"/&gt;&lt;/td&gt;
-&lt;td align="center"&gt;&lt;img src="/_images/eeg/file_conversion/intra_tetrode.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/images/eeg/file_conversion/ref_commune.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/images/eeg/file_conversion/inter_tetrode.png"/&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;img src="/images/eeg/file_conversion/intra_tetrode.png"/&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td align="center"&gt;Ref. is a macro-contact in the white matter&lt;/td&gt;
@@ -423,23 +423,23 @@ The &lt;code&gt;bipolarMontage&lt;/code&gt; variable is a cell of vectors. Each 
 &lt;p&gt;Some of these step are not mandatory and can be commented in the &lt;code&gt;jediconv&lt;/code&gt; file. All the files starting with &lt;code&gt;jediconv&lt;/code&gt;
 deal with EpiFaR files. The &lt;code&gt;yodaconv&lt;/code&gt; file can be used when the micro file is discontinued and composed of several parts. 
 However this script has not been tested thoroughly. &lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="EDF"></category></entry><entry><title>Hardware tools for reducing noise in micro-recordings</title><link href="https://tinmard.github.io/epifar/" rel="alternate"></link><published>2018-10-22T17:33:00+00:00</published><updated>2018-10-22T17:33:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2018-10-22:/epifar/</id><summary type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
- avalaible &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
+ avalaible &lt;a href="{filename}/data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;h3 id="spectrum-analyzer-spectran-nf-1010e"&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …&lt;/p&gt;</summary><content type="html">&lt;p&gt;A complete list of all hardware used for reducing noise in micro-electrode recordings is
- avalaible &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
+ avalaible &lt;a href="{filename}/data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;h3 id="spectrum-analyzer-spectran-nf-1010e"&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for localizing the
   source of noise in a complex environment. The Spectran NF-1010E comes with a Software which allows further analyses. &lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/epifar/noise/spectran_nf_1010e.jpg" width="500"/&gt;&lt;/p&gt;
-&lt;p&gt;Spectran NF Manual : &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf"&gt;fr&lt;/a&gt;
-  - &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf"&gt;en&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Soft Manual : &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Spectran NF Manual : &lt;a href="{filename}/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf"&gt;fr&lt;/a&gt;
+  - &lt;a href="{filename}/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf"&gt;en&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Soft Manual : &lt;a href="{filename}/data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="power-plantmultiprise-bada-lb-6600"&gt;&lt;strong&gt;Power-Plant/Multiprise BADA LB-6600&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The BADA LB-6600 is a power plant (multiprise) with 8 sockets. It also filters the incoming current from the mains (secteur).&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/noise/bada-lb-6610.jpg" width="400"/&gt;&lt;/p&gt;
-&lt;p&gt;Bada manual : &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Bada manual : &lt;a href="{filename}/data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; The total number of devices plugged in the BADA power-plant should note require more power than
 the BADA can deliver : 3300W &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; The BADA power plant must be powered in with a cable able to conduct a sufficient power.&lt;/p&gt;
@@ -450,38 +450,24 @@ the BADA can deliver : 3300W &lt;/p&gt;
 &lt;h3 id="shielding-fabric"&gt;&lt;strong&gt;Shielding fabric&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/images/epifar/noise/aaronia_shield.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Manuals: 
-   1. &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf"&gt;Aaronia-Mesh&lt;/a&gt;
-   2. &lt;a href="https://tinmard.github.io/_data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
+   1. &lt;a href="{filename}/data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf"&gt;Aaronia-Mesh&lt;/a&gt;
+   2. &lt;a href="{filename}/data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="fluke-87v-multimeter"&gt;&lt;strong&gt;Fluke 87V Multimeter&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/images/epifar/noise/Fluke87V.jpg" width="400"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
+&lt;p&gt;&lt;a href="{filename}/data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
-&lt;p&gt;MOKO &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
-&lt;p&gt;MOKOKOKOKOKOKO&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pelican" src="{filename}/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
-&lt;p&gt;AAAAAAAAAAAAAAA&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pelican" src="https://tinmard.github.io/images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
-&lt;p&gt;mok&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;
 &lt;/ul&gt;</summary><content type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
-&lt;p&gt;MOKO &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
-&lt;p&gt;MOKOKOKOKOKOKO&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pelican" src="{filename}/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
-&lt;p&gt;AAAAAAAAAAAAAAA&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Pelican" src="https://tinmard.github.io/images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
-&lt;p&gt;mok&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;
 &lt;/ul&gt;</content></entry><entry><title>DanaSoft</title><link href="https://tinmard.github.io/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :&lt;/li&gt;
@@ -498,7 +484,7 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Download &lt;strong&gt;danasoft&lt;/strong&gt; from …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="_images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :&lt;/li&gt;
@@ -551,18 +537,18 @@ cela peut poser probl&amp;egrave;me lors de l'ouverture du fichier selon le lect
 Il n'est pas n&amp;eacute;cessaire de modifier les valeurs qui apparaissent. Mieux vaut ne pas modifier le fichier original.&lt;/p&gt;
 &lt;h1 id="annotation-problems"&gt;Annotation problems&lt;/h1&gt;
 &lt;p&gt;Ce probl&amp;egrave;me peut provoquer une erreur lors de l'ouverture d'un fichier EDF dans EEGLAB via l'interface BIOSIG :&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/debug/edf_files/message_erreur_annotations.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/debug/edf_files/message_erreur_annotations.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Le format EDF+ introduit la possibilit&amp;eacute; d'ajouter des annotations, pouvant correspondre &amp;agrave; diff&amp;eacute;rents &amp;eacute;v&amp;egrave;nements,
 stimuli, temps. Pour cela un signal est ajout&amp;eacute;, m&amp;ecirc;me lorsque les annotations ne sont pas utilis&amp;eacute;es et son label est
 &amp;ldquo;EDF Annotations&amp;rdquo;. Ce signal, comme tous les autres, est divis&amp;eacute; en diff&amp;eacute;rents blocs en g&amp;eacute;n&amp;eacute;ral d'une seconde.&lt;/p&gt;
 &lt;p&gt;Un exemple de fichier normal : le premier bloc du signal annotations d&amp;eacute;marre toujours par &lt;strong&gt;+0&lt;/strong&gt; suivie de deux caract&amp;egrave;res
 de code hexad&amp;eacute;cimal &lt;strong&gt;14&lt;/strong&gt;, d'un autre chiffre ici &lt;strong&gt;0.55&lt;/strong&gt; (dur&amp;eacute;e de l&amp;rsquo;&amp;eacute;v&amp;eacute;nement annot&amp;eacute; en secondes ?) suivie du code hexa
 &lt;strong&gt;14&lt;/strong&gt; et de l'annotation rentr&amp;eacute;e lors de l'acquisition du signal (ici &lt;strong&gt;DAMIER S2&lt;/strong&gt;) encore une fois suivie du code hexa &lt;strong&gt;14&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/debug/edf_files/edf_normal.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/debug/edf_files/edf_normal.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Dans le cas des fichiers posant probl&amp;egrave;me, le premier bloc du signal annotation contient seulement le &lt;strong&gt;+0&lt;/strong&gt; suivi de deux
 codes hexa &lt;strong&gt;14&lt;/strong&gt;. Il semble que l'interface BIOSIG attende une valeur de dur&amp;eacute;e ainsi qu'une annotation.
 Une solution possible est donc de modifier manuellement le fichier dans &lt;a href="https://sourceforge.net/projects/hexedit/"&gt;HexEdit&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;rentrer une dur&amp;eacute;e apr&amp;egrave;s les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55&lt;/li&gt;
 &lt;li&gt;entrer un octet de valeur hexa 14&lt;/li&gt;
@@ -574,13 +560,13 @@ d&amp;eacute;crite ci-dessus, rajouter (ou supprimer) &amp;eacute;ventuellement 
 &lt;h2 id="comment-trouver-le-premier-bloc-du-signal-annotation"&gt;Comment trouver le premier bloc du signal annotation ?&lt;/h2&gt;
 &lt;p&gt;La m&amp;eacute;thode la plus simple est de rechercher la suite d'octets de valeur hexa &lt;strong&gt;2B 30 14 14&lt;/strong&gt;.
 Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et s&amp;eacute;lectionner Find Hex&amp;hellip; :&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/debug/edf_files/search_hex_tool.png" width="600"/&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="debug"></category><category term="EDF"></category></entry><entry><title>Epifar</title><link href="https://tinmard.github.io/epifar/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/epifar/</id><summary type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
+&lt;p&gt;&lt;img src="/images/debug/edf_files/search_hex_tool.png" width="600"/&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="debug"></category><category term="EDF"></category></entry><entry><title>Epifar</title><link href="https://tinmard.github.io/epifar/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/epifar/</id><summary type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
 &lt;p&gt;New micro-macro electrode : &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;More detailed &lt;a href="{filename}/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="file-conversion"&gt;File conversion&lt;/h2&gt;
@@ -592,8 +578,8 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://tinmard.github.io/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;More detailed &lt;a href="{filename}/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="file-conversion"&gt;File conversion&lt;/h2&gt;
@@ -628,7 +614,7 @@ ax.plot(t, eeg_traces_2d)
 mean_h, = ax.plot(t, np.mean(eeg_traces_2d, axis=0), label='mean')
 ax.legend(handles=[mean_h])
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;&lt;img alt="" src="_images/pyplot_ex_legend.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/pyplot_ex_legend.png"/&gt;&lt;/p&gt;
 &lt;h2 id="interactive-backend"&gt;Interactive Backend&lt;/h2&gt;
 &lt;p&gt;To have an interactive figure, one way is to set the backend to 'TkAgg' with : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;
@@ -657,14 +643,14 @@ ax.legend(handles=[mean_h])
 &lt;/ul&gt;
 &lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
 &lt;h3 id="global-view"&gt;Global view&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="./_images/micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="images/micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="./images/micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="snapshot" src="micmac/micmac_ex1.png"/&gt;&lt;/p&gt;
 &lt;h3 id="detail-view"&gt;Detail view&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="snapshot" src="_images/micmac/micmac_ex2.png"/&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="snapshot" src="images/micmac/micmac_ex2.png"/&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  &lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;
 &lt;h2 id="analyses"&gt;Analyses&lt;/h2&gt;
 &lt;h3 id="spike-sorting"&gt;Spike-Sorting&lt;/h3&gt;
 &lt;p&gt;Many spike-sorting tools exist (&lt;em&gt;WaveClus&lt;/em&gt;, &lt;em&gt;SpykingCircus&lt;/em&gt;, &lt;em&gt;tridesclous&lt;/em&gt;, &lt;em&gt;Spike2&lt;/em&gt;, ...). 
@@ -673,7 +659,7 @@ We have chosen &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;
 tetrode configuration, to be designed in Python …&lt;/p&gt;</summary><content type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  &lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;
 &lt;h2 id="analyses"&gt;Analyses&lt;/h2&gt;
 &lt;h3 id="spike-sorting"&gt;Spike-Sorting&lt;/h3&gt;
 &lt;p&gt;Many spike-sorting tools exist (&lt;em&gt;WaveClus&lt;/em&gt;, &lt;em&gt;SpykingCircus&lt;/em&gt;, &lt;em&gt;tridesclous&lt;/em&gt;, &lt;em&gt;Spike2&lt;/em&gt;, ...). 
@@ -685,7 +671,7 @@ tetrode configuration, to be designed in Python, and has been tested on several 
 &lt;p&gt;&lt;a href="https://neo.readthedocs.io/en/0.6/"&gt;Neo&lt;/a&gt; is a Python package for working with electrophysiology data in Python. 
 Neo offers a way to represent electrophysiologycal data in memory. Its IO (Input/Output) module allows to have read and write
 a large number of electrophysiologycal file formats.&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/neurons/neo_base_schematic.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/neurons/neo_base_schematic.png" width="600"/&gt;&lt;/p&gt;
 &lt;h4 id="spykingcircus-results-to-neo"&gt;SpykingCircus Results to Neo&lt;/h4&gt;
 &lt;p&gt;Details of the files generated by SpykingCircus : &lt;a href="https://spyking-circus.readthedocs.io/en/latest/advanced/files.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Each unit has a preffered micro-contact, i.e. we can imagine that it is the contact from which the unit is closer.
@@ -757,13 +743,13 @@ The following packages are needed :
  * _pickle&lt;/p&gt;
 &lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
 &lt;h3 id="erp-analyses"&gt;ERP analyses&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/erp_examples.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/sab/erp_examples.png"/&gt;&lt;/p&gt;
 &lt;h3 id="phase-analyses"&gt;Phase analyses&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/itpc_example.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/sab/itpc_example.png"/&gt;&lt;/p&gt;
 &lt;h3 id="extract-feature-and-evaluate-their-importance-for-predicting-the-behavioural-response"&gt;Extract feature and evaluate their importance for predicting the behavioural response&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/feature_importance_example.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/sab/feature_importance_example.png"/&gt;&lt;/p&gt;
 &lt;h3 id="evaluate-correlation-between-features-and-reaction-times"&gt;Evaluate correlation between features and reaction times&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>Softwares</title><link href="https://tinmard.github.io/category/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="" src="images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>Softwares</title><link href="https://tinmard.github.io/category/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
 More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
@@ -823,10 +809,10 @@ The following packages are needed :
  * _pickle&lt;/p&gt;
 &lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
 &lt;h3 id="erp-analyses"&gt;ERP analyses&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/erp_examples.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/sab/erp_examples.png"/&gt;&lt;/p&gt;
 &lt;h3 id="phase-analyses"&gt;Phase analyses&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/itpc_example.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/sab/itpc_example.png"/&gt;&lt;/p&gt;
 &lt;h3 id="extract-feature-and-evaluate-their-importance-for-predicting-the-behavioural-response"&gt;Extract feature and evaluate their importance for predicting the behavioural response&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/feature_importance_example.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="images/sab/feature_importance_example.png"/&gt;&lt;/p&gt;
 &lt;h3 id="evaluate-correlation-between-features-and-reaction-times"&gt;Evaluate correlation between features and reaction times&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="_images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;&lt;img alt="" src="images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+00:00</published><updated>2010-10-04T13:39:00+00:00</updated><author><name></name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry></feed>

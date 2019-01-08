@@ -47,18 +47,18 @@ cela peut poser probl&egrave;me lors de l'ouverture du fichier selon le lecteur 
 Il n'est pas n&eacute;cessaire de modifier les valeurs qui apparaissent. Mieux vaut ne pas modifier le fichier original.</p>
 <h1 id="annotation-problems">Annotation problems</h1>
 <p>Ce probl&egrave;me peut provoquer une erreur lors de l'ouverture d'un fichier EDF dans EEGLAB via l'interface BIOSIG :</p>
-<p><img src="/_images/debug/edf_files/message_erreur_annotations.png" width="600"/></p>
+<p><img src="/images/debug/edf_files/message_erreur_annotations.png" width="600"/></p>
 <p>Le format EDF+ introduit la possibilit&eacute; d'ajouter des annotations, pouvant correspondre &agrave; diff&eacute;rents &eacute;v&egrave;nements,
 stimuli, temps. Pour cela un signal est ajout&eacute;, m&ecirc;me lorsque les annotations ne sont pas utilis&eacute;es et son label est
 &ldquo;EDF Annotations&rdquo;. Ce signal, comme tous les autres, est divis&eacute; en diff&eacute;rents blocs en g&eacute;n&eacute;ral d'une seconde.</p>
 <p>Un exemple de fichier normal : le premier bloc du signal annotations d&eacute;marre toujours par <strong>+0</strong> suivie de deux caract&egrave;res
 de code hexad&eacute;cimal <strong>14</strong>, d'un autre chiffre ici <strong>0.55</strong> (dur&eacute;e de l&rsquo;&eacute;v&eacute;nement annot&eacute; en secondes ?) suivie du code hexa
 <strong>14</strong> et de l'annotation rentr&eacute;e lors de l'acquisition du signal (ici <strong>DAMIER S2</strong>) encore une fois suivie du code hexa <strong>14</strong>.</p>
-<p><img src="/_images/debug/edf_files/edf_normal.png" width="600"/></p>
+<p><img src="/images/debug/edf_files/edf_normal.png" width="600"/></p>
 <p>Dans le cas des fichiers posant probl&egrave;me, le premier bloc du signal annotation contient seulement le <strong>+0</strong> suivi de deux
 codes hexa <strong>14</strong>. Il semble que l'interface BIOSIG attende une valeur de dur&eacute;e ainsi qu'une annotation.
 Une solution possible est donc de modifier manuellement le fichier dans <a href="https://sourceforge.net/projects/hexedit/">HexEdit</a>:</p>
-<p><img src="/_images/warning.png" width="20"/> Faire une copie du fichier avant de le modifier</p>
+<p><img src="/images/warning.png" width="20"/> Faire une copie du fichier avant de le modifier</p>
 <ul>
 <li>rentrer une dur&eacute;e apr&egrave;s les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55</li>
 <li>entrer un octet de valeur hexa 14</li>
@@ -70,7 +70,7 @@ d&eacute;crite ci-dessus, rajouter (ou supprimer) &eacute;ventuellement des octe
 <h2 id="comment-trouver-le-premier-bloc-du-signal-annotation">Comment trouver le premier bloc du signal annotation ?</h2>
 <p>La m&eacute;thode la plus simple est de rechercher la suite d'octets de valeur hexa <strong>2B 30 14 14</strong>.
 Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et s&eacute;lectionner Find Hex&hellip; :</p>
-<p><img src="/_images/debug/edf_files/search_hex_tool.png" width="600"/></p>                </article>
+<p><img src="/images/debug/edf_files/search_hex_tool.png" width="600"/></p>                </article>
             </aside><!-- /#featured -->
         <section id="extras" class="body">
                 <div class="blogroll">
