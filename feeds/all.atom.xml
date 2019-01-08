@@ -457,16 +457,22 @@ the BADA can deliver : 3300W &lt;/p&gt;
 &lt;p&gt;&lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/_data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="htpps://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
+&lt;p&gt;MOKO &lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;SINGEERAT &lt;/p&gt;
 &lt;p&gt;&lt;img src="https://github.com/tinmarD/tinmard.github.io/blob/master/_images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;mok&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;
 &lt;/ul&gt;</summary><content type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="/_images/cochlea/cochlea_schema.png"/&gt;&lt;/p&gt;
+&lt;p&gt;MOKO &lt;/p&gt;
 &lt;p&gt;&lt;img src="/_images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;SINGEERAT &lt;/p&gt;
 &lt;p&gt;&lt;img src="https://github.com/tinmarD/tinmard.github.io/blob/master/_images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;mok&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;
