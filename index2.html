@@ -68,12 +68,20 @@
               <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
             <!--</form>-->
         <!--</div>-->
-        <form>
-            <div class="tipue_search_group">
-              <input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required>
-                <button type="submit" class="tipue_search_button" formaction="https://tinmard.github.io/search.html"><div class="tipue_search_icon">&#9906;</div></button>
-            </div>
-        </form>
+        <section>
+            <h1> Search </h1></hr>
+            <form class="navbar-search", action="https://tinmard.github.io/search.html"
+                  onsubmit="return validateForm(this.elements['q'].value);">
+                <input type="text" class="search-query" placeholder="" name="q" id="tipue_search_input">
+                <input type="submit" value="Go!">
+            </form></li>
+        </section>
+        <!--<form>-->
+            <!--<div class="tipue_search_group">-->
+              <!--<input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required>-->
+                <!--<button type="submit" class="tipue_search_button" formaction="https://tinmard.github.io/search.html"><div class="tipue_search_icon">&#9906;</div></button>-->
+            <!--</div>-->
+        <!--</form>-->
 
 <div id="tipue_search_content"></div>
 
