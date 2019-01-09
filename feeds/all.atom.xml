@@ -565,10 +565,10 @@ Pour cela, une fois le signal ouvert dans HexEdit, aller dans l'onglet Tools et 
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;More detailed &lt;a href="{filename}/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More detailed &lt;a href="https://tinmard.github.io/images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="file-conversion"&gt;File conversion&lt;/h2&gt;
 &lt;p&gt;Report to this &lt;a href="https://tinmard.github.io/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;p&gt;Scripts for converting files and for synchronizing macro and micro data 
@@ -578,10 +578,10 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;More detailed &lt;a href="{filename}/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More detailed &lt;a href="https://tinmard.github.io/images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="file-conversion"&gt;File conversion&lt;/h2&gt;
 &lt;p&gt;Report to this &lt;a href="https://tinmard.github.io/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;p&gt;Scripts for converting files and for synchronizing macro and micro data 
@@ -645,7 +645,7 @@ ax.legend(handles=[mean_h])
 &lt;h3 id="global-view"&gt;Global view&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/images/micmac/micmac_ex1.png" width="600"/&gt;&lt;/p&gt;
 &lt;h3 id="detail-view"&gt;Detail view&lt;/h3&gt;
-&lt;p&gt;&lt;img src="/images/micmac/micmac_ex2.png" width="80"/&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;p&gt;&lt;img src="/images/micmac/micmac_ex2.png" width="600"/&gt;&lt;/p&gt;</content><category term="micMac"></category><category term="Epifar"></category><category term="GUI"></category><category term="iEEG"></category><category term="Matlab"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;

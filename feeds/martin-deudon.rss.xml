@@ -37,10 +37,10 @@ cela peut poser probl&amp;egrave;me lors de l'ouverture du fichier selon le lect
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;The image was generated with &lt;a href="http://www.openscad.org/"&gt;OpenScad&lt;/a&gt;, from these 2 files : &lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="{filename}/_data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/data/epifar/model_hybrid_electrode/tetrodeSeul.scad"&gt;tetrode_only&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="{filename}/data/epifar/model_hybrid_electrode/microMacro.scad"&gt;micro-macro&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;More detailed &lt;a href="{filename}/_images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More detailed &lt;a href="https://tinmard.github.io/images/epifar/micro_macro_carac.pdf"&gt;images&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="file-conversion"&gt;File conversion&lt;/h2&gt;
 &lt;p&gt;Report to this &lt;a href="https://tinmard.github.io/file-conversion.html"&gt;article&lt;/a&gt; for more details.&lt;/p&gt;
 &lt;p&gt;Scripts for converting files and for synchronizing macro and micro data 
