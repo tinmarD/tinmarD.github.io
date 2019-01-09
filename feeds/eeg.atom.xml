@@ -131,7 +131,7 @@ the data by 10.&lt;/p&gt;
 &lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;out_dirpath&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;out_filename&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;EEGs&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;fileconv_nsx2edf&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;nsx_filename&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;-1&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;downsampling_factor&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;You can find a visual document showing the correspondencies between EEGLAB and Blackrock fields 
-&lt;a href="{filename}/data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;a href="https://tinmard.github.io/data/eeg/fileconversion/eeglab_nsx_correpondency.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="python"&gt;Python&lt;/h3&gt;
 &lt;p&gt;In python you can use the &lt;a href="https://github.com/NeuralEnsemble/python-neo"&gt;neo&lt;/a&gt; package.&lt;/p&gt;
 &lt;blockquote&gt;

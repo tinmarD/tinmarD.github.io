@@ -18,16 +18,17 @@
     <link href="https://tinmard.github.io/theme/local.css" rel="stylesheet">
     <link href="https://tinmard.github.io/theme/pygments.css" rel="stylesheet">
 
+    <!--TIPUE SEARCH old -->
+    <!--<link rel="stylesheet" href="https://tinmard.github.io/theme/tipuesearch/tipuesearch.css"-->
+    <!--<script src="https://tinmard.github.io/theme/js/jquery-3.3.1.min.js" type="text/javascript"></script>-->
+
     <!--TIPUE SEARCH -->
-    <link rel="stylesheet" href="https://tinmard.github.io/theme/tipuesearch/tipuesearch.css"
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-    <!--<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">-->
-    <!--<script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_content.js"></script>-->
-    <!--<link rel="stylesheet" href="https://tinmard.github.io/theme/tipuesearch/tipuesearch.css">-->
-    <!--&lt;!&ndash;<script src="tipuesearch/tipuesearch_set.js"></script>&ndash;&gt;-->
-    <!--&lt;!&ndash;<script src="tipuesearch/tipuesearch.min.js"></script>&ndash;&gt;-->
-    <!--<script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch_set.js"></script>-->
-    <!--<script src="https://tinmard.github.io/theme/tipuesearch/tipuesearch.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <script src="/theme/tipuesearch/tipuesearch_content.js"></script>
+    <link rel="stylesheet" href="tipuesearch/css/tipuesearch.css">
+    <script src="/theme/tipuesearch/tipuesearch_set.js"></script>
+    <script src="/theme/tipuesearch/tipuesearch.min.js"></script>
 
 
     <!-- So Firefox can bookmark->"abo this site" -->
@@ -61,26 +62,14 @@
         </ul>
         </div>
 
-        <!--TIPUE SEARCH old-->
-        <!--<div style="float:right; padding-right:100px;">-->
-            <!--<form action="https://tinmard.github.io/search.html" onsubmit="return this.elements['q'].value;">-->
-              <!--<input id="tipue_search_input" type="text" name="q" placeholder="Search">-->
-            <!--</form>-->
-        <!--</div>-->
+        <!--TIPUE SEARCH-->
         <section>
             <h1> Search </h1></hr>
-            <form class="navbar-search", action="https://tinmard.github.io/search.html"
-                  onsubmit="return validateForm(this.elements['q'].value);">
+            <form class="navbar-search" action="https://tinmard.github.io/search.html" onsubmit="return this.elements['q'].value;">
                 <input type="text" class="search-query" placeholder="" name="q" id="tipue_search_input">
                 <input type="submit" value="Go!">
             </form></li>
         </section>
-        <!--<form>-->
-            <!--<div class="tipue_search_group">-->
-              <!--<input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required>-->
-                <!--<button type="submit" class="tipue_search_button" formaction="https://tinmard.github.io/search.html"><div class="tipue_search_icon">&#9906;</div></button>-->
-            <!--</div>-->
-        <!--</form>-->
 
 <div id="tipue_search_content"></div>
 
@@ -111,19 +100,19 @@ by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">
         </div>
 	
         <div><p>A complete list of all hardware used for reducing noise in micro-electrode recordings is
- avalaible <a href="{filename}/data/epifar/noise/hardware/hardware_list.xlsx">here</a>. </p>
+ avalaible <a href="https://tinmard.github.io/data/epifar/noise/hardware/hardware_list.xlsx">here</a>. </p>
 <h3 id="spectrum-analyzer-spectran-nf-1010e"><strong>Spectrum Analyzer SPECTRAN-NF 1010E</strong></h3>
 <p>The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for localizing the
   source of noise in a complex environment. The Spectran NF-1010E comes with a Software which allows further analyses. </p>
 <p><img src="/_images/epifar/noise/spectran_nf_1010e.jpg" width="500"/></p>
-<p>Spectran NF Manual : <a href="{filename}/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf">fr</a>
-  - <a href="{filename}/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf">en</a></p>
-<p>Soft Manual : <a href="{filename}/data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf">MCS</a></p>
+<p>Spectran NF Manual : <a href="https://tinmard.github.io/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf">fr</a>
+  - <a href="https://tinmard.github.io/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf">en</a></p>
+<p>Soft Manual : <a href="https://tinmard.github.io/data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf">MCS</a></p>
 <h3 id="power-plantmultiprise-bada-lb-6600"><strong>Power-Plant/Multiprise BADA LB-6600</strong></h3>
 <p>The BADA LB-6600 is a power plant (multiprise) with 8 sockets. It also filters the incoming current from the mains (secteur).</p>
 <p><img src="/images/epifar/noise/bada-lb-6610.jpg" width="400"/></p>
-<p>Bada manual : <a href="{filename}/data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf">bada_lb_6600</a></p>
+<p>Bada manual : <a href="https://tinmard.github.io/data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf">bada_lb_6600</a></p>
 <p><img src="/_images/warning.png" width="20"/> The total number of devices plugged in the BADA power-plant should note require more power than
 the BADA can deliver : 3300W </p>
 <p><img src="/images/warning.png" width="20"/> The BADA power plant must be powered in with a cable able to conduct a sufficient power.</p>
@@ -134,8 +123,8 @@ the BADA can deliver : 3300W </p>
 <h3 id="shielding-fabric"><strong>Shielding fabric</strong></h3>
 <p><img src="/images/epifar/noise/aaronia_shield.png" width="600"/></p>
 <p>Manuals: 
-   1. <a href="{filename}/data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf">Aaronia-Mesh</a>
-   2. <a href="{filename}/data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf">Aaronia-Shield</a></p>
+   1. <a href="https://tinmard.github.io/data/epifar/noise/hardware/Shielding_fabric/Aaronia-Mesh_FR.pdf">Aaronia-Mesh</a>
+   2. <a href="https://tinmard.github.io/data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf">Aaronia-Shield</a></p>
 <h3 id="fluke-87v-multimeter"><strong>Fluke 87V Multimeter</strong></h3>
 <p><img src="/images/epifar/noise/Fluke87V.jpg" width="400"/></p>
 <p><a href="{filename}/data/epifar/noise/hardware/Fluke_87V_Spec.pdf">Spec</a> - <a href="{filename}/data/epifar/noise/hardware/Fluke_87V_UserManual.pdf">UserManual</a></p></div>
@@ -210,7 +199,7 @@ the BADA can deliver : 3300W </p>
 <p><a href="https://tinmard.github.io">Master-Doc</a> &copy; Martin Deudon 2018</p>
 </footer>
 </div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="https://tinmard.github.io/theme/bootstrap-collapse.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+<!--<script src="https://tinmard.github.io/theme/bootstrap-collapse.js"></script>-->
 </body>
 </html>
