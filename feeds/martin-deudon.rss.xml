@@ -50,14 +50,14 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;p&gt;Project Map &lt;/p&gt;
 &lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/</guid></item><item><title>Matplotlib tips</title><link>https://tinmard.github.io/matplotlib-tips.html</link><description>&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/matplotlib-tips.html</guid><category>Python</category><category>Tips</category><category>Programming</category></item><item><title>micMac</title><link>https://tinmard.github.io/micmac.html</link><description>&lt;ul&gt;
 &lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/micmac"&gt;micmac&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Documentation can be found here : &lt;a href="https://micmac.readthedocs.io/en/latest/"&gt;https://micmac.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Documentation : &lt;a href="https://micmac.readthedocs.io/en/latest/"&gt;https://micmac.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;micMac&lt;/strong&gt; was designed to visualize and analyse intracerebral recordings.
 &lt;strong&gt;micMac&lt;/strong&gt; handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes.&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Install &lt;a href="https://sccn.ucsd.edu/eeglab/download.php"&gt;EEGLAB&lt;/a&gt; and add it to the MATLAB path.&lt;/li&gt;
-&lt;li&gt;Install …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/micmac.html</guid><category>micMac</category><category>Epifar</category><category>GUI</category><category>iEEG</category><category>Matlab</category></item><item><title>Neurons</title><link>https://tinmard.github.io/neurons/</link><description>&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;li&gt;Install the Biosig toolbox from …&lt;/li&gt;&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/micmac.html</guid><category>micMac</category><category>Epifar</category><category>GUI</category><category>iEEG</category><category>Matlab</category></item><item><title>Neurons</title><link>https://tinmard.github.io/neurons/</link><description>&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;
