@@ -158,13 +158,13 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
-&lt;li&gt;The doc is here&lt;/li&gt;
+&lt;li&gt;The doc is &lt;a href="https://simplecochlea.readthedocs.io/en/latest/"&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</summary><content type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
-&lt;li&gt;The doc is here&lt;/li&gt;
+&lt;li&gt;The doc is &lt;a href="https://simplecochlea.readthedocs.io/en/latest/"&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content></entry><entry><title>Epifar</title><link href="https://tinmard.github.io/epifar/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/epifar/</id><summary type="html">&lt;h2 id="hybrid-electrode"&gt;Hybrid electrode&lt;/h2&gt;
 &lt;p&gt;New micro-macro electrode : &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro.png" width="600"/&gt;&lt;/p&gt;

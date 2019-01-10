@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Master-Doc - software</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/software.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2010-10-04T13:39:00+02:00</updated><entry><title>DanaSoft</title><link href="https://tinmard.github.io/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
-&lt;p&gt;The code is &lt;a href="https://github.com/tinmarD/danasoft"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github &lt;a href="https://github.com/tinmarD/danasoft"&gt;link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
@@ -14,8 +14,11 @@
 &lt;p&gt;Manual install PyQt4 on this environment&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Install numpy : conda install …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
-&lt;p&gt;The code is &lt;a href="https://github.com/tinmarD/danasoft"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install numpy : conda install numpy&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Download …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
+&lt;p&gt;Github &lt;a href="https://github.com/tinmarD/danasoft"&gt;link&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
