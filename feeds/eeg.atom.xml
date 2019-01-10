@@ -259,7 +259,7 @@ de code hexad&amp;eacute;cimal &lt;strong&gt;14&lt;/strong&gt;, d'un autre chiff
 &lt;p&gt;Dans le cas des fichiers posant probl&amp;egrave;me, le premier bloc du signal annotation contient seulement le &lt;strong&gt;+0&lt;/strong&gt; suivi de deux
 codes hexa &lt;strong&gt;14&lt;/strong&gt;. Il semble que l'interface BIOSIG attende une valeur de dur&amp;eacute;e ainsi qu'une annotation.
 Une solution possible est donc de modifier manuellement le fichier dans &lt;a href="https://sourceforge.net/projects/hexedit/"&gt;HexEdit&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier &lt;img src="/images/warning.png" width="20"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;rentrer une dur&amp;eacute;e apr&amp;egrave;s les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55&lt;/li&gt;
 &lt;li&gt;entrer un octet de valeur hexa 14&lt;/li&gt;

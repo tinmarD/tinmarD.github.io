@@ -454,7 +454,7 @@ the BADA can deliver : 3300W &lt;/p&gt;
    2. &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="fluke-87v-multimeter"&gt;&lt;strong&gt;Fluke 87V Multimeter&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/images/epifar/noise/Fluke87V.jpg" width="400"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="{filename}/data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
+&lt;p&gt;&lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Fluke_87V/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Fluke_87V/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -550,7 +550,7 @@ de code hexad&amp;eacute;cimal &lt;strong&gt;14&lt;/strong&gt;, d'un autre chiff
 &lt;p&gt;Dans le cas des fichiers posant probl&amp;egrave;me, le premier bloc du signal annotation contient seulement le &lt;strong&gt;+0&lt;/strong&gt; suivi de deux
 codes hexa &lt;strong&gt;14&lt;/strong&gt;. Il semble que l'interface BIOSIG attende une valeur de dur&amp;eacute;e ainsi qu'une annotation.
 Une solution possible est donc de modifier manuellement le fichier dans &lt;a href="https://sourceforge.net/projects/hexedit/"&gt;HexEdit&lt;/a&gt;:&lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; Faire une copie du fichier avant de le modifier &lt;img src="/images/warning.png" width="20"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;rentrer une dur&amp;eacute;e apr&amp;egrave;s les deux octets de valeur hexa 14 (la valeur semble avoir aucune importance), par exemple +0.55&lt;/li&gt;
 &lt;li&gt;entrer un octet de valeur hexa 14&lt;/li&gt;
