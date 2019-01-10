@@ -306,7 +306,7 @@ must be a cell containing the names of the bad channels. These channels will be 
 information such as the triggers.&lt;/p&gt;
 &lt;h3 id="matlab"&gt;Matlab&lt;/h3&gt;
 &lt;p&gt;To open the Blackrock file in Matlab, the &lt;a href="https://github.com/BlackrockMicrosystems/NPMK"&gt;NPMK&lt;/a&gt; toolbox is needed. 
-It contains a lot a useful function include &lt;em&gt;openNSx()&lt;/em&gt; which allows to load NSx files into Matlab.&lt;/p&gt;
+It contains a lot a useful functions including &lt;em&gt;openNSx()&lt;/em&gt; which allows to load NSx files into Matlab.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Open a NS5 file in Matlab with the &lt;em&gt;fileconv_nsx2edf&lt;/em&gt; function&lt;/strong&gt;. It writes an EDF file in the &lt;em&gt;edf_dirpath&lt;/em&gt; and downsample
 the data by 10.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'C:\TestFiles\NSX'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;  
@@ -325,7 +325,7 @@ the data by 10.&lt;/p&gt;
  (the &lt;em&gt;pyedflib&lt;/em&gt; package is complex). The &lt;em&gt;.fif&lt;/em&gt; format is a good alternative as it can be opened with 
  &lt;a href="https://tinmard.github.io/micmac.html"&gt;micMac&lt;/a&gt; and with MNE.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt; Import a Blackrock file in Python with &lt;a href="https://martinos.org/mne/stable/index.html"&gt;MNE&lt;/a&gt; &lt;/strong&gt; :&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Import a Blackrock file in Python with &lt;a href="https://martinos.org/mne/stable/index.html"&gt;MNE&lt;/a&gt; &lt;/strong&gt; and Neo :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;mne&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;neo&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
@@ -373,7 +373,7 @@ micro and Macro channels is based on the channel name. It may not work if differ
 &lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="micro-files"&gt;Micro files&lt;/h2&gt;
-&lt;p&gt;There are more possible montage for micro tetrodes that for macro electrodes. We have used mainly three montages so far : &lt;/p&gt;
+&lt;p&gt;There are more possible montages for micro tetrodes that for macro electrodes. We have used mainly three montages so far : &lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -396,12 +396,12 @@ micro and Macro channels is based on the channel name. It may not work if differ
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;mono2bipolar_micro&lt;/code&gt; : main mono-to-bipolar conversion function. Take as argument and return an EEGLAB structure.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fileconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Write the bipolar &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mono2bipolar_micro&lt;/code&gt; : main mono-to-bipolar conversion function. Takes as argument and returns an EEGLAB structure.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fileconv_mono2bipolar_micro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Write the bipolar &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_micro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The inter and intra tetrode montage has to be done manually. Modify the &lt;em&gt;mono2bipolar_micro&lt;/em&gt; file, you have to specify the 
-tetrode names &lt;code&gt;microNames&lt;/code&gt;, the number of channels per tetodre &lt;code&gt;nChanPerMicro&lt;/code&gt; (8 or 12) and the bipolar montage &lt;code&gt;bipolarMontage&lt;/code&gt;.
+tetrode names &lt;code&gt;microNames&lt;/code&gt;, the number of channels per tetrode &lt;code&gt;nChanPerMicro&lt;/code&gt; (8 or 12) and the bipolar montage &lt;code&gt;bipolarMontage&lt;/code&gt;.
 The &lt;code&gt;bipolarMontage&lt;/code&gt; variable is a cell of vectors. Each vector defines the new channels for a single electrode. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;case 34 % P34
     microNames              = {'b','tb','b'''}; 
@@ -411,7 +411,7 @@ The &lt;code&gt;bipolarMontage&lt;/code&gt; variable is a cell of vectors. Each 
                                [ 1,5;2,6;3,7;4,8;5,9;6,10;7,11;8,12;1,9;2,10;3,11;4,12]};
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id="epifar-files_1"&gt;EpiFaR files&lt;/h1&gt;
-&lt;p&gt;Several files are dedicated to the conversion of EpiFaR files and offer an automated pipeline : &lt;/p&gt;
+&lt;p&gt;Several scripts are dedicated to the conversion of EpiFaR files and offer an automated pipeline : &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Convert the micro &lt;em&gt;.ns5&lt;/em&gt; file into an &lt;em&gt;.edf&lt;/em&gt;, downsample it if needed and divide it into 10-minutes segments.&lt;/li&gt;
 &lt;li&gt;Synchronize the Macro &lt;em&gt;.edf&lt;/em&gt; file with the micro file. If the Macro file starts before, cut the beginning the macro
@@ -432,7 +432,7 @@ However this script has not been tested thoroughly. &lt;/p&gt;</content><categor
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for localizing the
   source of noise in a complex environment. The Spectran NF-1010E comes with a Software which allows further analyses. &lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/noise/spectran_nf_1010e.jpg" width="500"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/noise/spectran_nf_1010e.jpg" width="500"/&gt;&lt;/p&gt;
 &lt;p&gt;Spectran NF Manual : &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf"&gt;fr&lt;/a&gt;
   - &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf"&gt;en&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Soft Manual : &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
@@ -440,7 +440,7 @@ However this script has not been tested thoroughly. &lt;/p&gt;</content><categor
 &lt;p&gt;The BADA LB-6600 is a power plant (multiprise) with 8 sockets. It also filters the incoming current from the mains (secteur).&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/noise/bada-lb-6610.jpg" width="400"/&gt;&lt;/p&gt;
 &lt;p&gt;Bada manual : &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; The total number of devices plugged in the BADA power-plant should note require more power than
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; The total number of devices plugged in the BADA power-plant should note require more power than
 the BADA can deliver : 3300W &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; The BADA power plant must be powered in with a cable able to conduct a sufficient power.&lt;/p&gt;
 &lt;h3 id="shielded-power-cables"&gt;&lt;strong&gt;Shielded power cables&lt;/strong&gt;&lt;/h3&gt;
@@ -456,17 +456,18 @@ the BADA can deliver : 3300W &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/noise/Fluke87V.jpg" width="400"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="{filename}/data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;
 &lt;/ul&gt;</summary><content type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;
 &lt;/ul&gt;</content></entry><entry><title>DanaSoft</title><link href="https://tinmard.github.io/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
+&lt;p&gt;The code is &lt;a href="https://github.com/tinmarD/danasoft"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
@@ -480,10 +481,8 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;Manual install PyQt4 on this environment&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Install numpy : conda install numpy&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Download &lt;strong&gt;danasoft&lt;/strong&gt; from …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
+&lt;p&gt;Install numpy : conda install …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
+&lt;p&gt;The code is &lt;a href="https://github.com/tinmarD/danasoft"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
@@ -524,7 +523,7 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;OR&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;If step 5 was completed, you can open the software by calling danasoft in a terminal&lt;/li&gt;
+&lt;li&gt;If step 5 was completed (&lt;code&gt;python setup.py install&lt;/code&gt;), you can open the software by calling danasoft in a terminal&lt;/li&gt;
 &lt;/ol&gt;</content><category term="M4"></category><category term="DanaSoft"></category><category term="GUI"></category><category term="Python"></category></entry><entry><title>Debug EDF Files</title><link href="https://tinmard.github.io/debug-edf-files.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/debug-edf-files.html</id><summary type="html">&lt;h1 id="missing-header-information"&gt;Missing header information&lt;/h1&gt;
 &lt;p&gt;L'en-t&amp;ecirc;te (header) des fichiers .edf contient des m&amp;eacute;tadonn&amp;eacute;es sur le patient, l'h&amp;ocirc;pital... Si certaines de ces donn&amp;eacute;es sont absentes,
 cela peut poser probl&amp;egrave;me lors de l'ouverture du fichier selon le lecteur utilis&amp;eacute; (cela ne semble pas avoir d'impact sur EEGLAB mais pose probl&amp;egrave;me sur Anywave).&lt;/p&gt;

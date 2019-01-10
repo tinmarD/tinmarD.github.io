@@ -217,7 +217,7 @@ must be a cell containing the names of the bad channels. These channels will be 
 information such as the triggers.</p>
 <h3 id="matlab">Matlab</h3>
 <p>To open the Blackrock file in Matlab, the <a href="https://github.com/BlackrockMicrosystems/NPMK">NPMK</a> toolbox is needed. 
-It contains a lot a useful function include <em>openNSx()</em> which allows to load NSx files into Matlab.</p>
+It contains a lot a useful functions including <em>openNSx()</em> which allows to load NSx files into Matlab.</p>
 <p><strong>Open a NS5 file in Matlab with the <em>fileconv_nsx2edf</em> function</strong>. It writes an EDF file in the <em>edf_dirpath</em> and downsample
 the data by 10.</p>
 <div class="highlight"><pre><span></span><span class="nt">nsx_dir</span> <span class="o">=</span> <span class="s1">'C:\TestFiles\NSX'</span><span class="o">;</span>  
@@ -236,7 +236,7 @@ the data by 10.</p>
  (the <em>pyedflib</em> package is complex). The <em>.fif</em> format is a good alternative as it can be opened with 
  <a href="https://tinmard.github.io/micmac.html">micMac</a> and with MNE.</p>
 </blockquote>
-<p><strong> Import a Blackrock file in Python with <a href="https://martinos.org/mne/stable/index.html">MNE</a> </strong> :</p>
+<p><strong> Import a Blackrock file in Python with <a href="https://martinos.org/mne/stable/index.html">MNE</a> </strong> and Neo :</p>
 <div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">mne</span>
 <span class="kn">import</span> <span class="nn">neo</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
@@ -284,7 +284,7 @@ micro and Macro channels is based on the channel name. It may not work if differ
 <li><code>dirconv_mono2bipolar_macro</code> : wrapper around <em>mono2bipolar_macro</em> function. Convert all <em>.edf</em> files in a directory into bipolar <em>.edf</em> files </li>
 </ul>
 <h2 id="micro-files">Micro files</h2>
-<p>There are more possible montage for micro tetrodes that for macro electrodes. We have used mainly three montages so far : </p>
+<p>There are more possible montages for micro tetrodes that for macro electrodes. We have used mainly three montages so far : </p>
 <table>
 <thead>
 <tr>
@@ -307,12 +307,12 @@ micro and Macro channels is based on the channel name. It may not work if differ
 </tbody>
 </table>
 <ul>
-<li><code>mono2bipolar_micro</code> : main mono-to-bipolar conversion function. Take as argument and return an EEGLAB structure.</li>
-<li><code>fileconv_mono2bipolar_macro</code> : wrapper around <em>mono2bipolar_macro</em> function. Write the bipolar <em>.edf</em> file.</li>
-<li><code>dirconv_mono2bipolar_macro</code> : wrapper around <em>mono2bipolar_macro</em> function. Convert all <em>.edf</em> files in a directory into bipolar <em>.edf</em> files </li>
+<li><code>mono2bipolar_micro</code> : main mono-to-bipolar conversion function. Takes as argument and returns an EEGLAB structure.</li>
+<li><code>fileconv_mono2bipolar_micro</code> : wrapper around <em>mono2bipolar_macro</em> function. Write the bipolar <em>.edf</em> file.</li>
+<li><code>dirconv_mono2bipolar_micro</code> : wrapper around <em>mono2bipolar_macro</em> function. Convert all <em>.edf</em> files in a directory into bipolar <em>.edf</em> files </li>
 </ul>
 <p>The inter and intra tetrode montage has to be done manually. Modify the <em>mono2bipolar_micro</em> file, you have to specify the 
-tetrode names <code>microNames</code>, the number of channels per tetodre <code>nChanPerMicro</code> (8 or 12) and the bipolar montage <code>bipolarMontage</code>.
+tetrode names <code>microNames</code>, the number of channels per tetrode <code>nChanPerMicro</code> (8 or 12) and the bipolar montage <code>bipolarMontage</code>.
 The <code>bipolarMontage</code> variable is a cell of vectors. Each vector defines the new channels for a single electrode. </p>
 <div class="highlight"><pre><span></span>case 34 % P34
     microNames              = {'b','tb','b'''}; 
@@ -322,7 +322,7 @@ The <code>bipolarMontage</code> variable is a cell of vectors. Each vector defin
                                [ 1,5;2,6;3,7;4,8;5,9;6,10;7,11;8,12;1,9;2,10;3,11;4,12]};
 </pre></div>
 <h1 id="epifar-files_1">EpiFaR files</h1>
-<p>Several files are dedicated to the conversion of EpiFaR files and offer an automated pipeline : </p>
+<p>Several scripts are dedicated to the conversion of EpiFaR files and offer an automated pipeline : </p>
 <ol>
 <li>Convert the micro <em>.ns5</em> file into an <em>.edf</em>, downsample it if needed and divide it into 10-minutes segments.</li>
 <li>Synchronize the Macro <em>.edf</em> file with the micro file. If the Macro file starts before, cut the beginning the macro

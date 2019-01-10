@@ -131,7 +131,7 @@
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for localizing the
   source of noise in a complex environment. The Spectran NF-1010E comes with a Software which allows further analyses. &lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/epifar/noise/spectran_nf_1010e.jpg" width="500"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/epifar/noise/spectran_nf_1010e.jpg" width="500"/&gt;&lt;/p&gt;
 &lt;p&gt;Spectran NF Manual : &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_FR.pdf"&gt;fr&lt;/a&gt;
   - &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/SPECTRAN-NF/SPECTRAN-NF_EN.pdf"&gt;en&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Soft Manual : &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/SPECTRAN-NF/mcs-manual-en-20150811.pdf"&gt;MCS&lt;/a&gt;&lt;/p&gt;
@@ -139,7 +139,7 @@
 &lt;p&gt;The BADA LB-6600 is a power plant (multiprise) with 8 sockets. It also filters the incoming current from the mains (secteur).&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/noise/bada-lb-6610.jpg" width="400"/&gt;&lt;/p&gt;
 &lt;p&gt;Bada manual : &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Bada_LB_6600_FiltreSecteur.pdf"&gt;bada_lb_6600&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src="/_images/warning.png" width="20"/&gt; The total number of devices plugged in the BADA power-plant should note require more power than
+&lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; The total number of devices plugged in the BADA power-plant should note require more power than
 the BADA can deliver : 3300W &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/warning.png" width="20"/&gt; The BADA power plant must be powered in with a cable able to conduct a sufficient power.&lt;/p&gt;
 &lt;h3 id="shielded-power-cables"&gt;&lt;strong&gt;Shielded power cables&lt;/strong&gt;&lt;/h3&gt;
@@ -155,13 +155,13 @@ the BADA can deliver : 3300W &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/noise/Fluke87V.jpg" width="400"/&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="{filename}/data/epifar/noise/hardware/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="{filename}/data/epifar/noise/hardware/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;
 &lt;/ul&gt;</summary><content type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
 for the conversion of sound into spikes. &lt;/p&gt;
-&lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="600"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The code is availaible &lt;a href="https://github.com/tinmarD/simplecochlea"&gt;here&lt;/a&gt;. &lt;/li&gt;
 &lt;li&gt;The doc is here&lt;/li&gt;

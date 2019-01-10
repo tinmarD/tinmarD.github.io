@@ -120,7 +120,7 @@ must be a cell containing the names of the bad channels. These channels will be 
 information such as the triggers.&lt;/p&gt;
 &lt;h3 id="matlab"&gt;Matlab&lt;/h3&gt;
 &lt;p&gt;To open the Blackrock file in Matlab, the &lt;a href="https://github.com/BlackrockMicrosystems/NPMK"&gt;NPMK&lt;/a&gt; toolbox is needed. 
-It contains a lot a useful function include &lt;em&gt;openNSx()&lt;/em&gt; which allows to load NSx files into Matlab.&lt;/p&gt;
+It contains a lot a useful functions including &lt;em&gt;openNSx()&lt;/em&gt; which allows to load NSx files into Matlab.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Open a NS5 file in Matlab with the &lt;em&gt;fileconv_nsx2edf&lt;/em&gt; function&lt;/strong&gt;. It writes an EDF file in the &lt;em&gt;edf_dirpath&lt;/em&gt; and downsample
 the data by 10.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nt"&gt;nsx_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'C:\TestFiles\NSX'&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;  
@@ -139,7 +139,7 @@ the data by 10.&lt;/p&gt;
  (the &lt;em&gt;pyedflib&lt;/em&gt; package is complex). The &lt;em&gt;.fif&lt;/em&gt; format is a good alternative as it can be opened with 
  &lt;a href="https://tinmard.github.io/micmac.html"&gt;micMac&lt;/a&gt; and with MNE.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt; Import a Blackrock file in Python with &lt;a href="https://martinos.org/mne/stable/index.html"&gt;MNE&lt;/a&gt; &lt;/strong&gt; :&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt; Import a Blackrock file in Python with &lt;a href="https://martinos.org/mne/stable/index.html"&gt;MNE&lt;/a&gt; &lt;/strong&gt; and Neo :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;mne&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;neo&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="kn"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
@@ -187,7 +187,7 @@ micro and Macro channels is based on the channel name. It may not work if differ
 &lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="micro-files"&gt;Micro files&lt;/h2&gt;
-&lt;p&gt;There are more possible montage for micro tetrodes that for macro electrodes. We have used mainly three montages so far : &lt;/p&gt;
+&lt;p&gt;There are more possible montages for micro tetrodes that for macro electrodes. We have used mainly three montages so far : &lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -210,12 +210,12 @@ micro and Macro channels is based on the channel name. It may not work if differ
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;code&gt;mono2bipolar_micro&lt;/code&gt; : main mono-to-bipolar conversion function. Take as argument and return an EEGLAB structure.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;fileconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Write the bipolar &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_macro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mono2bipolar_micro&lt;/code&gt; : main mono-to-bipolar conversion function. Takes as argument and returns an EEGLAB structure.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fileconv_mono2bipolar_micro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Write the bipolar &lt;em&gt;.edf&lt;/em&gt; file.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dirconv_mono2bipolar_micro&lt;/code&gt; : wrapper around &lt;em&gt;mono2bipolar_macro&lt;/em&gt; function. Convert all &lt;em&gt;.edf&lt;/em&gt; files in a directory into bipolar &lt;em&gt;.edf&lt;/em&gt; files &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The inter and intra tetrode montage has to be done manually. Modify the &lt;em&gt;mono2bipolar_micro&lt;/em&gt; file, you have to specify the 
-tetrode names &lt;code&gt;microNames&lt;/code&gt;, the number of channels per tetodre &lt;code&gt;nChanPerMicro&lt;/code&gt; (8 or 12) and the bipolar montage &lt;code&gt;bipolarMontage&lt;/code&gt;.
+tetrode names &lt;code&gt;microNames&lt;/code&gt;, the number of channels per tetrode &lt;code&gt;nChanPerMicro&lt;/code&gt; (8 or 12) and the bipolar montage &lt;code&gt;bipolarMontage&lt;/code&gt;.
 The &lt;code&gt;bipolarMontage&lt;/code&gt; variable is a cell of vectors. Each vector defines the new channels for a single electrode. &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;case 34 % P34
     microNames              = {'b','tb','b'''}; 
@@ -225,7 +225,7 @@ The &lt;code&gt;bipolarMontage&lt;/code&gt; variable is a cell of vectors. Each 
                                [ 1,5;2,6;3,7;4,8;5,9;6,10;7,11;8,12;1,9;2,10;3,11;4,12]};
 &lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id="epifar-files_1"&gt;EpiFaR files&lt;/h1&gt;
-&lt;p&gt;Several files are dedicated to the conversion of EpiFaR files and offer an automated pipeline : &lt;/p&gt;
+&lt;p&gt;Several scripts are dedicated to the conversion of EpiFaR files and offer an automated pipeline : &lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Convert the micro &lt;em&gt;.ns5&lt;/em&gt; file into an &lt;em&gt;.edf&lt;/em&gt;, downsample it if needed and divide it into 10-minutes segments.&lt;/li&gt;
 &lt;li&gt;Synchronize the Macro &lt;em&gt;.edf&lt;/em&gt; file with the micro file. If the Macro file starts before, cut the beginning the macro
