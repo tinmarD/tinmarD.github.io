@@ -144,7 +144,8 @@ by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">
 <p>5 - Convert the micro <em>.NS5</em> file into <em>.edf</em> files using the conversion Matlab function <em>fileconv_nsx2edf</em>. Use a downsampling factor of 6 to get a sampling frequency of 5kHz.</p>
 </li>
 <li>
-<p>6 - Run the Python script <em>stim_macrotomicro_corr_file</em> for each <em>fif</em> and <em>csv</em> file. First you will need to find the time offset between the macro-file and the micro-file : micMac can be used, load the 2 files and either find the time offset manually or use the <em>Signals / Resynch signals</em> tool.</p>
+<p>6 - Run the Python script <em>stim_macrotomicro_corr_file</em> for each <em>fif</em> and <em>csv</em> file. First you will need to find the time offset between the macro-file and the micro-file : micMac can be 
+used, load the 2 files and either find the time offset manually or use the <a href="https://micmac.readthedocs.io/en/latest/signals/resynch_signals.html">Resynch signals</a> tool.</p>
 </li>
 <li>
 <p>7 - Concatenate all the excel sheet into one, to get all the stimulations data into 1 file.</p>
@@ -152,7 +153,7 @@ by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">
 </ul>
 <h2 id="output-spreadsheet">Output spreadsheet</h2>
 <p>The output spreadsheet will looks like this.This will allow to run further analysis.</p>
-<p><img src="/images/stimic/stim_list/output_spreadsheet_example.png" width="600"/></p>
+<p><img src="/images/stimic/stim_list/output_spreadsheet_example.png" width="900"/></p>
 <h2 id="detection-algorithm">Detection Algorithm</h2>
 <h3 id="1-hz-stimulation">1 Hz Stimulation</h3>
 <p><img src="/images/stimic/stim_list/1Hz_artefact_macro.png" width="600"/></p>
