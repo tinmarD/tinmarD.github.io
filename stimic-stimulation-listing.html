@@ -121,10 +121,10 @@ by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">
 <p>For each patient, for each file : </p>
 <ul>
 <li>
-<p>1 - Run the python script <em>stim_clean_EDF_files</em> which open all the EDF files, remove the non-EEG channels and bad channels. The script also check that each file contains the same number of channels and are ordered in the same way across each file. If a channel is missing, an NaN channel id added. It creates new FIF files</p>
+<p>1 - Run the python script <code>stim_clean_EDF_files.py</code> which open all the EDF files, remove the non-EEG channels and bad channels. The script also check that each file contains the same number of channels and are ordered in the same way across each file. If a channel is missing, an NaN channel id added. It creates new FIF files</p>
 </li>
 <li>
-<p>2 - For each file created in step 1, run the python script <em>stim_detection_main.py</em> which automatically detects the period of stimulation. It create an output csv file containing the events detected by the algorithm. Make sure that the frequencies of stimulations apart from 1 and 50 Hz are in the list called <em>mid_freqs_hz</em>.</p>
+<p>2 - For each file created in step 1, run the python script <code>stim_detection_main.py</code> which automatically detects the period of stimulation. It create an output csv file containing the events detected by the algorithm. Make sure that the frequencies of stimulations apart from 1 and 50 Hz are in the list called <em>mid_freqs_hz</em>.</p>
 </li>
 </ul>
 <p>Columns of interest are :</p>
@@ -138,13 +138,13 @@ by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">
 <p>3 - Visual check of the events : run <em>micMac</em> in Matlab and open the FIF file (<em>Signals / Load Raw Signal / FIF Files</em>). Import the csv file created in 1. Go in Events/Import/External Events. Indicate the correct columns number (You can use the <strong>Auto-detect button</strong>. <strong>Check the "zero-index for channel" checkbox</strong> . Check that the stimulation events are correct and manually add the missing ones. Once done, make sure to <strong>sort the event by time</strong> and <strong>export the events</strong>. It create another csv file, with this time all the stimulation events.</p>
 </li>
 <li>
-<p>4 - Use the python script <em>stim_frommicmactoexcel.py</em>, for each csv file. It will convert and reorganized the micMac event file into an Excel file.</p>
+<p>4 - Use the python script <code>stim_frommicmactoexcel.py</code>, for each csv file. It will convert and reorganized the micMac event file into an Excel file.</p>
 </li>
 <li>
 <p>5 - Convert the micro <em>.NS5</em> file into <em>.edf</em> files using the conversion Matlab function <em>fileconv_nsx2edf</em>. Use a downsampling factor of 6 to get a sampling frequency of 5kHz.</p>
 </li>
 <li>
-<p>6 - Run the Python script <em>stim_macrotomicro_corr_file</em> for each <em>fif</em> and <em>csv</em> file. First you will need to find the time offset between the macro-file and the micro-file : micMac can be 
+<p>6 - Run the Python script <code>stim_macrotomicro_corr_file.py</code> for each <em>fif</em> and <em>csv</em> file. First you will need to find the time offset between the macro-file and the micro-file : micMac can be 
 used, load the 2 files and either find the time offset manually or use the <a href="https://micmac.readthedocs.io/en/latest/signals/resynch_signals.html">Resynch signals</a> tool.</p>
 </li>
 <li>
@@ -160,9 +160,9 @@ used, load the 2 files and either find the time offset manually or use the <a hr
 It takes as input the path to the excel stimulation file and the path pointing to the cleaned data directory.</p>
 <p>3 options are available: </p>
 <ul>
-<li><code>resynch</code> : If True, resynchronize the onset of the stimulation</li>
-<li><code>inverse_neg_stim</code> : If True, inverse the negative stimulation so that all stimulation appears positive and the mean is not biased</li>
-<li><code>select_all_channels</code> :  If True select all the channel for creating the epoch, otherwise select only the stimulation channel</li>
+<li><em>resynch</em> : If True, resynchronize the onset of the stimulation</li>
+<li><em>inverse_neg_stim</em> : If True, inverse the negative stimulation so that all stimulation appears positive and the mean is not biased</li>
+<li><em>select_all_channels</em> :  If True select all the channel for creating the epoch, otherwise select only the stimulation channel</li>
 </ul>
 <h2 id="detection-algorithm">Detection Algorithm</h2>
 <h3 id="1-hz-stimulation">1 Hz Stimulation</h3>
