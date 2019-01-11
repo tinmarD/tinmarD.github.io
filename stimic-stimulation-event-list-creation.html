@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Master-Doc - Stimic - Stimulation Listing</title>
+    <title>Master-Doc - Stimic - Stimulation Event List Creation</title>
     <meta name="description" content="">
     <meta name="author" content="Martin Deudon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,7 +83,7 @@
         <div class="span9">
     <div class='article'>
         <div class="content-title">
-            <h1>Stimic - Stimulation Listing</h1>
+            <h1>Stimic - Stimulation Event List Creation</h1>
 jeu. 08 novembre 2018
 
 by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">Martin Deudon</a>
@@ -93,7 +93,7 @@ by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">
         </div>
 
         <div class="col-lg-3 hidden-xs hidden-sm">
-            <div id="toc"><ul><li><a class="toc-href" href="#" title="Stimic - Stimulation Listing">Stimic - Stimulation Listing</a><ul><li><a class="toc-href" href="#artifact-detection-in-macro-electrodes" title="Artifact Detection in macro-electrodes">Artifact Detection in macro-electrodes</a><ul><li><a class="toc-href" href="#description" title="Description">Description</a></li><li><a class="toc-href" href="#stimulation-parameters" title="Stimulation Parameters">Stimulation Parameters</a></li></ul></li><li><a class="toc-href" href="#pipeline_1" title="Pipeline">Pipeline</a></li><li><a class="toc-href" href="#output-spreadsheet" title="Output spreadsheet">Output spreadsheet</a></li><li><a class="toc-href" href="#epoch-creation" title="Epoch creation">Epoch creation</a></li></ul></li></ul></div>
+            <div id="toc"><ul><li><a class="toc-href" href="#" title="Stimic - Stimulation Event List Creation">Stimic - Stimulation Event List Creation</a><ul><li><a class="toc-href" href="#artifact-detection-in-macro-electrodes" title="Artifact Detection in macro-electrodes">Artifact Detection in macro-electrodes</a><ul><li><a class="toc-href" href="#description" title="Description">Description</a></li><li><a class="toc-href" href="#stimulation-parameters" title="Stimulation Parameters">Stimulation Parameters</a></li></ul></li><li><a class="toc-href" href="#pipeline_1" title="Pipeline">Pipeline</a></li><li><a class="toc-href" href="#output-spreadsheet" title="Output spreadsheet">Output spreadsheet</a></li><li><a class="toc-href" href="#epoch-creation" title="Epoch creation">Epoch creation</a></li></ul></li></ul></div>
         </div>
 	
         <div><p>This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.</p>
@@ -115,7 +115,7 @@ by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">
 <p>Both frequency and intensity of the stimulation can change and affect the artifacts waveforms. The duration of the stimulation can also change but as we are only interested in detection the onset time, we will not consider it.</p>
 <ul>
 <li>Frequency range between 1Hz and 50Hz</li>
-<li>Intensity range between 0.5 mA and 4, 5 mA</li>
+<li>Intensity range between 0.5 mA and 4-5 mA</li>
 </ul>
 <h2 id="pipeline_1">Pipeline</h2>
 <p>For each patient, for each file : </p>
