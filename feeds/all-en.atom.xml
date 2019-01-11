@@ -305,7 +305,7 @@ It takes as input the path to the excel stimulation file and the path pointing t
 &lt;li&gt;&lt;em&gt;inverse_neg_stim&lt;/em&gt; : If True, inverse the negative stimulation so that all stimulation appears positive and the mean is not biased&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;select_all_channels&lt;/em&gt; :  If True select all the channel for creating the epoch, otherwise select only the stimulation channel&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="detection-algorithm"&gt;Detection Algorithm&lt;/h2&gt;
+&lt;h2 id="detection-algorithm-details"&gt;Detection Algorithm Details&lt;/h2&gt;
 &lt;h3 id="1-hz-stimulation"&gt;1 Hz Stimulation&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/images/stimic/stim_list/1Hz_artefact_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;For 1Hz stimulation we count the number of peaks if the threshold signal in the window [-0.1s, 10.1s] around each time of threshold crossing. If the number of peaks if equal to 10 more or less, the event is considered a 1Hz stimulation.&lt;/p&gt;
