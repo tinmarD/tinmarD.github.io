@@ -269,13 +269,12 @@ to modify and run the code. &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Columns of interest are :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;   - 4 : Type of the stimulation
+   - 5 : Time (in seconds)
+   - 8 : Duration (in seconds)
+   - 7 : Channel index
+&lt;/pre&gt;&lt;/div&gt;
 &lt;ul&gt;
-&lt;li&gt;4 : Type of the stimulation&lt;/li&gt;
-&lt;li&gt;5 : Time (in seconds)&lt;/li&gt;
-&lt;li&gt;8 : Duration (in seconds)&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;7 : Channel index&lt;/p&gt;
-&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;3 - Visual check of the events : run &lt;em&gt;micMac&lt;/em&gt; in Matlab and open the FIF file (&lt;em&gt;Signals / Load Raw Signal / FIF Files&lt;/em&gt;). Import the csv file created in 1. Go in Events/Import/External Events. Indicate the correct columns number (You can use the &lt;strong&gt;Auto-detect button&lt;/strong&gt;. &lt;strong&gt;Check the "zero-index for channel" checkbox&lt;/strong&gt; . Check that the stimulation events are correct and manually add the missing ones. Once done, make sure to &lt;strong&gt;sort the event by time&lt;/strong&gt; and &lt;strong&gt;export the events&lt;/strong&gt;. It create another csv file, with this time all the stimulation events.&lt;/p&gt;
 &lt;/li&gt;
