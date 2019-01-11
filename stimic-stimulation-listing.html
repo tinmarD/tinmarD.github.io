@@ -93,7 +93,7 @@ by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">
         </div>
 
         <div class="col-lg-3 hidden-xs hidden-sm">
-            <div id="toc"><ul><li><a class="toc-href" href="#" title="Stimic - Stimulation Listing">Stimic - Stimulation Listing</a><ul><li><a class="toc-href" href="#artifact-detection-in-macro-electrodes" title="Artifact Detection in macro-electrodes">Artifact Detection in macro-electrodes</a><ul><li><a class="toc-href" href="#description" title="Description">Description</a></li><li><a class="toc-href" href="#stimulation-parameters" title="Stimulation Parameters">Stimulation Parameters</a></li></ul></li><li><a class="toc-href" href="#pipeline_1" title="Pipeline">Pipeline</a></li><li><a class="toc-href" href="#output-spreadsheet" title="Output spreadsheet">Output spreadsheet</a></li><li><a class="toc-href" href="#detection-algorithm" title="Detection Algorithm">Detection Algorithm</a><ul><li><a class="toc-href" href="#1-hz-stimulation" title="1 Hz Stimulation">1 Hz Stimulation</a></li><li><a class="toc-href" href="#1hz-f-50hz-stimulation" title="1Hz &lt; f &lt; 50Hz Stimulation">1Hz &lt; f &lt; 50Hz Stimulation</a></li><li><a class="toc-href" href="#50hz-stimulation" title="50Hz Stimulation">50Hz Stimulation</a></li></ul></li></ul></li></ul></div>
+            <div id="toc"><ul><li><a class="toc-href" href="#" title="Stimic - Stimulation Listing">Stimic - Stimulation Listing</a><ul><li><a class="toc-href" href="#artifact-detection-in-macro-electrodes" title="Artifact Detection in macro-electrodes">Artifact Detection in macro-electrodes</a><ul><li><a class="toc-href" href="#description" title="Description">Description</a></li><li><a class="toc-href" href="#stimulation-parameters" title="Stimulation Parameters">Stimulation Parameters</a></li></ul></li><li><a class="toc-href" href="#pipeline_1" title="Pipeline">Pipeline</a></li><li><a class="toc-href" href="#output-spreadsheet" title="Output spreadsheet">Output spreadsheet</a></li><li><a class="toc-href" href="#epoch-creation" title="Epoch creation">Epoch creation</a></li><li><a class="toc-href" href="#detection-algorithm" title="Detection Algorithm">Detection Algorithm</a><ul><li><a class="toc-href" href="#1-hz-stimulation" title="1 Hz Stimulation">1 Hz Stimulation</a></li><li><a class="toc-href" href="#1hz-f-50hz-stimulation" title="1Hz &lt; f &lt; 50Hz Stimulation">1Hz &lt; f &lt; 50Hz Stimulation</a></li><li><a class="toc-href" href="#50hz-stimulation" title="50Hz Stimulation">50Hz Stimulation</a></li></ul></li></ul></li></ul></div>
         </div>
 	
         <div><p>This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.</p>
@@ -154,6 +154,16 @@ used, load the 2 files and either find the time offset manually or use the <a hr
 <h2 id="output-spreadsheet">Output spreadsheet</h2>
 <p>The output spreadsheet will looks like this.This will allow to run further analysis.</p>
 <p><img src="/images/stimic/stim_list/output_spreadsheet_example.png" width="900"/></p>
+<h2 id="epoch-creation">Epoch creation</h2>
+<p>Once the Excel file containing all the event is done, an MNE Epoch structure can be created using the 
+ <code>stim_create_epoch.py</code> script. 
+It takes as input the path to the excel stimulation file and the path pointing to the cleaned data directory.</p>
+<p>3 options are available: </p>
+<ul>
+<li><code>resynch</code> : If True, resynchronize the onset of the stimulation</li>
+<li><code>inverse_neg_stim</code> : If True, inverse the negative stimulation so that all stimulation appears positive and the mean is not biased</li>
+<li><code>select_all_channels</code> :  If True select all the channel for creating the epoch, otherwise select only the stimulation channel</li>
+</ul>
 <h2 id="detection-algorithm">Detection Algorithm</h2>
 <h3 id="1-hz-stimulation">1 Hz Stimulation</h3>
 <p><img src="/images/stimic/stim_list/1Hz_artefact_macro.png" width="600"/></p>

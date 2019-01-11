@@ -60,6 +60,16 @@ used, load the 2 files and either find the time offset manually or use the &lt;a
 &lt;h2 id="output-spreadsheet"&gt;Output spreadsheet&lt;/h2&gt;
 &lt;p&gt;The output spreadsheet will looks like this.This will allow to run further analysis.&lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/stimic/stim_list/output_spreadsheet_example.png" width="900"/&gt;&lt;/p&gt;
+&lt;h2 id="epoch-creation"&gt;Epoch creation&lt;/h2&gt;
+&lt;p&gt;Once the Excel file containing all the event is done, an MNE Epoch structure can be created using the 
+ &lt;code&gt;stim_create_epoch.py&lt;/code&gt; script. 
+It takes as input the path to the excel stimulation file and the path pointing to the cleaned data directory.&lt;/p&gt;
+&lt;p&gt;3 options are available: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;resynch&lt;/code&gt; : If True, resynchronize the onset of the stimulation&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;inverse_neg_stim&lt;/code&gt; : If True, inverse the negative stimulation so that all stimulation appears positive and the mean is not biased&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;select_all_channels&lt;/code&gt; :  If True select all the channel for creating the epoch, otherwise select only the stimulation channel&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id="detection-algorithm"&gt;Detection Algorithm&lt;/h2&gt;
 &lt;h3 id="1-hz-stimulation"&gt;1 Hz Stimulation&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/images/stimic/stim_list/1Hz_artefact_macro.png" width="600"/&gt;&lt;/p&gt;
