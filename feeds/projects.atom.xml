@@ -21,7 +21,7 @@
 &lt;p&gt;Both frequency and intensity of the stimulation can change and affect the artifacts waveforms. The duration of the stimulation can also change but as we are only interested in detection the onset time, we will not consider it.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Frequency range between 1Hz and 50Hz&lt;/li&gt;
-&lt;li&gt;Intensity range between ? mA and ?? mA&lt;/li&gt;
+&lt;li&gt;Intensity range between 0.5 mA and 4, 5 mA&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id="pipeline_1"&gt;Pipeline&lt;/h2&gt;
 &lt;p&gt;For each patient, for each file : &lt;/p&gt;
