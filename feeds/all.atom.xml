@@ -1627,7 +1627,8 @@ The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;her
 &lt;p&gt;&lt;strong&gt;See this article &lt;a href="https://tinmard.github.io/stimic-stimulation-event-list-creation.html"&gt;Stim Event List Creation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The details of the detection algorithm can be found &lt;a href="https://tinmard.github.io/stimic-stimulation-detection-algorithm.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="analysis"&gt;Analysis&lt;/h1&gt;
-&lt;p&gt;Counting the number of stimulations in function of the stimulation parameters and channel location :  &lt;a href="{filename}/stimic/stimic_analysis.md"&gt;Stim Count&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
+&lt;p&gt;Counting the number of stimulations in function of the stimulation parameters and channel location :  &lt;a href="https://tinmard.github.io/stimic-analysis-stim-count.html"&gt;Stim Count&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Caracterization of the stimulation artifacts : &lt;a href="https://tinmard.github.io/stimic-analysis-artifact-carac.html"&gt;Artifact Carac.&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
 &lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
 &lt;/ul&gt;
