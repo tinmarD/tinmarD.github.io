@@ -120,47 +120,35 @@ by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">
 <h2 id="pipeline_1">Pipeline</h2>
 <p>For each patient, for each file : </p>
 <ul>
-<li>0 - Run the python script <em>stim_clean_EDF_files</em> which open all the EDF files, remove the non-EEG channels and bad channels. The script also check that each file contains the same number of channels and are ordered in the same way across each file. If a channel is missing, an NaN channel id added. It creates new FIF files</li>
 <li>
-<p>1 - For each file created in step 0, run the python script <em>stim_detection_main.py</em> which automatically detects the period of stimulation. It create an output csv file containing the events detected by the algorithm. Make sure that the frequencies of stimulations apart from 1 and 50 Hz are in the list called <em>mid_freqs_hz</em>.</p>
+<p>1 - Run the python script <em>stim_clean_EDF_files</em> which open all the EDF files, remove the non-EEG channels and bad channels. The script also check that each file contains the same number of channels and are ordered in the same way across each file. If a channel is missing, an NaN channel id added. It creates new FIF files</p>
+</li>
+<li>
+<p>2 - For each file created in step 1, run the python script <em>stim_detection_main.py</em> which automatically detects the period of stimulation. It create an output csv file containing the events detected by the algorithm. Make sure that the frequencies of stimulations apart from 1 and 50 Hz are in the list called <em>mid_freqs_hz</em>.</p>
+</li>
+</ul>
 <p>Columns of interest are :</p>
 <ul>
 <li>4 : Type of the stimulation</li>
 <li>5 : Time (in seconds)</li>
 <li>8 : Duration (in seconds)</li>
-<li>7 : Channel index</li>
-</ul>
+<li>
+<p>7 : Channel index</p>
 </li>
 <li>
-<p>2 - Visual check of the events : run <em>micMac</em> in Matlab and open the FIF file (<em>Signals / Load Raw Signal / FIF Files</em>).
- Import the csv file created in 1. Go in Events/Import/External Events. Indicate the correct columns number (You can use the <strong>Auto-detect button</strong>. <strong>Check the "zero-index for channel" checkbox</strong> . Check that the stimulation events are correct and manually add the missing ones. Once done, make sure to <strong>sort the event by time</strong> and <strong>export the events</strong>. It create another csv file, with this time all the stimulation events.</p>
+<p>3 - Visual check of the events : run <em>micMac</em> in Matlab and open the FIF file (<em>Signals / Load Raw Signal / FIF Files</em>). Import the csv file created in 1. Go in Events/Import/External Events. Indicate the correct columns number (You can use the <strong>Auto-detect button</strong>. <strong>Check the "zero-index for channel" checkbox</strong> . Check that the stimulation events are correct and manually add the missing ones. Once done, make sure to <strong>sort the event by time</strong> and <strong>export the events</strong>. It create another csv file, with this time all the stimulation events.</p>
 </li>
 <li>
-<p>3 - Import the csv file just created in <strong>2</strong> into Excel and reorganize the columns as :</p>
-<ol>
-<li><strong>ID</strong> : patient ID</li>
-<li>file : name of the EEG (.edf) file</li>
-<li>type : Type of the stimulation (e.g. Stim 1 Hz)</li>
-<li>time : Time of the stimulation onset (s)</li>
-<li>channelind : Channel index  ! first index = 1 ! </li>
-<li>channelname : Channel name</li>
-<li>freq : Frequency (Hz)</li>
-<li><strong>intensity</strong> : Intensity (mA)</li>
-<li><strong>duration</strong>: Duration (s)</li>
-<li><strong>effect</strong> : Comment on the possible effet of the stimulation, if none will be "RAS"</li>
-</ol>
-</li>
-</ul>
-<p>The columns in <strong>bold</strong> are the ones you will need to fill with the Cahier, where all the stimulations are written by hand. </p>
-<ul>
-<li>
-<p>4 - Run the python script <em>stim_spreadsheet_utils.py</em>. It will add an 11th field to the excel sheet created in <strong>3</strong>, the bipolar channel name and will decrement the channel index, to be zero-indexed. This is useful to know the 2 contacts of stimulation. Once done, check the column is correct.</p>
+<p>4 - Use the python script <em>stim_frommicmactoexcel.py</em>, for each csv file. It will convert and reorganized the micMac event file into an Excel file.</p>
 </li>
 <li>
-<p>5 - Concatenate all the excel sheet into one, to get all the stimulations data into 1 file.</p>
+<p>5 - Convert the micro <em>.NS5</em> file into <em>.edf</em> files using the conversion Matlab function <em>fileconv_nsx2edf</em>. Use a downsampling factor of 6 to get a sampling frequency of 5kHz.</p>
 </li>
 <li>
-<p>6 - Create the epoch structure using the <em>stim_create_epoch.py</em> file. It creates a MNE epoch structure.</p>
+<p>6 - Run the Python script <em>stim_macrotomicro_corr_file</em> for each <em>fif</em> and <em>csv</em> file. First you will need to find the time offset between the macro-file and the micro-file : micMac can be used, load the 2 files and either find the time offset manually or use the <em>Signals / Resynch signals</em> tool.</p>
+</li>
+<li>
+<p>7 - Concatenate all the excel sheet into one, to get all the stimulations data into 1 file.</p>
 </li>
 </ul>
 <h2 id="output-spreadsheet">Output spreadsheet</h2>

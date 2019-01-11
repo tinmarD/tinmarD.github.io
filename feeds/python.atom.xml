@@ -234,8 +234,7 @@ to modify and run the code. &lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/p&gt;</content><category term="Python"></category><category term="Jupyter"></category><category term="Notebook"></category></entry><entry><title>Python for Neuroscience</title><link href="https://tinmard.github.io/python-for-neuroscience.html" rel="alternate"></link><published>2018-10-24T17:29:00+02:00</published><updated>2018-10-24T17:29:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-10-24:/python-for-neuroscience.html</id><summary type="html">&lt;p&gt;Presents some Python packages for neuroscience&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="/data/python/pythonforneurosciences_presentation/main.html"&gt;Presentation&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Non exhaustive list of useful python packages for neuroscience &lt;/p&gt;
+&lt;/p&gt;</content><category term="Python"></category><category term="Jupyter"></category><category term="Notebook"></category></entry><entry><title>Python for Neuroscience</title><link href="https://tinmard.github.io/python-for-neuroscience.html" rel="alternate"></link><published>2018-10-24T17:29:00+02:00</published><updated>2018-10-24T17:29:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-10-24:/python-for-neuroscience.html</id><summary type="html">&lt;p&gt;Presents some Python packages for neuroscience&lt;/p&gt;</summary><content type="html">&lt;p&gt;Non exhaustive list of useful python packages for neuroscience &lt;/p&gt;
 &lt;h1 id="eeg-analyses"&gt;EEG Analyses&lt;/h1&gt;
 &lt;h2 id="mne"&gt;MNE&lt;/h2&gt;
 &lt;p&gt;&lt;a href="https://www.martinos.org/mne/stable/index.html"&gt;&lt;img src="/images/python/python_neuroscience/mne_logo.png" width="70"/&gt;&lt;/a&gt; is the
