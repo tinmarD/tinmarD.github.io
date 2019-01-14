@@ -64,7 +64,7 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;li&gt;The doc is &lt;a href="https://simplecochlea.readthedocs.io/en/latest/"&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/cochlea</guid></item><item><title>DanaSoft</title><link>https://tinmard.github.io/danasoft.html</link><description>&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
 &lt;p&gt;Github &lt;a href="https://github.com/tinmarD/danasoft"&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="danasoft_example" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :&lt;/li&gt;
@@ -130,23 +130,19 @@ tetrode configuration, to be designed in Python …&lt;/p&gt;</description><dc:c
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;%b%Y-%Hh%M'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'10Oct2018-18h01'&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/python-tips.html</guid><category>Python</category><category>Tips</category><category>Programming</category></item><item><title>SAB</title><link>https://tinmard.github.io/sab/</link><description>&lt;p&gt;SAB index page&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/sab/</guid></item><item><title>SAB</title><link>https://tinmard.github.io/sab.html</link><description>&lt;ul&gt;
-&lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
-&lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory&lt;/p&gt;
-&lt;p&gt;The SAB_main package allows you to do several analyses:
- * ERPs
- * Phase, ITPC (Inter-Trial Phase Coherence)
- * Feature …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/sab.html</guid><category>SAB</category><category>iEEG</category></item><item><title>Softwares</title><link>https://tinmard.github.io/category/</link><description>&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/python-tips.html</guid><category>Python</category><category>Tips</category><category>Programming</category></item><item><title>SAB</title><link>https://tinmard.github.io/sab/</link><description>&lt;p&gt;The pySAB package is a python module designed to analyze the data from the SAB experiment. It contains script for ERP 
+analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
+&lt;p&gt;&lt;img alt="erp" src="/images/sab/erp_examples.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/pySAB"&gt;https://github.com/tinmarD/SAB_main&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Documentation : &lt;a href="https://pysab.readthedocs.io/en/latest/"&gt;https://pysab.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/sab/</guid></item><item><title>Softwares</title><link>https://tinmard.github.io/category/</link><description>&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
 More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
 The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/category/</guid></item><item><title>Stimic</title><link>https://tinmard.github.io/stimic/</link><description>&lt;p&gt;Stimic index page &lt;/p&gt;
-&lt;h1 id="stimulation-event-list"&gt;Stimulation Event List&lt;/h1&gt;
+&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
-&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Clean the …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/stimic/</guid></item></channel></rss>
+&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/stimic/</guid></item></channel></rss>

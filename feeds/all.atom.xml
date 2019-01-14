@@ -1315,7 +1315,7 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;li&gt;The doc is &lt;a href="https://simplecochlea.readthedocs.io/en/latest/"&gt;here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content></entry><entry><title>DanaSoft</title><link href="https://tinmard.github.io/danasoft.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/danasoft.html</id><summary type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
 &lt;p&gt;Github &lt;a href="https://github.com/tinmarD/danasoft"&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="danasoft_example" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :&lt;/li&gt;
@@ -1333,7 +1333,7 @@ for the conversion of sound into spikes. &lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;Download …&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;DanaSoft is a python interface based on PyQt4. &lt;/p&gt;
 &lt;p&gt;Github &lt;a href="https://github.com/tinmarD/danasoft"&gt;link&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="danasoft_example" src="images/danasoft/fastmapping_train_fam.png"/&gt;&lt;/p&gt;
 &lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;If you are using Anaconda create a new environment with python's version 2.7 (in a terminal) :&lt;/li&gt;
@@ -1558,45 +1558,19 @@ $$&lt;/p&gt;
 &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;datetime&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;strftime&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s1"&gt;%b%Y-%Hh%M'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="s1"&gt;'10Oct2018-18h01'&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
-&lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory&lt;/p&gt;
-&lt;p&gt;The SAB_main package allows you to do several analyses:
- * ERPs
- * Phase, ITPC (Inter-Trial Phase Coherence)
- * Feature …&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
-&lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
-&lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory&lt;/p&gt;
-&lt;p&gt;The SAB_main package allows you to do several analyses:
- * ERPs
- * Phase, ITPC (Inter-Trial Phase Coherence)
- * Feature extraction
- * Correlations between feature and reaction times&lt;/p&gt;
-&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
-&lt;p&gt;SAB_main is using Python 3
-The following packages are needed :
- * pywavelets
- * tqdm
- * seaborn
- * datetime
- * sklearn
- * scipy
- * numpy
- * matplotlib
- * _pickle&lt;/p&gt;
-&lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
-&lt;h3 id="erp-analyses"&gt;ERP analyses&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="images/sab/erp_examples.png"/&gt;&lt;/p&gt;
-&lt;h3 id="phase-analyses"&gt;Phase analyses&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="images/sab/itpc_example.png"/&gt;&lt;/p&gt;
-&lt;h3 id="extract-feature-and-evaluate-their-importance-for-predicting-the-behavioural-response"&gt;Extract feature and evaluate their importance for predicting the behavioural response&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="images/sab/feature_importance_example.png"/&gt;&lt;/p&gt;
-&lt;h3 id="evaluate-correlation-between-features-and-reaction-times"&gt;Evaluate correlation between features and reaction times&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>Softwares</title><link href="https://tinmard.github.io/category/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;p&gt;See &lt;a href="https://docs.python.org/fr/3/library/datetime.html#strftime-strptime-behavior"&gt;Comportement de &lt;code&gt;strftime()&lt;/code&gt; et &lt;code&gt;strptime()&lt;/code&gt; &lt;/a&gt; for the availables directives&lt;/p&gt;</content><category term="Python"></category><category term="Tips"></category><category term="Programming"></category></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;The pySAB package is a python module designed to analyze the data from the SAB experiment. It contains script for ERP 
+analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
+&lt;p&gt;&lt;img alt="erp" src="/images/sab/erp_examples.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/pySAB"&gt;https://github.com/tinmarD/SAB_main&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Documentation : &lt;a href="https://pysab.readthedocs.io/en/latest/"&gt;https://pysab.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><content type="html">&lt;p&gt;The pySAB package is a python module designed to analyze the data from the SAB experiment. It contains script for ERP 
+analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
+&lt;p&gt;&lt;img alt="erp" src="/images/sab/erp_examples.png"/&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/pySAB"&gt;https://github.com/tinmarD/SAB_main&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Documentation : &lt;a href="https://pysab.readthedocs.io/en/latest/"&gt;https://pysab.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content></entry><entry><title>Softwares</title><link href="https://tinmard.github.io/category/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/category/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
 More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
@@ -1607,13 +1581,11 @@ More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&l
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
 The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
-&lt;h1 id="stimulation-event-list"&gt;Stimulation Event List&lt;/h1&gt;
+&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
-&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Clean the …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
-&lt;h1 id="stimulation-event-list"&gt;Stimulation Event List&lt;/h1&gt;
+&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
+&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
 &lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
@@ -1624,46 +1596,8 @@ The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;her
 &lt;li&gt;Re-organized the csv file (in Excel) and add a bipolar channel column&lt;/li&gt;
 &lt;li&gt;Concatenate these event files for all edf files&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;See this article &lt;a href="https://tinmard.github.io/stimic-stimulation-event-list-creation.html"&gt;Stim Event List Creation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;See this article &lt;a href="https://tinmard.github.io/stimic-stimulation-event-list-creation.html"&gt;Stim Event List / Epoch Creation&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;The details of the detection algorithm can be found &lt;a href="https://tinmard.github.io/stimic-stimulation-detection-algorithm.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="analysis"&gt;Analysis&lt;/h1&gt;
 &lt;p&gt;Counting the number of stimulations in function of the stimulation parameters and channel location :  &lt;a href="https://tinmard.github.io/stimic-analysis-stim-count.html"&gt;Stim Count&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Caracterization of the stimulation artifacts : &lt;a href="https://tinmard.github.io/stimic-analysis-artifact-carac.html"&gt;Artifact Carac.&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab.html</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
-&lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory&lt;/p&gt;
-&lt;p&gt;The SAB_main package allows you to do several analyses:
- * ERPs
- * Phase, ITPC (Inter-Trial Phase Coherence)
- * Feature …&lt;/p&gt;</summary><content type="html">&lt;ul&gt;
-&lt;li&gt;The documentation is here : http://sab-main.readthedocs.io&lt;/li&gt;
-&lt;li&gt;Github link : https://github.com/tinmarD/SAB_main&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The SAB (Speed and Accuracy Boosting) was first presented in the following paper : https://www.researchgate.net/publication/263213203_The_speed_of_visual_recognition_memory&lt;/p&gt;
-&lt;p&gt;The SAB_main package allows you to do several analyses:
- * ERPs
- * Phase, ITPC (Inter-Trial Phase Coherence)
- * Feature extraction
- * Correlations between feature and reaction times&lt;/p&gt;
-&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
-&lt;p&gt;SAB_main is using Python 3
-The following packages are needed :
- * pywavelets
- * tqdm
- * seaborn
- * datetime
- * sklearn
- * scipy
- * numpy
- * matplotlib
- * _pickle&lt;/p&gt;
-&lt;h2 id="screenshots"&gt;Screenshots&lt;/h2&gt;
-&lt;h3 id="erp-analyses"&gt;ERP analyses&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="images/sab/erp_examples.png"/&gt;&lt;/p&gt;
-&lt;h3 id="phase-analyses"&gt;Phase analyses&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="images/sab/itpc_example.png"/&gt;&lt;/p&gt;
-&lt;h3 id="extract-feature-and-evaluate-their-importance-for-predicting-the-behavioural-response"&gt;Extract feature and evaluate their importance for predicting the behavioural response&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="images/sab/feature_importance_example.png"/&gt;&lt;/p&gt;
-&lt;h3 id="evaluate-correlation-between-features-and-reaction-times"&gt;Evaluate correlation between features and reaction times&lt;/h3&gt;
-&lt;p&gt;&lt;img alt="" src="images/sab/feature_corr_example.png"/&gt;&lt;/p&gt;</content><category term="SAB"></category><category term="iEEG"></category></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;SAB index page&lt;/p&gt;</summary><content type="html">&lt;p&gt;SAB index page&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;Caracterization of the stimulation artifacts : &lt;a href="https://tinmard.github.io/stimic-analysis-artifact-carac.html"&gt;Artifact Carac.&lt;/a&gt;&lt;/p&gt;</content></entry></feed>
