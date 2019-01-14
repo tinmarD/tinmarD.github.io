@@ -852,7 +852,7 @@ a large number of electrophysiologycal file formats.&lt;/p&gt;
   for the spike-sorting : discriminating which unit has emitted the different spikes recorded on the tetrode (given the fact
   that a single tetrode can records spikes from different units).&lt;/p&gt;
 &lt;h3 id="pyspikeanalysis"&gt;pySpikeAnalysis&lt;/h3&gt;
-&lt;p&gt;The pySpikeAnalysis module contains Python scripts to analyze the Spyking-Circus results. Is it based on Neo structures 
+&lt;p&gt;The pySpikeAnalysis module contains Python scripts to analyze the Spyking-Circus results. Is it based on Neo&lt;br/&gt;
 and allow the visualization of spike sorting results such as : &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Unit template shape&lt;/li&gt;
@@ -862,8 +862,8 @@ and allow the visualization of spike sorting results such as : &lt;/p&gt;
 &lt;li&gt;...&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src="/images/neurons/pySpikeAnalysis.png" width="600"/&gt;&lt;/p&gt;
-&lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/pySpikeAnalysis"&gt;https://github.com/tinmarD/pySpikeAnalysis&lt;/a&gt;
-Documentation link : &lt;a href="https://pyspikeanalysis.readthedocs.io/en/latest/"&gt;https://pyspikeanalysis.readthedocs.io/en/latest/&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;The pySAB package is a python module designed to analyze the data from the SAB experiment. It contains script for ERP 
+&lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/pySpikeAnalysis"&gt;https://github.com/tinmarD/pySpikeAnalysis&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Documentation link : &lt;a href="https://pyspikeanalysis.readthedocs.io/en/latest/"&gt;https://pyspikeanalysis.readthedocs.io/en/latest/&lt;/a&gt;&lt;/p&gt;</content></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;The pySAB package is a python module designed to analyze the data from the SAB experiment. It contains script for ERP 
 analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
 &lt;p&gt;&lt;img alt="erp" src="/images/sab/erp_examples.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
