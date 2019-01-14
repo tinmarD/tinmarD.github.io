@@ -1525,7 +1525,7 @@ a large number of electrophysiologycal file formats.&lt;/p&gt;
   It allows to have a better representation of the unit shape from &lt;em&gt;"different angles"&lt;/em&gt; and is thus helpful 
   for the spike-sorting : discriminating which unit has emitted the different spikes recorded on the tetrode (given the fact
   that a single tetrode can records spikes from different units).&lt;/p&gt;
-&lt;h3 id="pyspikeanalysishttpsgithubcomtinmardpyspikeanalysis"&gt;&lt;strong&gt;pySpikeAnalysis&lt;/strong&gt;(https://github.com/tinmarD/pySpikeAnalysis)&lt;/h3&gt;
+&lt;h3 id="pyspikeanalysis"&gt;&lt;a href="https://github.com/tinmarD/pySpikeAnalysis"&gt;&lt;strong&gt;pySpikeAnalysis&lt;/strong&gt;&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;The pySpikeAnalysis module contains Python scripts to analyze the Spyking-Circus results. Is it based on Neo&lt;br/&gt;
 and allow the visualization of spike sorting results such as : &lt;/p&gt;
 &lt;ul&gt;
