@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Master-Doc - Martin Deudon</title><link>https://tinmard.github.io/</link><description></description><lastBuildDate>Thu, 10 Jan 2019 11:48:00 +0100</lastBuildDate><item><title>Jupyter Notebook and Jupyter Lab</title><link>https://tinmard.github.io/jupyter-notebook-and-jupyter-lab.html</link><description>&lt;p&gt;Jupyter notebooks and Jupyter Lab presentation&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 10 Jan 2019 11:48:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2019-01-10:/jupyter-notebook-and-jupyter-lab.html</guid><category>Python</category><category>Jupyter</category><category>Notebook</category></item><item><title>Stimic - Analysis - Artifact Carac</title><link>https://tinmard.github.io/stimic-analysis-artifact-carac.html</link><description>&lt;p&gt;
+<rss version="2.0"><channel><title>Master-Doc - Martin Deudon</title><link>https://tinmard.github.io/</link><description></description><lastBuildDate>Thu, 10 Jan 2019 11:48:00 +0100</lastBuildDate><item><title>Jupyter Notebook and Jupyter Lab</title><link>https://tinmard.github.io/jupyter-notebook-and-jupyter-lab.html</link><description>&lt;p&gt;Jupyter notebooks and Jupyter Lab presentation&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 10 Jan 2019 11:48:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2019-01-10:/jupyter-notebook-and-jupyter-lab.html</guid><category>Python</category><category>Jupyter</category><category>Notebook</category></item><item><title>Stimic - Analysis - Artefact evolution across contacts</title><link>https://tinmard.github.io/stimic-analysis-artefact-evolution-across-contacts.html</link><description>&lt;p&gt;Download the notebook : &lt;a href="https://tinmard.github.io/notebooks/stimic_artefact_distance.py"&gt;stimic_artefact_distance.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="Caracterization-of-the-stimulation-artefact"&gt;Caracterization of the stimulation artefact&lt;a class="anchor-link" href="#Caracterization-of-the-stimulation-artefact"&gt;&amp;para;&lt;/a&gt;&lt;/h1&gt;
+&lt;h2 id="Shape-evolution-of-the-stimulation-artefact-along-the-electrode"&gt;Shape evolution of the stimulation artefact along the electrode&lt;a class="anchor-link" href="#Shape-evolution-of-the-stimulation-artefact-along-the-electrode"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;In this notebook, we analyse how the shape of the artefact changes when the distrance from the recording site to the stimulation site increases.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="cell border-box-sizing code_cell rendered"&gt;
+&lt;div class="input"&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[3]:&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+    &lt;div class="input_area"&gt;
+&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 08 Nov 2018 13:42:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-11-08:/stimic-analysis-artefact-evolution-across-contacts.html</guid><category>Stimic</category><category>notebook</category></item><item><title>Stimic - Analysis - Artifact Carac</title><link>https://tinmard.github.io/stimic-analysis-artifact-carac.html</link><description>&lt;p&gt;Download the notebook : &lt;a href="https://tinmard.github.io/notebooks/stimic_artefact_carac.py"&gt;stimic_artefact_carac.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
+&lt;/div&gt;
+&lt;div class="inner_cell"&gt;
+&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
+&lt;h1 id="Caracterization-of-the-stimulation-artefact"&gt;Caracterization of the stimulation artefact&lt;a class="anchor-link" href="#Caracterization-of-the-stimulation-artefact"&gt;&amp;#182;&lt;/a&gt;&lt;/h1&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -12,7 +32,7 @@
 &lt;div class="input"&gt;
 &lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;mne&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
@@ -20,33 +40,33 @@
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns&lt;/span&gt;
-&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'../stimic_main/'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;../stimic_main/&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;utils_stimic&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;utils_eeg_cleaning&lt;/span&gt;
 &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;stim_analysis_fun&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt;
 &lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_context&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'paper'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;plt&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;rcParams&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'figure.figsize' …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 08 Nov 2018 13:42:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-11-08:/stimic-analysis-artifact-carac.html</guid><category>Stimic</category><category>Artifact</category></item><item><title>Stimic - Analysis - Stim count</title><link>https://tinmard.github.io/stimic-analysis-stim-count.html</link><description>&lt;p&gt;
+&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_context …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 08 Nov 2018 13:42:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-11-08:/stimic-analysis-artifact-carac.html</guid><category>Stimic</category><category>Artifact</category><category>notebook</category></item><item><title>Stimic - Analysis - Stim count</title><link>https://tinmard.github.io/stimic-analysis-stim-count.html</link><description>&lt;p&gt;Download the notebook : &lt;a href="https://tinmard.github.io/notebooks/stimic_stim_count.py"&gt;stimic_stim_count.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
 &lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h2 id="Count-Stim"&gt;Count Stim&lt;a class="anchor-link" href="#Count-Stim"&gt;&amp;para;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This notebook show how to count the number of stimulations in function of the different stimulation paremeters from the Stimulation Event File&lt;/p&gt;
+&lt;h2 id="Count-Stim"&gt;Count Stim&lt;a class="anchor-link" href="#Count-Stim"&gt;&amp;#182;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;This notebook show how to count the number of stimulations in function of the different stimulation paremeters from the Stimulation Event File&lt;/p&gt;
+
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="cell border-box-sizing code_cell rendered"&gt;
 &lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[9]:&lt;/div&gt;
+&lt;div class="prompt input_prompt"&gt;In&amp;nbsp;[1]:&lt;/div&gt;
 &lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
+    &lt;div class="input_area"&gt;
 &lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;%&lt;/span&gt;&lt;span class="k"&gt;matplotlib&lt;/span&gt; inline
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-&lt;span class="n"&gt;sns&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_context&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'paper'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;sns …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 08 Nov 2018 13:42:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-11-08:/stimic-analysis-stim-count.html</guid><category>Stimic</category></item><item><title>Stimic - Stimulation Detection Algorithm</title><link>https://tinmard.github.io/stimic-stimulation-detection-algorithm.html</link><description>&lt;h2 id="detection-algorithm-details"&gt;Detection Algorithm Details&lt;/h2&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 08 Nov 2018 13:42:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-11-08:/stimic-analysis-stim-count.html</guid><category>Stimic</category><category>notebook</category></item><item><title>Stimic - Stimulation Detection Algorithm</title><link>https://tinmard.github.io/stimic-stimulation-detection-algorithm.html</link><description>&lt;h2 id="detection-algorithm-details"&gt;Detection Algorithm Details&lt;/h2&gt;
 &lt;h3 id="1-hz-stimulation"&gt;1 Hz Stimulation&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/images/stimic/stim_list/1Hz_artefact_macro.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;For 1Hz stimulation we count the number of peaks if the threshold signal in the window [-0.1s, 10.1s] around each time of threshold crossing. If the number of peaks if equal to 10 more or less, the event is considered a 1Hz …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 08 Nov 2018 13:42:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-11-08:/stimic-stimulation-detection-algorithm.html</guid><category>Stimic</category><category>detector</category></item><item><title>Stimic - Stimulation Event List Creation</title><link>https://tinmard.github.io/stimic-stimulation-event-list-creation.html</link><description>&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
@@ -56,7 +76,7 @@
  avalaible &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/hardware_list.xlsx"&gt;here&lt;/a&gt;. &lt;/p&gt;
 &lt;h3 id="spectrum-analyzer-spectran-nf-1010e"&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
- both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 22 Oct 2018 17:33:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-10-22:/epifar/</guid><category>Epifar</category><category>Hardware</category><category>Noise</category></item><item><title>Cochlea</title><link>https://tinmard.github.io/cochlea</link><description>&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the M4 project, 
+ both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 22 Oct 2018 17:33:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-10-22:/epifar/</guid><category>Epifar</category><category>Hardware</category><category>Noise</category></item><item><title>Cochlea</title><link>https://tinmard.github.io/cochlea</link><description>&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the &lt;a href="http://m4.ups-tlse.fr/"&gt;M4 project&lt;/a&gt;, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -136,12 +156,12 @@ analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/pySAB"&gt;https://github.com/tinmarD/SAB_main&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Documentation : &lt;a href="https://pysab.readthedocs.io/en/latest/"&gt;https://pysab.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/sab/</guid><category>iEEG</category><category>SAB</category><category>pySAB</category><category>Memory</category></item><item><title>Softwares</title><link>https://tinmard.github.io/category/</link><description>&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/sab/</guid><category>iEEG</category><category>SAB</category><category>pySAB</category><category>Memory</category></item><item><title>Softwares List</title><link>https://tinmard.github.io/softwares/</link><description>&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
 More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
-The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/category/</guid><category>Softwares</category></item><item><title>Stimic</title><link>https://tinmard.github.io/stimic/</link><description>&lt;p&gt;Stimic index page &lt;/p&gt;
+The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/softwares/</guid><category>Software</category></item><item><title>Stimic</title><link>https://tinmard.github.io/stimic/</link><description>&lt;p&gt;Stimic index page &lt;/p&gt;
 &lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
