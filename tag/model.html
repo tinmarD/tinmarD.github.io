@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Master-Doc - Martin Deudon</title>
+    <title>Master-Doc - Model</title>
     <meta name="description" content="">
     <meta name="author" content="Martin Deudon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11886,204 +11886,6 @@ jQuery(document).ready(function($) {
 <article class="row teaser">
 
   <div style="width: 20%; float:left">
-    jeu. 10 janvier 2019
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/jupyter.html">Jupyter</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/jupyter.html">Jupyter</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/notebook.html">Notebook</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/notebook.html">Notebook</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/jupyter-notebook-and-jupyter-lab.html">Jupyter Notebook and Jupyter Lab</a></h2>
-      <div class="content">
-          Jupyter notebooks and Jupyter Lab presentation
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    jeu. 08 novembre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/artifact.html">Artifact</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/artifact.html">Artifact</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/stimic-analysis-artifact-carac.html">Stimic - Analysis - Artifact Carac</a></h2>
-      <div class="content">
-          Caracterization of the stimulation artefact¶ In [1]: %matplotlib inline import mne import pandas as pd import numpy as np import matplotlib.pyplot as plt import sys import seaborn as sns sys.path.append('../stimic_main/') import utils_stimic import utils_eeg_cleaning from stim_analysis_fun import * sns.set() sns.set_context('paper') plt.rcParams['figure.figsize' …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    jeu. 08 novembre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/stimic-analysis-stim-count.html">Stimic - Analysis - Stim count</a></h2>
-      <div class="content">
-          Count Stim¶This notebook show how to count the number of stimulations in function of the different stimulation paremeters from the Stimulation Event File In [9]: %matplotlib inline import matplotlib import numpy as np import pandas as pd import matplotlib.pyplot as plt sns.set_context('paper') import seaborn as sns …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    jeu. 08 novembre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/detector.html">detector</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/detector.html">detector</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/stimic-stimulation-detection-algorithm.html">Stimic - Stimulation Detection Algorithm</a></h2>
-      <div class="content">
-          Detection Algorithm Details 1 Hz Stimulation For 1Hz stimulation we count the number of peaks if the threshold signal in the window [-0.1s, 10.1s] around each time of threshold crossing. If the number of peaks if equal to 10 more or less, the event is considered a 1Hz …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    jeu. 08 novembre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/stimic-stimulation-event-list-creation.html">Stimic - Stimulation Event List Creation</a></h2>
-      <div class="content">
-          This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline. Artifact Detection in macro-electrodes Description Goal : Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    mer. 24 octobre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/python-for-neuroscience.html">Python for Neuroscience</a></h2>
-      <div class="content">
-          Presents some Python packages for neuroscience
-      </div>
-<img src="/images/banners/python_neuroscience.png" alt="">  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    mar. 23 octobre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/doc.html">Doc</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/doc.html">Doc</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html">How to create documentation with Sphinx</a></h2>
-      <div class="content">
-          Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme
-      </div>
-<img src="/images/banners/how_to_create_doc.png" alt="">  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 22 octobre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/edf.html">EDF</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/edf.html">EDF</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/file-conversion.html">File conversion</a></h2>
-      <div class="content">
-          How to use the file conversion scripts. Change the format. Create a new montage. Deal with Epifar Files
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 22 octobre 2018
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/hardware.html">Hardware</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/hardware.html">Hardware</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/noise.html">Noise</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/noise.html">Noise</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/epifar/">Hardware tools for reducing noise in micro-recordings</a></h2>
-      <div class="content">
-          A complete list of all hardware used for reducing noise in micro-electrode recordings is avalaible here. Spectrum Analyzer SPECTRAN-NF 1010E The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
     lun. 04 octobre 2010
     <div class="tag-resume" style="padding-right: 15px" >
         <span>Tags : </span>
@@ -12108,11 +11910,9 @@ jQuery(document).ready(function($) {
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
-    <li class="active"><a href="https://tinmard.github.io/author/martin-deudon.html">1</a></li>
-    <li class=""><a href="https://tinmard.github.io/author/martin-deudon2.html">2</a></li>
-    <li class=""><a href="https://tinmard.github.io/author/martin-deudon3.html">3</a></li>
+    <li class="active"><a href="https://tinmard.github.io/tag/model.html">1</a></li>
 
-    <li class="next"><a href="https://tinmard.github.io/author/martin-deudon2.html">Next &rarr;</a></li>
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
 
 </ul>
 </div>            <div class="article">
@@ -12183,7 +11983,7 @@ jQuery(document).ready(function($) {
 
 <footer>
 <br />
-<p><a href="https://tinmard.github.io">Master-Doc</a> &copy; Martin Deudon 2019</p>
+<p><a href="https://tinmard.github.io">Master-Doc</a> &copy; Martin Deudon 2010</p>
 </footer>
 </div> <!-- /container -->
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
