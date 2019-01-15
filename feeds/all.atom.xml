@@ -934,8 +934,7 @@ For instance :&lt;/p&gt;
 &lt;/div&gt;
  
 
-&lt;/p&gt;</content><category term="Stimic"></category><category term="Artifact"></category><category term="notebook"></category></entry><entry><title>Stimic - Analysis - Stim count</title><link href="https://tinmard.github.io/stimic-analysis-stim-count.html" rel="alternate"></link><published>2018-11-08T13:42:00+01:00</published><updated>2018-11-08T13:42:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-11-08:/stimic-analysis-stim-count.html</id><summary type="html">&lt;p&gt;&lt;link href="{{ SITEURL }}/theme/notebook_style.css" rel="stylesheet" type="text/css"&gt;&lt;/p&gt;
-&lt;p&gt;Download the notebook : &lt;a href="https://tinmard.github.io/notebooks/stimic_stim_count.py"&gt;stimic_stim_count.py&lt;/a&gt;&lt;/p&gt;
+&lt;/p&gt;</content><category term="Stimic"></category><category term="Artifact"></category><category term="notebook"></category></entry><entry><title>Stimic - Analysis - Stim count</title><link href="https://tinmard.github.io/stimic-analysis-stim-count.html" rel="alternate"></link><published>2018-11-08T13:42:00+01:00</published><updated>2018-11-08T13:42:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-11-08:/stimic-analysis-stim-count.html</id><summary type="html">&lt;p&gt;Download the notebook : &lt;a href="https://tinmard.github.io/notebooks/stimic_stim_count.py"&gt;stimic_stim_count.py&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
@@ -956,8 +955,7 @@ For instance :&lt;/p&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;np&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib.pyplot&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;plt&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;link href="{{ SITEURL }}/theme/notebook_style.css" rel="stylesheet" type="text/css"&gt;&lt;/p&gt;
-&lt;p&gt;Download the notebook : &lt;a href="https://tinmard.github.io/notebooks/stimic_stim_count.py"&gt;stimic_stim_count.py&lt;/a&gt;&lt;/p&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;seaborn …&lt;/span&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Download the notebook : &lt;a href="https://tinmard.github.io/notebooks/stimic_stim_count.py"&gt;stimic_stim_count.py&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
