@@ -1,5 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Master-Doc - python</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/python.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-10T11:48:00+01:00</updated><entry><title>Jupyter Notebook and Jupyter Lab</title><link href="https://tinmard.github.io/jupyter-notebook-and-jupyter-lab.html" rel="alternate"></link><published>2019-01-10T11:48:00+01:00</published><updated>2019-01-10T11:48:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-10:/jupyter-notebook-and-jupyter-lab.html</id><summary type="html">&lt;p&gt;Jupyter notebooks and Jupyter Lab presentation&lt;/p&gt;</summary><content type="html">&lt;h1 id="project-jupyter"&gt;Project Jupyter&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple - python</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/python.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-15T11:54:00+01:00</updated><entry><title>Pelican - How to add an article</title><link href="https://tinmard.github.io/pelican-how-to-add-an-article.html" rel="alternate"></link><published>2019-01-15T11:54:00+01:00</published><updated>2019-01-15T11:54:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-15:/pelican-how-to-add-an-article.html</id><summary type="html">&lt;p&gt;&lt;img alt="pelicanlogo" src="/images/python/pelican/pelicanlogo.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Pelican is a static site generator, written in Python. This site is based on Pelican.&lt;/p&gt;
+&lt;p&gt;Documentation : &lt;a href="http://docs.getpelican.com/en/stable/"&gt;http://docs.getpelican.com/en/stable/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There are a great number of tutorial on the internet explaining how to start a Pelican site. In this article we will 
+simply see how to add an …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="pelicanlogo" src="/images/python/pelican/pelicanlogo.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Pelican is a static site generator, written in Python. This site is based on Pelican.&lt;/p&gt;
+&lt;p&gt;Documentation : &lt;a href="http://docs.getpelican.com/en/stable/"&gt;http://docs.getpelican.com/en/stable/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;There are a great number of tutorial on the internet explaining how to start a Pelican site. In this article we will 
+simply see how to add an article.&lt;/p&gt;
+&lt;p&gt;Articles are written using the &lt;a href="https://docs.framasoft.org/fr/grav/markdown.html"&gt;Markdown&lt;/a&gt;
+ syntax (&lt;em&gt;.md&lt;/em&gt; files). Each article belongs to a category and are stored in the 
+content directory, in a folder named after the category.&lt;/p&gt;
+&lt;p&gt;To add an article create a new file in folder correponding to the article category.&lt;/p&gt;
+&lt;p&gt;For now, 5 categories are defined: eeg, misc, projects, python and software; but a new one can be added at anytime.&lt;/p&gt;
+&lt;p&gt;The header of the markdown file should look like this : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;How&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;add&lt;/span&gt; &lt;span class="n"&gt;an&lt;/span&gt; &lt;span class="n"&gt;article&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="n"&gt;site&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2019&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;01&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;15&lt;/span&gt; &lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;19&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;python&lt;/span&gt;
+&lt;span class="n"&gt;Tags&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Pelican&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Doc&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Update the content&lt;/h3&gt;
+&lt;p&gt;Once a new article has been added, you need to generate the html files, open a terminal, go in the root
+ directory of this project (where the Makefile file is placed) and run :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make html
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can preview you site locally by starting a local server with &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make serve
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And see your site at &lt;a href="http://localhost:8000/"&gt;http://localhost:8000/&lt;/a&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make github
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Search content&lt;/h3&gt;
+&lt;p&gt;When adding a new article, its content will not be indexed for the search
+ tool. See &lt;a href="https://tinmard.github.io/pelican-how-to-update-the-search-content.html"&gt;how to update the content of Tipue Search.&lt;/a&gt;&lt;/p&gt;</content><category term="Pelican"></category><category term="Doc"></category></entry><entry><title>Pelican - How to update the Search content</title><link href="https://tinmard.github.io/pelican-how-to-update-the-search-content.html" rel="alternate"></link><published>2019-01-15T11:54:00+01:00</published><updated>2019-01-15T11:54:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-15:/pelican-how-to-update-the-search-content.html</id><summary type="html">&lt;p&gt;The Search tool for this site is based on &lt;a href="http://www.tipue.com/search/help/"&gt;Tipue Search&lt;/a&gt;. This tool requires the 
+content of the site to be indexed. &lt;/p&gt;
+&lt;p&gt;One way to do this is explained &lt;a href="http://www.tipue.com/search/help/?d=2"&gt;here&lt;/a&gt; but it does not seems to work when the 
+ site is publish on github pages as it is the case …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The Search tool for this site is based on &lt;a href="http://www.tipue.com/search/help/"&gt;Tipue Search&lt;/a&gt;. This tool requires the 
+content of the site to be indexed. &lt;/p&gt;
+&lt;p&gt;One way to do this is explained &lt;a href="http://www.tipue.com/search/help/?d=2"&gt;here&lt;/a&gt; but it does not seems to work when the 
+ site is publish on github pages as it is the case now.&lt;/p&gt;
+&lt;p&gt;Another way to update the content, is to use the &lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/tipue_search"&gt;tipue_search&lt;/a&gt; pelican 
+plugin - which should already be in the &lt;em&gt;pelicanplugins&lt;/em&gt; directory.&lt;/p&gt;
+&lt;p&gt;Each time you regenerate the html code, the &lt;em&gt;tipuesearch_content.json&lt;/em&gt; file is updated. This file is at the root of 
+the &lt;em&gt;output&lt;/em&gt; directory. The new version of Tipue Search does not work the &lt;em&gt;.json&lt;/em&gt; file anymore, but the content of this
+file need to be placed in a javascript file (&lt;em&gt;.js&lt;/em&gt;). &lt;/p&gt;
+&lt;p&gt;This file is called &lt;em&gt;tipuesearch_content.js&lt;/em&gt; and must be placed in the &lt;em&gt;pelicantheme/static/tipuesearch/&lt;/em&gt; directory.&lt;/p&gt;
+&lt;p&gt;The only difference between the &lt;em&gt;.json&lt;/em&gt; file and the &lt;em&gt;.js&lt;/em&gt; file is that the &lt;em&gt;.js&lt;/em&gt; file starts with : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;var tipuesearch = {&amp;quot;pages&amp;quot;:[{&amp;quot;title&amp;quot;: ....
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Thus you only need ti add &lt;code&gt;var tipusearch =&lt;/code&gt; at the begining of the &lt;em&gt;.json&lt;/em&gt; file, change the extension to &lt;em&gt;js&lt;/em&gt; 
+and place it in the &lt;em&gt;pelicantheme/static/tipuesearch/&lt;/em&gt; directory.&lt;/p&gt;</content><category term="Pelican"></category><category term="Doc"></category></entry><entry><title>Cython - How to compile</title><link href="https://tinmard.github.io/cython-how-to-compile.html" rel="alternate"></link><published>2019-01-14T18:14:00+01:00</published><updated>2019-01-14T18:14:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-14:/cython-how-to-compile.html</id><summary type="html">&lt;p&gt;&lt;img src="/images/python/cython/cythonlogo.jpg" width="200"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cython.org/"&gt;Cython&lt;/a&gt; is a tool that allows you to compile your code to C, resulting in a huge speed increase. All is needed is slight 
+modification of the python code.&lt;/p&gt;
+&lt;p&gt;The Cython documentation : &lt;a href="http://docs.cython.org/en/latest/"&gt;http://docs.cython.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you only need to compile some Cython file (&lt;strong&gt;.pyx&lt;/strong&gt; extension), here …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img src="/images/python/cython/cythonlogo.jpg" width="200"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://cython.org/"&gt;Cython&lt;/a&gt; is a tool that allows you to compile your code to C, resulting in a huge speed increase. All is needed is slight 
+modification of the python code.&lt;/p&gt;
+&lt;p&gt;The Cython documentation : &lt;a href="http://docs.cython.org/en/latest/"&gt;http://docs.cython.org/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;If you only need to compile some Cython file (&lt;strong&gt;.pyx&lt;/strong&gt; extension), here is how it is done.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/python/cython/cython_principle.png" width="300"&gt;&lt;/p&gt;
+&lt;p&gt;The Cython code (&lt;em&gt;hello.pyx&lt;/em&gt;) is convert is a C code by the Cython compiler (&lt;em&gt;hello.c&lt;/em&gt;), which is then compiled to create a dynamic 
+library (&lt;em&gt;hello.so&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;To do all this create a python script, for example &lt;em&gt;setup.py&lt;/em&gt; with the following content : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;distutils.core&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;setup&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;Cython.Build&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cythonize&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
+
+&lt;span class="n"&gt;setup&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+    &lt;span class="n"&gt;ext_modules&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;cythonize&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;hello.pyx&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="n"&gt;extra_compile_args&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;-O3&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;fopenmp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="n"&gt;extra_link_args&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;fopenmp&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
+    &lt;span class="n"&gt;include_dirs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get_include&lt;/span&gt;&lt;span class="p"&gt;()]&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then, call this code from a terminal :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;python setup.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h3&gt;Requirements&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;The Cython module  : &lt;a href="https://cython.readthedocs.io/en/latest/src/quickstart/install.html"&gt;Installing Cython&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A C compiler - In Unix systems, the C compiler &lt;em&gt;gcc&lt;/em&gt; should already be installed, on Windows you can
+  install Visual Studio which includes a C compiler. See &lt;a href="https://wiki.python.org/moin/WindowsCompilers"&gt;here&lt;/a&gt; to know
+  which version is needed.&lt;/li&gt;
+&lt;/ul&gt;</content><category term="Cython"></category><category term="Tips"></category></entry><entry><title>Jupyter Notebook and Jupyter Lab</title><link href="https://tinmard.github.io/jupyter-notebook-and-jupyter-lab.html" rel="alternate"></link><published>2019-01-10T11:48:00+01:00</published><updated>2019-01-10T11:48:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-10:/jupyter-notebook-and-jupyter-lab.html</id><summary type="html">&lt;p&gt;Jupyter notebooks and Jupyter Lab presentation&lt;/p&gt;</summary><content type="html">&lt;h1 id="project-jupyter"&gt;Project Jupyter&lt;/h1&gt;
 &lt;p&gt;&lt;a href="https://jupyter.org/"&gt;Project Jupyter&lt;/a&gt; has developped the Jupyter Notebook, an open-source web application that allows you to
 create and share documents that contain live code, equations, visualizations and narrative text.&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://jupyterlab.readthedocs.io/en/stable/"&gt;JupyterLab&lt;/a&gt; is a web-based user interface for Project Jupyter. It enables you
@@ -269,9 +366,9 @@ Results are very good, cross-validated on several datasets, and details of the a
 &lt;p&gt;See the doc : &lt;a href="http://neuralensemble.org/elephant/"&gt;&lt;img src="/images/python/python_neuroscience/elephant_logo.png" width="75"/&gt;&lt;/a&gt;&lt;/p&gt;</content><category term="Python"></category></entry><entry><title>How to create documentation with Sphinx</title><link href="https://tinmard.github.io/how-to-create-documentation-with-sphinx.html" rel="alternate"></link><published>2018-10-23T14:15:00+02:00</published><updated>2018-10-23T14:15:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-10-23:/how-to-create-documentation-with-sphinx.html</id><summary type="html">&lt;p&gt;Sphinx explained. Add comments to your Python code. Use of Sphinx-quickstart and sphinx-autodoc. Change the theme&lt;/p&gt;</summary><content type="html">&lt;h2 id="add-comments-to-your-python-code"&gt;Add comments to your Python code&lt;/h2&gt;
 &lt;p&gt;The documentation will be generated from the docstrings (~comments) added in your code.&lt;/p&gt;
 &lt;!-- PELICAN_END_SUMMARY --&gt;
-&lt;p&gt;&lt;img alt="comments_ex" src="_images/python/how_to_create_doc/code_with_comments.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="comments_ex" src="images/python/how_to_create_doc/code_with_comments.png"/&gt;&lt;/p&gt;
 &lt;p&gt;In PyCharms, the docstring format can be selected (here NumPy) : &lt;/p&gt;
-&lt;p&gt;&lt;img alt="docstrings" src="_images/python/how_to_create_doc/pycharm_docstrings.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="docstrings" src="images/python/how_to_create_doc/pycharm_docstrings.png"/&gt;&lt;/p&gt;
 &lt;h2 id="sphinx"&gt;Sphinx&lt;/h2&gt;
 &lt;h3 id="install-sphinx"&gt;Install sphinx  :&lt;/h3&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;pip install Sphinx
@@ -296,9 +393,9 @@ sphinx-quickstart
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make html
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;If you encounter this error : &lt;/p&gt;
-&lt;p&gt;&lt;img alt="sphinx_error" src="_images/python/how_to_create_doc/sphinx_error.png"/&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="sphinx_error" src="images/python/how_to_create_doc/sphinx_error.png"/&gt;&lt;/p&gt;
 &lt;p&gt;It means sphinx could not locate the source (&lt;em&gt;.py&lt;/em&gt;) files of your project. You need to indicate in the &lt;em&gt;conf.py&lt;/em&gt; file in the &lt;em&gt;doc/&lt;/em&gt; directory, the location of the source directory. To do this uncomment and complete the first few lines of the &lt;em&gt;conf.py&lt;/em&gt; file in the &lt;em&gt;--- Path Setup ---&lt;/em&gt; part : &lt;/p&gt;
-&lt;p&gt;&lt;img alt="setup" src="_images/python/how_to_create_doc/conf_path_setup.png"/&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Doc"></category></entry><entry><title>Matplotlib tips</title><link href="https://tinmard.github.io/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2 id="legend"&gt;Legend&lt;/h2&gt;
+&lt;p&gt;&lt;img alt="setup" src="images/python/how_to_create_doc/conf_path_setup.png"/&gt;&lt;/p&gt;</content><category term="Python"></category><category term="Doc"></category><category term="Sphinx"></category></entry><entry><title>Matplotlib tips</title><link href="https://tinmard.github.io/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2 id="legend"&gt;Legend&lt;/h2&gt;
 &lt;p&gt;Plot legend for a specific entry : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;f, ax = plt.subplots()
 ax.plot(t, eeg_traces_2d)

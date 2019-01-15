@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Le Temple - misc</title>
+    <title>Le Temple - Cython - How to compile</title>
     <meta name="description" content="">
     <meta name="author" content="Martin Deudon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11883,32 +11883,57 @@ jQuery(document).ready(function($) {
     <div class="row">
 
         <div class="span9">
-<article class="row teaser">
+    <div class='article'>
+        <div class="content-title">
+            <h1>Cython - How to compile</h1>
+lun. 14 janvier 2019
 
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-    </div>
-  </div>
+by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">Martin Deudon</a>
+ 
 
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/">Home</a></h2>
-      <div class="content">
-          Bienvenue Project Map
-      </div>
-  </div>
 
-</article>
-<div class="pagination">
+        </div>
+
+	
+        <div><p><img src="/images/python/cython/cythonlogo.jpg" width="200"></p>
+<p><a href="https://cython.org/">Cython</a> is a tool that allows you to compile your code to C, resulting in a huge speed increase. All is needed is slight 
+modification of the python code.</p>
+<p>The Cython documentation : <a href="http://docs.cython.org/en/latest/">http://docs.cython.org/en/latest/</a></p>
+<p>If you only need to compile some Cython file (<strong>.pyx</strong> extension), here is how it is done.</p>
+<p><img src="/images/python/cython/cython_principle.png" width="300"></p>
+<p>The Cython code (<em>hello.pyx</em>) is convert is a C code by the Cython compiler (<em>hello.c</em>), which is then compiled to create a dynamic 
+library (<em>hello.so</em>)</p>
+<p>To do all this create a python script, for example <em>setup.py</em> with the following content : </p>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+<span class="kn">from</span> <span class="nn">Cython.Build</span> <span class="kn">import</span> <span class="n">cythonize</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+
+<span class="n">setup</span><span class="p">(</span>
+    <span class="n">ext_modules</span><span class="o">=</span><span class="n">cythonize</span><span class="p">(</span><span class="s2">&quot;hello.pyx&quot;</span><span class="p">),</span>
+    <span class="n">extra_compile_args</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;-O3&quot;</span><span class="p">,</span> <span class="s2">&quot;fopenmp&quot;</span><span class="p">],</span>
+    <span class="n">extra_link_args</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;fopenmp&quot;</span><span class="p">],</span>
+    <span class="n">include_dirs</span><span class="o">=</span><span class="p">[</span><span class="n">numpy</span><span class="o">.</span><span class="n">get_include</span><span class="p">()]</span>
+<span class="p">)</span>
+</pre></div>
+
+
+<p>Then, call this code from a terminal :</p>
+<div class="highlight"><pre><span></span>python setup.py
+</pre></div>
+
+
+<h3>Requirements</h3>
 <ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+<li>The Cython module  : <a href="https://cython.readthedocs.io/en/latest/src/quickstart/install.html">Installing Cython</a></li>
+<li>A C compiler - In Unix systems, the C compiler <em>gcc</em> should already be installed, on Windows you can
+  install Visual Studio which includes a C compiler. See <a href="https://wiki.python.org/moin/WindowsCompilers">here</a> to know
+  which version is needed.</li>
+</ul></div>
+	
+        <hr>
 
-    <li class="active"><a href="https://tinmard.github.io/category/misc.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>            <div class="article">
+    </div>
+            <div class="article">
                 <!--TIPUE SEARCH--><div id="tipue_search_content"></div>
             </div>
         </div>
@@ -11976,7 +12001,7 @@ jQuery(document).ready(function($) {
 
 <footer>
 <br />
-<p><a href="https://tinmard.github.io">Le Temple</a> &copy; Martin Deudon 2010</p>
+<p><a href="https://tinmard.github.io">Le Temple</a> &copy; Martin Deudon 2019</p>
 </footer>
 </div> <!-- /container -->
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->

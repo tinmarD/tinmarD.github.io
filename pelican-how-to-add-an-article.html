@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Le Temple - misc</title>
+    <title>Le Temple - Pelican - How to add an article</title>
     <meta name="description" content="">
     <meta name="author" content="Martin Deudon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11883,32 +11883,61 @@ jQuery(document).ready(function($) {
     <div class="row">
 
         <div class="span9">
-<article class="row teaser">
+    <div class='article'>
+        <div class="content-title">
+            <h1>Pelican - How to add an article</h1>
+mar. 15 janvier 2019
 
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
+by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">Martin Deudon</a>
+ 
+
+
+        </div>
+
+	
+        <div><p><img alt="pelicanlogo" src="/images/python/pelican/pelicanlogo.jpg"></p>
+<p>Pelican is a static site generator, written in Python. This site is based on Pelican.</p>
+<p>Documentation : <a href="http://docs.getpelican.com/en/stable/">http://docs.getpelican.com/en/stable/</a></p>
+<p>There are a great number of tutorial on the internet explaining how to start a Pelican site. In this article we will 
+simply see how to add an article.</p>
+<p>Articles are written using the <a href="https://docs.framasoft.org/fr/grav/markdown.html">Markdown</a>
+ syntax (<em>.md</em> files). Each article belongs to a category and are stored in the 
+content directory, in a folder named after the category.</p>
+<p>To add an article create a new file in folder correponding to the article category.</p>
+<p>For now, 5 categories are defined: eeg, misc, projects, python and software; but a new one can be added at anytime.</p>
+<p>The header of the markdown file should look like this : </p>
+<div class="highlight"><pre><span></span><span class="n">Title</span><span class="o">:</span> <span class="n">Pelican</span> <span class="o">-</span> <span class="n">How</span> <span class="n">to</span> <span class="n">add</span> <span class="n">an</span> <span class="n">article</span> <span class="n">to</span> <span class="k">this</span> <span class="n">site</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2019</span><span class="o">-</span><span class="mi">01</span><span class="o">-</span><span class="mi">15</span> <span class="mi">11</span><span class="o">:</span><span class="mi">19</span>
+<span class="n">Category</span><span class="o">:</span> <span class="n">python</span>
+<span class="n">Tags</span><span class="o">:</span> <span class="n">Pelican</span><span class="o">,</span> <span class="n">Doc</span>
+</pre></div>
+
+
+<h3>Update the content</h3>
+<p>Once a new article has been added, you need to generate the html files, open a terminal, go in the root
+ directory of this project (where the Makefile file is placed) and run :</p>
+<div class="highlight"><pre><span></span>make html
+</pre></div>
+
+
+<p>You can preview you site locally by starting a local server with </p>
+<div class="highlight"><pre><span></span>make serve
+</pre></div>
+
+
+<p>And see your site at <a href="http://localhost:8000/">http://localhost:8000/</a></p>
+<div class="highlight"><pre><span></span>make github
+</pre></div>
+
+
+<h3>Search content</h3>
+<p>When adding a new article, its content will not be indexed for the search
+ tool. See <a href="https://tinmard.github.io/pelican-how-to-update-the-search-content.html">how to update the content of Tipue Search.</a></p></div>
+	
+        <hr>
+
     </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/">Home</a></h2>
-      <div class="content">
-          Bienvenue Project Map
-      </div>
-  </div>
-
-</article>
-<div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-
-    <li class="active"><a href="https://tinmard.github.io/category/misc.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>            <div class="article">
+            <div class="article">
                 <!--TIPUE SEARCH--><div id="tipue_search_content"></div>
             </div>
         </div>
@@ -11976,7 +12005,7 @@ jQuery(document).ready(function($) {
 
 <footer>
 <br />
-<p><a href="https://tinmard.github.io">Le Temple</a> &copy; Martin Deudon 2010</p>
+<p><a href="https://tinmard.github.io">Le Temple</a> &copy; Martin Deudon 2019</p>
 </footer>
 </div> <!-- /container -->
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->

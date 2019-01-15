@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Le Temple - misc</title>
+    <title>Le Temple - Pelican - How to update the Search content</title>
     <meta name="description" content="">
     <meta name="author" content="Martin Deudon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11883,32 +11883,40 @@ jQuery(document).ready(function($) {
     <div class="row">
 
         <div class="span9">
-<article class="row teaser">
+    <div class='article'>
+        <div class="content-title">
+            <h1>Pelican - How to update the Search content</h1>
+mar. 15 janvier 2019
 
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
+by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">Martin Deudon</a>
+ 
+
+
+        </div>
+
+	
+        <div><p>The Search tool for this site is based on <a href="http://www.tipue.com/search/help/">Tipue Search</a>. This tool requires the 
+content of the site to be indexed. </p>
+<p>One way to do this is explained <a href="http://www.tipue.com/search/help/?d=2">here</a> but it does not seems to work when the 
+ site is publish on github pages as it is the case now.</p>
+<p>Another way to update the content, is to use the <a href="https://github.com/getpelican/pelican-plugins/tree/master/tipue_search">tipue_search</a> pelican 
+plugin - which should already be in the <em>pelicanplugins</em> directory.</p>
+<p>Each time you regenerate the html code, the <em>tipuesearch_content.json</em> file is updated. This file is at the root of 
+the <em>output</em> directory. The new version of Tipue Search does not work the <em>.json</em> file anymore, but the content of this
+file need to be placed in a javascript file (<em>.js</em>). </p>
+<p>This file is called <em>tipuesearch_content.js</em> and must be placed in the <em>pelicantheme/static/tipuesearch/</em> directory.</p>
+<p>The only difference between the <em>.json</em> file and the <em>.js</em> file is that the <em>.js</em> file starts with : </p>
+<div class="highlight"><pre><span></span>var tipuesearch = {&quot;pages&quot;:[{&quot;title&quot;: ....
+</pre></div>
+
+
+<p>Thus you only need ti add <code>var tipusearch =</code> at the begining of the <em>.json</em> file, change the extension to <em>js</em> 
+and place it in the <em>pelicantheme/static/tipuesearch/</em> directory.</p></div>
+	
+        <hr>
+
     </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/">Home</a></h2>
-      <div class="content">
-          Bienvenue Project Map
-      </div>
-  </div>
-
-</article>
-<div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-
-    <li class="active"><a href="https://tinmard.github.io/category/misc.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>            <div class="article">
+            <div class="article">
                 <!--TIPUE SEARCH--><div id="tipue_search_content"></div>
             </div>
         </div>
@@ -11976,7 +11984,7 @@ jQuery(document).ready(function($) {
 
 <footer>
 <br />
-<p><a href="https://tinmard.github.io">Le Temple</a> &copy; Martin Deudon 2010</p>
+<p><a href="https://tinmard.github.io">Le Temple</a> &copy; Martin Deudon 2019</p>
 </footer>
 </div> <!-- /container -->
 <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
