@@ -1173,7 +1173,9 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;ul&gt;
 &lt;li&gt;LNC&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="noise-level-in-micro-recordings_1"&gt;Noise level in micro-recordings&lt;/h3&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="hybrid electrode"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
+&lt;h3 id="noise-level-in-micro-recordings_1"&gt;Noise level in micro-recordings&lt;/h3&gt;
+&lt;p&gt;Sripts for estimating the noise levels in iEEG recordings are available 
+here : &lt;a href="https://github.com/tinmarD/NoiseEstimation"&gt;https://github.com/tinmarD/NoiseEstimation&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="hybrid electrode"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/epifar/micro_macro_details.png" width="800"/&gt;&lt;/p&gt;

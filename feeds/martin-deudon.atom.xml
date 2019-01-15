@@ -1751,7 +1751,11 @@ the BADA can deliver : 3300W &lt;/p&gt;
    2. &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Shielding_fabric/Aaronia-Shield_Tissu_de_blindage_de_50dB.pdf"&gt;Aaronia-Shield&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id="fluke-87v-multimeter"&gt;&lt;strong&gt;Fluke 87V Multimeter&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;img src="/images/epifar/noise/Fluke87V.jpg" width="400"/&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Fluke_87V/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Fluke_87V/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the &lt;a href="http://m4.ups-tlse.fr/"&gt;M4 project&lt;/a&gt;, 
+&lt;p&gt;&lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Fluke_87V/Fluke_87V_Spec.pdf"&gt;Spec&lt;/a&gt; - &lt;a href="https://tinmard.github.io/data/epifar/noise/hardware/Fluke_87V/Fluke_87V_UserManual.pdf"&gt;UserManual&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="Hardware"></category><category term="Noise"></category></entry><entry><title>Home</title><link href="https://tinmard.github.io/" rel="alternate"></link><published>2018-10-04T13:39:00+02:00</published><updated>2018-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-10-04:/</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
+&lt;p&gt;Project Map &lt;/p&gt;
+&lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
+&lt;p&gt;Project Map &lt;/p&gt;
+&lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;</content></entry><entry><title>Cochlea</title><link href="https://tinmard.github.io/cochlea" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/cochlea</id><summary type="html">&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the &lt;a href="http://m4.ups-tlse.fr/"&gt;M4 project&lt;/a&gt;, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -1902,11 +1906,9 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;ul&gt;
 &lt;li&gt;LNC&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id="noise-level-in-micro-recordings_1"&gt;Noise level in micro-recordings&lt;/h3&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="hybrid electrode"></category></entry><entry><title>Home</title><link href="https://tinmard.github.io/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
-&lt;p&gt;Project Map &lt;/p&gt;
-&lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;</summary><content type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
-&lt;p&gt;Project Map &lt;/p&gt;
-&lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;</content></entry><entry><title>Matplotlib tips</title><link href="https://tinmard.github.io/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2 id="legend"&gt;Legend&lt;/h2&gt;
+&lt;h3 id="noise-level-in-micro-recordings_1"&gt;Noise level in micro-recordings&lt;/h3&gt;
+&lt;p&gt;Sripts for estimating the noise levels in iEEG recordings are available 
+here : &lt;a href="https://github.com/tinmarD/NoiseEstimation"&gt;https://github.com/tinmarD/NoiseEstimation&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="hybrid electrode"></category></entry><entry><title>Matplotlib tips</title><link href="https://tinmard.github.io/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2 id="legend"&gt;Legend&lt;/h2&gt;
 &lt;p&gt;Plot legend for a specific entry : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;f, ax = plt.subplots()
 ax.plot(t, eeg_traces_2d)
