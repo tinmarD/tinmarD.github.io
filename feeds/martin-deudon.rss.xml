@@ -88,8 +88,24 @@ modification of the python code.&lt;/p&gt;
 &lt;h3 id="spectrum-analyzer-spectran-nf-1010e"&gt;&lt;strong&gt;Spectrum Analyzer SPECTRAN-NF 1010E&lt;/strong&gt;&lt;/h3&gt;
 &lt;p&gt;The Spectran NF-1010E from Aaronia is a spectrum analyzer. It can measures 
  both electric and magnetic fields in a frequency range of 10Hz to 10kHz. It is very useful for …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 22 Oct 2018 17:33:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-10-22:/epifar/</guid><category>Epifar</category><category>Hardware</category><category>Noise</category></item><item><title>Home</title><link>https://tinmard.github.io/</link><description>&lt;p&gt;Bienvenue&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align="center"&gt;&lt;/th&gt;
+&lt;th align="center"&gt;&lt;/th&gt;
+&lt;th align="center"&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/sab/"&gt;&lt;img src="/images/home/SAB.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/epifar/"&gt;&lt;img src="/images/home/Epifar.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/cochlea"&gt;&lt;img src="/images/home/Cochlea.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 04 Oct 2018 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-10-04:/</guid></item><item><title>Home-old</title><link>https://tinmard.github.io/home-old.html</link><description>&lt;p&gt;Bienvenue&lt;/p&gt;
 &lt;p&gt;Project Map &lt;/p&gt;
-&lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 04 Oct 2018 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-10-04:/</guid></item><item><title>Cochlea</title><link>https://tinmard.github.io/cochlea</link><description>&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the &lt;a href="http://m4.ups-tlse.fr/"&gt;M4 project&lt;/a&gt;, 
+&lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 04 Oct 2018 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-10-04:/home-old.html</guid></item><item><title>Cochlea</title><link>https://tinmard.github.io/cochlea</link><description>&lt;p&gt;The simplecochlea package is a basic cochlea model, designed during the &lt;a href="http://m4.ups-tlse.fr/"&gt;M4 project&lt;/a&gt;, 
 for the conversion of sound into spikes. &lt;/p&gt;
 &lt;p&gt;&lt;img src="/images/cochlea/cochlea_schema.png" width="800"/&gt;&lt;/p&gt;
 &lt;ul&gt;
