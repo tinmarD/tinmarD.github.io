@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Le Temple - Martin Deudon</title><link>https://tinmard.github.io/</link><description></description><lastBuildDate>Wed, 16 Jan 2019 14:11:00 +0100</lastBuildDate><item><title>Git - Update your code</title><link>https://tinmard.github.io/git-update-your-code.html</link><description>&lt;h3&gt;How to use git to update your code&lt;/h3&gt;
+<rss version="2.0"><channel><title>Le Temple - Martin Deudon</title><link>https://tinmard.github.io/</link><description></description><lastBuildDate>Wed, 16 Jan 2019 14:11:00 +0100</lastBuildDate><item><title>Git - Update your code</title><link>https://tinmard.github.io/git-update-your-code.html</link><description>&lt;p&gt;&lt;img alt="gitlogo" src="/images/misc/gitlogo.jpg"&gt;&lt;/p&gt;
+&lt;h3&gt;How to use git to update your code&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://git-scm.com/"&gt;Git&lt;/a&gt; is a free and open source distributed version control system. It allows
 you to get some code from repositories like &lt;a href="https://github.com"&gt;github&lt;/a&gt; and to easily update your
  code to the latest version.&lt;/p&gt;
