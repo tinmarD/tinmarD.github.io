@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-15T11:54:00+01:00</updated><entry><title>Pelican - How to add an article</title><link href="https://tinmard.github.io/pelican-how-to-add-an-article.html" rel="alternate"></link><published>2019-01-15T11:54:00+01:00</published><updated>2019-01-15T11:54:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-15:/pelican-how-to-add-an-article.html</id><summary type="html">&lt;p&gt;&lt;img alt="pelicanlogo" src="/images/python/pelican/pelicanlogo.jpg"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/all.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-16T14:11:00+01:00</updated><entry><title>Git - Update your code</title><link href="https://tinmard.github.io/git-update-your-code.html" rel="alternate"></link><published>2019-01-16T14:11:00+01:00</published><updated>2019-01-16T14:11:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-16:/git-update-your-code.html</id><summary type="html">&lt;h3&gt;How to use git to update your code&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://git-scm.com/"&gt;Git&lt;/a&gt; is a free and open source distributed version control system. It allows
+you to get some code from repositories like &lt;a href="https://github.com"&gt;github&lt;/a&gt; and to easily update your
+ code to the latest version.&lt;/p&gt;
+&lt;p&gt;The first step is to install git : &lt;a href="https://git-scm.com/"&gt;https://git-scm.com …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h3&gt;How to use git to update your code&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://git-scm.com/"&gt;Git&lt;/a&gt; is a free and open source distributed version control system. It allows
+you to get some code from repositories like &lt;a href="https://github.com"&gt;github&lt;/a&gt; and to easily update your
+ code to the latest version.&lt;/p&gt;
+&lt;p&gt;The first step is to install git : &lt;a href="https://git-scm.com/"&gt;https://git-scm.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then open a terminal, go to the location where you want to store the code and run : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/tinmarD/micmac.git 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Later, when you want to update this code, return to this directory and do : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git pull
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Git"></category></entry><entry><title>Pelican - How to add an article</title><link href="https://tinmard.github.io/pelican-how-to-add-an-article.html" rel="alternate"></link><published>2019-01-15T11:54:00+01:00</published><updated>2019-01-15T11:54:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-15:/pelican-how-to-add-an-article.html</id><summary type="html">&lt;p&gt;&lt;img alt="pelicanlogo" src="/images/python/pelican/pelicanlogo.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Pelican is a static site generator, written in Python. This site is based on Pelican.&lt;/p&gt;
 &lt;p&gt;Documentation : &lt;a href="http://docs.getpelican.com/en/stable/"&gt;http://docs.getpelican.com/en/stable/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;There are a great number of tutorial on the internet explaining how to start a Pelican site. In this article we will 
@@ -34,6 +50,7 @@ content directory, in a folder named after the category.&lt;/p&gt;
 
 
 &lt;p&gt;And see your site at &lt;a href="http://localhost:8000/"&gt;http://localhost:8000/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To publish the site to github pages use : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;make github
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -50,7 +67,7 @@ content of the site to be indexed. &lt;/p&gt;
 &lt;p&gt;Another way to update the content, is to use the &lt;a href="https://github.com/getpelican/pelican-plugins/tree/master/tipue_search"&gt;tipue_search&lt;/a&gt; pelican 
 plugin - which should already be in the &lt;em&gt;pelicanplugins&lt;/em&gt; directory.&lt;/p&gt;
 &lt;p&gt;Each time you regenerate the html code, the &lt;em&gt;tipuesearch_content.json&lt;/em&gt; file is updated. This file is at the root of 
-the &lt;em&gt;output&lt;/em&gt; directory. The new version of Tipue Search does not work the &lt;em&gt;.json&lt;/em&gt; file anymore, but the content of this
+the &lt;em&gt;output&lt;/em&gt; directory. The new version of Tipue Search does not work the &lt;em&gt;.json&lt;/em&gt; file anymore, the content of this
 file need to be placed in a javascript file (&lt;em&gt;.js&lt;/em&gt;). &lt;/p&gt;
 &lt;p&gt;This file is called &lt;em&gt;tipuesearch_content.js&lt;/em&gt; and must be placed in the &lt;em&gt;pelicantheme/static/tipuesearch/&lt;/em&gt; directory.&lt;/p&gt;
 &lt;p&gt;The only difference between the &lt;em&gt;.json&lt;/em&gt; file and the &lt;em&gt;.js&lt;/em&gt; file is that the &lt;em&gt;.js&lt;/em&gt; file starts with : &lt;/p&gt;
@@ -58,7 +75,7 @@ file need to be placed in a javascript file (&lt;em&gt;.js&lt;/em&gt;). &lt;/p&g
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;Thus you only need ti add &lt;code&gt;var tipusearch =&lt;/code&gt; at the begining of the &lt;em&gt;.json&lt;/em&gt; file, change the extension to &lt;em&gt;js&lt;/em&gt; 
+&lt;p&gt;Thus you only need to add &lt;code&gt;var tipusearch =&lt;/code&gt; at the begining of the &lt;em&gt;.json&lt;/em&gt; file, change the extension to &lt;em&gt;js&lt;/em&gt; 
 and place it in the &lt;em&gt;pelicantheme/static/tipuesearch/&lt;/em&gt; directory.&lt;/p&gt;</content><category term="Pelican"></category><category term="Doc"></category></entry><entry><title>Cython - How to compile</title><link href="https://tinmard.github.io/cython-how-to-compile.html" rel="alternate"></link><published>2019-01-14T18:14:00+01:00</published><updated>2019-01-14T18:14:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-14:/cython-how-to-compile.html</id><summary type="html">&lt;p&gt;&lt;img src="/images/python/cython/cythonlogo.jpg" width="200"&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href="https://cython.org/"&gt;Cython&lt;/a&gt; is a tool that allows you to compile your code to C, resulting in a huge speed increase. All is needed is slight 
 modification of the python code.&lt;/p&gt;

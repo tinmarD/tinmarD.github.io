@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple - misc</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2018-10-04T13:39:00+02:00</updated><entry><title>Home</title><link href="https://tinmard.github.io/" rel="alternate"></link><published>2018-10-04T13:39:00+02:00</published><updated>2018-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-10-04:/</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple - misc</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-16T14:11:00+01:00</updated><entry><title>Git - Update your code</title><link href="https://tinmard.github.io/git-update-your-code.html" rel="alternate"></link><published>2019-01-16T14:11:00+01:00</published><updated>2019-01-16T14:11:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-16:/git-update-your-code.html</id><summary type="html">&lt;h3&gt;How to use git to update your code&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://git-scm.com/"&gt;Git&lt;/a&gt; is a free and open source distributed version control system. It allows
+you to get some code from repositories like &lt;a href="https://github.com"&gt;github&lt;/a&gt; and to easily update your
+ code to the latest version.&lt;/p&gt;
+&lt;p&gt;The first step is to install git : &lt;a href="https://git-scm.com/"&gt;https://git-scm.com …&lt;/a&gt;&lt;/p&gt;</summary><content type="html">&lt;h3&gt;How to use git to update your code&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://git-scm.com/"&gt;Git&lt;/a&gt; is a free and open source distributed version control system. It allows
+you to get some code from repositories like &lt;a href="https://github.com"&gt;github&lt;/a&gt; and to easily update your
+ code to the latest version.&lt;/p&gt;
+&lt;p&gt;The first step is to install git : &lt;a href="https://git-scm.com/"&gt;https://git-scm.com/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Then open a terminal, go to the location where you want to store the code and run : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/tinmarD/micmac.git 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Later, when you want to update this code, return to this directory and do : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git pull
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Git"></category></entry><entry><title>Home</title><link href="https://tinmard.github.io/" rel="alternate"></link><published>2018-10-04T13:39:00+02:00</published><updated>2018-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-10-04:/</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;

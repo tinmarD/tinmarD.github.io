@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Le Temple - Martin Deudon</title><link>https://tinmard.github.io/</link><description></description><lastBuildDate>Tue, 15 Jan 2019 11:54:00 +0100</lastBuildDate><item><title>Pelican - How to add an article</title><link>https://tinmard.github.io/pelican-how-to-add-an-article.html</link><description>&lt;p&gt;&lt;img alt="pelicanlogo" src="/images/python/pelican/pelicanlogo.jpg"&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>Le Temple - Martin Deudon</title><link>https://tinmard.github.io/</link><description></description><lastBuildDate>Wed, 16 Jan 2019 14:11:00 +0100</lastBuildDate><item><title>Git - Update your code</title><link>https://tinmard.github.io/git-update-your-code.html</link><description>&lt;h3&gt;How to use git to update your code&lt;/h3&gt;
+&lt;p&gt;&lt;a href="https://git-scm.com/"&gt;Git&lt;/a&gt; is a free and open source distributed version control system. It allows
+you to get some code from repositories like &lt;a href="https://github.com"&gt;github&lt;/a&gt; and to easily update your
+ code to the latest version.&lt;/p&gt;
+&lt;p&gt;The first step is to install git : &lt;a href="https://git-scm.com/"&gt;https://git-scm.com …&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Wed, 16 Jan 2019 14:11:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2019-01-16:/git-update-your-code.html</guid><category>Git</category></item><item><title>Pelican - How to add an article</title><link>https://tinmard.github.io/pelican-how-to-add-an-article.html</link><description>&lt;p&gt;&lt;img alt="pelicanlogo" src="/images/python/pelican/pelicanlogo.jpg"&gt;&lt;/p&gt;
 &lt;p&gt;Pelican is a static site generator, written in Python. This site is based on Pelican.&lt;/p&gt;
 &lt;p&gt;Documentation : &lt;a href="http://docs.getpelican.com/en/stable/"&gt;http://docs.getpelican.com/en/stable/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;There are a great number of tutorial on the internet explaining how to start a Pelican site. In this article we will 
