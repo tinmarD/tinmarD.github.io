@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Le Temple - Martin Deudon</title><link>https://tinmard.github.io/</link><description></description><lastBuildDate>Thu, 17 Jan 2019 14:00:00 +0100</lastBuildDate><item><title>Spike Sorting Animation</title><link>https://tinmard.github.io/spike-sorting-animation.html</link><description>&lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/SpikeSortingAnimation"&gt;https://github.com/tinmarD/SpikeSortingAnimation&lt;/a&gt;&lt;/p&gt;
+<rss version="2.0"><channel><title>Le Temple - Martin Deudon</title><link>https://tinmard.github.io/</link><description></description><lastBuildDate>Thu, 17 Jan 2019 14:48:00 +0100</lastBuildDate><item><title>Cartography with the NetworkX library</title><link>https://tinmard.github.io/cartography-with-the-networkx-library.html</link><description>&lt;p&gt;&lt;a href="https://networkx.github.io/"&gt;Networkx&lt;/a&gt; is a Python package for the creation, manipulation, and study of the
+ structure, dynamics, and functions of complex networks.&lt;/p&gt;
+&lt;p&gt;Tutorial on Datacamp : &lt;a href="https://www.datacamp.com/courses/network-analysis-in-python-part-1"&gt;network-analysis-in-python-part-1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The following image was generated with networkx. It show a map of the different scripts in both Python and Matlab: &lt;/p&gt;
+&lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;
+&lt;p&gt;It was generated with the following …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 17 Jan 2019 14:48:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2019-01-17:/cartography-with-the-networkx-library.html</guid><category>networkx</category><category>python</category></item><item><title>Spike Sorting Animation</title><link>https://tinmard.github.io/spike-sorting-animation.html</link><description>&lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/SpikeSortingAnimation"&gt;https://github.com/tinmarD/SpikeSortingAnimation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;These scripts illustrate the spike-sorting process using Python and &lt;a href="https://www.pygame.org/news"&gt;pygame&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;spikesorting_game_1.py&lt;/code&gt; shows the raw signal on 1 tetrode&lt;/li&gt;

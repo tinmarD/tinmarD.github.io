@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Le Temple | 
-</title>
+    <title>Le Temple - Cartography with the NetworkX library</title>
     <meta name="description" content="">
     <meta name="author" content="Martin Deudon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11885,261 +11884,88 @@ jQuery(document).ready(function($) {
     <div class="row">
 
         <div class="span9">
-<article class="row teaser">
+    <div class='article'>
 
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/debug.html">debug</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/debug.html">debug</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/edf.html">EDF</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/edf.html">EDF</a>
+        <div class="content-title">
+            <h1>Cartography with the NetworkX library</h1>
+jeu. 17 janvier 2019
+
+by <a class="url fn" href="https://tinmard.github.io/author/martin-deudon.html">Martin Deudon</a>
+ 
+
+
+        </div>
+
+
+        <div><p><a href="https://networkx.github.io/">Networkx</a> is a Python package for the creation, manipulation, and study of the
+ structure, dynamics, and functions of complex networks.</p>
+<p>Tutorial on Datacamp : <a href="https://www.datacamp.com/courses/network-analysis-in-python-part-1">network-analysis-in-python-part-1</a></p>
+<p>The following image was generated with networkx. It show a map of the different scripts in both Python and Matlab: </p>
+<p><img src="images/cartographie.png" width="1000"/></p>
+<p>It was generated with the following code : </p>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib</span>
+<span class="n">matplotlib</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">'TkAgg'</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">networkx</span> <span class="kn">as</span> <span class="nn">nx</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+
+
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'micMac'</span><span class="p">,</span> <span class="s1">'EEGFileConversion'</span><span class="p">,</span> <span class="s1">'NoiseEstimation-old'</span><span class="p">,</span> <span class="s1">'NeuronPipeline'</span><span class="p">,</span> <span class="s1">'DatasetCreation'</span><span class="p">,</span> <span class="s1">'CorrelationRT'</span><span class="p">,</span>
+         <span class="s1">'ERP'</span><span class="p">,</span> <span class="s1">'MVPA'</span><span class="p">,</span> <span class="s1">'Stat'</span><span class="p">,</span> <span class="s1">'Phase'</span><span class="p">,</span> <span class="s1">'SAB_Main'</span><span class="p">,</span> <span class="s1">'NoiseEstimation'</span><span class="p">,</span> <span class="s1">'SpikeTrainAnalysis'</span><span class="p">,</span> <span class="s1">'Animation'</span><span class="p">,</span>
+         <span class="s1">'pySpikeAnalysis'</span><span class="p">,</span> <span class="s1">'BaselineAnalyses'</span><span class="p">,</span> <span class="s1">'StimFiles'</span><span class="p">,</span> <span class="s1">'DanaSoft_clean'</span><span class="p">,</span> <span class="s1">'cochlea-matlab'</span><span class="p">,</span> <span class="s1">'eegSpiker'</span><span class="p">,</span>
+         <span class="s1">'pyCochlea'</span><span class="p">,</span> <span class="s1">'JAST_STDP'</span><span class="p">,</span> <span class="s1">'JAST2'</span><span class="p">,</span> <span class="s1">'classic_STDP'</span><span class="p">,</span> <span class="s1">'JAST2_cythonver'</span><span class="p">,</span> <span class="s1">'python_utils'</span><span class="p">,</span> <span class="s1">'Interactive-Viz'</span><span class="p">]</span>
+<span class="n">language</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'Matlab'</span><span class="p">]</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="p">[</span><span class="s1">'Python'</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="s1">'Matlab'</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="p">[</span><span class="s1">'Python'</span><span class="p">]</span><span class="o">*</span><span class="mi">5</span><span class="o">+</span><span class="p">[</span><span class="s1">'Matlab'</span><span class="p">]</span><span class="o">*</span><span class="mi">2</span><span class="o">+</span><span class="p">[</span><span class="s1">'Python'</span><span class="p">]</span><span class="o">+</span><span class="p">[</span><span class="s1">'Matlab'</span><span class="p">]</span><span class="o">*</span><span class="mi">3</span><span class="o">+</span><span class="p">[</span><span class="s1">'Cython'</span><span class="p">]</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="p">[</span><span class="s1">'Python'</span><span class="p">]</span>
+<span class="n">state</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">keywords</span> <span class="o">=</span> <span class="p">[[</span><span class="s1">'Viz'</span><span class="p">,</span> <span class="s1">'EpiFar'</span><span class="p">,</span> <span class="s1">'micro'</span><span class="p">,</span> <span class="s1">'Macro'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'File-conv'</span><span class="p">,</span> <span class="s1">'EpiFar'</span><span class="p">,</span> <span class="s1">'micro'</span><span class="p">,</span> <span class="s1">'Macro'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Noise'</span><span class="p">,</span> <span class="s1">'old'</span><span class="p">,</span> <span class="s1">'micro'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'Neuron'</span><span class="p">,</span> <span class="s1">'Spike-Sorting'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'SAB'</span><span class="p">,</span> <span class="s1">'Macro'</span><span class="p">,</span> <span class="s1">'Dataset-Creation'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'SAB'</span><span class="p">,</span> <span class="s1">'Correlation'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'SAB'</span><span class="p">,</span> <span class="s1">'ERPs'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'SAB'</span><span class="p">,</span> <span class="s1">'MVPA'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'SAB'</span><span class="p">,</span> <span class="s1">'Stat'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'SAB'</span><span class="p">,</span> <span class="s1">'Phase'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'SAB'</span><span class="p">,</span> <span class="s1">'ERPs'</span><span class="p">,</span> <span class="s1">'MVPA'</span><span class="p">,</span> <span class="s1">'Viz'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'Noise'</span><span class="p">,</span> <span class="s1">'micro'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Spike-Sorting'</span><span class="p">,</span> <span class="s1">'Neuron'</span><span class="p">,</span> <span class="s1">'Viz'</span><span class="p">,</span> <span class="s1">'micro'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'Spike-Sorting'</span><span class="p">,</span> <span class="s1">'Neuron'</span><span class="p">,</span> <span class="s1">'Animation'</span><span class="p">,</span> <span class="s1">'micro'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Spike-Sorting'</span><span class="p">,</span> <span class="s1">'Viz'</span><span class="p">,</span> <span class="s1">'micro'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'Stimic'</span><span class="p">,</span> <span class="s1">'Phase'</span><span class="p">,</span> <span class="s1">'Freq-Analysis'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Stimic'</span><span class="p">,</span> <span class="s1">'Dataset-Creation'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'M4'</span><span class="p">,</span> <span class="s1">'Soft. Dana&eacute;'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'M4'</span><span class="p">,</span> <span class="s1">'Cochlea'</span><span class="p">,</span> <span class="s1">'Spike'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'M4'</span><span class="p">,</span> <span class="s1">'Spike'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'M4'</span><span class="p">,</span> <span class="s1">'Cochlea'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'M4'</span><span class="p">,</span> <span class="s1">'STDP'</span><span class="p">,</span> <span class="s1">'JAST'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'M4'</span><span class="p">,</span> <span class="s1">'STDP'</span><span class="p">,</span> <span class="s1">'JAST'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'M4'</span><span class="p">,</span> <span class="s1">'STDP'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'M4'</span><span class="p">,</span> <span class="s1">'STDP'</span><span class="p">,</span> <span class="s1">'JAST'</span><span class="p">],</span>
+            <span class="p">[</span><span class="s1">'utils'</span><span class="p">],</span> <span class="p">[</span><span class="s1">'Viz'</span><span class="p">,</span> <span class="s1">'Interactive'</span><span class="p">],</span>
+            <span class="p">]</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">'name'</span><span class="p">:</span> <span class="n">names</span><span class="p">,</span> <span class="s1">'language'</span><span class="p">:</span> <span class="n">language</span><span class="p">,</span> <span class="s1">'Advancement'</span><span class="p">:</span> <span class="n">state</span><span class="p">,</span> <span class="s1">'keywords'</span><span class="p">:</span> <span class="n">keywords</span><span class="p">})</span>
+<span class="n">entrie_names</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">name</span>
+<span class="n">n_entries</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+<span class="n">G</span><span class="o">.</span><span class="n">add_nodes_from</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'name'</span><span class="p">])</span>
+<span class="c1"># Add an edge between node a and b if a and b share a keywork</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">key_a</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'keywords'</span><span class="p">]):</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">key_b</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">'keywords'</span><span class="p">]):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">j</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">n_shared_keys</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">key_a</span><span class="p">)</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">key_b</span><span class="p">)))</span>
+        <span class="k">if</span> <span class="n">n_shared_keys</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">entrie_names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">entrie_names</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">weight</span><span class="o">=</span><span class="n">n_shared_keys</span><span class="p">)</span>
+
+<span class="n">unique_languages</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">language</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">colors</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="n">n_colors</span><span class="o">=</span><span class="n">unique_languages</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="n">node_color_dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">unique_languages</span><span class="p">,</span> <span class="n">colors</span><span class="p">))</span>
+<span class="n">node_color</span> <span class="o">=</span> <span class="p">[</span><span class="n">node_color_dict</span><span class="p">[</span><span class="n">lan</span><span class="p">]</span> <span class="k">for</span> <span class="n">lan</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">language</span><span class="p">]</span>
+
+<span class="c1"># pos = nx.circular_layout(G)</span>
+<span class="n">weights</span> <span class="o">=</span> <span class="p">[</span><span class="n">G</span><span class="p">[</span><span class="n">u</span><span class="p">][</span><span class="n">v</span><span class="p">][</span><span class="s1">'weight'</span><span class="p">]</span> <span class="k">for</span> <span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">edges</span><span class="p">()]</span>
+
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">iterations</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="o">=</span><span class="n">pos</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_color</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="n">weights</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">'g'</span><span class="p">)</span>
+</pre></div></div>
+
+        <hr>
+
+
     </div>
-  </div>
 
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/debug-edf-files.html">Debug EDF Files</a></h2>
-      <div class="content">
-          Missing header information L'en-tête (header) des fichiers .edf contient des métadonnées sur le patient, l'hôpital... Si certaines de ces données sont absentes, cela peut poser problème lors de l'ouverture du fichier selon le lecteur utilisé (cela ne semble pas avoir d'impact sur EEGLAB mais pose problème sur Anywave). Il existe …
-      </div>
-  </div>
 
-</article>
-<hr>
-<article class="row teaser">
 
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/hybrid-electrode.html">hybrid electrode</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/hybrid-electrode.html">hybrid electrode</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/epifar/">Epifar</a></h2>
-      <div class="content">
-          Hybrid electrode New micro-macro electrode : The image was generated with OpenScad, from these 2 files : tetrode_only micro-macro More detailed images. File conversion Report to this article for more details. Scripts for converting files and for synchronizing macro and micro data are here. Multiples format are used to record and analyze …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/tips.html">Tips</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/tips.html">Tips</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/programming.html">Programming</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/programming.html">Programming</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/matplotlib-tips.html">Matplotlib tips</a></h2>
-      <div class="content">
-          Tips about matplotlib library. Legend, backend, ...
-      </div>
-<img src="/images/banners/matplotlib_tips.png" alt="">  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/micmac.html">micMac</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/micmac.html">micMac</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/epifar.html">Epifar</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/gui.html">GUI</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/gui.html">GUI</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/matlab.html">Matlab</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/matlab.html">Matlab</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/micmac.html">micMac</a></h2>
-      <div class="content">
-          Github link : micmac Documentation : https://micmac.readthedocs.io/en/latest/ micMac was designed to visualize and analyse intracerebral recordings. micMac handles micro- and Macro- recordings and is helpful for visualizing signals recorded by hybrids electrodes. Installation Install EEGLAB and add it to the MATLAB path. Install the Biosig toolbox from …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/neurons.html">neurons</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/neurons.html">neurons</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/spike-sorting.html">spike-sorting</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/spike-sorting.html">spike-sorting</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/neo.html">neo</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/neo.html">neo</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/pyspikeanalysis.html">pySpikeAnalysis</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/pyspikeanalysis.html">pySpikeAnalysis</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/neurons/">Neurons</a></h2>
-      <div class="content">
-          Intro Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG exploration. Analyses Spike-Sorting Many spike-sorting tools exist (WaveClus, SpykingCircus, tridesclous, Spike2, ...). See here for more. We have chosen SpykingCircus, it has the advantages of handling tetrode configuration, to be designed in Python …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/tips.html">Tips</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/tips.html">Tips</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/programming.html">Programming</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/programming.html">Programming</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/numpy-tips.html">Numpy tips</a></h2>
-      <div class="content">
-          np.where(np.diff(np.sign(x)))[0] Find points of x crossing the threshold T : np.where(np.diff(x > T))[0] Find points of x crossing threshold ascending : np.where(np.diff(x > T) & (x[1:] > T)) Remove points that are close, i.e. given a sorted array …
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/python.html">Python</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/python.html">Python</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/tips.html">Tips</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/tips.html">Tips</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/programming.html">Programming</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/programming.html">Programming</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/python-tips.html">Python tips</a></h2>
-      <div class="content">
-          Datetime Get the current date/time and format it (e.g. to create a filename) : import datetime print(datetime.datetime.now().strftime('%d%b%Y-%Hh%M')) >> '10Oct2018-18h01' See Comportement de strftime() et strptime() for the availables directives
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/sab.html">SAB</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/sab.html">SAB</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/pysab.html">pySAB</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/pysab.html">pySAB</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/memory.html">Memory</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/memory.html">Memory</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/sab/">SAB</a></h2>
-      <div class="content">
-          The pySAB package is a python module designed to analyze the data from the SAB experiment. It contains script for ERP analysis, feature extraction, decoding, correlation analysis, ... Github link : https://github.com/tinmarD/SAB_main Documentation : https://pysab.readthedocs.io/en/latest/
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/software.html">Software</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/software.html">Software</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/softwares/">Softwares List</a></h2>
-      <div class="content">
-          micMac micMac is a matlab GUI for iEEG visualization and analysis. More info here Danasoft DanaSoft is an interface for running a learning experience in children. The documentation is here
-      </div>
-  </div>
-
-</article>
-<hr>
-<article class="row teaser">
-
-  <div style="width: 20%; float:left">
-    lun. 04 octobre 2010
-    <div class="tag-resume" style="padding-right: 15px" >
-        <span>Tags : </span>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/stimic.html">Stimic</a>
-          <!--<a class="fa fa-folder-open-o" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>-->
-           <a class="label" href="https://tinmard.github.io/tag/ieeg.html">iEEG</a>
-    </div>
-  </div>
-
-  <div style="width: 80%; float:right;">
-      <h2 class="title"><a href="https://tinmard.github.io/stimic/">Stimic</a></h2>
-      <div class="content">
-          Stimic index page Stimulation Event List and Epoch creation The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters, and associate each stimulation with its potential effect on the iEEG To gain speed, a semi-automatic detection pipeline was developped. The different steps …
-      </div>
-  </div>
-
-</article>
-<div class="pagination">
-<ul>
-    <li class="prev"><a href="https://tinmard.github.io/index2.html">&larr; Previous</a></li>
-
-    <li class=""><a href="https://tinmard.github.io/index.html">1</a></li>
-    <li class=""><a href="https://tinmard.github.io/index2.html">2</a></li>
-    <li class="active"><a href="https://tinmard.github.io/index3.html">3</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>            <div class="article">
+            <div class="article">
                 <!--TIPUE SEARCH--><div id="tipue_search_content"></div>
             </div>
         </div>
