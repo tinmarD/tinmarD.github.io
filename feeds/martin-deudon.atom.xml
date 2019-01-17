@@ -1,5 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple - Martin Deudon</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/martin-deudon.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-16T14:11:00+01:00</updated><entry><title>Git - Update your code</title><link href="https://tinmard.github.io/git-update-your-code.html" rel="alternate"></link><published>2019-01-16T14:11:00+01:00</published><updated>2019-01-16T14:11:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-16:/git-update-your-code.html</id><summary type="html">&lt;p&gt;&lt;img alt="gitlogo" src="/images/misc/gitlogo.png"&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple - Martin Deudon</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/martin-deudon.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-17T14:00:00+01:00</updated><entry><title>Spike Sorting Animation</title><link href="https://tinmard.github.io/spike-sorting-animation.html" rel="alternate"></link><published>2019-01-17T14:00:00+01:00</published><updated>2019-01-17T14:00:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-17:/spike-sorting-animation.html</id><summary type="html">&lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/SpikeSortingAnimation"&gt;https://github.com/tinmarD/SpikeSortingAnimation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These scripts illustrate the spike-sorting process using Python and &lt;a href="https://www.pygame.org/news"&gt;pygame&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;spikesorting_game_1.py&lt;/code&gt; shows the raw signal on 1 tetrode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spikesorting_game_1_2.py&lt;/code&gt; shows both the raw and filtered signal (~300-3000Hz)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spikesorting_game_2.py&lt;/code&gt; shows the raw signal on top and the action potential after spike …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/SpikeSortingAnimation"&gt;https://github.com/tinmarD/SpikeSortingAnimation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;These scripts illustrate the spike-sorting process using Python and &lt;a href="https://www.pygame.org/news"&gt;pygame&lt;/a&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;spikesorting_game_1.py&lt;/code&gt; shows the raw signal on 1 tetrode&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spikesorting_game_1_2.py&lt;/code&gt; shows both the raw and filtered signal (~300-3000Hz)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spikesorting_game_2.py&lt;/code&gt; shows the raw signal on top and the action potential after spike detection&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;spikesorting_game_3.py&lt;/code&gt; shows the results of the spike sorting, i.e. each action potential is colored differently depending on the neuron having emitted the spike.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The scripts works with the spike sorting results from &lt;a href="https://spyking-circus.readthedocs.io/en/latest/"&gt;Spyking Circus&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For all the scripts, you can press the &lt;strong&gt;space&lt;/strong&gt; key to pause or play the animation, the &lt;strong&gt;down&lt;/strong&gt; or &lt;strong&gt;up&lt;/strong&gt; keys to slow
+down or increase the speed (until a certain limit)&lt;/p&gt;
+&lt;h3 id="raw-signal-spikesorting_game_1py"&gt;Raw signal - spikesorting_game_1.py&lt;/h3&gt;
+&lt;p&gt;This first script simply shows the raw signal on one tetrode. You can select a particular tetrode and a time period.
+It also writes the raw signal (first micro-wire of the selected tetrode) as a &lt;em&gt;.wav&lt;/em&gt; file. This signal can then be listened to
+but it needs to be slowed down before. It can be done with Audacity.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/neurons/spikesorting_animation/spikesorting_animation_1.gif" width="600"/&gt;&lt;/p&gt;
+&lt;h3 id="raw-and-filtered-signals-spikesorting_game_2py"&gt;Raw and filtered signals - spikesorting_game_2.py&lt;/h3&gt;
+&lt;p&gt;The second script shows both the raw and filtered signal in the neuronal range ([300-3000Hz]).
+It also writes the raw and filtered signal (first micro-wire of the selected tetrode) as a &lt;em&gt;.wav&lt;/em&gt; file. &lt;/p&gt;
+&lt;p&gt;Press &lt;strong&gt;2&lt;/strong&gt; to hide or show the filtered signal.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/neurons/spikesorting_animation/spikesorting_animation_1_2.gif" width="600"/&gt;&lt;/p&gt;
+&lt;h3 id="spike-detection-spikesorting_game_2py"&gt;Spike Detection : spikesorting_game_2.py&lt;/h3&gt;
+&lt;p&gt;The third script includes the spike detection step but not the spike sorting step. Raw signal is shown on top, with each
+spike colored in yellow. A sound is played each time a spike reaches the middle of the screen.&lt;/p&gt;
+&lt;p&gt;Press &lt;strong&gt;3&lt;/strong&gt; to hide or show the spikes.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/neurons/spikesorting_animation/spikesorting_animation_2.gif" width="600"/&gt;&lt;/p&gt;
+&lt;h3 id="spike-sorting-spikesorting_game_3py"&gt;Spike Sorting : spikesorting_game_3.py&lt;/h3&gt;
+&lt;p&gt;This last step show the end of the spike sorting process. Each spike is associated with a neuron/unit. Spikes are colored
+depending on the unit which has fired. A sound is played each time a spike reaches the middle of the screen and this sound
+is different depending on the unit which fires.&lt;/p&gt;
+&lt;p&gt;Press &lt;strong&gt;3&lt;/strong&gt; to hide or show the spikes.&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/neurons/spikesorting_animation/spikesorting_animation_3.gif" width="600"/&gt;&lt;/p&gt;</content><category term="neurons"></category><category term="spike-sorting"></category><category term="animation"></category><category term="pygame"></category></entry><entry><title>Git - Update your code</title><link href="https://tinmard.github.io/git-update-your-code.html" rel="alternate"></link><published>2019-01-16T14:11:00+01:00</published><updated>2019-01-16T14:11:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-16:/git-update-your-code.html</id><summary type="html">&lt;p&gt;&lt;img alt="gitlogo" src="/images/misc/gitlogo.png"&gt;&lt;/p&gt;
 &lt;h3&gt;How to use git to update your code&lt;/h3&gt;
 &lt;p&gt;&lt;a href="https://git-scm.com/"&gt;Git&lt;/a&gt; is a free and open source distributed version control system. It allows
 you to get some code from repositories like &lt;a href="https://github.com"&gt;github&lt;/a&gt; and to easily update your
@@ -1958,7 +1994,7 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;li&gt;LNC&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="noise-level-in-micro-recordings_1"&gt;Noise level in micro-recordings&lt;/h3&gt;
-&lt;p&gt;Sripts for estimating the noise levels in iEEG recordings are available 
+&lt;p&gt;Scripts for estimating the noise levels in iEEG recordings are available 
 here : &lt;a href="https://github.com/tinmarD/NoiseEstimation"&gt;https://github.com/tinmarD/NoiseEstimation&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="hybrid electrode"></category></entry><entry><title>Matplotlib tips</title><link href="https://tinmard.github.io/matplotlib-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/matplotlib-tips.html</id><summary type="html">&lt;p&gt;Tips about matplotlib library. Legend, backend, ...&lt;/p&gt;</summary><content type="html">&lt;h2 id="legend"&gt;Legend&lt;/h2&gt;
 &lt;p&gt;Plot legend for a specific entry : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;f, ax = plt.subplots()
@@ -2040,7 +2076,10 @@ and allow the visualization of spike sorting results such as : &lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src="/images/neurons/pySpikeAnalysis.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/pySpikeAnalysis"&gt;https://github.com/tinmarD/pySpikeAnalysis&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Documentation link : &lt;a href="https://pyspikeanalysis.readthedocs.io/en/latest/"&gt;https://pyspikeanalysis.readthedocs.io/en/latest/&lt;/a&gt;&lt;/p&gt;</content><category term="neurons"></category><category term="spike-sorting"></category><category term="neo"></category><category term="pySpikeAnalysis"></category></entry><entry><title>Numpy tips</title><link href="https://tinmard.github.io/numpy-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/numpy-tips.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;p&gt;Documentation link : &lt;a href="https://pyspikeanalysis.readthedocs.io/en/latest/"&gt;https://pyspikeanalysis.readthedocs.io/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="spike-sorting-animation_1"&gt;Spike sorting animation&lt;/h2&gt;
+&lt;p&gt;These scripts illustrate the spike sorting pipeline - See the detailed article here : 
+&lt;a href="https://tinmard.github.io/spike-sorting-animation.html"&gt;Spike Sorting Animation&lt;/a&gt;&lt;/p&gt;</content><category term="neurons"></category><category term="spike-sorting"></category><category term="neo"></category><category term="pySpikeAnalysis"></category></entry><entry><title>Numpy tips</title><link href="https://tinmard.github.io/numpy-tips.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/numpy-tips.html</id><summary type="html">&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sign&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Find points of x crossing the threshold T :&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;where&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;np&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;diff&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;T&lt;/span&gt;&lt;span class="p"&gt;))[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; 

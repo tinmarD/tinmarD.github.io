@@ -1174,7 +1174,7 @@ are &lt;a href="https://github.com/tinmarD/eegFileConversion"&gt;here&lt;/a&gt;.
 &lt;li&gt;LNC&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id="noise-level-in-micro-recordings_1"&gt;Noise level in micro-recordings&lt;/h3&gt;
-&lt;p&gt;Sripts for estimating the noise levels in iEEG recordings are available 
+&lt;p&gt;Scripts for estimating the noise levels in iEEG recordings are available 
 here : &lt;a href="https://github.com/tinmarD/NoiseEstimation"&gt;https://github.com/tinmarD/NoiseEstimation&lt;/a&gt;&lt;/p&gt;</content><category term="Epifar"></category><category term="iEEG"></category><category term="hybrid electrode"></category></entry><entry><title>Neurons</title><link href="https://tinmard.github.io/neurons/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/neurons/</id><summary type="html">&lt;h2 id="intro"&gt;Intro&lt;/h2&gt;
 &lt;p&gt;Thanks to the new DIXI micro-macro electrode, single-unit activity can be recorded in epileptic patients during sEEG
 exploration.  &lt;/p&gt;
@@ -1218,7 +1218,10 @@ and allow the visualization of spike sorting results such as : &lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src="/images/neurons/pySpikeAnalysis.png" width="600"/&gt;&lt;/p&gt;
 &lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/pySpikeAnalysis"&gt;https://github.com/tinmarD/pySpikeAnalysis&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Documentation link : &lt;a href="https://pyspikeanalysis.readthedocs.io/en/latest/"&gt;https://pyspikeanalysis.readthedocs.io/en/latest/&lt;/a&gt;&lt;/p&gt;</content><category term="neurons"></category><category term="spike-sorting"></category><category term="neo"></category><category term="pySpikeAnalysis"></category></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;The pySAB package is a python module designed to analyze the data from the SAB experiment. It contains script for ERP 
+&lt;p&gt;Documentation link : &lt;a href="https://pyspikeanalysis.readthedocs.io/en/latest/"&gt;https://pyspikeanalysis.readthedocs.io/en/latest/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="spike-sorting-animation_1"&gt;Spike sorting animation&lt;/h2&gt;
+&lt;p&gt;These scripts illustrate the spike sorting pipeline - See the detailed article here : 
+&lt;a href="https://tinmard.github.io/spike-sorting-animation.html"&gt;Spike Sorting Animation&lt;/a&gt;&lt;/p&gt;</content><category term="neurons"></category><category term="spike-sorting"></category><category term="neo"></category><category term="pySpikeAnalysis"></category></entry><entry><title>SAB</title><link href="https://tinmard.github.io/sab/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/sab/</id><summary type="html">&lt;p&gt;The pySAB package is a python module designed to analyze the data from the SAB experiment. It contains script for ERP 
 analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
 &lt;p&gt;&lt;img alt="erp" src="/images/sab/erp_examples.png"/&gt;&lt;/p&gt;
 &lt;ul&gt;
