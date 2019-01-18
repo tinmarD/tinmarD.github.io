@@ -2,9 +2,8 @@
 <rss version="2.0"><channel><title>Le Temple - Martin Deudon</title><link>https://tinmard.github.io/</link><description></description><lastBuildDate>Thu, 17 Jan 2019 14:48:00 +0100</lastBuildDate><item><title>Cartography with the NetworkX library</title><link>https://tinmard.github.io/cartography-with-the-networkx-library.html</link><description>&lt;p&gt;&lt;a href="https://networkx.github.io/"&gt;Networkx&lt;/a&gt; is a Python package for the creation, manipulation, and study of the
  structure, dynamics, and functions of complex networks.&lt;/p&gt;
 &lt;p&gt;Tutorial on Datacamp : &lt;a href="https://www.datacamp.com/courses/network-analysis-in-python-part-1"&gt;network-analysis-in-python-part-1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The following image was generated with networkx. It show a map of the different scripts in both Python and Matlab: &lt;/p&gt;
-&lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;
-&lt;p&gt;It was generated with the following …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 17 Jan 2019 14:48:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2019-01-17:/cartography-with-the-networkx-library.html</guid><category>networkx</category><category>python</category></item><item><title>Spike Sorting Animation</title><link>https://tinmard.github.io/spike-sorting-animation.html</link><description>&lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/SpikeSortingAnimation"&gt;https://github.com/tinmarD/SpikeSortingAnimation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The following image was generated with networkx. It shows a map of the different scripts in both Python and Matlab: 
+The projects sharing keywords between one …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 17 Jan 2019 14:48:00 +0100</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2019-01-17:/cartography-with-the-networkx-library.html</guid><category>networkx</category><category>python</category></item><item><title>Spike Sorting Animation</title><link>https://tinmard.github.io/spike-sorting-animation.html</link><description>&lt;p&gt;Github link : &lt;a href="https://github.com/tinmarD/SpikeSortingAnimation"&gt;https://github.com/tinmarD/SpikeSortingAnimation&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;These scripts illustrate the spike-sorting process using Python and &lt;a href="https://www.pygame.org/news"&gt;pygame&lt;/a&gt;.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;spikesorting_game_1.py&lt;/code&gt; shows the raw signal on 1 tetrode&lt;/li&gt;
@@ -117,6 +116,11 @@ modification of the python code.&lt;/p&gt;
 &lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/epifar/"&gt;&lt;img src="/images/home/Epifar.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/cochlea"&gt;&lt;img src="/images/home/Cochlea.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/micmac.html"&gt;&lt;img src="/images/home/micmac.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/stimic/"&gt;&lt;img src="/images/home/Stimic.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/neurons/"&gt;&lt;img src="/images/home/neurons.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Thu, 04 Oct 2018 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2018-10-04:/</guid></item><item><title>Home-old</title><link>https://tinmard.github.io/home-old.html</link><description>&lt;p&gt;Bienvenue&lt;/p&gt;
 &lt;p&gt;Project Map &lt;/p&gt;
@@ -198,13 +202,14 @@ analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/pySAB"&gt;https://github.com/tinmarD/SAB_main&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Documentation : &lt;a href="https://pysab.readthedocs.io/en/latest/"&gt;https://pysab.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/sab/</guid><category>iEEG</category><category>SAB</category><category>pySAB</category><category>Memory</category></item><item><title>Softwares List</title><link>https://tinmard.github.io/softwares/</link><description>&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/sab/</guid><category>iEEG</category><category>SAB</category><category>pySAB</category><category>Memory</category></item><item><title>Software List</title><link>https://tinmard.github.io/software-list.html</link><description>&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
 More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
-The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/softwares/</guid><category>Software</category></item><item><title>Stimic</title><link>https://tinmard.github.io/stimic/</link><description>&lt;p&gt;Stimic index page &lt;/p&gt;
-&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
+The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/software-list.html</guid><category>Software</category></item><item><title>Stimic</title><link>https://tinmard.github.io/stimic/</link><description>&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
-&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps …&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/stimic/</guid><category>Stimic</category><category>iEEG</category></item></channel></rss>
+&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clean the …&lt;/li&gt;&lt;/ol&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Martin Deudon</dc:creator><pubDate>Mon, 04 Oct 2010 13:39:00 +0200</pubDate><guid isPermaLink="false">tag:tinmard.github.io,2010-10-04:/stimic/</guid><category>Stimic</category><category>iEEG</category></item></channel></rss>

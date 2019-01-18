@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-17T14:48:00+01:00</updated><entry><title>Cartography with the NetworkX library</title><link href="https://tinmard.github.io/cartography-with-the-networkx-library.html" rel="alternate"></link><published>2019-01-17T14:48:00+01:00</published><updated>2019-01-17T14:48:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-17:/cartography-with-the-networkx-library.html</id><summary type="html">&lt;p&gt;&lt;a href="https://networkx.github.io/"&gt;Networkx&lt;/a&gt; is a Python package for the creation, manipulation, and study of the
  structure, dynamics, and functions of complex networks.&lt;/p&gt;
 &lt;p&gt;Tutorial on Datacamp : &lt;a href="https://www.datacamp.com/courses/network-analysis-in-python-part-1"&gt;network-analysis-in-python-part-1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The following image was generated with networkx. It show a map of the different scripts in both Python and Matlab: &lt;/p&gt;
-&lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;
-&lt;p&gt;It was generated with the following …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://networkx.github.io/"&gt;Networkx&lt;/a&gt; is a Python package for the creation, manipulation, and study of the
+&lt;p&gt;The following image was generated with networkx. It shows a map of the different scripts in both Python and Matlab: 
+The projects sharing keywords between one …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;a href="https://networkx.github.io/"&gt;Networkx&lt;/a&gt; is a Python package for the creation, manipulation, and study of the
  structure, dynamics, and functions of complex networks.&lt;/p&gt;
 &lt;p&gt;Tutorial on Datacamp : &lt;a href="https://www.datacamp.com/courses/network-analysis-in-python-part-1"&gt;network-analysis-in-python-part-1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;The following image was generated with networkx. It show a map of the different scripts in both Python and Matlab: &lt;/p&gt;
+&lt;p&gt;The following image was generated with networkx. It shows a map of the different scripts in both Python and Matlab: 
+The projects sharing keywords between one another are grouped together.&lt;/p&gt;
 &lt;p&gt;&lt;img src="images/cartographie.png" width="1000"/&gt;&lt;/p&gt;
 &lt;p&gt;It was generated with the following code : &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;matplotlib&lt;/span&gt;
@@ -1895,6 +1895,11 @@ the BADA can deliver : 3300W &lt;/p&gt;
 &lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/epifar/"&gt;&lt;img src="/images/home/Epifar.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/cochlea"&gt;&lt;img src="/images/home/Cochlea.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/micmac.html"&gt;&lt;img src="/images/home/micmac.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/stimic/"&gt;&lt;img src="/images/home/Stimic.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/neurons/"&gt;&lt;img src="/images/home/neurons.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</summary><content type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
 &lt;table&gt;
@@ -1910,6 +1915,11 @@ the BADA can deliver : 3300W &lt;/p&gt;
 &lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/sab/"&gt;&lt;img src="/images/home/SAB.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/epifar/"&gt;&lt;img src="/images/home/Epifar.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/cochlea"&gt;&lt;img src="/images/home/Cochlea.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/micmac.html"&gt;&lt;img src="/images/home/micmac.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/stimic/"&gt;&lt;img src="/images/home/Stimic.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td align="center"&gt;&lt;a href="https://tinmard.github.io/neurons/"&gt;&lt;img src="/images/home/neurons.png" width="250"/&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;</content></entry><entry><title>Home-old</title><link href="https://tinmard.github.io/home-old.html" rel="alternate"></link><published>2018-10-04T13:39:00+02:00</published><updated>2018-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-10-04:/home-old.html</id><summary type="html">&lt;p&gt;Bienvenue&lt;/p&gt;
@@ -2199,7 +2209,7 @@ analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/pySAB"&gt;https://github.com/tinmarD/SAB_main&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Documentation : &lt;a href="https://pysab.readthedocs.io/en/latest/"&gt;https://pysab.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="iEEG"></category><category term="SAB"></category><category term="pySAB"></category><category term="Memory"></category></entry><entry><title>Softwares List</title><link href="https://tinmard.github.io/softwares/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/softwares/</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
+&lt;/ul&gt;</content><category term="iEEG"></category><category term="SAB"></category><category term="pySAB"></category><category term="Memory"></category></entry><entry><title>Software List</title><link href="https://tinmard.github.io/software-list.html" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/software-list.html</id><summary type="html">&lt;h2&gt;micMac&lt;/h2&gt;
 &lt;p&gt;micMac is a matlab GUI for iEEG visualization and analysis.
 More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
@@ -2209,12 +2219,12 @@ The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;her
 More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
-The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content><category term="Software"></category></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
-&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
+The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content><category term="Software"></category></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
-&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
-&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
+&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clean the …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
 &lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;

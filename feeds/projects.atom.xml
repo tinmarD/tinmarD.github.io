@@ -1234,12 +1234,12 @@ analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/pySAB"&gt;https://github.com/tinmarD/SAB_main&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Documentation : &lt;a href="https://pysab.readthedocs.io/en/latest/"&gt;https://pysab.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="iEEG"></category><category term="SAB"></category><category term="pySAB"></category><category term="Memory"></category></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
-&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="iEEG"></category><category term="SAB"></category><category term="pySAB"></category><category term="Memory"></category></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
-&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Stimic index page &lt;/p&gt;
-&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
+&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clean the …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
 &lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
