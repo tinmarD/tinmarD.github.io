@@ -1017,9 +1017,11 @@ For instance :&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note : If the signal is very noisy the detection algorithm may detect a huge number of events, in this case it may take more time to clean the detected stimulation rather than detecting manually all the stimulations&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Cleaning stimulation events&lt;/p&gt;
 &lt;p&gt;Stimulation events are then sorted by increasing time and events on the same channel with the same frequency and close in time (difference inferior to 5s) are merged.&lt;/p&gt;</content><category term="Stimic"></category><category term="detector"></category></entry><entry><title>Stimic - Stimulation Event List Creation</title><link href="https://tinmard.github.io/stimic-stimulation-event-list-creation.html" rel="alternate"></link><published>2018-11-08T13:42:00+01:00</published><updated>2018-11-08T13:42:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-11-08:/stimic-stimulation-event-list-creation.html</id><summary type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+&lt;p&gt;The details of the detection algorithm can be found &lt;a href="https://tinmard.github.io/stimic-stimulation-detection-algorithm.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="artifact-detection-in-macro-electrodes"&gt;Artifact Detection in macro-electrodes&lt;/h2&gt;
 &lt;h3 id="description"&gt;Description&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+&lt;p&gt;The details of the detection algorithm can be found &lt;a href="https://tinmard.github.io/stimic-stimulation-detection-algorithm.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="artifact-detection-in-macro-electrodes"&gt;Artifact Detection in macro-electrodes&lt;/h2&gt;
 &lt;h3 id="description"&gt;Description&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the stim. A visual confirmation will be necessary before using the results. Here we only concentrate on locating the stimulation on the stimulation channels, with monopolar montage.&lt;/p&gt;
@@ -1234,12 +1236,13 @@ analysis, feature extraction, decoding, correlation analysis, ...&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Github link : &lt;a href="https://github.com/tinmarD/pySAB"&gt;https://github.com/tinmarD/SAB_main&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Documentation : &lt;a href="https://pysab.readthedocs.io/en/latest/"&gt;https://pysab.readthedocs.io/en/latest/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><category term="iEEG"></category><category term="SAB"></category><category term="pySAB"></category><category term="Memory"></category></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
+&lt;/ul&gt;</content><category term="iEEG"></category><category term="SAB"></category><category term="pySAB"></category><category term="Memory"></category></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;p&gt;The StiMiC project aims at investigating the effect of electrical stimulations using depth electrode in epilectic 
+drug refractory patients. &lt;/p&gt;
+&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
- and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
-&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Clean the …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
+ and associate each stimulation with its potential …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The StiMiC project aims at investigating the effect of electrical stimulations using depth electrode in epilectic 
+drug refractory patients. &lt;/p&gt;
+&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
 &lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;

@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-17T14:48:00+01:00</updated><entry><title>Cartography with the NetworkX library</title><link href="https://tinmard.github.io/cartography-with-the-networkx-library.html" rel="alternate"></link><published>2019-01-17T14:48:00+01:00</published><updated>2019-01-17T14:48:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-17:/cartography-with-the-networkx-library.html</id><summary type="html">&lt;p&gt;&lt;a href="https://networkx.github.io/"&gt;Networkx&lt;/a&gt; is a Python package for the creation, manipulation, and study of the
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Le Temple</title><link href="https://tinmard.github.io/" rel="alternate"></link><link href="https://tinmard.github.io/feeds/all-en.atom.xml" rel="self"></link><id>https://tinmard.github.io/</id><updated>2019-01-22T16:25:00+01:00</updated><entry><title>Conda Basics</title><link href="https://tinmard.github.io/conda-basics.html" rel="alternate"></link><published>2019-01-22T16:25:00+01:00</published><updated>2019-01-22T16:25:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-22:/conda-basics.html</id><summary type="html">&lt;h2 id="concepts"&gt;Concepts&lt;/h2&gt;
+&lt;p&gt;We list here some basic commands to manage environments with conda. Conda is a package manager and environment
+manager. It is included with the Anaconda Python distribution. Thus you should have already installed &lt;a href="https://docs.anaconda.com/anaconda/install/"&gt;Anaconda&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A conda environment is a directory that contains a specific collection of conda packages that …&lt;/em&gt;&lt;/p&gt;</summary><content type="html">&lt;h2 id="concepts"&gt;Concepts&lt;/h2&gt;
+&lt;p&gt;We list here some basic commands to manage environments with conda. Conda is a package manager and environment
+manager. It is included with the Anaconda Python distribution. Thus you should have already installed &lt;a href="https://docs.anaconda.com/anaconda/install/"&gt;Anaconda&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A conda environment is a directory that contains a specific collection of conda packages that you have installed.&lt;/em&gt;
+For example you may have an environment for doing Spike Sorting, another for running other analyses, etc...&lt;/p&gt;
+&lt;p&gt;You can easily switch between environments. It allows you to seperate the environment for your different projects, 
+as all you projects may need different packages or different version of these packages.&lt;/p&gt;
+&lt;p&gt;A complete documentation for conda is available &lt;a href="https://conda.io/projects/continuumio-conda/en/latest/user-guide/getting-started.html#managing-environments"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;A cheatsheet listing more commands can be downloaded &lt;a href="https://tinmard.github.io/data/python/conda-cheatsheet.pdf"&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="create-a-new-environment"&gt;Create a new environment&lt;/h2&gt;
+&lt;p&gt;To create a new environment named  &lt;em&gt;spikesortingenv&lt;/em&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;conda create --name spikesortingenv
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Specify the version of python you want :&lt;/em&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;conda create --name spikesortingenv python=3.5
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="activate-an-environment"&gt;Activate an environment&lt;/h2&gt;
+&lt;p&gt;On Windows :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;activate spikesortingenv
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;On Linux and macOS :&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;source activate spikesortingenv
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="list-all-your-environments"&gt;List all your environments&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;conda env list 
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id="remove-an-environment"&gt;Remove an environment&lt;/h2&gt;
+&lt;p&gt;Remove the &lt;em&gt;spikesortingenv&lt;/em&gt; environment : &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;conda env remove -n spikesortingenv
+&lt;/pre&gt;&lt;/div&gt;</content><category term="Python"></category><category term="Conda"></category><category term="Anaconda"></category></entry><entry><title>Cartography with the NetworkX library</title><link href="https://tinmard.github.io/cartography-with-the-networkx-library.html" rel="alternate"></link><published>2019-01-17T14:48:00+01:00</published><updated>2019-01-17T14:48:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2019-01-17:/cartography-with-the-networkx-library.html</id><summary type="html">&lt;p&gt;&lt;a href="https://networkx.github.io/"&gt;Networkx&lt;/a&gt; is a Python package for the creation, manipulation, and study of the
  structure, dynamics, and functions of complex networks.&lt;/p&gt;
 &lt;p&gt;Tutorial on Datacamp : &lt;a href="https://www.datacamp.com/courses/network-analysis-in-python-part-1"&gt;network-analysis-in-python-part-1&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;The following image was generated with networkx. It shows a map of the different scripts in both Python and Matlab: 
@@ -1478,9 +1510,11 @@ For instance :&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note : If the signal is very noisy the detection algorithm may detect a huge number of events, in this case it may take more time to clean the detected stimulation rather than detecting manually all the stimulations&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Cleaning stimulation events&lt;/p&gt;
 &lt;p&gt;Stimulation events are then sorted by increasing time and events on the same channel with the same frequency and close in time (difference inferior to 5s) are merged.&lt;/p&gt;</content><category term="Stimic"></category><category term="detector"></category></entry><entry><title>Stimic - Stimulation Event List Creation</title><link href="https://tinmard.github.io/stimic-stimulation-event-list-creation.html" rel="alternate"></link><published>2018-11-08T13:42:00+01:00</published><updated>2018-11-08T13:42:00+01:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2018-11-08:/stimic-stimulation-event-list-creation.html</id><summary type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+&lt;p&gt;The details of the detection algorithm can be found &lt;a href="https://tinmard.github.io/stimic-stimulation-detection-algorithm.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="artifact-detection-in-macro-electrodes"&gt;Artifact Detection in macro-electrodes&lt;/h2&gt;
 &lt;h3 id="description"&gt;Description&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim …&lt;/p&gt;</summary><content type="html">&lt;p&gt;This article describes the procedure used for listing all the stimulations events through a semi-automated pipeline.&lt;/p&gt;
+&lt;p&gt;The details of the detection algorithm can be found &lt;a href="https://tinmard.github.io/stimic-stimulation-detection-algorithm.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id="artifact-detection-in-macro-electrodes"&gt;Artifact Detection in macro-electrodes&lt;/h2&gt;
 &lt;h3 id="description"&gt;Description&lt;/h3&gt;
 &lt;p&gt;&lt;strong&gt;Goal&lt;/strong&gt; :  Detect (semi)-automatically stimulation artifacts on the macro-signals. Detection output must give the onset time of the stim, the channel(s) of stimulations and the frequency of the stim. A visual confirmation will be necessary before using the results. Here we only concentrate on locating the stimulation on the stimulation channels, with monopolar montage.&lt;/p&gt;
@@ -2219,12 +2253,13 @@ The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;her
 More info &lt;a href="https://tinmard.github.io/micmac.html"&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Danasoft&lt;/h2&gt;
 &lt;p&gt;DanaSoft is an interface for running a learning experience in children.
-The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content><category term="Software"></category></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
+The documentation is &lt;a href="https://tinmard.github.io/danasoft.html"&gt;here&lt;/a&gt;&lt;/p&gt;</content><category term="Software"></category></entry><entry><title>Stimic</title><link href="https://tinmard.github.io/stimic/" rel="alternate"></link><published>2010-10-04T13:39:00+02:00</published><updated>2010-10-04T13:39:00+02:00</updated><author><name>Martin Deudon</name></author><id>tag:tinmard.github.io,2010-10-04:/stimic/</id><summary type="html">&lt;p&gt;The StiMiC project aims at investigating the effect of electrical stimulations using depth electrode in epilectic 
+drug refractory patients. &lt;/p&gt;
+&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
- and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
-&lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Clean the …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
+ and associate each stimulation with its potential …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The StiMiC project aims at investigating the effect of electrical stimulations using depth electrode in epilectic 
+drug refractory patients. &lt;/p&gt;
+&lt;h1 id="stimulation-event-list-and-epoch-creation"&gt;Stimulation Event List and Epoch creation&lt;/h1&gt;
 &lt;p&gt;The first step fot the Stimic project is to list all the stimulations, their localization, the electrical parameters,
  and associate each stimulation with its potential effect on the iEEG &lt;/p&gt;
 &lt;p&gt;To gain speed, a semi-automatic detection pipeline was developped. The different steps are :&lt;/p&gt;
